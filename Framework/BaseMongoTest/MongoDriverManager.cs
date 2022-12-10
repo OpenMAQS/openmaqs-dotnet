@@ -4,12 +4,12 @@
 // </copyright>
 // <summary>Mongo database driver</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseTest;
+using Maqs.Utilities.Logging;
 using MongoDB.Driver;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace Maqs.BaseMongoTest
 {
     /// <summary>
     /// Mongo database driver

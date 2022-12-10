@@ -4,14 +4,14 @@
 // </copyright>
 // <summary>This is the base Playwright test class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseTest;
+using Maqs.Utilities.Logging;
 using Microsoft.Playwright;
 using System;
 using System.IO;
 using System.Linq;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Generic base Playwright test class

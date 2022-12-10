@@ -4,12 +4,12 @@
 // </copyright>
 // <summary>page factory</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.Utilities.Logging;
 using Microsoft.Playwright;
 using System;
 
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Factory for creating page drivers

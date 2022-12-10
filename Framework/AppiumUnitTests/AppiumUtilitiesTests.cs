@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>Test class for utility files</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseAppiumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseAppiumTest;
+using Maqs.Utilities.Helper;
+using Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;

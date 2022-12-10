@@ -5,7 +5,7 @@
 // <summary>IProvider interface</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest.Providers
+namespace Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The Provider interface.

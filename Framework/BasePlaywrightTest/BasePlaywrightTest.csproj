@@ -8,10 +8,10 @@
 	<PropertyGroup>
 		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
 		<Nullable>enable</Nullable>
-		<PackageId>CognizantSoftvision.Maqs.Playwright</PackageId>
-		<Product>CognizantSoftvision.Maqs.Playwright</Product>
-		<AssemblyName>CognizantSoftvision.Maqs.BasePlaywrightTest</AssemblyName>
-		<RootNamespace>CognizantSoftvision.Maqs.BasePlaywrightTest</RootNamespace>
+		<PackageId>Maqs.Playwright</PackageId>
+		<Product>Maqs.Playwright</Product>
+		<AssemblyName>Maqs.BasePlaywrightTest</AssemblyName>
+		<RootNamespace>Maqs.BasePlaywrightTest</RootNamespace>
 		<ApplicationIcon>MAQS.ico</ApplicationIcon>
 		<Title>Playwright Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

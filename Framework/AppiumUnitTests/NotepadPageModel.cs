@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>A test selenium page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BaseAppiumTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using Maqs.BaseAppiumTest;
+using Maqs.Utilities.Logging;
+using Maqs.Utilities.Performance;
 using OpenQA.Selenium.Appium;
 
 namespace AppiumUnitTests

@@ -4,14 +4,14 @@
 // </copyright>
 // <summary>This is the Appium utilities class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.IO;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Static class for the appium utilities

@@ -7,7 +7,7 @@
 
 using Microsoft.Data.Sqlite;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest.Providers
+namespace Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The Sqlite provider.

@@ -4,12 +4,12 @@
 // </copyright>
 // <summary>This is the base Appium test class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseTest;
+using Maqs.Utilities.Logging;
 using OpenQA.Selenium.Appium;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Generic base Appium test class

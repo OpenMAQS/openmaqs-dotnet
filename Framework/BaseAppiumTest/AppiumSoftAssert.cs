@@ -4,10 +4,10 @@
 // </copyright>
 // <summary>This is the Appium soft assert class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using Maqs.BaseTest;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Soft Assert override for appium tests

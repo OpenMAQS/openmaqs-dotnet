@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Helper class for getting database specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseDatabaseTest.Providers;
+using Maqs.BaseDatabaseTest.Providers;
 using System;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Config class

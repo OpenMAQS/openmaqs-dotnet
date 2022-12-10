@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Holds Appium test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using Maqs.BaseTest;
 using OpenQA.Selenium.Appium;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium test object interface

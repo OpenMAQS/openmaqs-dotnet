@@ -4,10 +4,10 @@
 // </copyright>
 // <summary>Helper class for getting MongoDB specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace Maqs.BaseMongoTest
 {
     /// <summary>
     /// Config class

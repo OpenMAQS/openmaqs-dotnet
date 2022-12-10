@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Database utilities

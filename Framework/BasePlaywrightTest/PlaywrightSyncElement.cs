@@ -8,7 +8,7 @@ using Microsoft.Playwright;
 using System.Collections.Generic;
 using System.Text.Json;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Playwright synchronous element

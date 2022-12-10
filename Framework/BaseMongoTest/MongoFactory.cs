@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using MongoDB.Driver;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace Maqs.BaseMongoTest
 {
     /// <summary>
     /// Mongo database factory

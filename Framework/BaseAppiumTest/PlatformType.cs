@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>Known device types</summary>
 //--------------------------------------------------
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Known device types

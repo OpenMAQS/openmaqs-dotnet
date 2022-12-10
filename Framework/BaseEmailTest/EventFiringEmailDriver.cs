@@ -11,7 +11,7 @@ using MimeKit;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace Maqs.BaseEmailTest
 {
     /// <summary>
     /// Wraps the basic database interactions

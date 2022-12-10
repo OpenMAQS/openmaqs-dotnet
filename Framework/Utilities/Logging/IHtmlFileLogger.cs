@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="IHtmlFileLogger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IHtmlFileLogger.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>HTML file logger interface</summary>
 //--------------------------------------------------
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace Maqs.Utilities.Logging
 {
     /// <summary>
     /// Inteface for HTML file logger

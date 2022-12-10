@@ -7,7 +7,7 @@
 
 using Npgsql;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest.Providers
+namespace Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The POSTGRE SQL provider.

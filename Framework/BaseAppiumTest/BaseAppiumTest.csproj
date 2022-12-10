@@ -7,10 +7,10 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
-		<PackageId>CognizantSoftvision.Maqs.Appium</PackageId>
-		<Product>CognizantSoftvision.Maqs.Appium</Product>
-		<AssemblyName>CognizantSoftvision.Maqs.BaseAppiumTest</AssemblyName>
-		<RootNamespace>CognizantSoftvision.Maqs.BaseAppiumTest</RootNamespace>
+		<PackageId>Maqs.Appium</PackageId>
+		<Product>Maqs.Appium</Product>
+		<AssemblyName>Maqs.BaseAppiumTest</AssemblyName>
+		<RootNamespace>Maqs.BaseAppiumTest</RootNamespace>
 		<ApplicationIcon>MAQS.ico</ApplicationIcon>
 		<Title>Appium Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

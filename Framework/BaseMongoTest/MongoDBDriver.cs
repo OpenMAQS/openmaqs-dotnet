@@ -6,7 +6,7 @@
 using MongoDB.Driver;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace Maqs.BaseMongoTest
 {
     /// <summary>
     /// Class to wrap the IMongoCollection and related helper functions

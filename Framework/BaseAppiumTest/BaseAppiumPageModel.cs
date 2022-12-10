@@ -4,14 +4,14 @@
 // </copyright>
 // <summary>This is the base Appium page model class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using Maqs.Utilities.Logging;
+using Maqs.Utilities.Performance;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Base Appium page model

@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Holds Playwright test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using Maqs.BaseTest;
 using Microsoft.Playwright;
 using System;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Playwright test object interface

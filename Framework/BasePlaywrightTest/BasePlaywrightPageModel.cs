@@ -4,10 +4,10 @@
 // </copyright>
 // <summary>This is the base Playwright page model class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using Maqs.Utilities.Logging;
+using Maqs.Utilities.Performance;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Base Playwright page model

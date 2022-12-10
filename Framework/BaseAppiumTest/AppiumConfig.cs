@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>This is the Appium Configuration class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium Configuration class

@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="ILogger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ILogger.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Logger interface</summary>
 //--------------------------------------------------
 using System;
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace Maqs.Utilities.Logging
 {
     /// <summary>
     /// Base interface for loggers 

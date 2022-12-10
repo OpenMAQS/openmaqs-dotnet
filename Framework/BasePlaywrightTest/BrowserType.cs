@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>Known browser types</summary>
 //--------------------------------------------------
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Known browser types

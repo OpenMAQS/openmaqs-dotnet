@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>Test class for windows application driver related functions</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseAppiumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseAppiumTest;
+using Maqs.Utilities.Helper;
+using Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium;
 using System;

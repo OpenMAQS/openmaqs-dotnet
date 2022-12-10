@@ -7,10 +7,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
-    <PackageId>CognizantSoftvision.Maqs</PackageId>
-    <Product>CognizantSoftvision.Maqs</Product>
-    <AssemblyName>CognizantSoftvision.Maqs.BaseCompositeTest</AssemblyName>
-    <RootNamespace>CognizantSoftvision.Maqs.BaseCompositeTest</RootNamespace>
+    <PackageId>Maqs</PackageId>
+    <Product>Maqs</Product>
+    <AssemblyName>Maqs.BaseCompositeTest</AssemblyName>
+    <RootNamespace>Maqs.BaseCompositeTest</RootNamespace>
     <ApplicationIcon>MAQS.ico</ApplicationIcon>
 	<Title>All MAQS Modules</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

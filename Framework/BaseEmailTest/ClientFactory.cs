@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using MailKit.Net.Imap;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace Maqs.BaseEmailTest
 {
     /// <summary>
     /// Email client factory

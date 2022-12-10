@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Test class for appium test object files</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseAppiumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseAppiumTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;

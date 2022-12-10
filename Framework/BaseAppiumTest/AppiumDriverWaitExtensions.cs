@@ -11,7 +11,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium driver wait extension methods

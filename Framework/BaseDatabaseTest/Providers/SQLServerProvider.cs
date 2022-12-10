@@ -7,7 +7,7 @@
 
 using System.Data.SqlClient;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest.Providers
+namespace Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The SQL server provider.

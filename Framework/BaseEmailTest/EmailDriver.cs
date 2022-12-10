@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>The basic email interactions</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper;
 using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Search;
@@ -15,7 +15,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace Maqs.BaseEmailTest
 {
     /// <summary>
     /// Wraps the basic email interactions

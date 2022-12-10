@@ -5,11 +5,11 @@
 // <summary>This is the base database test class</summary>
 //--------------------------------------------------
 
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseTest;
+using Maqs.Utilities.Logging;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Generic base database test class

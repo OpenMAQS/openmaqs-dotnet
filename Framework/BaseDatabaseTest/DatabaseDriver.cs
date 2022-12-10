@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Wraps the basic database interactions

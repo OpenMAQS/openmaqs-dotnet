@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Holds email test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using Maqs.BaseTest;
 using MailKit.Net.Imap;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace Maqs.BaseEmailTest
 {
     /// <summary>
     /// Email test object interface

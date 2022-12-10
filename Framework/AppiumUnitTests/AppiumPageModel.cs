@@ -1,11 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="AppiumPageModel.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumPageModel.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>A test Appium page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BaseAppiumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseAppiumTest;
+using Maqs.Utilities.Helper;
 using OpenQA.Selenium.Appium;
 
 namespace AppiumUnitTests

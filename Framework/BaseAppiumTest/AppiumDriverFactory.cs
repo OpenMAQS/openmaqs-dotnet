@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Static class creating Appium drivers

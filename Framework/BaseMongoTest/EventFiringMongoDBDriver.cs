@@ -8,7 +8,7 @@ using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace Maqs.BaseMongoTest
 {
     /// <summary>
     /// Wrap basic firing database interactions

@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Holds Mongo test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using Maqs.BaseTest;
 using MongoDB.Driver;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace Maqs.BaseMongoTest
 {
     /// <summary>
     /// Mongo test object interface

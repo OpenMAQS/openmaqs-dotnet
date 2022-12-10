@@ -7,9 +7,9 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
-		<PackageId>CognizantSoftvision.Maqs.Email</PackageId>
-		<AssemblyName>CognizantSoftvision.Maqs.BaseEmailTest</AssemblyName>
-		<RootNamespace>CognizantSoftvision.Maqs.BaseEmailTest</RootNamespace>
+		<PackageId>Maqs.Email</PackageId>
+		<AssemblyName>Maqs.BaseEmailTest</AssemblyName>
+		<RootNamespace>Maqs.BaseEmailTest</RootNamespace>
 		<ApplicationIcon>MAQS.ico</ApplicationIcon>
 		<Title>Email Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

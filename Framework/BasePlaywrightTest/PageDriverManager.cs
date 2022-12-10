@@ -4,12 +4,12 @@
 // </copyright>
 // <summary>Playwright driver</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseTest;
+using Maqs.Utilities.Logging;
 using Microsoft.Playwright;
 using System;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Playwright driver store

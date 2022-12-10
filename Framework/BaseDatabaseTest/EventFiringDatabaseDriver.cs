@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Wrap basic firing database interactions
