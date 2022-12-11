@@ -1,5 +1,5 @@
-﻿using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+﻿using Maqs.Utilities.Helper;
+using Maqs.Utilities.Logging;
 
 namespace BaseTestUnitTests
 {

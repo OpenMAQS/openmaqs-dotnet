@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseAppiumPageModel.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseAppiumPageModel.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Appium page model class</summary>
 //--------------------------------------------------

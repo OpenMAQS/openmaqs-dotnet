@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoTestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="MongoTestObject.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Holds MongoDB context data</summary>
 //--------------------------------------------------

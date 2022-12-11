@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="BrowserType.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BrowserType.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Known browser types</summary>
 //--------------------------------------------------

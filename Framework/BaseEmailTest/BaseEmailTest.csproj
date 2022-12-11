@@ -14,19 +14,19 @@
 		<Title>Email Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Authors>CognizantSoftvision</Authors>
-		<Description>Email extension for Cognizant Softvision's modular automation quick start</Description>
-		<Copyright>Copyright © Cognizant $([System.DateTime]::Now.Year)</Copyright>
+		<Authors>MAQS</Authors>
+		<Description>Email extension for MAQS's modular automation quick start</Description>
+		<Copyright>Copyright © MAQS $([System.DateTime]::Now.Year)</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>MAQS.png</PackageIcon>
-		<PackageIconUrl>https://raw.githubusercontent.com/CognizantOpenSource/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
-		<PackageProjectUrl>https://github.com/CognizantOpenSource/maqs-dotnet</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/https://github.com/MAQS-Framework/maqs-dotnet/releases/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+		<PackageProjectUrl>https://github.com/https://github.com/MAQS-Framework/maqs-dotnet/releases/maqs-dotnet</PackageProjectUrl>
 		<PackageTags>test email automation NUnit MSTest TestFramework</PackageTags>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<RepositoryUrl>https://github.com/CognizantOpenSource/maqs-dotnet</RepositoryUrl>
+		<RepositoryUrl>https://github.com/MAQS-Framework/maqs-dotnet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
-			Release Notes can be found at https://github.com/CognizantOpenSource/maqs-dotnet/releases
+			Release Notes can be found at https://github.com/MAQS-Framework/maqs-dotnet/releases
 		</PackageReleaseNotes>
 		<DebugSymbols>true</DebugSymbols>
 		<IncludeSymbols>true</IncludeSymbols>

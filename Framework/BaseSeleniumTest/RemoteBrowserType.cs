@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="RemoteBrowserType.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="RemoteBrowserType.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Known remote browser types</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest
+namespace Maqs.BaseSeleniumTest
 {
     /// <summary>
     /// Known remote browser types

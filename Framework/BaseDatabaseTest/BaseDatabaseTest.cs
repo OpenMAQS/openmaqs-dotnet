@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseDatabaseTest.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseDatabaseTest.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base database test class</summary>
 //--------------------------------------------------

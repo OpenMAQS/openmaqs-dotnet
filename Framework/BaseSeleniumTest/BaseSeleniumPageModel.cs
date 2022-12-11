@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseSeleniumPageModel.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseSeleniumPageModel.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Selenium page model class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using Maqs.BaseSeleniumTest.Extensions;
+using Maqs.Utilities.Logging;
+using Maqs.Utilities.Performance;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest
+namespace Maqs.BaseSeleniumTest
 {
     /// <summary>
     /// Base Selenium page model

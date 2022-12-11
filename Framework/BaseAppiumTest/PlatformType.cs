@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlatformType.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PlatformType.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Known device types</summary>
 //--------------------------------------------------

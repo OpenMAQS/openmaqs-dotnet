@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlaywrightDriverManager.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PlaywrightDriverManager.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Playwright driver</summary>
 //--------------------------------------------------

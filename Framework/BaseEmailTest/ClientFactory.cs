@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="ClientFactory.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ClientFactory.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Factory for getting email client connections</summary>
 //--------------------------------------------------

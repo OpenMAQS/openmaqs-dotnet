@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="IEmailTestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IEmailTestObject.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Holds email test object interface</summary>
 //--------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="LazyMobileElement.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="LazyMobileElement.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>This is the LazyMobileElement class</summary>
 //--------------------------------------------------

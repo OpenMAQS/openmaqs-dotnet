@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumTestObjectTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumTestObjectTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Test class for appium test object files</summary>
 //--------------------------------------------------
@@ -75,10 +75,10 @@ namespace AppiumUnitTests
         public void SeparateLazyElementInteractions()
         {
             AppiumDriverManager newDriver = new AppiumDriverManager(() => AppiumDriverFactory.GetDefaultMobileDriver(), this.TestObject);
-            newDriver.GetAppiumDriver().Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/async.html");
+            newDriver.GetAppiumDriver().Navigate().GoToUrl("https://MAQS-Framework.github.io/maqs-dotnet-templates/Static/Automation/async.html");
             this.ManagerStore.Add("test", newDriver);
 
-            this.TestObject.AppiumDriver.Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/");
+            this.TestObject.AppiumDriver.Navigate().GoToUrl("https://MAQS-Framework.github.io/maqs-dotnet-templates/Static/Automation/");
 
             LazyMobileElement topNew = new LazyMobileElement(this.TestObject, newDriver.GetAppiumDriver(), By.CssSelector("*"));
             LazyMobileElement topDefault = new LazyMobileElement(this.TestObject, By.CssSelector("*"));

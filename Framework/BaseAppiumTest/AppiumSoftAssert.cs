@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumSoftAssert.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumSoftAssert.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>This is the Appium soft assert class</summary>
 //--------------------------------------------------

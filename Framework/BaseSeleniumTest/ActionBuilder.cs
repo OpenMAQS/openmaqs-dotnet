@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="ActionBuilder.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ActionBuilder.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting selenium specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
+using Maqs.BaseSeleniumTest.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest
+namespace Maqs.BaseSeleniumTest
 {
     /// <summary>
     /// Contains methods for interactions using selenium Actions class

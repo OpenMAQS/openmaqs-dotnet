@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlaywrightSyncElement.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PlaywrightSyncElement.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Playwright synchronous element wrapper</summary>
 //--------------------------------------------------

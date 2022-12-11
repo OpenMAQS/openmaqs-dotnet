@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumUtilities.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumUtilities.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>This is the Appium utilities class</summary>
 //--------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="ConnectionFactory.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ConnectionFactory.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting database specific configuration values</summary>
 //--------------------------------------------------
@@ -98,7 +98,7 @@ namespace Maqs.BaseDatabaseTest
                 case "ODP":
                 case "ORACLE":
                     throw new NotImplementedException(@"Oracle database is no longer directly supported.  
-See https://cognizantopensource.github.io/maqs-dotnet/#/MAQS_8/Database/DatabaseFAQ?id=how-can-to-connect-to-an-oracle-sql-database for how to connect to an Oracle database.");
+See https://MAQS-Framework.github.io/maqs-dotnet/#/MAQS_8/Database/DatabaseFAQ?id=how-can-to-connect-to-an-oracle-sql-database for how to connect to an Oracle database.");
                 default:
                     provider = GetCustomProviderType(providerType);
                     break;

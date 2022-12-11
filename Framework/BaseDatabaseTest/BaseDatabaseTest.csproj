@@ -16,14 +16,14 @@
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Authors>MAQS</Authors>
 		<Description>Database extension for a modular automation quick start</Description>
-		<Copyright>Copyright © Cognizant $([System.DateTime]::Now.Year)</Copyright>
+		<Copyright>Copyright © MAQS $([System.DateTime]::Now.Year)</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>MAQS.png</PackageIcon>
 		<PackageIconUrl>https://raw.githubusercontent.com/MAQS-Framework/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
 		<PackageProjectUrl>https://github.com/MAQS-Framework/maqs-dotnet</PackageProjectUrl>
 		<PackageTags>test SQL database automation NUnit MSTest TestFramework</PackageTags>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<RepositoryUrl>https://github.com/CognizantOpenSource/maqs-dotnet</RepositoryUrl>
+		<RepositoryUrl>https://github.com/MAQS-Framework/maqs-dotnet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
 			Release Notes can be found at https://github.com/MAQS-Framework/maqs-dotnet/releases
