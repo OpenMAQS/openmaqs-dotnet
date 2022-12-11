@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Unit test email driver without base email test</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseEmailTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;

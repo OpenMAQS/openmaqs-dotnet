@@ -5,7 +5,7 @@
 // <summary>Web service MediaType class page</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace Maqs.BaseWebServiceTest
 {
     /// <summary>
     ///  Test media type of web service

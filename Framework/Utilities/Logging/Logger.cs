@@ -7,7 +7,7 @@
 using System;
 using System.Globalization;
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace Maqs.Utilities.Logging
 {
     /// <summary>
     /// Abstract logger base class

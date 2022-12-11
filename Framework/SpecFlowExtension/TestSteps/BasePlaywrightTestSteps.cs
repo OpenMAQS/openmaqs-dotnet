@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Base teststeps code for tests using Playwright</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
+using Maqs.BasePlaywrightTest;
 using TechTalk.SpecFlow;
-using MaqsPlaywright = CognizantSoftvision.Maqs.BasePlaywrightTest.BasePlaywrightTest;
+using MaqsPlaywright = Maqs.BasePlaywrightTest.BasePlaywrightTest;
 
-namespace CognizantSoftvision.Maqs.SpecFlow.TestSteps
+namespace Maqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for Playwright TestSteps classes

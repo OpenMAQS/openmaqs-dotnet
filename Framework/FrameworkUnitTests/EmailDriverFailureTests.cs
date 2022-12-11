@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Email driver failure tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseEmailTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MimeKit;
 using System;

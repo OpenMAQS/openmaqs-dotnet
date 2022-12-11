@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>Low level framework tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseTest;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using System.Diagnostics.CodeAnalysis;

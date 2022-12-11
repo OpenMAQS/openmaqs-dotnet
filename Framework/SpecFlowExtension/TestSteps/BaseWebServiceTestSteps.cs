@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Base teststeps code for tests using web services</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
+using Maqs.BaseWebServiceTest;
 using TechTalk.SpecFlow;
-using MaqsWeb = CognizantSoftvision.Maqs.BaseWebServiceTest.BaseWebServiceTest;
+using MaqsWeb = Maqs.BaseWebServiceTest.BaseWebServiceTest;
 
-namespace CognizantSoftvision.Maqs.SpecFlow.TestSteps
+namespace Maqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for web service TestSteps classes

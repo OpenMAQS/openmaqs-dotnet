@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Base teststeps code for tests using databases</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseDatabaseTest;
+using Maqs.BaseDatabaseTest;
 using TechTalk.SpecFlow;
-using MaqsDatabase = CognizantSoftvision.Maqs.BaseDatabaseTest.BaseDatabaseTest;
+using MaqsDatabase = Maqs.BaseDatabaseTest.BaseDatabaseTest;
 
-namespace CognizantSoftvision.Maqs.SpecFlow.TestSteps
+namespace Maqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for database TestSteps classes

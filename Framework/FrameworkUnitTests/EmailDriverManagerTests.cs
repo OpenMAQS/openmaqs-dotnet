@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>Email driver store tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseEmailTest;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;

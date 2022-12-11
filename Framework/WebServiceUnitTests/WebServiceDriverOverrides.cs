@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Web service override unit tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics.CodeAnalysis;
@@ -77,7 +77,7 @@ namespace WebServiceTesterUnitTesting
         [TestCategory(TestCategories.Utilities)]
         public void OverrideWorksForFactory()
         {
-            HttpClient factoryClient = CognizantSoftvision.Maqs.BaseWebServiceTest.HttpClientFactory.GetDefaultClient();
+            HttpClient factoryClient = Maqs.BaseWebServiceTest.HttpClientFactory.GetDefaultClient();
             Assert.AreEqual(WebServiceConfig.GetWebServiceUri() + "/", factoryClient.BaseAddress.ToString());
         }
 

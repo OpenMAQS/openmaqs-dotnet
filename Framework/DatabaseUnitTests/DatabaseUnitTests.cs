@@ -5,8 +5,8 @@
 // <summary>Unit test database driver without base database test</summary>
 //--------------------------------------------------
 
-using CognizantSoftvision.Maqs.BaseDatabaseTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseDatabaseTest;
+using Maqs.Utilities.Helper;
 using DatabaseUnitTests.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data;

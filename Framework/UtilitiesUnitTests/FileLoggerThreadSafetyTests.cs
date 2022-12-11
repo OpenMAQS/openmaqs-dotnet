@@ -5,12 +5,12 @@
 // <summary>Thread safe file logger unit tests</summary>
 //--------------------------------------------------
 
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.Utilities.Helper;
+using Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using UtilityLogger = CognizantSoftvision.Maqs.Utilities.Logging.Logger;
+using UtilityLogger = Maqs.Utilities.Logging.Logger;
 
 namespace UtilitiesUnitTesting
 {

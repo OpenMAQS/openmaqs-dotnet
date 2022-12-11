@@ -4,10 +4,10 @@
 // </copyright>
 // <summary>Helper class for getting web service specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Config class

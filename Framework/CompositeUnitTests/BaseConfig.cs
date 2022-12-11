@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Base configuration unit tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CompositeUnitTests

@@ -5,8 +5,8 @@
 // <summary>Database base test unit tests</summary>
 //--------------------------------------------------
 
-using CognizantSoftvision.Maqs.BaseDatabaseTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseDatabaseTest;
+using Maqs.Utilities.Helper;
 using Microsoft.Data.Sqlite;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

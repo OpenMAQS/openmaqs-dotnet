@@ -7,7 +7,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// Driver manager dictionary

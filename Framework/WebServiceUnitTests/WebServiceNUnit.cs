@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Web service get unit tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
 using NUnit.Framework;
 using System;
 using System.Diagnostics.CodeAnalysis;

@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>TestSteps class that inherits from BaseEmailTestSteps</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseDatabaseTest;
-using CognizantSoftvision.Maqs.SpecFlow.TestSteps;
+using Maqs.BaseDatabaseTest;
+using Maqs.SpecFlow.TestSteps;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 

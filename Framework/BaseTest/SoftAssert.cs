@@ -4,15 +4,15 @@
 // </copyright>
 // <summary>This is the SoftAssert class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.Utilities.Helper;
+using Maqs.Utilities.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// SoftAssert class

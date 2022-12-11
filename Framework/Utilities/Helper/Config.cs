@@ -16,7 +16,7 @@ using System.Text;
 using System.Xml.Linq;
 using VSTestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace Maqs.Utilities.Helper
 {
     /// <summary>
     /// Config class

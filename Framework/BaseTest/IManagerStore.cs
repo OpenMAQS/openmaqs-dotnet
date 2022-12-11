@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// Manager store interface

@@ -9,7 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Wrap basic http client interactions

@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>Web service delete unit tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
+using Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 using System.Net;

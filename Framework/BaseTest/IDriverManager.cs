@@ -4,10 +4,10 @@
 // </copyright>
 // <summary>Base driver manager interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.Utilities.Logging;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// Interface for base driver manager

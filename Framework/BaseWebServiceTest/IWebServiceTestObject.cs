@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Web service test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using Maqs.BaseTest;
 using System;
 using System.Net.Http;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Web service test object interface

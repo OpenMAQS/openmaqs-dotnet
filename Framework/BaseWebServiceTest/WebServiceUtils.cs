@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>Web service utilities</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Web service utilities

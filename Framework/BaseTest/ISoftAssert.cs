@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Soft assert interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.Utilities.Logging;
 using System;
 using System.Reflection;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// Interface for soft assert

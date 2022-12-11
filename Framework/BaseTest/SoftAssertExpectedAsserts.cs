@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// Expected assert keys for a <see cref="SoftAssert"/> instance.

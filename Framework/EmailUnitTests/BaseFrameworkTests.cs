@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>Low level framework tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseEmailTest;
+using Maqs.BaseTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using System.Diagnostics.CodeAnalysis;

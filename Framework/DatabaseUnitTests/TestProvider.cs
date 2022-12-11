@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using CognizantSoftvision.Maqs.BaseDatabaseTest.Providers;
+using Maqs.BaseDatabaseTest.Providers;
 using System.Data.SqlClient;
 
 namespace DatabaseUnitTests

@@ -10,7 +10,7 @@ using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace Maqs.Utilities.Logging
 {
     /// <summary>
     ///  Helper class for adding logs to a plain text file. Allows configurable file path.

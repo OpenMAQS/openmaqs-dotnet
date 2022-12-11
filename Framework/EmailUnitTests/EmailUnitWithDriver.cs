@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Unit test email driver with base email test</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseEmailTest;
+using Maqs.Utilities.Helper;
 using MailKit;
 using MailKit.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

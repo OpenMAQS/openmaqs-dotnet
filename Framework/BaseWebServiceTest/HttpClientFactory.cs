@@ -9,7 +9,7 @@ using System;
 using System.Net;
 using System.Net.Http;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Http client factory

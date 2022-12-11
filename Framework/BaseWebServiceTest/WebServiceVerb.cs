@@ -5,7 +5,7 @@
 // <summary>Web service verb constants</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace Maqs.BaseWebServiceTest
 {
     /// <summary>
     ///  Web service verb constants

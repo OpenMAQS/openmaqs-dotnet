@@ -5,8 +5,8 @@
 // <summary>Test the base Playwright page object model</summary>
 //-----------------------------------------------------
 
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BasePlaywrightTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 

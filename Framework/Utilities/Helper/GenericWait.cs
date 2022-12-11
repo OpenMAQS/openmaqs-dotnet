@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace Maqs.Utilities.Helper
 {
     /// <summary>
     /// Generic wait class

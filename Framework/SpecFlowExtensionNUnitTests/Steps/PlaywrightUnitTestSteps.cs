@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>TestSteps class that inherits from BasePlaywrightTestSteps</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
-using CognizantSoftvision.Maqs.SpecFlow.TestSteps;
+using Maqs.BasePlaywrightTest;
+using Maqs.SpecFlow.TestSteps;
 using NUnit.Framework;
 using System;
 using TechTalk.SpecFlow;

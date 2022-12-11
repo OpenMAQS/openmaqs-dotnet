@@ -4,10 +4,10 @@
 // </copyright>
 // <summary>Selenium driver store tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseSeleniumTest;
+using Maqs.BaseSeleniumTest.Extensions;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;

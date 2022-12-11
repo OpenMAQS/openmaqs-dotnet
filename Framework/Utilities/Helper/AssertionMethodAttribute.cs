@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using System;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace Maqs.Utilities.Helper
 {
     /// <summary>
     /// SonarLink 2699 Tests should include assertions

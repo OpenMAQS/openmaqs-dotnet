@@ -7,7 +7,7 @@
 using System;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace Maqs.Utilities.Helper
 {
     /// <summary>
     /// Initializes a new instance of the StringProcessor class

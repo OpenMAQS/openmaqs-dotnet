@@ -7,7 +7,7 @@
 
 using System;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace Maqs.Utilities.Helper
 {
     /// <summary>
     /// The configuration sections

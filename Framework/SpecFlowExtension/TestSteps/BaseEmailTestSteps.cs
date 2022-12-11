@@ -4,11 +4,11 @@
 // </copyright>
 // <summary>Base teststeps code for tests using email</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
+using Maqs.BaseEmailTest;
 using TechTalk.SpecFlow;
-using MaqsEmail = CognizantSoftvision.Maqs.BaseEmailTest.BaseEmailTest;
+using MaqsEmail = Maqs.BaseEmailTest.BaseEmailTest;
 
-namespace CognizantSoftvision.Maqs.SpecFlow.TestSteps
+namespace Maqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for email TestSteps classes

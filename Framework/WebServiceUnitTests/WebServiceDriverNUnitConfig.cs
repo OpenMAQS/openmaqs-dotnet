@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Configuration override tests for NUnit</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
 using NUnit.Framework;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;

@@ -7,7 +7,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// Soft assert exceptions

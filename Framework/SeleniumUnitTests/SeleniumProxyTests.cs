@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Selenium Proxy Tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseSeleniumTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;

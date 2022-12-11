@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Another test Selenium page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
+using Maqs.BaseSeleniumTest;
+using Maqs.BaseSeleniumTest.Extensions;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;
 

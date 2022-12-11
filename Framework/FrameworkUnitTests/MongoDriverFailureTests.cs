@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Mongo database driver failure tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseMongoTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseMongoTest;
+using Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Bson;
 using System;

@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Test the file logger</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using Maqs.Utilities.Helper;
+using Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 

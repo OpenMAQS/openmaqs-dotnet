@@ -4,8 +4,8 @@
 // </copyright>
 // <summary>Test Playwright driver manager</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BasePlaywrightTest;
+using Maqs.Utilities.Helper;
 using Microsoft.Playwright;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;

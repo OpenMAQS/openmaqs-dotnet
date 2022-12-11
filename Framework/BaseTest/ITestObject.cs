@@ -4,12 +4,12 @@
 // </copyright>
 // <summary>Test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using Maqs.Utilities.Logging;
+using Maqs.Utilities.Performance;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace Maqs.BaseTest
 {
     /// <summary>
     /// Test object interface

@@ -7,7 +7,7 @@
 using Maqs.Utilities.Helper;
 using System;
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace Maqs.Utilities.Logging
 {
     /// <summary>
     /// Helper class for logging to the console

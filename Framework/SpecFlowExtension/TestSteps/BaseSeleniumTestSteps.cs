@@ -4,12 +4,12 @@
 // </copyright>
 // <summary>Base teststeps code for tests using selenium</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
+using Maqs.BaseSeleniumTest;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-using MaqsSelenium = CognizantSoftvision.Maqs.BaseSeleniumTest.BaseSeleniumTest;
+using MaqsSelenium = Maqs.BaseSeleniumTest.BaseSeleniumTest;
 
-namespace CognizantSoftvision.Maqs.SpecFlow.TestSteps
+namespace Maqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for selenium TestSteps classes

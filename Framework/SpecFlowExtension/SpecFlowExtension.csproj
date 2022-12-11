@@ -7,10 +7,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>net471;netcoreapp3.1</TargetFrameworks>
-    <PackageId>CognizantSoftvision.Maqs.SpecFlow</PackageId>
-    <Product>CognizantSoftvision.Maqs.SpecFlow</Product>
-    <AssemblyName>CognizantSoftvision.Maqs.SpecFlow</AssemblyName>
-    <RootNamespace>CognizantSoftvision.Maqs.SpecFlow</RootNamespace>
+    <PackageId>Maqs.SpecFlow</PackageId>
+    <Product>Maqs.SpecFlow</Product>
+    <AssemblyName>Maqs.SpecFlow</AssemblyName>
+    <RootNamespace>Maqs.SpecFlow</RootNamespace>
     <ApplicationIcon>MAQS.ico</ApplicationIcon>
 	<Title>Gherkin Module</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

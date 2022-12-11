@@ -5,7 +5,7 @@
 // <summary>Test category constants</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace Maqs.Utilities.Helper
 {
     /// <summary>
     ///  Test category constants

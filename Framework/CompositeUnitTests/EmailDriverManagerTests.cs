@@ -4,9 +4,9 @@
 // </copyright>
 // <summary>Email driver store tests</summary>
 //-------------------------------------------------- 
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using Maqs.BaseEmailTest;
+using Maqs.BaseWebServiceTest;
+using Maqs.Utilities.Helper;
 using MailKit.Net.Imap;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net.Http;

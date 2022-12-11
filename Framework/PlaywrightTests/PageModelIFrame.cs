@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>Another test Playwright page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
+using Maqs.BasePlaywrightTest;
 using Microsoft.Playwright;
 using System.Diagnostics.CodeAnalysis;
 
