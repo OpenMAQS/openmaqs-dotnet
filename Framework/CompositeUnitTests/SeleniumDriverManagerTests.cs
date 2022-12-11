@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumDriverManagerTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumDriverManagerTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Selenium driver store tests</summary>
 //--------------------------------------------------
@@ -104,11 +104,11 @@ namespace CompositeUnitTests
         public void SeparateInteractions()
         {
             SeleniumDriverManager newDriver = new SeleniumDriverManager(() => WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.HeadlessChrome), this.TestObject);
-            newDriver.GetWebDriver().Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation");
+            newDriver.GetWebDriver().Navigate().GoToUrl("https://MAQS-Framework.github.io/maqs-dotnet-templates/Static/Automation");
 
             this.ManagerStore.Add("test", newDriver);
 
-            this.TestObject.WebDriver.Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/async.html");
+            this.TestObject.WebDriver.Navigate().GoToUrl("https://MAQS-Framework.github.io/maqs-dotnet-templates/Static/Automation/async.html");
 
             Assert.AreNotEqual(this.TestObject.WebDriver.Url, this.ManagerStore.GetManager<SeleniumDriverManager>("test").GetWebDriver().Url);
         }
@@ -120,10 +120,10 @@ namespace CompositeUnitTests
         public void SeparateLazyElementInteractions()
         {
             SeleniumDriverManager newDriver = new SeleniumDriverManager(() => WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.HeadlessChrome), this.TestObject);
-            newDriver.GetWebDriver().Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation");
+            newDriver.GetWebDriver().Navigate().GoToUrl("https://MAQS-Framework.github.io/maqs-dotnet-templates/Static/Automation");
             this.ManagerStore.Add("test", newDriver);
 
-            this.TestObject.WebDriver.Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/async.html");
+            this.TestObject.WebDriver.Navigate().GoToUrl("https://MAQS-Framework.github.io/maqs-dotnet-templates/Static/Automation/async.html");
 
             LazyElement topNew = new LazyElement(this.TestObject, newDriver.GetWebDriver(), By.CssSelector("*"));
             LazyElement topDefault = new LazyElement(this.TestObject, By.CssSelector("*"));

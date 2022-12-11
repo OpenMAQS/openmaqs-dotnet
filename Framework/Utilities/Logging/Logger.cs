@@ -1,6 +1,6 @@
 //--------------------------------------------------
-// <copyright file="Logger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="Logger.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Abstract logger</summary>
 //--------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceConfigTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceConfigTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test web service configuration test</summary>
 //--------------------------------------------------

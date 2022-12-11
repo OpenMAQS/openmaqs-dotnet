@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="ManagerDictionary.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ManagerDictionary.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Dictionary for handling driver managers</summary>
 //--------------------------------------------------

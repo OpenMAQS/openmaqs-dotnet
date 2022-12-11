@@ -15,10 +15,10 @@
 		<Title>Web Service Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Authors>CognizantSoftvision</Authors>
-		<Company>CognizantSoftvision</Company>
-		<Description>Web Service extension for Cognizant Softvision's modular automation quick start</Description>
-		<Copyright>Copyright © Cognizant $([System.DateTime]::Now.Year)</Copyright>
+		<Authors>MAQS</Authors>
+		<Company>MAQS</Company>
+		<Description>Web Service extension for MAQS's modular automation quick start</Description>
+		<Copyright>Copyright © MAQS $([System.DateTime]::Now.Year)</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>MAQS.png</PackageIcon>
 		<PackageIconUrl>https://raw.githubusercontent.com/MAQS-Framework/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>

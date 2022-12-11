@@ -15,8 +15,8 @@
 		<Title>Base Test Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Authors>CognizantSoftvision</Authors>
-		<Company>CognizantSoftvision</Company>
+		<Authors>MAQS</Authors>
+		<Company>MAQS</Company>
 		<Description>Base extension for the modular automation quick start</Description>
 		<Copyright>Copyright © MAQS $([System.DateTime]::Now.Year)</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>

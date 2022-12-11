@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceWithDriverCustomVerb.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceWithDriverCustomVerb.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>HTTP Request Custom Verb unit tests</summary>
 //--------------------------------------------------

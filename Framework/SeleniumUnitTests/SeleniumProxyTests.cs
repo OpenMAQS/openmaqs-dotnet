@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumProxyTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumProxyTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Selenium Proxy Tests</summary>
 //--------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoDriverManagerTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="MongoDriverManagerTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Mongo database driver store tests</summary>
 //--------------------------------------------------

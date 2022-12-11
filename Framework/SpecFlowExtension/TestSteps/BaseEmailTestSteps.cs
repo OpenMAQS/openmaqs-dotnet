@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseEmailTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseEmailTestSteps.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using email</summary>
 //--------------------------------------------------

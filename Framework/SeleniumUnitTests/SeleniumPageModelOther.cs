@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------
-// <copyright file="SeleniumPageModelOther.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumPageModelOther.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Another test Selenium page object model</summary>
 //-----------------------------------------------------

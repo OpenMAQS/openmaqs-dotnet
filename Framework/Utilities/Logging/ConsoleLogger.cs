@@ -1,6 +1,6 @@
 //--------------------------------------------------
-// <copyright file="ConsoleLogger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ConsoleLogger.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for console logging</summary>
 //--------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceDriver.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>The basic http client interactions</summary>
 //--------------------------------------------------

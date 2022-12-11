@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------
-// <copyright file="PageDriverTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PageDriverTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Test the page driver</summary>
 //-----------------------------------------------------
@@ -246,7 +246,7 @@ namespace PlaywrightTests
         [TestMethod]
         public void ContentTest()
         {
-            Assert.IsTrue(this.PageDriver.Content().Contains("Softvision"));
+            Assert.IsTrue(this.PageDriver.Content().Contains("MAQS"));
         }
 
         /// <summary>
@@ -338,7 +338,7 @@ namespace PlaywrightTests
         [TestMethod]
         public void InnerHTMLTest()
         {
-            Assert.IsTrue(this.PageDriver.InnerHTML(Footer).Contains("Softvision"));
+            Assert.IsTrue(this.PageDriver.InnerHTML(Footer).Contains("MAQS"));
         }
 
         /// <summary>
@@ -347,7 +347,7 @@ namespace PlaywrightTests
         [TestMethod]
         public void InnerTextTest()
         {
-            Assert.IsTrue(this.PageDriver.InnerText(Footer).Contains("Softvision"));
+            Assert.IsTrue(this.PageDriver.InnerText(Footer).Contains("MAQS"));
         }
 
         /// <summary>

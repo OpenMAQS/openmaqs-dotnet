@@ -147,7 +147,7 @@ Close the page/tab
 ## Contains
 Get the HTML for the page
 ```csharp
-    Assert.IsTrue(this.PageDriver.Content().Contains("Softvision"));
+    Assert.IsTrue(this.PageDriver.Content().Contains("MAQS"));
 ```
 
 ## DblClick
@@ -238,13 +238,13 @@ Hover over an element
 ## InnerHTML
 Get an element's inner HTML
 ```csharp
-    Assert.IsTrue(this.PageDriver.InnerHTML(Footer).Contains("Softvision"));
+    Assert.IsTrue(this.PageDriver.InnerHTML(Footer).Contains("MAQS"));
 ```
 
 ## InnerText
 Get an element's inner text
 ```csharp
-    Assert.IsTrue(this.PageDriver.InnerText(Footer).Contains("Softvision"));
+    Assert.IsTrue(this.PageDriver.InnerText(Footer).Contains("MAQS"));
 ```
 
 ## InputValue

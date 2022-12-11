@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceDriverOverrides.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceDriverOverrides.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Web service override unit tests</summary>
 //--------------------------------------------------
@@ -23,12 +23,12 @@ namespace WebServiceTesterUnitTesting
         /// <summary>
         /// Base test url
         /// </summary>
-        private const string BaseUrl = "https://github.com/CognizantOpenSource";
+        private const string BaseUrl = "https://github.com/MAQS-Framework";
 
         /// <summary>
         /// Expected updated url
         /// </summary>
-        private const string UpdatedUrl = "https://github.com/CognizantOpenSource/maqs-dotnet";
+        private const string UpdatedUrl = "https://github.com/MAQS-Framework/maqs-dotnet";
 
         /// <summary>
         /// Timeout override

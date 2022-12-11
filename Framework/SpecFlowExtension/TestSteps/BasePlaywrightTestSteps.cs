@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="BasePlaywrightTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BasePlaywrightTestSteps.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using Playwright</summary>
 //--------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="SoftAssertException.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SoftAssertException.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Exception class for soft asserts</summary>
 //--------------------------------------------------

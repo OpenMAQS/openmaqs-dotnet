@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------
-// <copyright file="CustomXmlMediaTypeFormatterTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="CustomXmlMediaTypeFormatterTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Test the CustomXMLMediaTypeFormatter class</summary>
 //-----------------------------------------------------

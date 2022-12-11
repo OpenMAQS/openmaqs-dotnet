@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseTestTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseTestTests.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Tests for testing base test directly</summary>
 //--------------------------------------------------

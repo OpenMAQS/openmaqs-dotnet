@@ -236,7 +236,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p MAQS-Framework/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -258,7 +258,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p MAQS-Framework/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -280,7 +280,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p MAQS-Framework/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -366,9 +366,9 @@ jobs:
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - name: Build the docker-compose mongo stack
-        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p MAQS-Framework/maqs-dotnet up -d
       - name: Build the docker-compose email stack
-        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p MAQS-Framework/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:

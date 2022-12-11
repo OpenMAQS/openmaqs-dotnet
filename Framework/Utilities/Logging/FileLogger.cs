@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="FileLogger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="FileLogger.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Writes event logs to plain text file</summary>
 //--------------------------------------------------

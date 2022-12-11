@@ -103,14 +103,14 @@ Assert.IsTrue(this.PageDriver.IsVisible(TrainingOneLink));
 Get an element's inner HTML
 #### Written as
 ```csharp
-Assert.IsTrue(this.ElementID.InnerHTML().Contains("Softvision"));
+Assert.IsTrue(this.ElementID.InnerHTML().Contains("MAQS"));
 ```
 
 ### InnerText
 Get an element's inner text
 #### Written as
 ```csharp
-Assert.IsTrue(this.ElementID.InnerText().Contains("Softvision"));
+Assert.IsTrue(this.ElementID.InnerText().Contains("MAQS"));
 ```
 
 ### InputValue

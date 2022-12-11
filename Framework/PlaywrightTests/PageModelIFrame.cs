@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------
-// <copyright file="PageModelOther.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PageModelOther.cs" company="MAQS">
+//  Copyright 2022 MAQS, All rights Reserved
 // </copyright>
 // <summary>Another test Playwright page object model</summary>
 //-----------------------------------------------------
