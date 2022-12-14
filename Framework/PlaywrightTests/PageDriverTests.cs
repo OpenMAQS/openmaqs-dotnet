@@ -467,7 +467,7 @@ namespace PlaywrightTests
         [TestMethod]
         public void TitleTest()
         {
-            Assert.AreEqual("Automation - Magenic Automation Test Site", this.PageDriver.Title());
+            Assert.AreEqual("Automation - MAQS Automation Test Site", this.PageDriver.Title());
         }
 
         /// <summary>

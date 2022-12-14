@@ -25,7 +25,7 @@ Templates can be found in the [Visual Studio Marketplace](https://marketplace.vi
    - Selenium tests (Visual Studio and NUnit versions)
    - Selenium page object model
    - Web Service tests (Visual Studio and NUnit versions)
-- DotNet Core project templates - https://www.nuget.org/packages/Cognizant.Maqs.Templates 
+- DotNet Core project templates - https://www.nuget.org/packages/Maqs.Templates 
    - Appium (with tests and page object models) 
    - Base
    - Composite (mix and match all MAQS capabilities)  

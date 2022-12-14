@@ -56,7 +56,7 @@ Syncronys element wrapper
 
 ## Sample code
 ```csharp
-using Cognizant.Maqs.BasePlaywrightTest;
+using Maqs.BasePlaywrightTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
