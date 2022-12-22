@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>Performance Timer Collection Class</summary>
 //--------------------------------------------------
-using Utilities.Logging;
+using Maqs.Utilities.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;

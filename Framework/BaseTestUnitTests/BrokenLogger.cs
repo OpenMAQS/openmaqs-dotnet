@@ -1,4 +1,4 @@
-﻿using Maqs.Utilities.Helper;
+﻿using Maqs.Utilities.Helper.Exceptions;
 using Maqs.Utilities.Logging;
 
 namespace BaseTestUnitTests

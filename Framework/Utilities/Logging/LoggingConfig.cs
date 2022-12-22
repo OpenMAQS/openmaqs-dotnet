@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>Logging related configuration</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper.Exceptions;
 using System;
 using System.IO;
 using System.Reflection;

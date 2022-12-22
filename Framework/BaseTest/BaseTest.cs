@@ -4,7 +4,7 @@
 // </copyright>
 // <summary>Base code for tests without a system under test object like web drivers or database connections</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper.Exceptions;
 using Maqs.Utilities.Logging;
 using Maqs.Utilities.Performance;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
