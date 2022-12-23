@@ -4,6 +4,7 @@
 // </copyright>
 // <summary>Helper class for getting application configuration values</summary>
 //--------------------------------------------------
+using Maqs.Utilities.Helper.Exceptions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using System;
@@ -536,7 +537,7 @@ namespace Maqs.Utilities.Helper
                 string[] newPath = (string[])path.Clone();
 
 #pragma warning disable CS0618 // Type or member is obsolete
-                newPath[0] = ConfigSection.Maqs.ToString().ToLower();
+                newPath[0] = ConfigSection.GlobalMaqs.ToString().ToLower();
 #pragma warning restore CS0618 // Type or member is obsolete
 
                 value = compositeConfig.GetValue(newPath);

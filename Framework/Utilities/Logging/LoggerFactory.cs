@@ -4,6 +4,7 @@
 // </copyright>
 // <summary>Logger factory</summary>
 //--------------------------------------------------
+using Maqs.Utilities.Helper;
 using Maqs.Utilities.Helper.Exceptions;
 
 namespace Maqs.Utilities.Logging

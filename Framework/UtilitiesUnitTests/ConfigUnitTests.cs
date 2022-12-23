@@ -5,6 +5,7 @@
 // <summary>Unit test configuration tests</summary>
 //--------------------------------------------------
 using Maqs.Utilities.Helper;
+using Maqs.Utilities.Helper.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
