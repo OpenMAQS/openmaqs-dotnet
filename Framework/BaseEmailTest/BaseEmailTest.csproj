@@ -7,26 +7,26 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
-		<PackageId>Maqs.Email</PackageId>
-		<AssemblyName>Maqs.BaseEmailTest</AssemblyName>
-		<RootNamespace>Maqs.BaseEmailTest</RootNamespace>
+		<PackageId>OpenMaqs.Email</PackageId>
+		<AssemblyName>OpenMaqs.BaseEmailTest</AssemblyName>
+		<RootNamespace>OpenMaqs.BaseEmailTest</RootNamespace>
 		<ApplicationIcon>MAQS.ico</ApplicationIcon>
 		<Title>Email Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Authors>MAQS</Authors>
-		<Description>Email extension for MAQS's modular automation quick start</Description>
-		<Copyright>Copyright © MAQS $([System.DateTime]::Now.Year)</Copyright>
+		<Authors>OpenMAQS</Authors>
+		<Description>Email extension for OpenMAQS's modular automation quick start</Description>
+		<Copyright>Copyright © OpenMAQS $([System.DateTime]::Now.Year)</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>MAQS.png</PackageIcon>
-		<PackageIconUrl>https://raw.githubusercontent.com/https://github.com/MAQS-Framework/maqs-dotnet/releases/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
-		<PackageProjectUrl>https://github.com/https://github.com/MAQS-Framework/maqs-dotnet/releases/maqs-dotnet</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/https://github.com/OpenMAQS/openmaqs-dotnet/releases/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+		<PackageProjectUrl>https://github.com/https://github.com/OpenMAQS/openmaqs-dotnet/releases/maqs-dotnet</PackageProjectUrl>
 		<PackageTags>test email automation NUnit MSTest TestFramework</PackageTags>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<RepositoryUrl>https://github.com/MAQS-Framework/maqs-dotnet</RepositoryUrl>
+		<RepositoryUrl>https://github.com/OpenMAQS/openmaqs-dotnet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
-			Release Notes can be found at https://github.com/MAQS-Framework/maqs-dotnet/releases
+			Release Notes can be found at https://github.com/OpenMAQS/openmaqs-dotnet/releases
 		</PackageReleaseNotes>
 		<DebugSymbols>true</DebugSymbols>
 		<IncludeSymbols>true</IncludeSymbols>
