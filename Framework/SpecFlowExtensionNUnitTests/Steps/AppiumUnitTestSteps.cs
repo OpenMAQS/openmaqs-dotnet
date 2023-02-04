@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumUnitTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AppiumUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BaseAppiumTestSteps</summary>
 //--------------------------------------------------
-using Maqs.BaseAppiumTest;
-using Maqs.SpecFlow.TestSteps;
+using OpenMaqs.BaseAppiumTest;
+using OpenMaqs.SpecFlow.TestSteps;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 

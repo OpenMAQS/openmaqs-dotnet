@@ -1,11 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="SeleniumCustomConfigUnitTest.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumCustomConfigUnitTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test the selenium framework with a custom configuration</summary>
 //-----------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;

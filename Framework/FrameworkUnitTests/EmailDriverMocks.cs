@@ -1,6 +1,6 @@
 //--------------------------------------------------
-// <copyright file="EmailDriverMocks.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EmailDriverMocks.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Email driver mocks</summary>
 //--------------------------------------------------

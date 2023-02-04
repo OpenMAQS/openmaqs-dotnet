@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="EventFiringDatabaseDriver.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EventFiringDatabaseDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The event firing database interactions</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
-namespace Maqs.BaseDatabaseTest
+namespace OpenMaqs.BaseDatabaseTest
 {
     /// <summary>
     /// Wrap basic firing database interactions

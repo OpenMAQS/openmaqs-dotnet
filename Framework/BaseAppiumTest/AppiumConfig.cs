@@ -1,14 +1,14 @@
 //--------------------------------------------------
-// <copyright file="AppiumConfig.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AppiumConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the Appium Configuration class</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 
-namespace Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium Configuration class

@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="IManagerStore.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="IManagerStore.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>manager store interface</summary>
 //--------------------------------------------------
 using System;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Manager store interface

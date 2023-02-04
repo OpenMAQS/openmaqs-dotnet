@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseUtils.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseUtils.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Database utilities</summary>
 //--------------------------------------------------
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace Maqs.BaseDatabaseTest
+namespace OpenMaqs.BaseDatabaseTest
 {
     /// <summary>
     /// Database utilities

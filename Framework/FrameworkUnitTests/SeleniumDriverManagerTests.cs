@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumDriverManagerTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumDriverManagerTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Selenium driver store tests</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.BaseWebServiceTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;

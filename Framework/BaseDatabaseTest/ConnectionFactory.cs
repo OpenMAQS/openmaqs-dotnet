@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="ConnectionFactory.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ConnectionFactory.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting database specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.BaseDatabaseTest.Providers;
+using OpenMaqs.BaseDatabaseTest.Providers;
 using System;
 using System.Data;
 
-namespace Maqs.BaseDatabaseTest
+namespace OpenMaqs.BaseDatabaseTest
 {
     /// <summary>
     /// Config class

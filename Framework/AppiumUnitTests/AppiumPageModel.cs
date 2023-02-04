@@ -1,11 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="AppiumPageModel.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AppiumPageModel.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>A test Appium page object model</summary>
 //-----------------------------------------------------
-using Maqs.BaseAppiumTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseAppiumTest;
+using OpenMaqs.Utilities.Helper;
 using OpenQA.Selenium.Appium;
 
 namespace AppiumUnitTests

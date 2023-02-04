@@ -1,13 +1,13 @@
 //--------------------------------------------------
-// <copyright file="ConsoleLogger.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ConsoleLogger.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for console logging</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// Helper class for logging to the console

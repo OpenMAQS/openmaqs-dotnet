@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test database driver without base database test</summary>
 //--------------------------------------------------
 
-using Maqs.BaseDatabaseTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.Utilities.Helper;
 using DatabaseUnitTests.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data;

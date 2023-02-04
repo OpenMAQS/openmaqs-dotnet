@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseMongoTest.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseMongoTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base MongoDB test class</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using MongoDB.Driver;
 using System;
 
-namespace Maqs.BaseMongoTest
+namespace OpenMaqs.BaseMongoTest
 {
     /// <summary>
     /// Generic base MongoDB test class

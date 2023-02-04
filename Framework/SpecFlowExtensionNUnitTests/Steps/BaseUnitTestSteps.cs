@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseUnitTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BaseTestSteps</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.SpecFlow.TestSteps;
+using OpenMaqs.BaseTest;
+using OpenMaqs.SpecFlow.TestSteps;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 

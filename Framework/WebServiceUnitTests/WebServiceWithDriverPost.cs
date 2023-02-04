@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceWithDriverPost.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="WebServiceWithDriverPost.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web service post unit tests</summary>
 //--------------------------------------------------
-using Maqs.BaseWebServiceTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 using System.Net;

@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailConfig.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EmailConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting email specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace Maqs.BaseEmailTest
+namespace OpenMaqs.BaseEmailTest
 {
     /// <summary>
     /// Email configuration class

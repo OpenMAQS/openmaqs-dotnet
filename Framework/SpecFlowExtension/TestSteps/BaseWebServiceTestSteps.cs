@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseWebServiceTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseWebServiceTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using web services</summary>
 //--------------------------------------------------
-using Maqs.BaseWebServiceTest;
+using OpenMaqs.BaseWebServiceTest;
 using TechTalk.SpecFlow;
 using MaqsWeb = Maqs.BaseWebServiceTest.BaseWebServiceTest;
 
-namespace Maqs.SpecFlow.TestSteps
+namespace OpenMaqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for web service TestSteps classes

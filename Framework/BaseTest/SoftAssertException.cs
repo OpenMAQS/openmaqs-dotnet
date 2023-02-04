@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SoftAssertException.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SoftAssertException.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Exception class for soft asserts</summary>
 //--------------------------------------------------
 using System;
 using System.Runtime.Serialization;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Soft assert exceptions

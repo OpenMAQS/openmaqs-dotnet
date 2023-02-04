@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="IProvider.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="IProvider.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>IProvider interface</summary>
 //--------------------------------------------------
 
-namespace Maqs.BaseDatabaseTest.Providers
+namespace OpenMaqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The Provider interface.

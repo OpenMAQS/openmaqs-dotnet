@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumUtilities.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AppiumUtilities.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the Appium utilities class</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Logging;
+using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.IO;
 
-namespace Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Static class for the appium utilities

@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlaywrightConfig.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PlaywrightConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting Playwright specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Config class

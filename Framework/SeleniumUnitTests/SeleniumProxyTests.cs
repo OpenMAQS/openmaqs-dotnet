@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumProxyTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumProxyTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Selenium Proxy Tests</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;

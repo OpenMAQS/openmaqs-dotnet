@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseConfig.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting database specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.BaseDatabaseTest.Providers;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseDatabaseTest.Providers;
+using OpenMaqs.Utilities.Helper;
 using System.Collections.Generic;
 using System.Data;
 
-namespace Maqs.BaseDatabaseTest
+namespace OpenMaqs.BaseDatabaseTest
 {
     /// <summary>
     /// Config class

@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumUnitTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BaseSeleniumTestSteps</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.SpecFlow.TestSteps;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.SpecFlow.TestSteps;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Support.Events;
 using TechTalk.SpecFlow;

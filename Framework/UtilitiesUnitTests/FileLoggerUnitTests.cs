@@ -1,13 +1,13 @@
 ﻿//-----------------------------------------------------
-// <copyright file="FileLoggerUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="FileLoggerUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test the file logger</summary>
 //-----------------------------------------------------
 using BaseTestUnitTests;
-using Maqs.BaseTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using NUnit.Framework;
 using System;
 using System.Collections;

@@ -1,13 +1,13 @@
 //--------------------------------------------------
-// <copyright file="ConfigSection.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ConfigSection.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Configuration sections</summary>
 //--------------------------------------------------
 
 using System;
 
-namespace Maqs.Utilities.Helper
+namespace OpenMaqs.Utilities.Helper
 {
     /// <summary>
     /// The configuration sections

@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="ActionBuilder.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ActionBuilder.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting selenium specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.BaseSeleniumTest.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
-namespace Maqs.BaseSeleniumTest
+namespace OpenMaqs.BaseSeleniumTest
 {
     /// <summary>
     /// Contains methods for interactions using selenium Actions class

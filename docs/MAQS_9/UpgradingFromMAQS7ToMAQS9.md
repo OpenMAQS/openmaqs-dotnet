@@ -17,7 +17,7 @@ The name 'CognizantSoftvision' is replacing 'Magenic' in all namespaces.
 // using Magenic.Maqs.Utilities.Logging;
 
 // New namespaces
-using Maqs.Utilities.Logging;
+using OpenMaqs.Utilities.Logging;
 ```
 
 ## Config

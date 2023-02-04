@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseTestObject.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds base context data</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Logging;
-using Maqs.Utilities.Performance;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Base test context data

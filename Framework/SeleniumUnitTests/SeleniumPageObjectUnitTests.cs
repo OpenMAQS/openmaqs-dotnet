@@ -1,12 +1,12 @@
 ﻿//-----------------------------------------------------
-// <copyright file="SeleniumPageObjectUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumPageObjectUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test the base Selenium page object model</summary>
 //-----------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;

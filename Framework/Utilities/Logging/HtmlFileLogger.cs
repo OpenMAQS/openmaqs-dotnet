@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="HtmlFileLogger.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="HtmlFileLogger.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Writes event logs to HTML file</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 using System.IO;
 using System.Web;
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// Helper class for adding logs to an HTML file. Allows configurable file path.

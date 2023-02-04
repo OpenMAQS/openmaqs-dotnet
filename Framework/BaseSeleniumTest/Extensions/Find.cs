@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="Find.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="Find.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the FindElements class</summary>
 //--------------------------------------------------
@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Maqs.BaseSeleniumTest.Extensions
+namespace OpenMaqs.BaseSeleniumTest.Extensions
 {
     /// <summary>
     /// General Element functions for finding and returning Web Elements

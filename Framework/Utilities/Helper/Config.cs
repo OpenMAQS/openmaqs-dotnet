@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="Config.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="Config.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting application configuration values</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper.Exceptions;
+using OpenMaqs.Utilities.Helper.Exceptions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using System;
@@ -17,7 +17,7 @@ using System.Text;
 using System.Xml.Linq;
 using VSTestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 
-namespace Maqs.Utilities.Helper
+namespace OpenMaqs.Utilities.Helper
 {
     /// <summary>
     /// Config class
@@ -45,7 +45,7 @@ namespace Maqs.Utilities.Helper
             .Build();
 
         /// <summary>
-        /// Configuration mappings from run context 
+        /// Configuration mappings from run context
         /// </summary>
         private static IConfigurationRoot runContextConfig = GetEmptyConfig();
 

@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumUtilities.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumUtilities.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Utilities class for generic selenium methods</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using Selenium.Axe;
@@ -14,7 +14,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace Maqs.BaseSeleniumTest
+namespace OpenMaqs.BaseSeleniumTest
 {
     /// <summary>
     /// Static class for the selenium utilities

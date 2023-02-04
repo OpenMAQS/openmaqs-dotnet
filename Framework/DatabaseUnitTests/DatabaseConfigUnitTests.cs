@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseConfigUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseConfigUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test database configuration test</summary>
 //--------------------------------------------------
-using Maqs.BaseDatabaseTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.Utilities.Helper;
 using Dapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;

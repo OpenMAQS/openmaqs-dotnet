@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="ExtendableTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ExtendableTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Extendable class for defining a test steps class</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
-using Maqs.Utilities.Performance;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TechTalk.SpecFlow;
 
-namespace Maqs.SpecFlow
+namespace OpenMaqs.SpecFlow
 {
     /// <summary>
     /// Abstract a TestSteps class

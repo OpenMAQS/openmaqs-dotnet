@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoDriverManager.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="MongoDriverManager.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Mongo database driver</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using MongoDB.Driver;
 using System;
 
-namespace Maqs.BaseMongoTest
+namespace OpenMaqs.BaseMongoTest
 {
     /// <summary>
     /// Mongo database driver

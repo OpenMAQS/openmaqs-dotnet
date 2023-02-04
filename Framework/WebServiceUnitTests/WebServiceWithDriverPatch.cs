@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceWithDriverPatch.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="WebServiceWithDriverPatch.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Put unit tests</summary>
 //--------------------------------------------------
 
-using Maqs.BaseWebServiceTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 using System.Net;

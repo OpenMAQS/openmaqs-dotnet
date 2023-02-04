@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseFrameworkTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseFrameworkTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Low level framework tests</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.BaseWebServiceTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseTest;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using System.Diagnostics.CodeAnalysis;

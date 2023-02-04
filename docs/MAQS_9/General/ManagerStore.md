@@ -59,8 +59,8 @@ DatabaseDriver alsoDBNamed = this.ManagerStore.GetDriver<DatabaseDriverManager>(
 
 # Example
 ```csharp
-using Maqs.BaseDatabaseTest;
-using Maqs.BaseSeleniumTest;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.BaseSeleniumTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 

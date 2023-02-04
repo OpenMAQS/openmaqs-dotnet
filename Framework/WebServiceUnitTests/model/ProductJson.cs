@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="ProductJson.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ProductJson.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Product definition for Json</summary>
 //--------------------------------------------------

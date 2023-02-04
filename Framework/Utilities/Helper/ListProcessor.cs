@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="ListProcessor.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ListProcessor.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting selenium specific configuration values</summary>
 //--------------------------------------------------
@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Maqs.Utilities.Helper
+namespace OpenMaqs.Utilities.Helper
 {
     /// <summary>
     /// Contains methods for processing lists
@@ -63,7 +63,7 @@ namespace Maqs.Utilities.Helper
                     $"The following lists are not the same size: Expected {Environment.NewLine} [{CreateCommaDelimitedString(expectedList)}] {Environment.NewLine} and got {Environment.NewLine} [{CreateCommaDelimitedString(actualList)}]");
             }
 
-            // Clone the first list 
+            // Clone the first list
             List<string> clonedList = new List<string>(expectedList.Count);
             foreach (string text in expectedList)
             {

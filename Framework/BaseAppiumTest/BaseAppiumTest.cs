@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseAppiumTest.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseAppiumTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Appium test class</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium.Appium;
 using System;
 
-namespace Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Generic base Appium test class

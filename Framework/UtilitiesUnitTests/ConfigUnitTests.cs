@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="ConfigUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ConfigUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test configuration tests</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Helper.Exceptions;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseConfig.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base configuration unit tests</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CompositeUnitTests

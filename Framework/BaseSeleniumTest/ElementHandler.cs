@@ -1,18 +1,18 @@
 ﻿//--------------------------------------------------
-// <copyright file="ElementHandler.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ElementHandler.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting selenium specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 
-namespace Maqs.BaseSeleniumTest
+namespace OpenMaqs.BaseSeleniumTest
 {
     /// <summary>
     /// Contains functions for interacting with IWebElement objects

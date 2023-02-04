@@ -1,13 +1,13 @@
 //--------------------------------------------------
-// <copyright file="ActionBuilder.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ActionBuilder.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Utilities class for generic accessibility methods</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;

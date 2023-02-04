@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceProxyTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="WebServiceProxyTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web Service Proxy Tests</summary>
 //--------------------------------------------------
-using Maqs.BaseWebServiceTest;
+using OpenMaqs.BaseWebServiceTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Concurrent;

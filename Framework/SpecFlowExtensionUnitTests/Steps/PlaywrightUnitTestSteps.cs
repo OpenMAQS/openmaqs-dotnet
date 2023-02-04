@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlaywrightUnitTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PlaywrightUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BasePlaywrightTestSteps</summary>
 //--------------------------------------------------
-using Maqs.BasePlaywrightTest;
-using Maqs.SpecFlow.TestSteps;
+using OpenMaqs.BasePlaywrightTest;
+using OpenMaqs.SpecFlow.TestSteps;
 using NUnit.Framework;
 using System;
 using TechTalk.SpecFlow;

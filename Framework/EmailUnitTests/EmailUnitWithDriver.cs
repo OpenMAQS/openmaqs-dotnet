@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailUnitWithDriver.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EmailUnitWithDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test email driver with base email test</summary>
 //--------------------------------------------------
-using Maqs.BaseEmailTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseEmailTest;
+using OpenMaqs.Utilities.Helper;
 using MailKit;
 using MailKit.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

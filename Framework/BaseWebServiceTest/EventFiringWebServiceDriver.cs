@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="EventFiringWebServiceDriver.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EventFiringWebServiceDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The event firing basic http client interactions</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 
-namespace Maqs.BaseWebServiceTest
+namespace OpenMaqs.BaseWebServiceTest
 {
     /// <summary>
     /// Wrap basic http client interactions

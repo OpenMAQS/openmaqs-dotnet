@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlatformType.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PlatformType.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Known device types</summary>
 //--------------------------------------------------
-namespace Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Known device types

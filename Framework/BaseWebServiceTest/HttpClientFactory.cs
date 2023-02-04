@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="HttpClientFactory.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="HttpClientFactory.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Factory for creating HTTP clients</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using System;
 using System.Net;
 using System.Net.Http;
 
-namespace Maqs.BaseWebServiceTest
+namespace OpenMaqs.BaseWebServiceTest
 {
     /// <summary>
     /// Http client factory

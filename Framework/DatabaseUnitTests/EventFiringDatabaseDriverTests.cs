@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="EventFiringDatabaseDriverTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EventFiringDatabaseDriverTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Database base Eventfiring driver test unit tests</summary>
 //--------------------------------------------------
 
-using Maqs.BaseDatabaseTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Data;

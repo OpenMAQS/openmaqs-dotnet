@@ -56,7 +56,7 @@ Syncronys element wrapper
 
 ## Sample code
 ```csharp
-using Maqs.BasePlaywrightTest;
+using OpenMaqs.BasePlaywrightTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests

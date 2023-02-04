@@ -1,11 +1,11 @@
 //--------------------------------------------------
-// <copyright file="EmailDriverFailureTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EmailDriverFailureTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Email driver failure tests</summary>
 //--------------------------------------------------
-using Maqs.BaseEmailTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseEmailTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MimeKit;
 using System;

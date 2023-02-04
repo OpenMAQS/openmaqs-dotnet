@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumSoftAssert.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumSoftAssert.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Selenium override for the soft asserts</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
+using OpenMaqs.BaseTest;
 using System;
 
-namespace Maqs.BaseSeleniumTest
+namespace OpenMaqs.BaseSeleniumTest
 {
     /// <summary>
     /// Soft Assert override for selenium tests

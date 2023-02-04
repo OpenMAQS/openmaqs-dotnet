@@ -1,11 +1,11 @@
 //--------------------------------------------------
-// <copyright file="TestResultType.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="TestResultType.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test result type enumeration</summary>
 //--------------------------------------------------
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// The type of result

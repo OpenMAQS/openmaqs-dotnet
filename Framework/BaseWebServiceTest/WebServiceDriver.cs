@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceDriver.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="WebServiceDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The basic http client interactions</summary>
 //--------------------------------------------------
 
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Maqs.BaseWebServiceTest
+namespace OpenMaqs.BaseWebServiceTest
 {
     /// <summary>
     /// Wrap basic http client interactions

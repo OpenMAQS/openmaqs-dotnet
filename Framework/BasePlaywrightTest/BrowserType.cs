@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="BrowserType.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BrowserType.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Known browser types</summary>
 //--------------------------------------------------
-namespace Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Known browser types

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="Product.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="Product.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Object for string products</summary>
 //--------------------------------------------------

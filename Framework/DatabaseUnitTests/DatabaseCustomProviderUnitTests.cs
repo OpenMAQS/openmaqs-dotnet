@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseCustomProviderUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseCustomProviderUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Database base test unit tests</summary>
 //--------------------------------------------------
 
-using Maqs.BaseDatabaseTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.Utilities.Helper;
 using NUnit.Framework;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;

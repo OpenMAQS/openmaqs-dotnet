@@ -7,28 +7,28 @@
 
   <PropertyGroup>
     <TargetFrameworks>net471;netcoreapp3.1</TargetFrameworks>
-    <PackageId>Maqs.SpecFlow</PackageId>
-    <Product>Maqs.SpecFlow</Product>
-    <AssemblyName>Maqs.SpecFlow</AssemblyName>
-    <RootNamespace>Maqs.SpecFlow</RootNamespace>
+    <PackageId>OpenMaqs.SpecFlow</PackageId>
+    <Product>OpenMaqs.SpecFlow</Product>
+    <AssemblyName>OpenMaqs.SpecFlow</AssemblyName>
+    <RootNamespace>OpenMaqs.SpecFlow</RootNamespace>
     <ApplicationIcon>MAQS.ico</ApplicationIcon>
 	<Title>Gherkin Module</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Authors>MAQS</Authors>
-    <Company>MAQS</Company>
-    <Description>SpecFlow extension for MAQS's modular automation quick start</Description>
-    <Copyright>Copyright © MAQS $([System.DateTime]::Now.Year)</Copyright>
+    <Authors>OpenMAQS</Authors>
+    <Company>OpenMAQS</Company>
+    <Description>SpecFlow extension for OpenMAQS's modular automation quick start</Description>
+    <Copyright>Copyright © OpenMAQS $([System.DateTime]::Now.Year)</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>MAQS.png</PackageIcon>
-	<PackageIconUrl>https://raw.githubusercontent.com/MAQS-Framework/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+	<PackageIconUrl>https://raw.githubusercontent.com/OpenMAQS/openmaqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/MAQS-Framework/maqs-dotnet</PackageProjectUrl>
     <PackageTags>test selenium appium automation NUnit MSTest TestFramework SpecFlow</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <RepositoryUrl>https://github.com/MAQS-Framework/maqs-dotnet</RepositoryUrl>
+    <RepositoryUrl>https://github.com/OpenMAQS/openmaqs-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>
-      Release Notes can be found at https://github.com/MAQS-Framework/maqs-dotnet/releases
+      Release Notes can be found at https://github.com/OpenMAQS/openmaqs-dotnet/releases
     </PackageReleaseNotes>
     <DebugSymbols>true</DebugSymbols>
     <IncludeSymbols>true</IncludeSymbols>

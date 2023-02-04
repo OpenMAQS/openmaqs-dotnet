@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumWinAppUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AppiumWinAppUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test class for windows application driver related functions</summary>
 //--------------------------------------------------
-using Maqs.BaseAppiumTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseAppiumTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium;
 using System;

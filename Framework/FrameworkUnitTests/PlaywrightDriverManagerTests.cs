@@ -1,11 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="PlaywrightDriverManagerTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PlaywrightDriverManagerTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test Playwright driver manager</summary>
 //-----------------------------------------------------
-using Maqs.BasePlaywrightTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BasePlaywrightTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.Playwright;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;

@@ -8,28 +8,28 @@
 	<PropertyGroup>
 		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
 		<Nullable>enable</Nullable>
-		<PackageId>Maqs.Playwright</PackageId>
-		<Product>Maqs.Playwright</Product>
-		<AssemblyName>Maqs.BasePlaywrightTest</AssemblyName>
-		<RootNamespace>Maqs.BasePlaywrightTest</RootNamespace>
+		<PackageId>OpenMaqs.Playwright</PackageId>
+		<Product>OpenMaqs.Playwright</Product>
+		<AssemblyName>OpenMaqs.BasePlaywrightTest</AssemblyName>
+		<RootNamespace>OpenMaqs.BasePlaywrightTest</RootNamespace>
 		<ApplicationIcon>MAQS.ico</ApplicationIcon>
 		<Title>Playwright Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Authors>MAQS</Authors>
-		<Company>MAQS</Company>
+		<Authors>OpenMAQS</Authors>
+		<Company>OpenMAQS</Company>
 		<Description>Playwright extension for the modular automation quick start</Description>
-		<Copyright>Copyright © MAQS $([System.DateTime]::Now.Year)</Copyright>
+		<Copyright>Copyright © OpenMAQS $([System.DateTime]::Now.Year)</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>MAQS.png</PackageIcon>
-		<PackageIconUrl>https://raw.githubusercontent.com/MAQS-Framework/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
-		<PackageProjectUrl>https://github.com/MAQS-Framework/maqs-dotnet</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/OpenMAQS/openmaqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+		<PackageProjectUrl>https://github.com/OpenMAQS/openmaqs-dotnet</PackageProjectUrl>
 		<PackageTags>test playwright automation NUnit MSTest TestFramework</PackageTags>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<RepositoryUrl>https://github.com/MAQS-Framework/maqs-dotnet</RepositoryUrl>
+		<RepositoryUrl>https://github.com/OpenMAQS/openmaqs-dotnet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
-			Release Notes can be found at https://github.com/MAQS-Framework/maqs-dotnet/releases
+			Release Notes can be found at https://github.com/OpenMAQS/openmaqs-dotnet/releases
 		</PackageReleaseNotes>
 		<DebugSymbols>true</DebugSymbols>
 		<IncludeSymbols>true</IncludeSymbols>

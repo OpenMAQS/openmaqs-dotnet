@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServicePatches.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="WebServicePatches.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web service get unit tests</summary>
 //--------------------------------------------------
-using Maqs.BaseWebServiceTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics.CodeAnalysis;

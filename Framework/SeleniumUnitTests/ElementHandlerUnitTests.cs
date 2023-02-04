@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="ElementHandlerUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ElementHandlerUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting selenium specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System;

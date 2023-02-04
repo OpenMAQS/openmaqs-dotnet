@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="DriverManagerTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DriverManagerTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Low level framework tests</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.BaseWebServiceTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics.CodeAnalysis;

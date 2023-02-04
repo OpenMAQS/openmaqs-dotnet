@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="ActionBuilderUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ActionBuilderUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting selenium specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest;
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;

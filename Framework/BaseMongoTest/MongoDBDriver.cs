@@ -1,12 +1,12 @@
-﻿// <copyright file="MongoDBDriver.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+﻿// <copyright file="MongoDBDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the driver for the mongo collection object</summary>
 //--------------------------------------------------
 using MongoDB.Driver;
 using System.Collections.Generic;
 
-namespace Maqs.BaseMongoTest
+namespace OpenMaqs.BaseMongoTest
 {
     /// <summary>
     /// Class to wrap the IMongoCollection and related helper functions

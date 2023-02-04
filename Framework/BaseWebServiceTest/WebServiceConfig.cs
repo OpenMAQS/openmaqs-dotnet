@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceConfig.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="WebServiceConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting web service specific configuration values</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 
-namespace Maqs.BaseWebServiceTest
+namespace OpenMaqs.BaseWebServiceTest
 {
     /// <summary>
     /// Config class

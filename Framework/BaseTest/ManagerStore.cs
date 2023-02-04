@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="ManagerDictionary.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ManagerDictionary.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Dictionary for handling driver managers</summary>
 //--------------------------------------------------
 using System;
 using System.Collections.Generic;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Driver manager dictionary
@@ -19,28 +19,28 @@ namespace Maqs.BaseTest
         /// </summary>
         private readonly Dictionary<string, IDriverManager> managerDictionary = new Dictionary<string, IDriverManager>();
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public int Count => managerDictionary.Count;
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public T GetDriver<T>(string key)
         {
             return (T)managerDictionary[key].Get();
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public T GetDriver<T, U>() where U : IDriverManager
         {
             return (T)GetManager<U>().Get();
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public IDriverManager GetManager(string key)
         {
             return GetManager<IDriverManager>(key);
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public T GetManager<T>() where T : IDriverManager
         {
             return (T)managerDictionary[typeof(T).FullName];
@@ -56,32 +56,32 @@ namespace Maqs.BaseTest
             return (T)managerDictionary[key];
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public void Add(IDriverManager manager)
         {
             managerDictionary.Add(manager.GetType().FullName, manager);
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public void Add(string key, IDriverManager manager)
         {
             managerDictionary.Add(key, manager);
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public void AddOrOverride(IDriverManager manager)
         {
             this.AddOrOverride(manager.GetType().FullName, manager);
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public void AddOrOverride(string key, IDriverManager manager)
         {
             this.Remove(key);
             managerDictionary.Add(key, manager);
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public bool Remove(string key)
         {
             if (managerDictionary.ContainsKey(key) && managerDictionary[key] != null)
@@ -92,7 +92,7 @@ namespace Maqs.BaseTest
             return managerDictionary.Remove(key);
         }
 
-        /// <inheritdoc /> 
+        /// <inheritdoc />
         public bool Remove<T>() where T : IDriverManager
         {
             return this.Remove(typeof(T).FullName);

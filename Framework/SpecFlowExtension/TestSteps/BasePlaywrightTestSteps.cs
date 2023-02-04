@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="BasePlaywrightTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BasePlaywrightTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using Playwright</summary>
 //--------------------------------------------------
-using Maqs.BasePlaywrightTest;
+using OpenMaqs.BasePlaywrightTest;
 using TechTalk.SpecFlow;
 using MaqsPlaywright = Maqs.BasePlaywrightTest.BasePlaywrightTest;
 
-namespace Maqs.SpecFlow.TestSteps
+namespace OpenMaqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for Playwright TestSteps classes

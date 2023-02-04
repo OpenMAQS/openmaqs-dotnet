@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="PerformanceUnitTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PerformanceUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>PerformanceTests class</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
-using Maqs.Utilities.Performance;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;

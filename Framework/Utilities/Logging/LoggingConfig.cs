@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="LoggingConfig.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="LoggingConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Logging related configuration</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Helper.Exceptions;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper.Exceptions;
 using System;
 using System.IO;
 using System.Reflection;
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// Logging related configuration

@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="IHtmlFileLogger.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="IHtmlFileLogger.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>HTML file logger interface</summary>
 //--------------------------------------------------
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// Inteface for HTML file logger

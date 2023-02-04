@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="AccessibilityCheckType.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AccessibilityCheckType.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Accessibility check types</summary>
 //--------------------------------------------------
-namespace Maqs.BaseSeleniumTest
+namespace OpenMaqs.BaseSeleniumTest
 {
     /// <summary>
     /// Known browser types

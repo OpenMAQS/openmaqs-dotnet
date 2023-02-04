@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlaywrightDriverManager.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PlaywrightDriverManager.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Playwright driver</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.Playwright;
 using System;
 
-namespace Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Playwright driver store

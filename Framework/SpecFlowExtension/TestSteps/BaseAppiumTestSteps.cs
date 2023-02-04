@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseAppiumTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseAppiumTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using appium</summary>
 //--------------------------------------------------
-using Maqs.BaseAppiumTest;
+using OpenMaqs.BaseAppiumTest;
 using OpenQA.Selenium.Appium;
 using TechTalk.SpecFlow;
 using MaqsAppium = Maqs.BaseAppiumTest.BaseAppiumTest;
 
-namespace Maqs.SpecFlow.TestSteps
+namespace OpenMaqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for appium TestSteps classes

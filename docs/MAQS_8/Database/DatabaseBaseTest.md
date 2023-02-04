@@ -36,9 +36,9 @@ this.TestObject.Log.LogMessage("I am testing with MAQS");
 ## Sample code
 ```csharp
 using System.Linq;
-using Maqs.BaseDatabaseTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DatabaseUnitTests

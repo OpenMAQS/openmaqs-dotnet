@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SQLServerProvider.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SQLServerProvider.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>SQLServerProvider class</summary>
 //--------------------------------------------------
 
 using System.Data.SqlClient;
 
-namespace Maqs.BaseDatabaseTest.Providers
+namespace OpenMaqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The SQL server provider.

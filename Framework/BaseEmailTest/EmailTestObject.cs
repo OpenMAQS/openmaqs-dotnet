@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailTestObject.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EmailTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds email context data</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using MailKit.Net.Imap;
 using System;
 
-namespace Maqs.BaseEmailTest
+namespace OpenMaqs.BaseEmailTest
 {
     /// <summary>
     /// Email test context data

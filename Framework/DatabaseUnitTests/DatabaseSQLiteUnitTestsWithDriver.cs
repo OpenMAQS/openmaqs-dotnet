@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseSQLiteUnitTestsWithDriver.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseSQLiteUnitTestsWithDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit tests for SQLITE provider</summary>
 //--------------------------------------------------
 
-using Maqs.BaseDatabaseTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.Utilities.Helper;
 using Dapper;
 using DatabaseUnitTests.Models;
 using Microsoft.Data.Sqlite;

@@ -15,7 +15,7 @@
       <Value>UDID</Value>
       <Value>Appium</Value>
       <Value>isSSL</Value>
-      <Value>Sqlite</Value>	  
+      <Value>Sqlite</Value>
     </CollectionProperty>
     <StringProperty Name="MergeSettingsFiles">NoMerge</StringProperty>
   </GlobalSettings>
@@ -45,7 +45,7 @@
     <Analyzer AnalyzerId="StyleCop.CSharp.DocumentationRules">
       <AnalyzerSettings>
         <StringProperty Name="CompanyName">MAQS</StringProperty>
-        <StringProperty Name="Copyright">Copyright 2022 MAQS, All rights Reserved</StringProperty>
+        <StringProperty Name="Copyright">Copyright 2023 OpenMAQS, All rights Reserved</StringProperty>
       </AnalyzerSettings>
     </Analyzer>
     <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">

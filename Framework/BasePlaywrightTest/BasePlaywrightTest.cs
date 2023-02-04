@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="BasePlaywrightTest.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BasePlaywrightTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Playwright test class</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.Playwright;
 using System;
 using System.IO;
 using System.Linq;
 
-namespace Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Generic base Playwright test class

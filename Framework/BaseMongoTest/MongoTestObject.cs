@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoTestObject.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="MongoTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds MongoDB context data</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using MongoDB.Driver;
 using System;
 
-namespace Maqs.BaseMongoTest
+namespace OpenMaqs.BaseMongoTest
 {
     /// <summary>
     /// Mongo test context data

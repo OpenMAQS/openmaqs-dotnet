@@ -1,11 +1,11 @@
 //--------------------------------------------------
-// <copyright file="LoggingEnabled.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="LoggingEnabled.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>When to enable logging enumeration</summary>
 //--------------------------------------------------
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// The type of message

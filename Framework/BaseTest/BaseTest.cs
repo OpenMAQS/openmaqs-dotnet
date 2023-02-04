@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseTest.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base code for tests without a system under test object like web drivers or database connections</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Helper.Exceptions;
-using Maqs.Utilities.Logging;
-using Maqs.Utilities.Performance;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper.Exceptions;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
@@ -23,7 +23,7 @@ using System.Text;
 using NUnitTestContext = NUnit.Framework.TestContext;
 using VSTestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Base for tests without a defined system under test

@@ -37,8 +37,8 @@ this.TestObject.Log.LogMessage("I am testing with MAQS");
 
 ## Sample code
 ```csharp
-using Maqs.BaseEmailTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseEmailTest;
+using OpenMaqs.Utilities.Helper;
 using MailKit;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MimeKit;

@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="AbstractLazyIWebElement.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AbstractLazyIWebElement.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the abstract LazyElement class</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -18,7 +18,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace Maqs.BaseSeleniumTest.Extensions
+namespace OpenMaqs.BaseSeleniumTest.Extensions
 {
     /// <summary>
     /// Abstract structure for dynamically finding and interacting with elements

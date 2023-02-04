@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="PageDriverFactoryTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PageDriverFactoryTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test page driver factory</summary>
 //--------------------------------------------------
-using Maqs.BasePlaywrightTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BasePlaywrightTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 

@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseDatabaseTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseDatabaseTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using databases</summary>
 //--------------------------------------------------
-using Maqs.BaseDatabaseTest;
+using OpenMaqs.BaseDatabaseTest;
 using TechTalk.SpecFlow;
 using MaqsDatabase = Maqs.BaseDatabaseTest.BaseDatabaseTest;
 
-namespace Maqs.SpecFlow.TestSteps
+namespace OpenMaqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for database TestSteps classes

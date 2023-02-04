@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseSeleniumTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseSeleniumTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using selenium</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest;
+using OpenMaqs.BaseSeleniumTest;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using MaqsSelenium = Maqs.BaseSeleniumTest.BaseSeleniumTest;
 
-namespace Maqs.SpecFlow.TestSteps
+namespace OpenMaqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for selenium TestSteps classes

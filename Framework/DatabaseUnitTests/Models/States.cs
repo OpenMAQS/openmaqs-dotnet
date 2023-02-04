@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="States.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="States.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Model representing States table</summary>
 //--------------------------------------------------

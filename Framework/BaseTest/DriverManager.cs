@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="DriverManager.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DriverManager.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base driver manager</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Logging;
+using OpenMaqs.Utilities.Logging;
 using System;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Base driver manager object

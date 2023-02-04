@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="IEmailTestObject.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="IEmailTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds email test object interface</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
+using OpenMaqs.BaseTest;
 using MailKit.Net.Imap;
 using System;
 
-namespace Maqs.BaseEmailTest
+namespace OpenMaqs.BaseEmailTest
 {
     /// <summary>
     /// Email test object interface

@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseEmailTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseEmailTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using email</summary>
 //--------------------------------------------------
-using Maqs.BaseEmailTest;
+using OpenMaqs.BaseEmailTest;
 using TechTalk.SpecFlow;
 using MaqsEmail = Maqs.BaseEmailTest.BaseEmailTest;
 
-namespace Maqs.SpecFlow.TestSteps
+namespace OpenMaqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for email TestSteps classes

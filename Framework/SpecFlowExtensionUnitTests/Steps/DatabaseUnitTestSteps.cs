@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseUnitTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BaseEmailTestSteps</summary>
 //--------------------------------------------------
-using Maqs.BaseDatabaseTest;
-using Maqs.SpecFlow.TestSteps;
+using OpenMaqs.BaseDatabaseTest;
+using OpenMaqs.SpecFlow.TestSteps;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 

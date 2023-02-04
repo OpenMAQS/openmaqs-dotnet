@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="ILogger.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ILogger.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Logger interface</summary>
 //--------------------------------------------------
 using System;
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// Base interface for loggers 

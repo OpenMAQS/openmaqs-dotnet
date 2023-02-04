@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="IAppiumTestObject.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="IAppiumTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds Appium test object interface</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
+using OpenMaqs.BaseTest;
 using OpenQA.Selenium.Appium;
 using System;
 
-namespace Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium test object interface

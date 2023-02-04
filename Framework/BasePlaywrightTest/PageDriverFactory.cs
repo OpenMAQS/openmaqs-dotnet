@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="PageDriverFactory.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="PageDriverFactory.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>page factory</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Logging;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.Playwright;
 using System;
 
 
-namespace Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Factory for creating page drivers

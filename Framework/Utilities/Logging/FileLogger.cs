@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="FileLogger.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="FileLogger.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Writes event logs to plain text file</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper;
 using System;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     ///  Helper class for adding logs to a plain text file. Allows configurable file path.

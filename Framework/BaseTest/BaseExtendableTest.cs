@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseExtendableTest.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseExtendableTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base code for test classes that setup test objects like web drivers or database connections</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Logging;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Base code for test classes that setup test objects like web drivers or database connections
@@ -25,7 +25,7 @@ namespace Maqs.BaseTest
         }
 
         /// <summary>
-        /// Gets or sets the test object 
+        /// Gets or sets the test object
         /// </summary>void CreateNewTestObject
         protected new T TestObject
         {

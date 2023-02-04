@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="StringProcessor.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="StringProcessor.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Help utilities for string processing</summary>
 //--------------------------------------------------
 using System;
 using System.Text;
 
-namespace Maqs.Utilities.Helper
+namespace OpenMaqs.Utilities.Helper
 {
     /// <summary>
     /// Initializes a new instance of the StringProcessor class

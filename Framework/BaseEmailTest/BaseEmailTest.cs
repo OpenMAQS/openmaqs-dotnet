@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseEmailTest.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseEmailTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base email test class</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using MailKit.Net.Imap;
 
-namespace Maqs.BaseEmailTest
+namespace OpenMaqs.BaseEmailTest
 {
     /// <summary>
     /// Generic base email test class

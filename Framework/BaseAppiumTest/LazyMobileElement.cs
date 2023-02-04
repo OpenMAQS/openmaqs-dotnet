@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="LazyMobileElement.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="LazyMobileElement.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the LazyMobileElement class</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.BaseSeleniumTest.Extensions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 
-namespace Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Driver for dynamically finding and interacting with elements

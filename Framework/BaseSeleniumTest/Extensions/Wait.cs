@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="Wait.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="Wait.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Wait extension for web drivers and elements</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 
-namespace Maqs.BaseSeleniumTest.Extensions
+namespace OpenMaqs.BaseSeleniumTest.Extensions
 {
     /// <summary>
     /// Web driver wait extension methods

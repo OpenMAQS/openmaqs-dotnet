@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseDriver.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="DatabaseDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The basic database interactions</summary>
 //--------------------------------------------------
@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace Maqs.BaseDatabaseTest
+namespace OpenMaqs.BaseDatabaseTest
 {
     /// <summary>
     /// Wraps the basic database interactions

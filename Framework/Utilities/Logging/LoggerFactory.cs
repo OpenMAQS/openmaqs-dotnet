@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="LoggerFactory.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="LoggerFactory.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Logger factory</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Helper.Exceptions;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Helper.Exceptions;
 
-namespace Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// Logger factory

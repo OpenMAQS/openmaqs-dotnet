@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Expected assert keys for a <see cref="SoftAssert"/> instance.

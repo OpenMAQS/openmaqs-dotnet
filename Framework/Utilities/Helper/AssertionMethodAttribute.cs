@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="SoftAssert.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SoftAssert.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the SoftAssert class</summary>
 //--------------------------------------------------
 using System;
 
-namespace Maqs.Utilities.Helper
+namespace OpenMaqs.Utilities.Helper
 {
     /// <summary>
     /// SonarLink 2699 Tests should include assertions

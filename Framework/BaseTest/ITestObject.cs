@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="ITestObject.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="ITestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test object interface</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Logging;
-using Maqs.Utilities.Performance;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 using System;
 using System.Collections.Generic;
 
-namespace Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Test object interface

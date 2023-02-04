@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="FilesUploaded.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="FilesUploaded.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>FilesUploaded model</summary>
 //--------------------------------------------------

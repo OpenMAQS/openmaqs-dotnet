@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="CustomXmlMediaTypeFormatter.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="CustomXmlMediaTypeFormatter.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Custom XML formatter</summary>
 //--------------------------------------------------
@@ -11,7 +11,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Xml.Serialization;
 
-namespace Maqs.BaseWebServiceTest
+namespace OpenMaqs.BaseWebServiceTest
 {
     /// <summary>
     /// Create a custom xml media type formatter

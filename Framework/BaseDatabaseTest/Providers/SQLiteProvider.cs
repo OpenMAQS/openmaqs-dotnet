@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SqliteProvider.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SqliteProvider.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>SQLiteProvider class</summary>
 //--------------------------------------------------
 
 using Microsoft.Data.Sqlite;
 
-namespace Maqs.BaseDatabaseTest.Providers
+namespace OpenMaqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The Sqlite provider.

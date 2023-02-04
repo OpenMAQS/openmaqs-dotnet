@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="MobileDriverManager.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="MobileDriverManager.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Mobile driver manager</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium.Appium;
 using System;
 
-namespace Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Mobile driver manager

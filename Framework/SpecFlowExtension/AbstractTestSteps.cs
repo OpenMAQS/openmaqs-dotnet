@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="AbstractTestSteps.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="AbstractTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Abstract class with TestSteps functions</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
+using OpenMaqs.BaseTest;
 using System;
 using TechTalk.SpecFlow;
 
-namespace Maqs.SpecFlow
+namespace OpenMaqs.SpecFlow
 {
     /// <summary>
     /// The abstract TestSteps class definition

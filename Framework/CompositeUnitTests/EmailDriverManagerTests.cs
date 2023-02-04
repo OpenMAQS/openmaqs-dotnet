@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailDriverManagerTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="EmailDriverManagerTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Email driver store tests</summary>
 //-------------------------------------------------- 
-using Maqs.BaseEmailTest;
-using Maqs.BaseWebServiceTest;
-using Maqs.Utilities.Helper;
+using OpenMaqs.BaseEmailTest;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
 using MailKit.Net.Imap;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net.Http;

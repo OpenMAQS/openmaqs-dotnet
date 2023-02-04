@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseWithSoftAssertTests.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BaseWithSoftAssertTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Tests soft assert interactions with base test</summary>
 //--------------------------------------------------
-using Maqs.BaseTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using System.Collections.Generic;

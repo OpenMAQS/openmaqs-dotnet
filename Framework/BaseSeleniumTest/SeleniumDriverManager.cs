@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumDriverManager.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="SeleniumDriverManager.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Selenium driver</summary>
 //--------------------------------------------------
-using Maqs.BaseSeleniumTest.Extensions;
-using Maqs.BaseTest;
-using Maqs.Utilities.Helper;
-using Maqs.Utilities.Logging;
+using OpenMaqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.BaseTest;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.Events;
@@ -15,7 +15,7 @@ using System;
 using System.Reflection;
 using System.Text;
 
-namespace Maqs.BaseSeleniumTest
+namespace OpenMaqs.BaseSeleniumTest
 {
     /// <summary>
     /// Selenium driver store

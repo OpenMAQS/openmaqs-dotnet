@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="TestCategories.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="TestCategories.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test category constants</summary>
 //--------------------------------------------------
 
-namespace Maqs.Utilities.Helper
+namespace OpenMaqs.Utilities.Helper
 {
     /// <summary>
     ///  Test category constants

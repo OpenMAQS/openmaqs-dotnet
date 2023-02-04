@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoFactory.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="MongoFactory.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Mongo database driver factory</summary>
 //--------------------------------------------------
 using MongoDB.Driver;
 
-namespace Maqs.BaseMongoTest
+namespace OpenMaqs.BaseMongoTest
 {
     /// <summary>
     /// Mongo database factory

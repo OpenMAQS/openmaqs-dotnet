@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="BasePlaywrightPageModel.cs" company="MAQS">
-//  Copyright 2022 MAQS, All rights Reserved
+// <copyright file="BasePlaywrightPageModel.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Playwright page model class</summary>
 //--------------------------------------------------
-using Maqs.Utilities.Logging;
-using Maqs.Utilities.Performance;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 
-namespace Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Base Playwright page model
