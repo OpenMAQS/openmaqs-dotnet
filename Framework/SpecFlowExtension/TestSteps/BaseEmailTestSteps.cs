@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using OpenMaqs.BaseEmailTest;
 using TechTalk.SpecFlow;
-using MaqsEmail = Maqs.BaseEmailTest.BaseEmailTest;
+using MaqsEmail = OpenMaqs.BaseEmailTest.BaseEmailTest;
 
 namespace OpenMaqs.SpecFlow.TestSteps
 {

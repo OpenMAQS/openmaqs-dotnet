@@ -46,7 +46,7 @@ namespace SeleniumUnitTests
         [TestCleanup]
         public void Cleanup()
         {
-            var passed = this.GetResultType() == Maqs.Utilities.Logging.TestResultType.PASS;
+            var passed = this.GetResultType() == OpenMaqs.Utilities.Logging.TestResultType.PASS;
 
             if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnSauceLabs"), "YES", StringComparison.OrdinalIgnoreCase))
             {
@@ -56,7 +56,7 @@ namespace SeleniumUnitTests
                 }
                 catch (Exception e)
                 {
-                    this.Log.LogMessage(Maqs.Utilities.Logging.MessageType.WARNING, "Failed to set Sauce Result because: " + e.Message);
+                    this.Log.LogMessage(OpenMaqs.Utilities.Logging.MessageType.WARNING, "Failed to set Sauce Result because: " + e.Message);
                 }
             }
             base.MaqsTeardown();

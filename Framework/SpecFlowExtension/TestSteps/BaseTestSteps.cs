@@ -8,7 +8,7 @@ using OpenMaqs.BaseTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TechTalk.SpecFlow;
-using MaqsBase = Maqs.BaseTest.BaseTest;
+using MaqsBase = OpenMaqs.BaseTest.BaseTest;
 
 namespace OpenMaqs.SpecFlow.TestSteps
 {

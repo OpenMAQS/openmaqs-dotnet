@@ -7,7 +7,7 @@
 using OpenMaqs.BaseSeleniumTest;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-using MaqsSelenium = Maqs.BaseSeleniumTest.BaseSeleniumTest;
+using MaqsSelenium = OpenMaqs.BaseSeleniumTest.BaseSeleniumTest;
 
 namespace OpenMaqs.SpecFlow.TestSteps
 {

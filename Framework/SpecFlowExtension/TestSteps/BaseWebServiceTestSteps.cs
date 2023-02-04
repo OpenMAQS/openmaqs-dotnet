@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using OpenMaqs.BaseWebServiceTest;
 using TechTalk.SpecFlow;
-using MaqsWeb = Maqs.BaseWebServiceTest.BaseWebServiceTest;
+using MaqsWeb = OpenMaqs.BaseWebServiceTest.BaseWebServiceTest;
 
 namespace OpenMaqs.SpecFlow.TestSteps
 {

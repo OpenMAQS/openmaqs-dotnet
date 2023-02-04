@@ -10,7 +10,7 @@ using OpenMaqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using UtilityLogger = Maqs.Utilities.Logging.Logger;
+using UtilityLogger = OpenMaqs.Utilities.Logging.Logger;
 
 namespace UtilitiesUnitTesting
 {

@@ -7,7 +7,7 @@
 using OpenMaqs.BaseAppiumTest;
 using OpenQA.Selenium.Appium;
 using TechTalk.SpecFlow;
-using MaqsAppium = Maqs.BaseAppiumTest.BaseAppiumTest;
+using MaqsAppium = OpenMaqs.BaseAppiumTest.BaseAppiumTest;
 
 namespace OpenMaqs.SpecFlow.TestSteps
 {

@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using OpenMaqs.BasePlaywrightTest;
 using TechTalk.SpecFlow;
-using MaqsPlaywright = Maqs.BasePlaywrightTest.BasePlaywrightTest;
+using MaqsPlaywright = OpenMaqs.BasePlaywrightTest.BasePlaywrightTest;
 
 namespace OpenMaqs.SpecFlow.TestSteps
 {

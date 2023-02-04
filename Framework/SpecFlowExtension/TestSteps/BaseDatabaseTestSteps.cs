@@ -6,7 +6,7 @@
 //--------------------------------------------------
 using OpenMaqs.BaseDatabaseTest;
 using TechTalk.SpecFlow;
-using MaqsDatabase = Maqs.BaseDatabaseTest.BaseDatabaseTest;
+using MaqsDatabase = OpenMaqs.BaseDatabaseTest.BaseDatabaseTest;
 
 namespace OpenMaqs.SpecFlow.TestSteps
 {
