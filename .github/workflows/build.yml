@@ -86,12 +86,18 @@ jobs:
             
             Write-Host "::set-output name=BUILD_NUMBER::$($version)"
 
-  test-untils:
+  test-utils:
     name: Utils
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: builder
         env:
           GlobalMaqs:ConfigJsonEnvRunOverride: ENV
@@ -142,6 +148,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -161,6 +173,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -207,6 +225,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
@@ -235,6 +259,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
       - id: builder
@@ -257,6 +287,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
       - id: builder
@@ -279,6 +315,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
       - id: builder
@@ -301,7 +343,7 @@ jobs:
     runs-on: windows-2019
     steps:
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: | 
             3.1.x
@@ -342,6 +384,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -363,6 +411,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - name: Build the docker-compose mongo stack
@@ -388,6 +442,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -409,6 +469,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -430,6 +496,12 @@ jobs:
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - run: dotnet restore Framework/Base.sln
         shell: pwsh
       - run: choco upgrade firefox
@@ -457,6 +529,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            6.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - run: |
