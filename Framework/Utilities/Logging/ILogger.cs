@@ -9,7 +9,7 @@ using System;
 namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
-    /// Base interface for loggers 
+    /// Base interface for loggers
     /// </summary>
     public interface ILogger : IDisposable
     {

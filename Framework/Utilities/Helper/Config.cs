@@ -25,7 +25,7 @@ namespace OpenMaqs.Utilities.Helper
     public static class Config
     {
         /// <summary>
-        /// Object for locking the configs so 
+        /// Object for locking the configs so
         /// pending tasks will wait for config to be freed
         /// </summary>
         private static readonly object ConfigLock = new object();
