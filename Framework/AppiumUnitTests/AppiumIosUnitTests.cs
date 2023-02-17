@@ -81,8 +81,8 @@ namespace AppiumUnitTests
             {
                 DeviceName = "iPhone 14",
                 PlatformName = "iOS",
-                PlatformVersion = "16.0",
-                BrowserName = "Safari"
+                PlatformVersion = "16",
+                //BrowserName = "Safari"
             };
 
             var sauceOptions = AppiumConfig.GetCapabilitiesAsObjects();
