@@ -42,7 +42,7 @@ namespace CompositeUnitTests
             this.ManagerStore.Add("test", newDriver);
             this.ManagerStore.GetDriver<WebServiceDriver, WebServiceDriverManager>();
 
-            Assert.AreNotEqual(this.TestObject.WebServiceDriver, this.ManagerStore.GetManager<WebServiceDriverManager>("test"));
+            Assert.AreNotEqual(this.TestObject.WebServiceDriver, this.ManagerStore.GetManager<WebServiceDriverManager>("test").GetWebServiceDriver());
             Assert.AreNotEqual(this.TestObject.WebServiceManager.Get(), this.ManagerStore.GetDriver<WebServiceDriver>("test"));
         }
 
