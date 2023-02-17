@@ -418,7 +418,7 @@ namespace SeleniumUnitTests
             string logContent = File.ReadAllText(filePath);
 
             SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 15 items"), "Expected to find 15 pass matches."));
-            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 66 items"), "Expected to find 66 inapplicable matches."));
+            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 67 items"), "Expected to find 66 inapplicable matches."));
             SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 6 items"), "Expected to find 6 violations matches."));
             SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 0 items"), "Expected to find 0 incomplete matches."));
             SoftAssert.FailTestIfAssertFailed();
