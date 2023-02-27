@@ -78,7 +78,7 @@ namespace SeleniumUnitTests
             string url = Path.Combine(SeleniumConfig.GetWebSiteBase().Replace("https://", "http://"), "iFrame.html");
             this.WebDriver.Navigate().GoToUrl(url);
 
-            bool proxyUsed = RequestsHistory.Values.Any(r => r.RequestUri.ToString().Contains("Static/Automation/iFrame.html"));
+            bool proxyUsed = RequestsHistory.Values.Any(r => r.RequestUri.ToString().Contains("Automation/iFrame.html"));
             Assert.IsTrue(proxyUsed, "Failed to assert the proxy was used by the web driver.");
         }
 

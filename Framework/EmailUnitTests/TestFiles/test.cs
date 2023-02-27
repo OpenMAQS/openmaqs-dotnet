@@ -21,7 +21,7 @@ namespace SeleniumTests
         public void SetupTest()
         {
             driver = new FirefoxDriver();
-            baseURL = "http://localhost:25396/Static/Training3/Loginpage.html";
+            baseURL = "http://localhost:25396/Training3/Loginpage.html";
             verificationErrors = new StringBuilder();
         }
         
@@ -42,7 +42,7 @@ namespace SeleniumTests
         [Test]
         public void TheTest()
         {
-            driver.Navigate().GoToUrl(baseURL + "/Static/Training3/Loginpage.html");
+            driver.Navigate().GoToUrl(baseURL + "/Training3/Loginpage.html");
             driver.FindElement(By.Id("name")).Clear();
             driver.FindElement(By.Id("name")).SendKeys("Ted");
             driver.FindElement(By.Id("pw")).Clear();

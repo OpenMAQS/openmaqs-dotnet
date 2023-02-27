@@ -213,7 +213,7 @@ namespace SeleniumUnitTests
         {
             string website = SeleniumConfig.GetWebSiteBase();
 
-            Assert.IsTrue(website.Equals("https://MAQSopensource.github.io/maqs-dotnet-templates/Static/Automation/", StringComparison.InvariantCultureIgnoreCase));
+            Assert.IsTrue(website.Equals("https://openmaqs.github.io/TestingSite/Automation/", StringComparison.InvariantCultureIgnoreCase));
         }
 
         /// <summary>
