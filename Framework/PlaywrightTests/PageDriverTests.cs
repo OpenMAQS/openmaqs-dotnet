@@ -29,7 +29,7 @@ namespace PlaywrightTests
         private readonly string MainHeader = "H2";
 
         /// <summary>
-        /// Rename header Javascript funtion 
+        /// Rename header Javascript funtion
         /// </summary>
         private readonly string RenameHeaderFunc = @"function changeMainHeaderName() {document.querySelector('H2').innerHTML = 'NEWNAME';}";
 

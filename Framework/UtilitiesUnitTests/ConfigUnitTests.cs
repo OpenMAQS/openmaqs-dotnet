@@ -348,7 +348,7 @@ namespace UtilitiesUnitTesting
         }
 
         /// <summary>
-        /// Tests that we can skip the validation 
+        /// Tests that we can skip the validation
         /// </summary>
         [TestMethod]
         public void ConfigFieldsMissingButValidationSkipped()

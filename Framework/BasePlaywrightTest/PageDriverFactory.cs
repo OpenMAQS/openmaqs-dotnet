@@ -59,7 +59,7 @@ namespace OpenMaqs.BasePlaywrightTest
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="browser">The current browser</param>
         /// <returns>A page</returns>
