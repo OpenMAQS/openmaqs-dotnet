@@ -11,7 +11,7 @@
     <Product>OpenMaqs</Product>
     <AssemblyName>OpenMaqs.BaseCompositeTest</AssemblyName>
     <RootNamespace>OpenMaqs.BaseCompositeTest</RootNamespace>
-    <ApplicationIcon>OpenMaqs.ico</ApplicationIcon>
+    <ApplicationIcon>MAQS.ico</ApplicationIcon>
 	<Title>All OpenMAQS Modules</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

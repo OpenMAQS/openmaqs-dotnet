@@ -28,7 +28,7 @@ namespace WebServiceTesterUnitTesting
         /// <summary>
         /// Expected updated url
         /// </summary>
-        private const string UpdatedUrl = "https://github.com/OpenMAQS/maqs-dotnet";
+        private const string UpdatedUrl = "https://github.com/OpenMAQS/openmaqs-dotnet";
 
         /// <summary>
         /// Timeout override
