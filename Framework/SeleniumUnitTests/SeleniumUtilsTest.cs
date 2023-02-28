@@ -32,7 +32,6 @@ namespace SeleniumUnitTests
         /// </summary>
         private static readonly string TestSiteUrl = SeleniumConfig.GetWebSiteBase();
 
-        
         /// <summary>
         /// Unit testing site URL - Automation page
         /// </summary>

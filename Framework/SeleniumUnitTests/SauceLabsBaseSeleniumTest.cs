@@ -22,14 +22,14 @@ namespace SeleniumUnitTests
                 var name = this.TestContext.FullyQualifiedTestClassName + "." + this.TestContext.TestName;
                 var options = SeleniumConfig.GetRemoteCapabilitiesAsObjects();
 
-                var sauceOptions = options["sauce:options"] as Dictionary<string, object>;
-                sauceOptions.Add("screenResolution", "1280x1024");
-                sauceOptions.Add("build", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SAUCE_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("SAUCE_BUILD_NAME"));
-                sauceOptions.Add("name", name);
+                var sauceOptions = options["bstack:options"] as Dictionary<string, object>;
+                sauceOptions.Add("resolution", "1280x1024");
+                sauceOptions.Add("buildName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SAUCE_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("SAUCE_BUILD_NAME"));
+                sauceOptions.Add("sessionName", name);
 
                 var browserOptions = new ChromeOptions
                 {
-                    PlatformName = "Windows 10",
+                    PlatformName = "WINDOWS",
                     BrowserVersion = "latest"
                 };
 
@@ -52,7 +52,7 @@ namespace SeleniumUnitTests
             {
                 try
                 {
-                    ((IJavaScriptExecutor)this.WebDriver).ExecuteScript("sauce:job-result=" + (passed ? "passed" : "failed"));
+                    ((IJavaScriptExecutor)this.WebDriver).ExecuteScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"" + (passed ? "passed" : "failed") + "\", \"reason\": \"\"}}");
                 }
                 catch (Exception e)
                 {

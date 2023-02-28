@@ -79,16 +79,16 @@ namespace AppiumUnitTests
         {
             AppiumOptions options = new AppiumOptions
             {
-                DeviceName = "iPhone 13 Simulator",
+                DeviceName = "iPhone 14",
                 PlatformName = "iOS",
-                PlatformVersion = "15.0",
-                BrowserName = "Safari"
+                PlatformVersion = "16",
+                //BrowserName = "Safari"
             };
 
             var sauceOptions = AppiumConfig.GetCapabilitiesAsObjects();
 
             // Use Appium 1.22 for running iOS tests
-            (sauceOptions["sauce:options"] as Dictionary<string, object>)["appiumVersion"] = "1.22.0";
+            (sauceOptions["bstack:options"] as Dictionary<string, object>)["appiumVersion"] = "1.22.0";
             options.SetMobileOptions(sauceOptions);
 
             return AppiumDriverFactory.GetIOSDriver(AppiumConfig.GetMobileHubUrl(), options, AppiumConfig.GetMobileCommandTimeout());
