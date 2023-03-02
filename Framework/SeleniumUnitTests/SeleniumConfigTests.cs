@@ -299,7 +299,7 @@ namespace SeleniumUnitTests
         {
             string platform = SeleniumConfig.GetRemotePlatform();
 
-            Assert.AreEqual("Windows 10", platform);
+            Assert.AreEqual("Windows", platform);
         }
 
         /// <summary>
