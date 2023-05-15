@@ -22,10 +22,12 @@ namespace SeleniumUnitTests
                 var name = this.TestContext.FullyQualifiedTestClassName + "." + this.TestContext.TestName;
                 var options = SeleniumConfig.GetRemoteCapabilitiesAsObjects();
 
-                var sauceOptions = options["bstack:options"] as Dictionary<string, object>;
-                sauceOptions.Add("resolution", "1280x1024");
-                sauceOptions.Add("buildName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BS_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BS_BUILD_NAME"));
-                sauceOptions.Add("sessionName", name);
+                var browserStackOptions = options["bstack:options"] as Dictionary<string, object>;
+                browserStackOptions.Add("resolution", "1280x1024");
+                browserStackOptions.Add("buildName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BS_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BS_BUILD_NAME"));
+                browserStackOptions.Add("sessionName", name);
+                // browserStackOptions.Add("userName", "");
+                // browserStackOptions.Add("accessKey","");
 
                 var browserOptions = new ChromeOptions
                 {
@@ -56,7 +58,7 @@ namespace SeleniumUnitTests
                 }
                 catch (Exception e)
                 {
-                    this.Log.LogMessage(OpenMaqs.Utilities.Logging.MessageType.WARNING, "Failed to set Sauce Result because: " + e.Message);
+                    this.Log.LogMessage(OpenMaqs.Utilities.Logging.MessageType.WARNING, "Failed to set BrowserStack Result because: " + e.Message);
                 }
             }
             base.MaqsTeardown();

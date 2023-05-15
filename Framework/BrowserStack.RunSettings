@@ -30,9 +30,9 @@
       <Parameter name="webServiceMaqs:SectionAdd" value="SAMPLEWebz" />
       <Parameter name="SeleniumMaqs:Browser" value="Remote" />
       <Parameter name="AppiumCapsMaqs:username" value="openmaqsdotnet_o1HFEC" />
-      <Parameter name="RemoteSeleniumCapsMaqs:bstack:options:username" value="openmaqsdotnet_o1HFEC" />
-      <Parameter name="RemoteSeleniumCapsMaqs:bstack:options:accessKey" value="OVERRIDE_ME_ON_COMMANDLINE" />
-      <Parameter name="AppiumCapsMaqs:bstack:options:accessKey" value="OVERRIDE_ME_ON_COMMANDLINE" />
+      <Parameter name="RemoteSeleniumCapsMaqs:username" value="openmaqsdotnet_o1HFEC" />
+      <Parameter name="RemoteSeleniumCapsMaqs:accessKey" value="OVERRIDE_ME_ON_COMMANDLINE" />
+      <Parameter name="AppiumCapsMaqs:accessKey" value="OVERRIDE_ME_ON_COMMANDLINE" />
       <Parameter name="SeleniumMaqs:RunOnSauceLabs" value="NO" />
       <Parameter name="SeleniumMaqs:RunOnBrowserstack" value="YES" />
     </TestRunParameters>
