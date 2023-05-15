@@ -364,9 +364,9 @@ jobs:
           node-version: '14'
       - name: Install Playwright
         run: |
-            npx playwright install --with-deps
+            npx playwright install-deps
+            npx playwright install 
             dotnet build Framework/FrameworkUnitTests/FrameworkUnitTests.csproj -o Framework/FrameworkUnitTests/build
-            pwsh Framework/FrameworkUnitTests/build/playwright.ps1 install-deps
             pwsh Framework/FrameworkUnitTests/build/playwright.ps1 install  
       - run: dotnet restore Framework/FrameworkUnitTests/FrameworkUnitTests.csproj
         shell: pwsh
