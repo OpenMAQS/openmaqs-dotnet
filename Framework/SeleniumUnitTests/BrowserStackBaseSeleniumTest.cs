@@ -40,7 +40,7 @@ namespace SeleniumUnitTests
                 var accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY");
                 var bsDomain = Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")
                     .Replace("https://", String.Empty);
-                var uriString = $"https://{username}:{accessKey}@{bsDomain}/wd/hub";
+                var uriString = $"https://{username}:{accessKey}@{bsDomain}";
                 var remoteCapabilities = browserOptions.ToCapabilities();
 
                 return new RemoteWebDriver(new Uri(uriString), remoteCapabilities, SeleniumConfig.GetCommandTimeout());
