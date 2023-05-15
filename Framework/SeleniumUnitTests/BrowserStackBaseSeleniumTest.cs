@@ -29,7 +29,7 @@ namespace SeleniumUnitTests
                 browserStackOptions.Add("projectName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
                 browserStackOptions.Add("sessionName", name);
 
-                var browserOptions = new FirefoxOptions()
+                var browserOptions = new ChromeOptions()
                 {
                     PlatformName = "WINDOWS",
                     BrowserVersion = "latest"
