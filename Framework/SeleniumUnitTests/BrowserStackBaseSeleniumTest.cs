@@ -7,6 +7,7 @@ using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using OpenQA.Selenium.Chromium;
 using OpenQA.Selenium.Firefox;
 
 namespace SeleniumUnitTests
@@ -18,15 +19,22 @@ namespace SeleniumUnitTests
 
         protected override IWebDriver GetBrowser()
         {
-            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnBrowserStack"), "YES", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnBrowserStack"), "YES",
+                    StringComparison.OrdinalIgnoreCase))
             {
                 var name = this.TestContext.FullyQualifiedTestClassName + "." + this.TestContext.TestName;
                 var options = SeleniumConfig.GetRemoteCapabilitiesAsObjects();
 
                 var browserStackOptions = options["bstack:options"] as Dictionary<string, object>;
                 browserStackOptions.Add("resolution", "1280x1024");
-                browserStackOptions.Add("buildName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME"));
-                browserStackOptions.Add("projectName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
+                browserStackOptions.Add("buildName",
+                    string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME"))
+                        ? BuildDate
+                        : Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME"));
+                browserStackOptions.Add("projectName",
+                    string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"))
+                        ? BuildDate
+                        : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
                 browserStackOptions.Add("sessionName", name);
 
                 var browserOptions = new ChromeOptions()
@@ -36,19 +44,19 @@ namespace SeleniumUnitTests
                 };
 
                 browserOptions.SetDriverOptions(options);
-                var username = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME")
-                    .Replace("-GitHubAction", String.Empty);
-                var accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY");
-                var bsDomain = Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")
-                    .Replace("https://", String.Empty);
-                var uriString = $"https://{username}:{accessKey}@{bsDomain}";
                 var remoteCapabilities = browserOptions.ToCapabilities();
-
-                return new RemoteWebDriver(new Uri(uriString), remoteCapabilities, SeleniumConfig.GetCommandTimeout());
+   
+                // return new RemoteWebDriver(new Uri(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")),
+                //     browserOptions);
+                return new RemoteWebDriver(new Uri(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")),
+                    remoteCapabilities, SeleniumConfig.GetCommandTimeout());
             }
+        
+    
 
-            return base.GetBrowser();
+    return base.GetBrowser();
         }
+        
 
         [TestCleanup]
         public void Cleanup()
