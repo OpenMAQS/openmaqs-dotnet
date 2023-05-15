@@ -366,6 +366,7 @@ jobs:
         run: |
             npx playwright install --with-deps
             dotnet build Framework/FrameworkUnitTests/FrameworkUnitTests.csproj -o Framework/FrameworkUnitTests/build
+            pwsh bin\Debug\netX\playwright.ps1 install-deps
             pwsh Framework/FrameworkUnitTests/build/playwright.ps1 install  
       - run: dotnet restore Framework/FrameworkUnitTests/FrameworkUnitTests.csproj
         shell: pwsh
