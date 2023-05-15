@@ -1,35 +1,35 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.Utilities.Helper;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using OpenMaqs.BaseSeleniumTest;
-using OpenMaqs.Utilities.Helper;
 
 namespace SeleniumUnitTests
 {
     [ExcludeFromCodeCoverage]
-    public class SauceLabsBaseSeleniumTest : BaseSeleniumTest
+    public class BrowserStackBaseSeleniumTest : BaseSeleniumTest
     {
         private static readonly string BuildDate = DateTime.Now.ToString("MMddyyyy hhmmss");
 
         protected override IWebDriver GetBrowser()
         {
-            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnSauceLabs"), "YES", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnBrowserStack"), "YES", StringComparison.OrdinalIgnoreCase))
             {
                 var name = this.TestContext.FullyQualifiedTestClassName + "." + this.TestContext.TestName;
                 var options = SeleniumConfig.GetRemoteCapabilitiesAsObjects();
 
-                var sauceOptions = options["sauce:options"] as Dictionary<string, object>;
-                sauceOptions.Add("screenResolution", "1280x1024");
-                sauceOptions.Add("build", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SAUCE_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("SAUCE_BUILD_NAME"));
-                sauceOptions.Add("name", name);
+                var sauceOptions = options["bstack:options"] as Dictionary<string, object>;
+                sauceOptions.Add("resolution", "1280x1024");
+                sauceOptions.Add("buildName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BS_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BS_BUILD_NAME"));
+                sauceOptions.Add("sessionName", name);
 
                 var browserOptions = new ChromeOptions
                 {
-                    PlatformName = "Windows 10",
+                    PlatformName = "WINDOWS",
                     BrowserVersion = "latest"
                 };
 
@@ -48,11 +48,11 @@ namespace SeleniumUnitTests
         {
             var passed = this.GetResultType() == OpenMaqs.Utilities.Logging.TestResultType.PASS;
 
-            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnSauceLabs"), "YES", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnBrowserstack"), "YES", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {
-                    ((IJavaScriptExecutor)this.WebDriver).ExecuteScript("sauce:job-result=" + (passed ? "passed" : "failed"));
+                    ((IJavaScriptExecutor)this.WebDriver).ExecuteScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"" + (passed ? "passed" : "failed") + "\", \"reason\": \"\"}}");
                 }
                 catch (Exception e)
                 {
