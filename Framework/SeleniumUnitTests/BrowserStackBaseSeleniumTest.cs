@@ -26,8 +26,6 @@ namespace SeleniumUnitTests
                 browserStackOptions.Add("resolution", "1280x1024");
                 browserStackOptions.Add("buildName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BS_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BS_BUILD_NAME"));
                 browserStackOptions.Add("sessionName", name);
-                // browserStackOptions.Add("userName", "");
-                // browserStackOptions.Add("accessKey","");
 
                 var browserOptions = new ChromeOptions
                 {
