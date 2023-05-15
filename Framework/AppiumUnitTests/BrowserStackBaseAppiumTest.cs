@@ -1,47 +1,49 @@
-﻿using OpenMaqs.BaseSeleniumTest;
-using OpenMaqs.Utilities.Helper;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Remote;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenMaqs.BaseAppiumTest;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.Utilities.Helper;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
+using OpenQA.Selenium.Appium.Android;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
 
-namespace SeleniumUnitTests
+namespace AppiumUnitTests
 {
     [ExcludeFromCodeCoverage]
-    public class BrowserStackBaseSeleniumTest : BaseSeleniumTest
+    public class BrowserStackBaseAppiumTest : BaseAppiumTest
     {
         private static readonly string BuildDate = DateTime.Now.ToString("MMddyyyy hhmmss");
 
-        protected override IWebDriver GetBrowser()
+        protected override AppiumDriver GetMobileDevice()
         {
-            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnBrowserStack"), "YES", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Config.GetValueForSection(ConfigSection.AppiumMaqs, "RunOnBrowserStack"), "YES", StringComparison.OrdinalIgnoreCase))
             {
                 var name = this.TestContext.FullyQualifiedTestClassName + "." + this.TestContext.TestName;
-                var options = SeleniumConfig.GetRemoteCapabilitiesAsObjects();
+                var options = AppiumConfig.GetCapabilitiesAsObjects();
 
                 var browserStackOptions = options["bstack:options"] as Dictionary<string, object>;
-                browserStackOptions.Add("resolution", "1280x1024");
                 browserStackOptions.Add("buildName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME"));
                 browserStackOptions.Add("projectName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
                 browserStackOptions.Add("sessionName", name);
 
                 var browserOptions = new ChromeOptions
                 {
-                    PlatformName = "WINDOWS",
+                    PlatformName = "Android",
                     BrowserVersion = "latest"
                 };
 
                 browserOptions.SetDriverOptions(options);
 
-                var remoteCapabilities = browserOptions.ToCapabilities();
 
-                return new RemoteWebDriver(new Uri(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")), remoteCapabilities, SeleniumConfig.GetCommandTimeout());
+
+                return new AndroidDriver(new Uri(Config.GetValueForSection(ConfigSection.AppiumMaqs, "MobileHubUrl")), browserOptions);
             }
 
-            return base.GetBrowser();
+            return base.GetMobileDevice();
         }
 
         [TestCleanup]
@@ -49,11 +51,11 @@ namespace SeleniumUnitTests
         {
             var passed = this.GetResultType() == OpenMaqs.Utilities.Logging.TestResultType.PASS;
 
-            if (string.Equals(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "RunOnBrowserstack"), "YES", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Config.GetValueForSection(ConfigSection.AppiumMaqs, "RunOnBrowserstack"), "YES", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {
-                    ((IJavaScriptExecutor)this.WebDriver).ExecuteScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"" + (passed ? "passed" : "failed") + "\", \"reason\": \"\"}}");
+                    ((IJavaScriptExecutor)this.AppiumDriver).ExecuteScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"" + (passed ? "passed" : "failed") + "\", \"reason\": \"\"}}");
                 }
                 catch (Exception e)
                 {
