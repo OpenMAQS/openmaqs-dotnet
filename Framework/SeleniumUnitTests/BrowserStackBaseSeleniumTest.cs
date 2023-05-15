@@ -36,7 +36,8 @@ namespace SeleniumUnitTests
                 };
 
                 browserOptions.SetDriverOptions(options);
-                var username = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME");
+                var username = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME")
+                    .Replace("-GitHubAction", String.Empty);
                 var accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY");
                 var bsDomain = Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")
                     .Replace("https://", String.Empty);
