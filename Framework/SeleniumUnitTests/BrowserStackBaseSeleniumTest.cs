@@ -7,6 +7,7 @@ using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using OpenQA.Selenium.Firefox;
 
 namespace SeleniumUnitTests
 {
@@ -28,17 +29,21 @@ namespace SeleniumUnitTests
                 browserStackOptions.Add("projectName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
                 browserStackOptions.Add("sessionName", name);
 
-                var browserOptions = new ChromeOptions
+                var browserOptions = new FirefoxOptions()
                 {
                     PlatformName = "WINDOWS",
                     BrowserVersion = "latest"
                 };
 
                 browserOptions.SetDriverOptions(options);
-
+                var username = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME");
+                var accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY");
+                var bsDomain = Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")
+                    .Replace("https://", String.Empty);
+                var uriString = $"https://{username}:{accessKey}@{bsDomain}/wd/hub";
                 var remoteCapabilities = browserOptions.ToCapabilities();
 
-                return new RemoteWebDriver(new Uri(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "HubUrl")), remoteCapabilities, SeleniumConfig.GetCommandTimeout());
+                return new RemoteWebDriver(new Uri(uriString), remoteCapabilities, SeleniumConfig.GetCommandTimeout());
             }
 
             return base.GetBrowser();
