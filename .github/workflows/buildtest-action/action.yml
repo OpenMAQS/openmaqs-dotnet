@@ -10,7 +10,12 @@ inputs:
 runs:
   using: "composite"
   steps:
+<<<<<<< HEAD
     - name: Run headless test
       uses: coactions/setup-xvfb@v1
       with:
         run: dotnet test ${{ inputs.bt-param }} -o "${{github.workspace}}/artifactTests/${{ inputs.artifact-name }}"
+=======
+    - run: dotnet test ${{ inputs.bt-param }} -o "${{github.workspace}}/artifactTests/${{ inputs.artifact-name }}"
+      shell: pwsh
+>>>>>>> afdded35 (remove xvfb)
