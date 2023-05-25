@@ -83,7 +83,7 @@ namespace WebServiceTesterUnitTesting
             WebServiceDriver testDriver = new WebServiceDriver(testUri);
             testDriver.SetCustomMediaFormatters(new List<MediaTypeFormatter>());
             Assert.IsNotNull(testDriver);
-            Assert.AreEqual(testDriver.HttpClient.BaseAddress, testUri);
+            Assert.AreEqual(testUri, testDriver.HttpClient.BaseAddress);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace WebServiceTesterUnitTesting
             WebServiceDriver testDriver = new WebServiceDriver(this.GetBaseWebServiceUrl());
             testDriver.SetCustomMediaFormatters(new CustomXmlMediaTypeFormatter("application/xml", typeof(string)));
             Assert.IsNotNull(testDriver);
-            Assert.AreEqual(testDriver.HttpClient.BaseAddress.ToString(), this.GetBaseWebServiceUrl());
+            Assert.AreEqual(this.GetBaseWebServiceUrl(),testDriver.HttpClient.BaseAddress.ToString());
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace WebServiceTesterUnitTesting
             WebServiceDriver testDriver = new WebServiceDriver(this.GetBaseWebServiceUrl());
             testDriver.SetCustomMediaFormatters(new List<MediaTypeFormatter>());
             Assert.IsNotNull(testDriver);
-            Assert.AreEqual(testDriver.HttpClient.BaseAddress.ToString(), this.GetBaseWebServiceUrl());
+            Assert.AreEqual(this.GetBaseWebServiceUrl(),testDriver.HttpClient.BaseAddress.ToString());
         }
 
         /// <summary>
