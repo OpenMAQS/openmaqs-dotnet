@@ -78,7 +78,7 @@ namespace WebServiceTesterUnitTesting
         public void OverrideWorksForFactory()
         {
             HttpClient factoryClient = OpenMaqs.BaseWebServiceTest.HttpClientFactory.GetDefaultClient();
-            Assert.AreEqual(WebServiceConfig.GetWebServiceUri() + "/", factoryClient.BaseAddress.ToString());
+            Assert.AreEqual(WebServiceConfig.GetWebServiceUri(), factoryClient.BaseAddress.ToString());
         }
 
         /// <summary>
