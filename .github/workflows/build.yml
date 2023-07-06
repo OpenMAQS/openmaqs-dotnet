@@ -106,7 +106,7 @@ jobs:
           GlobalMaqs:EnvOnly: ENV
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/UtilitiesUnitTests/UtilitiesUnitTests.csproj --settings Framework/ParallelLinux.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/utils/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/utils/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
+          bt-param: 'Framework/UtilitiesUnitTests/UtilitiesUnitTests.csproj --settings Framework/ParallelLinux.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/utils/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/utils/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- TestRunParameters.Parameter(name=\"Globalmaqs:CustomLogPath\", value=\"${{github.workspace}}/FrameworkCustom/Logs\")' 
       - uses: actions/upload-artifact@v2
         if: always()
         name: "Upload test artifact"

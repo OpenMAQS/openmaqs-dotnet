@@ -34,8 +34,6 @@
     <Parameter name="Globalmaqs:ConfigJsonEnvRunOverride" value="RUN" />
     <Parameter name="Globalmaqs:ConfigJsonEnvRun" value="RUN" />
     <Parameter name="Globalmaqs:RunOnly" value="RUN" />
-    <Parameter name="Globalmaqs:FileLoggerPath" value="~/Frameworks/" />
-    <Parameter name="Globalmaqs:CustomLogPath" value="./Logs" />
   </TestRunParameters>
   <DataCollectionRunSettings>
     <DataCollectors>

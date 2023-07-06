@@ -69,7 +69,7 @@ namespace UtilitiesUnitTesting
             string path = ((IFileLogger)this.Log).FilePath;
             this.Log.LogMessage(MessageType.ERROR, "Error message");
             Assert.IsTrue(System.IO.File.Exists(path), path + " does not exist, but it should");
-            Assert.IsTrue(path.StartsWith(customPath), path + " should be under" + @"C:\FrameworksCustom\");
+            Assert.IsTrue(path.StartsWith(customPath), path + " should be under " + customPath);
         }
     }
 }
