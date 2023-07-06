@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <RunConfiguration>
+    <DisableAppDomain>True</DisableAppDomain>
+    <MaxCpuCount>1</MaxCpuCount>
+  </RunConfiguration>
+  <MSTest>
+    <Parallelize>
+      <Workers>4</Workers>
+      <Scope>MethodLevel</Scope>
+    </Parallelize>
+  </MSTest>
+  <TestRunParameters>
+    <Parameter name="SeleniumMaqs:Adding" value="SAMPLE" />
+    <Parameter name="GlobalMaqs:SectionOverrideCore" value="ANOTHERSAMPLE" />
+    <Parameter name="Globalmaqs:Grog" value="YetAnother" />
+    <Parameter name="Globalmaqs:SectionOverride" value="SAMPLEGen" />
+    <Parameter name="Appiummaqs:SectionOverride" value="SAMPLEApp" />
+    <Parameter name="AppiumCaPsMaqs:SectionOverride" value="SAMPLEAppCap" />
+    <Parameter name="DatabasEMaqs:SectionOverride" value="SAMPLEDatabase" />
+    <Parameter name="EmailMaqS:SectionOverride" value="SAMPLEEmail" />
+    <Parameter name="SeleniumMAqs:SectionOverride" value="SAMPLESel" />
+    <Parameter name="RemoteseleniumCapsMaqs:SectionOverride" value="SAMPLESelCap" />
+    <Parameter name="WebServiceMaqs:SectionOverride" value="SAMPLEWeb" />
+    <Parameter name="globalMaqs:SectionAdd" value="SAMPLEGenz" />
+    <Parameter name="appiummaqs:SectionAdd" value="SAMPLEAppz" />
+    <Parameter name="appiumCapsMaqs:SectionAdd" value="SAMPLEAppCapz" />
+    <Parameter name="Databasemaqs:SectionAdd" value="SAMPLEDatabasez" />
+    <Parameter name="Emailmaqs:SectionAdd" value="SAMPLEEmailz" />
+    <Parameter name="SeleniumMaqs:SectionAdd" value="SAMPLESelz" />
+    <Parameter name="RemoteseleniumCapsMaqs:SectionAdd" value="SAMPLESelCapz" />
+    <Parameter name="webServiceMaqs:SectionAdd" value="SAMPLEWebz" />
+    <Parameter name="SeleniumMaqs:RetryRefused" value="Yes" />
+    <Parameter name="Globalmaqs:ConfigJsonEnvRunOverride" value="RUN" />
+    <Parameter name="Globalmaqs:ConfigJsonEnvRun" value="RUN" />
+    <Parameter name="Globalmaqs:RunOnly" value="RUN" />
+    <Parameter name="Globalmaqs:FileLoggerPath" value="~/Frameworks/" />
+    <Parameter name="Globalmaqs:CustomLogPath" value="./Logs" />
+  </TestRunParameters>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <Configuration>
+          <CodeCoverage>
+            <ModulePaths>
+              <Exclude>
+                <ModulePath>.*UnitTests.*</ModulePath>
+              </Exclude>
+            </ModulePaths>
+          </CodeCoverage>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

@@ -34,6 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		BrowserStack.RunSettings = BrowserStack.RunSettings
 		Parallel.RunSettings = Parallel.RunSettings
 		SauceLabs.RunSettings = SauceLabs.RunSettings
+		ParallelLinux.RunSettings = ParallelLinux.RunSettings
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseUnitTests", "DatabaseUnitTests\DatabaseUnitTests.csproj", "{1BF34A71-A13B-4E18-843D-4F296805B6C9}"
