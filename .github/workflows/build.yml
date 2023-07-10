@@ -227,7 +227,7 @@ jobs:
   test-playwright:
     name: Playwright
     needs: waitOld
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -244,7 +244,6 @@ jobs:
         run: |
             dotnet build Framework/PlaywrightTests/PlaywrightTests.csproj -o Framework/PlaywrightTests/build
             npx playwright@latest install-deps
-            pwsh Framework/PlaywrightTests/build/playwright.ps1 install-deps  
             pwsh Framework/PlaywrightTests/build/playwright.ps1 install    
       - id: builder
         uses: ./.github/workflows/buildtest-action
