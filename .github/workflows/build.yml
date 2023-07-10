@@ -243,7 +243,7 @@ jobs:
       - name: Install Playwright
         run: |
             dotnet build Framework/PlaywrightTests/PlaywrightTests.csproj -o Framework/PlaywrightTests/build
-            npx playwright@latest install-deps
+            pwsh Framework/PlaywrightTests/build/playwright.ps1 install-deps
             pwsh Framework/PlaywrightTests/build/playwright.ps1 install    
       - id: builder
         uses: ./.github/workflows/buildtest-action
