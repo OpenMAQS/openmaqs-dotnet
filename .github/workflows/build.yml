@@ -242,6 +242,7 @@ jobs:
           node-version: '14'
       - name: Install Playwright
         run: |
+            npm install @playwright/test      
             npx playwright install --with-deps
             dotnet build Framework/PlaywrightTests/PlaywrightTests.csproj -o Framework/PlaywrightTests/build
             sudo pwsh Framework/PlaywrightTests/build/playwright.ps1 install --with-deps
