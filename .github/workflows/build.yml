@@ -242,6 +242,7 @@ jobs:
           node-version: '14'
       - name: Install Playwright
         run: |
+            sudo apt-get update
             sudo apt-get install libicu66 libwebp6 libenchant1c2a    
             npx playwright install --with-deps
             dotnet build Framework/PlaywrightTests/PlaywrightTests.csproj -o Framework/PlaywrightTests/build
