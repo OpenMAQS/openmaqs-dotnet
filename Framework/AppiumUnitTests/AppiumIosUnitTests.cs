@@ -97,8 +97,8 @@ namespace AppiumUnitTests
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["appiumVersion"] = "1.22.0";
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["deviceName"] = "iPhone 14";
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["osVersion"] = "16";
-            (bstackOptions["bstack:options"] as Dictionary<string, object>)["buildName"] = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME"));
-            (bstackOptions["bstack:options"] as Dictionary<string, object>)["projectName"] = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
+            (bstackOptions["bstack:options"] as Dictionary<string, object>)["buildName"] = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME");
+            (bstackOptions["bstack:options"] as Dictionary<string, object>)["projectName"] = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME");
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["sessionName"] = name;
             options.SetMobileOptions(bstackOptions);
 
