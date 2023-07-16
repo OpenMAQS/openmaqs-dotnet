@@ -156,10 +156,15 @@ jobs:
             3.1.417
             6.0.201
             7.0.203
+      - name: 'BrowserStack Env Setup'
+        uses: 'browserstack/github-actions/setup-env@master'
+        with:
+          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }} 
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/SauceLabs.RunSettings --filter FullyQualifiedName!~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/appium/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/appium/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"AppiumCapsMaqs:sauce:options:accessKey\",value=\"${{ secrets.SAUCE }}\")'''
+          bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/BrowserStack.RunSettings --filter FullyQualifiedName!~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/appium/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/appium/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"AppiumCapsMaqs:bstack:options:accessKey\",value=\"${{ secrets.BROWSERSTACK_ACCESS_KEY }}\")'''
       - uses: actions/upload-artifact@v2
         if: always()
         name: "Upload test artifact"
