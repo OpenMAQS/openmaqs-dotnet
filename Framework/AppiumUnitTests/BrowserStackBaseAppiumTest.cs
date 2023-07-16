@@ -29,11 +29,8 @@ namespace AppiumUnitTests
                 browserStackOptions.Add("projectName", string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
                 browserStackOptions.Add("sessionName", name);
 
-                var browserOptions = new ChromeOptions
-                {
-                    PlatformName = "Android",
-                    BrowserVersion = "latest"
-                };
+                var browserOptions = new ChromeOptions();
+               
 
                 //browserOptions.SetDriverOptions(options);
                 foreach (var key in options.Keys)
@@ -54,7 +51,7 @@ namespace AppiumUnitTests
         {
             var passed = this.GetResultType() == CognizantSoftvision.Maqs.Utilities.Logging.TestResultType.PASS;
 
-            if (string.Equals(Config.GetValueForSection(ConfigSection.AppiumMaqs, "RunOnBrowserStack"), "YES", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Config.GetValueForSection(ConfigSection.AppiumMaqs, "RunOnBrowserstack"), "YES", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {
