@@ -54,7 +54,7 @@ namespace AppiumUnitTests
         {
             var passed = this.GetResultType() == CognizantSoftvision.Maqs.Utilities.Logging.TestResultType.PASS;
 
-            if (string.Equals(Config.GetValueForSection(ConfigSection.AppiumMaqs, "RunOnBrowserstack"), "YES", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(Config.GetValueForSection(ConfigSection.AppiumMaqs, "RunOnBrowserStack"), "YES", StringComparison.OrdinalIgnoreCase))
             {
                 try
                 {
