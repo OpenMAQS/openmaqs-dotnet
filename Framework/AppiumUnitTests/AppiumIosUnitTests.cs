@@ -89,8 +89,6 @@ namespace AppiumUnitTests
 
             // Use Appium 1.22 for running iOS tests
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["appiumVersion"] = "1.22.0";
-            (bstackOptions["bstack:options"] as Dictionary<string, object>)["BrowserName"] = "Safari";
-            (bstackOptions["bstack:options"] as Dictionary<string, object>)["PlatformName"] = "iOS";
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["deviceName"] = "iPhone 14";
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["osVersion"] = "16";
 
