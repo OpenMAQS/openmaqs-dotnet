@@ -10,8 +10,10 @@ using CognizantSoftvision.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml.Linq;
 
 namespace AppiumUnitTests
 {
@@ -21,6 +23,8 @@ namespace AppiumUnitTests
     [TestClass]
     public class AppiumIosUnitTests : BaseAppiumTest
     {
+        private static readonly string BuildDate = DateTime.Now.ToString("MMddyyyy hhmmss");
+
         /// <summary>
         /// Tests the creation of the Appium iOS Driver
         /// </summary>
@@ -85,13 +89,17 @@ namespace AppiumUnitTests
                 BrowserName = "Safari"
             };
 
+            var name = this.TestContext.FullyQualifiedTestClassName + "." + this.TestContext.TestName;
+
             var bstackOptions = AppiumConfig.GetCapabilitiesAsObjects();
 
             // Use Appium 1.22 for running iOS tests
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["appiumVersion"] = "1.22.0";
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["deviceName"] = "iPhone 14";
             (bstackOptions["bstack:options"] as Dictionary<string, object>)["osVersion"] = "16";
-
+            (bstackOptions["bstack:options"] as Dictionary<string, object>)["buildName"] = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME"));
+            (bstackOptions["bstack:options"] as Dictionary<string, object>)["projectName"] = string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME")) ? BuildDate : Environment.GetEnvironmentVariable("BROWSERSTACK_PROJECT_NAME"));
+            (bstackOptions["bstack:options"] as Dictionary<string, object>)["sessionName"] = name;
             options.SetMobileOptions(bstackOptions);
 
             return AppiumDriverFactory.GetIOSDriver(AppiumConfig.GetMobileHubUrl(), options, AppiumConfig.GetMobileCommandTimeout());
