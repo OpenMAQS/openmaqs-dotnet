@@ -120,9 +120,11 @@ jobs:
   test-winapp:
     name: WinApp
     needs: waitOld
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v2
+      - name: Configure Windows for automation
+        uses: ./github/workflows/setup-winapp
       - name: Install Appium
         run: npm install -g appium
       - name: Run Appium
@@ -513,7 +515,7 @@ jobs:
   test-selenutil:
     name: Selenium Utils
     needs: waitOld
-    runs-on: windows-2019
+    runs-on: window-2022
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
