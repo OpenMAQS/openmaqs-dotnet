@@ -10,9 +10,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    if: [runs-ons == 'windows-2019']
     - run: dotnet test ${{ inputs.bt-param }} -o "${{github.workspace}}/artifactTests/${{ inputs.artifact-name }}"
-      shell: pwsh
-    if: [runs-ons == 'ubuntu-latest']
-    - run: xvfb dotnet test ${{ inputs.bt-param }} -o "${{github.workspace}}/artifactTests/${{ inputs.artifact-name }}"
       shell: pwsh
