@@ -4,12 +4,15 @@ runs:
   using: "composite"
   steps:
     - name: Setting up WinAppDriver
+      shell: pwsh
       run: |
        curl -L -o WindowsApplicationDriver_1.2.1.msi https://github.com/microsoft/WinAppDriver/releases/download/v1.2.1/WindowsApplicationDriver_1.2.1.msi
        Start-Process msiexec "/i D:\a\wido-ultimate\wido-ultimate\WindowsApplicationDriver_1.2.1.msi /norestart /qn" -Wait 
     - name: Enable developer-mode
+      shell: pwsh
       run : |
        reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"
     - name: Add WinAppDriver firewall rule
+      shell: pwsh
       run: |
         netsh advfirewall firewall add rule name="WinAppDriver remote" dir=in action=allow protocol=TCP localport=4723
