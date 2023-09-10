@@ -570,7 +570,9 @@ jobs:
         uses: ./.github/workflows/setuplinbrowser-action
       - run: |
           Write-Host "Installing/Updating Firefox"
-          sudo apt-get --only-upgrade install  firefox
+          sudo snap remove firefox
+          sudo add-apt-repository ppa:mozillateam/ppa
+          sudo apt install firefox
         shell: pwsh
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
