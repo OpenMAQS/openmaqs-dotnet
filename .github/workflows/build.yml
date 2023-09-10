@@ -556,7 +556,7 @@ jobs:
     # Skip when dependabot PR - Dependabot PRs cannot access action secrets
     if: github.actor != 'dependabot[bot]'
     needs: waitOld
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -567,11 +567,7 @@ jobs:
             6.0.201
             7.0.203
       - id: browserupdate
-        uses: ./.github/workflows/setuplinbrowser-action
-      - run: |
-          Write-Host "Installing/Updating Firefox"
-          sudo apt-get --only-upgrade install  firefox
-        shell: pwsh
+        uses: ./.github/workflows/setupwinbrowser-action
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
         with:
@@ -580,7 +576,7 @@ jobs:
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/BrowserStack.RunSettings --filter "(FullyQualifiedName!~SeleniumNUnitTest)&(FullyQualifiedName!~Proxy)&(FullyQualifiedName!~SeleniumConfigTests)&(FullyQualifiedName!~SeleniumPageObjectUnitTest)&(FullyQualifiedName!~LazyElementUnitTests)&(FullyQualifiedName!~SeleniumUnitTests.SeleniumUnitTest)&(FullyQualifiedName!~SeleniumWebElementTest)&(FullyQualifiedName!~SeleniumUtilsTest)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selengen/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selengen/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"RemoteSeleniumCapsMaqs:bstack:options:accessKey\",value=\"${{ secrets.BROWSERSTACK_ACCESS_KEY }}\")'' ''TestRunParameters.Parameter(name=\"SeleniumMaqs:RunOnBrowserStack\",value=\"YES\")'''
+          bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName!~SeleniumNUnitTest)&(FullyQualifiedName!~Proxy)&(FullyQualifiedName!~SeleniumConfigTests)&(FullyQualifiedName!~SeleniumPageObjectUnitTest)&(FullyQualifiedName!~LazyElementUnitTests)&(FullyQualifiedName!~SeleniumUnitTests.SeleniumUnitTest)&(FullyQualifiedName!~SeleniumWebElementTest)&(FullyQualifiedName!~SeleniumUtilsTest)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selengen/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selengen/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"RemoteSeleniumCapsMaqs:bstack:options:accessKey\",value=\"${{ secrets.BROWSERSTACK_ACCESS_KEY }}\")'' ''TestRunParameters.Parameter(name=\"SeleniumMaqs:RunOnBrowserStack\",value=\"YES\")'''
       - uses: actions/upload-artifact@v2
         if: always()
         name: "Upload test artifact"
