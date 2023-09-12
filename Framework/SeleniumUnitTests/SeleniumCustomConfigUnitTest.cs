@@ -45,7 +45,7 @@ namespace SeleniumUnitTests
         protected override IWebDriver GetBrowser()
         {
             var firefoxOptions = WebDriverFactory.GetDefaultFirefoxOptions();
-            //firefoxOptions.AddArgument("--headless");
+            firefoxOptions.AddArgument("--headless");
             IWebDriver driver = WebDriverFactory.GetFirefoxDriver(SeleniumConfig.GetCommandTimeout(), firefoxOptions);
 
             driver.Manage().Window.Size = new Size(701, 199);
