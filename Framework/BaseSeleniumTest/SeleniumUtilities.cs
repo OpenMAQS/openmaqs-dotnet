@@ -10,11 +10,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using Selenium.Axe;
 using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats;
-using SixLabors.ImageSharp.Formats.Bmp;
-using SixLabors.ImageSharp.Formats.Gif;
-using SixLabors.ImageSharp.Formats.Jpeg;
-using SixLabors.ImageSharp.Formats.Png;
 using System;
 using System.IO;
 using System.Reflection;
@@ -80,8 +75,8 @@ namespace CognizantSoftvision.Maqs.BaseSeleniumTest
         public static string CaptureScreenshot(this IWebDriver webDriver, ISeleniumTestObject testObject, string directory, string fileNameWithoutExtension, ScreenshotImageFormat imageFormat = ScreenshotImageFormat.Png)
         {
             Screenshot screenShot = ((ITakesScreenshot)webDriver).GetScreenshot();
-            var format = Image.DetectFormat(screenShot.AsByteArray);
-            Image image = Image.Load(screenShot.AsByteArray);
+            //var format = Image.DetectFormat(screenShot.AsByteArray);
+            using Image image = Image.Load(screenShot.AsByteArray);
             
             // Make sure the directory exists
             if (!Directory.Exists(directory))
@@ -92,12 +87,23 @@ namespace CognizantSoftvision.Maqs.BaseSeleniumTest
             // Calculate the file name
             string path = Path.Combine(directory, $"{fileNameWithoutExtension}.{imageFormat}");
 
-            switch (format)
+            switch (imageFormat)
             {
-                case JpegFormat:
+                case ScreenshotImageFormat.Jpeg:
                     image.SaveAsJpeg(path);
                     break;
-                case PngFormat
+                case ScreenshotImageFormat.Png: 
+                    image.SaveAsPng(path); 
+                    break;
+                case ScreenshotImageFormat.Bmp:
+                    image.SaveAsBmp(path);
+                    break;
+                case ScreenshotImageFormat.Gif:
+                    image.SaveAsGif(path);
+                    break;
+                case ScreenshotImageFormat.Tiff: 
+                    image.SaveAsTiff(path); 
+                    break;
                 default:
                     image.SaveAsPng(path);
                     break;
@@ -107,7 +113,7 @@ namespace CognizantSoftvision.Maqs.BaseSeleniumTest
 
             // Save the screenshot
             //screenShot.SaveAsFile(path, imageFormat);
-            //testObject.AddAssociatedFile(path);
+            testObject.AddAssociatedFile(path);
 
 
 
