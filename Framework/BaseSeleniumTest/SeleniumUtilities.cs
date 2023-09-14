@@ -75,8 +75,7 @@ namespace CognizantSoftvision.Maqs.BaseSeleniumTest
         public static string CaptureScreenshot(this IWebDriver webDriver, ISeleniumTestObject testObject, string directory, string fileNameWithoutExtension, ScreenshotImageFormat imageFormat = ScreenshotImageFormat.Png)
         {
             Screenshot screenShot = ((ITakesScreenshot)webDriver).GetScreenshot();
-            //var format = Image.DetectFormat(screenShot.AsByteArray);
-            using Image image = Image.Load(screenShot.AsByteArray);
+            Image image = Image.Load(screenShot.AsByteArray);
             
             // Make sure the directory exists
             if (!Directory.Exists(directory))
@@ -87,6 +86,7 @@ namespace CognizantSoftvision.Maqs.BaseSeleniumTest
             // Calculate the file name
             string path = Path.Combine(directory, $"{fileNameWithoutExtension}.{imageFormat}");
 
+            // Save the screenshot
             switch (imageFormat)
             {
                 case ScreenshotImageFormat.Jpeg:
@@ -109,13 +109,8 @@ namespace CognizantSoftvision.Maqs.BaseSeleniumTest
                     break;
 
             }
-            // TODO: Refactoring to use Image Sharp
 
-            // Save the screenshot
-            //screenShot.SaveAsFile(path, imageFormat);
             testObject.AddAssociatedFile(path);
-
-
 
             return path;
         }
