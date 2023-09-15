@@ -302,7 +302,6 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(WebDriverException), ".Net Core only allows for PNG.  BMP is not allowed")]
         public void CaptureScreenshotBmpFormat()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
@@ -318,7 +317,6 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(WebDriverException), ".Net Core only allows for PNG.  GIF is not allowed")]
         public void CaptureScreenshotGifFormat()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
@@ -334,7 +332,6 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(WebDriverException), ".Net Core only allows for PNG.  JPEG is not allowed")]
         public void CaptureScreenshotJpegFormat()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
@@ -365,7 +362,6 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(WebDriverException), ".Net Core only allows for PNG.  TIFF is not allowed")]
         public void CaptureScreenshotTiffFormat()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);

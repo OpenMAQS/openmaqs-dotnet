@@ -567,7 +567,6 @@ jobs:
             6.0.201
             7.0.203
       - id: browserupdate
-
         uses: ./.github/workflows/setupwinbrowser-action
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
