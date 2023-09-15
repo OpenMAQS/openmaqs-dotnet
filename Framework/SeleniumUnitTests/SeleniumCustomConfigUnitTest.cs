@@ -24,7 +24,7 @@ namespace SeleniumUnitTests
         /// Google URL
         /// </summary>
         // TODO: fix URL
-        private readonly string urlToNavigate = "https://github.com/OpenMAQS/openmaqs-dotnet";
+        private readonly string urlToNavigate = "https://github.com/OpenMAQS/TestingSite";
 
         /// <summary>
         /// Verify WaitForAbsentElement wait works
