@@ -7,7 +7,7 @@ runs:
       shell: pwsh
       run: |
        curl -L -o WindowsApplicationDriver_1.2.1.msi https://github.com/microsoft/WinAppDriver/releases/download/v1.2.1/WindowsApplicationDriver_1.2.1.msi
-       Start-Process msiexec "/i D:\a\wido-ultimate\wido-ultimate\WindowsApplicationDriver_1.2.1.msi /norestart /qn" -Wait 
+       Start-Process msiexec "/i D:\a\wido-ultimate\wido-ultimate\WindowsApplicationDriver_1.2.1.msi /norestart /qn" -Wait
     - name: Enable developer-mode
       shell: pwsh
       run : |

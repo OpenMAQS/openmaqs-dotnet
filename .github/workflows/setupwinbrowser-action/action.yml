@@ -4,6 +4,6 @@ runs:
   using: "composite"
   steps:
     - run: choco upgrade googlechrome
-      shell: pwsh 
+      shell: pwsh
     - run: choco upgrade firefox
       shell: pwsh
