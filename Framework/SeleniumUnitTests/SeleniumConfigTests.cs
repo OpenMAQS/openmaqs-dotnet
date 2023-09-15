@@ -213,7 +213,7 @@ namespace SeleniumUnitTests
         {
             string website = SeleniumConfig.GetWebSiteBase();
 
-            Assert.IsTrue(website.Equals("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/", StringComparison.InvariantCultureIgnoreCase));
+            Assert.IsTrue(website.Equals("https://openmaqs.github.io/TestingSite/Automation/", StringComparison.InvariantCultureIgnoreCase));
         }
 
         /// <summary>
@@ -270,13 +270,13 @@ namespace SeleniumUnitTests
             var username = Config.GetValueForSection(ConfigSection.RemoteSeleniumCapsMaqs, "username");
             try
             {
-                Config.AddTestSettingValues(new Dictionary<string, string> { ["username"] = "Sauce_Labs_Username" }, ConfigSection.RemoteSeleniumCapsMaqs);
+                Config.AddTestSettingValues(new Dictionary<string, string> { ["username"] = "BrowserStack_Username" }, ConfigSection.RemoteSeleniumCapsMaqs);
                 driver = WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.Remote);
                 driver.Navigate().GoToUrl("https://www.cognizantsoftvision.com/");
             }
             catch (Exception e)
             {
-                Assert.IsTrue(e.InnerException.Message.Contains("Sauce_Labs_Username") || e.InnerException.Message.Contains("Unauthorized"), "Did not see 'Sauce_Labs_Username' in error message: " + e.Message + " -- " + e.InnerException.Message);
+                Assert.IsTrue(e.InnerException.Message.Contains("BrowserStack_Username") || e.InnerException.Message.Contains("Authorization required"), "Did not see 'BrowserStack_Username' in error message: " + e.Message + " -- " + e.InnerException.Message);
                 checkedAssertion = true;
             }
             finally
@@ -537,6 +537,8 @@ namespace SeleniumUnitTests
 
         [TestMethod]
         [DoNotParallelize]
+        [Obsolete]
+        [Ignore]
         public void OpenIEBrowser()
         {
             // We dont navigate here because there is special configuration required to get IE to fully work
