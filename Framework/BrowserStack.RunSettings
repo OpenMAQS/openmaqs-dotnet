@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <RunConfiguration>
+    <DisableAppDomain>True</DisableAppDomain>
+    <MaxCpuCount>0</MaxCpuCount>
+  </RunConfiguration>
+  <MSTest>
+    <Parallelize>
+      <Workers>2</Workers>
+      <Scope>MethodLevel</Scope>
+    </Parallelize>
+  </MSTest>
+    <TestRunParameters>
+      <Parameter name="SeleniumMaqs:Adding" value="SAMPLE" />
+      <Parameter name="GlobalMaqs:SectionOverrideCore" value="ANOTHERSAMPLE" />
+      <Parameter name="Grog" value="YetAnother" />
+      <Parameter name="Globalmaqs:SectionOverride" value="SAMPLEGen" />
+      <Parameter name="Appiummaqs:SectionOverride" value="SAMPLEApp" />
+      <Parameter name="AppiumCaPsMaqs:SectionOverride" value="SAMPLEAppCap" />
+      <Parameter name="DatabasEMaqs:SectionOverride" value="SAMPLEDatabase" />
+      <Parameter name="EmailMaqS:SectionOverride" value="SAMPLEEmail" />
+      <Parameter name="SeleniumMAqs:SectionOverride" value="SAMPLESel" />
+      <Parameter name="WebServiceMaqs:SectionOverride" value="SAMPLEWeb" />
+      <Parameter name="globalMaqs:SectionAdd" value="SAMPLEGenz" />
+      <Parameter name="appiummaqs:SectionAdd" value="SAMPLEAppz" />
+      <Parameter name="appiumCapsMaqs:SectionAdd" value="SAMPLEAppCapz" />
+      <Parameter name="Databasemaqs:SectionAdd" value="SAMPLEDatabasez" />
+      <Parameter name="Emailmaqs:SectionAdd" value="SAMPLEEmailz" />
+      <Parameter name="SeleniumMaqs:SectionAdd" value="SAMPLESelz" />
+      <Parameter name="webServiceMaqs:SectionAdd" value="SAMPLEWebz" />
+      <Parameter name="SeleniumMaqs:Browser" value="Remote" />
+      <Parameter name="AppiumCapsMaqs:bstack:options:userName" value="openmaqsdotnet_o1HFEC" />
+      <Parameter name="RemoteSeleniumCapsMaqs:bstack:options:userName" value="openmaqsdotnet_o1HFEC" />
+      <Parameter name="RemoteSeleniumCapsMaqs:bstack:options:accessKey" value="OVERRIDE_ME_ON_COMMANDLINE" />
+      <Parameter name="AppiumCapsMaqs:bstack:options:accessKey" value="OVERRIDE_ME_ON_COMMANDLINE" />
+      <Parameter name="SeleniumMaqs:RunOnSauceLabs" value="NO" />
+      <Parameter name="SeleniumMaqs:RunOnBrowserstack" value="YES" />
+      <Parameter name="AppiumMaqs:RunOnSauceLabs" value="NO" />
+      <Parameter name="AppiumMaqs:RunOnBrowserstack" value="YES" />
+    </TestRunParameters>
+    <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+        <Configuration>
+          <CodeCoverage>
+            <ModulePaths>
+              <Exclude>
+                <ModulePath>.*UnitTestsz.*</ModulePath>
+              </Exclude>
+            </ModulePaths>
+          </CodeCoverage>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+  </RunSettings>
