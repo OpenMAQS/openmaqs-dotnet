@@ -23,7 +23,7 @@ namespace WebServiceTesterUnitTesting
         /// <summary>
         /// Base test url
         /// </summary>
-        private const string BaseUrl = "https://github.com/CognizantOpenSource";
+        private const string BaseUrl = "https://github.com/OpenMAQS";
 
         /// <summary>
         /// Expected updated url
