@@ -2,7 +2,7 @@
 
 ## Supported Versions
 We are currently only supporting MAQS 8 and above.  
-*If you are using MAQS 7 or below we strongly recommend updating to 8, this [upgrade link](https://cognizantopensource.github.io/maqs-dotnet/#/MAQS_8/UpgradingFromMAQS7ToMAQS8) may help
+*If you are using MAQS 7 or below we strongly recommend updating to 8, this [upgrade link](https://OpenMAQS.github.io/maqs-dotnet/#/MAQS_8/UpgradingFromMAQS7ToMAQS8) may help
 
 | Version | Supported          |
 | ------- | ------------------ |

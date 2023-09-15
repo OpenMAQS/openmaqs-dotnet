@@ -81,7 +81,7 @@ string proxyAddress = PlaywrightConfig.GetProxyAddress();
   </configSections>
 	<PlaywrightMaqs>
 		<!--Default base web url-->
-		<add key="WebBase" value="https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/" />
+		<add key="WebBase" value="https://OpenMAQS.github.io/maqs-dotnet-templates/Static/Automation/" />
 
 		<!--Local browser settings
 		<add key="Browser" value="Chrome"/>
@@ -146,7 +146,7 @@ string proxyAddress = PlaywrightConfig.GetProxyAddress();
 ```json
 {
   "PlaywrightMaqs": {
-    "WebBase": "https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/",
+    "WebBase": "https://OpenMAQS.github.io/maqs-dotnet-templates/Static/Automation/",
     "Browser": "Chrome",
     "Headless": "YES",
     "CommandTimeout": "60000",

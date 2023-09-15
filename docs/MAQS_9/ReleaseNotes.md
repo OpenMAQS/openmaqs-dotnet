@@ -1,2 +1,2 @@
 # MAQS Release Notes
-[GitHub Release Notes](https://github.com/CognizantOpenSource/maqs-dotnet/releases)
+[GitHub Release Notes](https://github.com/OpenMAQS/maqs-dotnet/releases)
