@@ -24,7 +24,7 @@ Templates can be found in the [Visual Studio Marketplace](https://marketplace.vi
    - Playwright tests (Visual Studio and NUnit versions)
    - Playwright page object model
    - Web Service tests (Visual Studio and NUnit versions)
-- DotNet Core project templates - https://www.nuget.org/packages/Cognizant.Maqs.Templates 
+- DotNet Core project templates - https://www.nuget.org/packages/OpenMAQS.Templates 
    - Appium (with tests and page object models) 
    - Base
    - Composite (mix and match all MAQS capabilities)  

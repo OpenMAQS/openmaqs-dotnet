@@ -1,7 +1,7 @@
 # Updating from MAQS 7 to MAQS 8
 
 ## Namespace
-The name 'CognizantSoftvision' is replacing 'Magenic' in all namespaces. 
+The name 'OpenMAQS' is replacing 'Magenic' in all namespaces. 
 ### Example
 ```csharp
 // Old namespaces
