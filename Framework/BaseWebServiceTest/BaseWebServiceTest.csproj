@@ -7,28 +7,28 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
-		<PackageId>CognizantSoftvision.Maqs.WebService</PackageId>
-		<Product>CognizantSoftvision.Maqs.Base</Product>
-		<AssemblyName>CognizantSoftvision.Maqs.BaseWebServiceTest</AssemblyName>
-		<RootNamespace>CognizantSoftvision.Maqs.BaseWebServiceTest</RootNamespace>
+		<PackageId>OpenMaqs.WebService</PackageId>
+		<Product>OpenMaqs.Base</Product>
+		<AssemblyName>OpenMaqs.BaseWebServiceTest</AssemblyName>
+		<RootNamespace>OpenMaqs.BaseWebServiceTest</RootNamespace>
 		<ApplicationIcon>MAQS.ico</ApplicationIcon>
 		<Title>Web Service Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Authors>CognizantSoftvision</Authors>
-		<Company>CognizantSoftvision</Company>
-		<Description>Web Service extension for Cognizant Softvision's modular automation quick start</Description>
-		<Copyright>Copyright © Cognizant $([System.DateTime]::Now.Year)</Copyright>
+		<Authors>OpenMaqs</Authors>
+		<Company>OpenMaqs</Company>
+		<Description>Web Service extension for OpenMaqs' modular automation quick start</Description>
+		<Copyright>Copyright © OpenMAQS $([System.DateTime]::Now.Year)</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>MAQS.png</PackageIcon>
-		<PackageIconUrl>https://raw.githubusercontent.com/CognizantOpenSource/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
-		<PackageProjectUrl>https://github.com/CognizantOpenSource/maqs-dotnet</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/OpenMAQS/openmaqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+		<PackageProjectUrl>https://github.com/OpenMAQS/openmaqs-dotnet</PackageProjectUrl>
 		<PackageTags>test Web service http client automation NUnit MSTest TestFramework</PackageTags>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<RepositoryUrl>https://github.com/CognizantOpenSource/maqs-dotnet</RepositoryUrl>
+		<RepositoryUrl>https://github.com/OpenMAQS/openmaqs-dotnet</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageReleaseNotes>
-			Release Notes can be found at https://github.com/CognizantOpenSource/maqs-dotnet/releases
+			Release Notes can be found at https://github.com/OpenMAQS/openmaqs-dotnet/releases
 		</PackageReleaseNotes>
 		<DebugSymbols>true</DebugSymbols>
 		<IncludeSymbols>true</IncludeSymbols>

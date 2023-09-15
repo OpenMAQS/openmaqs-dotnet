@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="BasePlaywrightPageModel.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BasePlaywrightPageModel.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Playwright page model class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Base Playwright page model

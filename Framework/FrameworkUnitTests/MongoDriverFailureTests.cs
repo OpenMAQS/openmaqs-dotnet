@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoDriverFailureTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="MongoDriverFailureTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Mongo database driver failure tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseMongoTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMaqs.BaseMongoTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Bson;
 using System;

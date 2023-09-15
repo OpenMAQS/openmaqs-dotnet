@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="ITestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ITestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Test object interface

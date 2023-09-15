@@ -1,4 +1,4 @@
-﻿using CognizantSoftvision.Maqs.Utilities.Helper;
+﻿using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Android;
@@ -8,7 +8,7 @@ using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using CognizantSoftvision.Maqs.BaseAppiumTest;
+using OpenMaqs.BaseAppiumTest;
 
 namespace AppiumUnitTests
 {
@@ -49,7 +49,7 @@ namespace AppiumUnitTests
         [TestCleanup]
         public void Cleanup()
         {
-            var passed = this.GetResultType() == CognizantSoftvision.Maqs.Utilities.Logging.TestResultType.PASS;
+            var passed = this.GetResultType() == OpenMaqs.Utilities.Logging.TestResultType.PASS;
 
             if (string.Equals(Config.GetValueForSection(ConfigSection.AppiumMaqs, "RunOnBrowserstack"), "YES", StringComparison.OrdinalIgnoreCase))
             {
@@ -59,7 +59,7 @@ namespace AppiumUnitTests
                 }
                 catch (Exception e)
                 {
-                    this.Log.LogMessage(CognizantSoftvision.Maqs.Utilities.Logging.MessageType.WARNING, "Failed to set BrowserStack Result because: " + e.Message);
+                    this.Log.LogMessage(OpenMaqs.Utilities.Logging.MessageType.WARNING, "Failed to set BrowserStack Result because: " + e.Message);
                 }
             }
             base.MaqsTeardown();

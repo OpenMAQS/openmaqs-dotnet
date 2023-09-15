@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumDriverWaitExtensions.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumDriverWaitExtensions.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the Appium driver wait extensions class</summary>
 //--------------------------------------------------
@@ -11,7 +11,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Threading;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace OpenMaqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium driver wait extension methods

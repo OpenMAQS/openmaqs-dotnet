@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="ClientFactory.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ClientFactory.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Factory for getting email client connections</summary>
 //--------------------------------------------------
 using MailKit.Net.Imap;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace OpenMaqs.BaseEmailTest
 {
     /// <summary>
     /// Email client factory

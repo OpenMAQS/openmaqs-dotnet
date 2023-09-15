@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="IPlaywrightTestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IPlaywrightTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds Playwright test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using OpenMaqs.BaseTest;
 using Microsoft.Playwright;
 using System;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace OpenMaqs.BasePlaywrightTest
 {
     /// <summary>
     /// Playwright test object interface

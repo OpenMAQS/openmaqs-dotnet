@@ -1,13 +1,13 @@
 //--------------------------------------------------
-// <copyright file="Logger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="Logger.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Abstract logger</summary>
 //--------------------------------------------------
 using System;
 using System.Globalization;
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// Abstract logger base class

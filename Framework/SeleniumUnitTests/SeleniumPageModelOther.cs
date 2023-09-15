@@ -1,11 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="SeleniumPageModelOther.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumPageModelOther.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Another test Selenium page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.BaseSeleniumTest.Extensions;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;
 

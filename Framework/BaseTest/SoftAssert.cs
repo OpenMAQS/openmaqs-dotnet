@@ -1,18 +1,18 @@
 //--------------------------------------------------
-// <copyright file="SoftAssert.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SoftAssert.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the SoftAssert class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// SoftAssert class

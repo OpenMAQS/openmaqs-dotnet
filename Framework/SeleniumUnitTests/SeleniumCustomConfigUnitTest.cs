@@ -1,11 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="SeleniumCustomConfigUnitTest.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumCustomConfigUnitTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test the selenium framework with a custom configuration</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;
@@ -23,7 +23,8 @@ namespace SeleniumUnitTests
         /// <summary>
         /// Google URL
         /// </summary>
-        private readonly string urlToNavigate = "https://github.com/CognizantOpenSource/maqs-dotnet";
+        // TODO: fix URL
+        private readonly string urlToNavigate = "https://github.com/OpenMAQS/openmaqs-dotnet";
 
         /// <summary>
         /// Verify WaitForAbsentElement wait works

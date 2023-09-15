@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="DriverManager.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="DriverManager.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base driver manager</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMaqs.Utilities.Logging;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Base driver manager object

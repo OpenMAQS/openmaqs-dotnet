@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceDriverOverrides.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceDriverOverrides.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web service override unit tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMaqs.BaseWebServiceTest;
+using OpenMaqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics.CodeAnalysis;
@@ -28,7 +28,7 @@ namespace WebServiceTesterUnitTesting
         /// <summary>
         /// Expected updated url
         /// </summary>
-        private const string UpdatedUrl = "https://github.com/CognizantOpenSource/maqs-dotnet";
+        private const string UpdatedUrl = "https://github.com/OpenMAQS/openmaqs-dotnet";
 
         /// <summary>
         /// Timeout override
@@ -77,7 +77,7 @@ namespace WebServiceTesterUnitTesting
         [TestCategory(TestCategories.Utilities)]
         public void OverrideWorksForFactory()
         {
-            HttpClient factoryClient = CognizantSoftvision.Maqs.BaseWebServiceTest.HttpClientFactory.GetDefaultClient();
+            HttpClient factoryClient = OpenMaqs.BaseWebServiceTest.HttpClientFactory.GetDefaultClient();
             Assert.AreEqual(WebServiceConfig.GetWebServiceUri() + "/", factoryClient.BaseAddress.ToString());
         }
 

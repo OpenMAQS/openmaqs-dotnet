@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailUnitWithDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EmailUnitWithDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test email driver with base email test</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMaqs.BaseEmailTest;
+using OpenMaqs.Utilities.Helper;
 using MailKit;
 using MailKit.Search;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

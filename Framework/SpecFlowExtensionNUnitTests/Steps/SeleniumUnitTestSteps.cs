@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumUnitTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BaseSeleniumTestSteps</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.SpecFlow.TestSteps;
+using OpenMaqs.BaseSeleniumTest;
+using OpenMaqs.SpecFlow.TestSteps;
 using NUnit.Framework;
 using OpenQA.Selenium.Support.Events;
 using TechTalk.SpecFlow;

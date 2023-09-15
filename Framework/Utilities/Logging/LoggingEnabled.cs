@@ -1,11 +1,11 @@
 //--------------------------------------------------
-// <copyright file="LoggingEnabled.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="LoggingEnabled.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>When to enable logging enumeration</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace OpenMaqs.Utilities.Logging
 {
     /// <summary>
     /// The type of message

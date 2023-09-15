@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="AbstractTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AbstractTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Abstract class with TestSteps functions</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using OpenMaqs.BaseTest;
 using System;
 using TechTalk.SpecFlow;
 
-namespace CognizantSoftvision.Maqs.SpecFlow
+namespace OpenMaqs.SpecFlow
 {
     /// <summary>
     /// The abstract TestSteps class definition

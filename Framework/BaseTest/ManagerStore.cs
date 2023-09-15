@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="ManagerDictionary.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ManagerDictionary.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Dictionary for handling driver managers</summary>
 //--------------------------------------------------
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Driver manager dictionary

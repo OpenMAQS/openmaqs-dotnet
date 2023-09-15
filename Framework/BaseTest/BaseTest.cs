@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseTest.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base code for tests without a system under test object like web drivers or database connections</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using OpenMaqs.Utilities.Helper;
+using OpenMaqs.Utilities.Logging;
+using OpenMaqs.Utilities.Performance;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
@@ -22,7 +22,7 @@ using System.Text;
 using NUnitTestContext = NUnit.Framework.TestContext;
 using VSTestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMaqs.BaseTest
 {
     /// <summary>
     /// Base for tests without a defined system under test
@@ -608,7 +608,7 @@ namespace CognizantSoftvision.Maqs.BaseTest
                 var messages = this.LoggedExceptionList;
 
                 // Make sure this error is associated with the current test and that we have not logged it yet
-                if (innerStack.ToLower().Contains("cognizantsoftvision.maqs") || innerStack.Contains("at " + this.GetFullyQualifiedTestClassName() + "("))
+                if (innerStack.ToLower().Contains("OpenMaqs") || innerStack.Contains("at " + this.GetFullyQualifiedTestClassName() + "("))
                 {
                     // Check if this is a duplicate massage
                     if (messages.Count > 0 && messages.Last().Equals(message))

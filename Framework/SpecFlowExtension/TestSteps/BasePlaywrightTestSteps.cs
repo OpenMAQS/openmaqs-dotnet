@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="BasePlaywrightTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BasePlaywrightTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for tests using Playwright</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
+using OpenMaqs.BasePlaywrightTest;
 using TechTalk.SpecFlow;
-using MaqsPlaywright = CognizantSoftvision.Maqs.BasePlaywrightTest.BasePlaywrightTest;
+using MaqsPlaywright = OpenMaqs.BasePlaywrightTest.BasePlaywrightTest;
 
-namespace CognizantSoftvision.Maqs.SpecFlow.TestSteps
+namespace OpenMaqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for Playwright TestSteps classes

@@ -1,13 +1,13 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="TestProvider.cs" company="Cognizant">
-//   Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="TestProvider.cs" company="OpenMAQS">
+//   Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>
 //   The test provider classed used to test custom providers.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using CognizantSoftvision.Maqs.BaseDatabaseTest.Providers;
+using OpenMaqs.BaseDatabaseTest.Providers;
 using System.Data.SqlClient;
 
 namespace DatabaseUnitTests
