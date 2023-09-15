@@ -46,7 +46,7 @@ namespace AppiumUnitTests
         [TestCategory(TestCategories.Appium)]
         public void GetPlatformVersionTest()
         {
-            Assert.AreEqual("6.0", AppiumConfig.GetPlatformVersion());
+            Assert.AreEqual("13.0", AppiumConfig.GetPlatformVersion());
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace AppiumUnitTests
         [TestCategory(TestCategories.Appium)]
         public void GetDeviceNameTest()
         {
-            Assert.AreEqual("Android Emulator", AppiumConfig.GetDeviceName());
+            Assert.AreEqual("Google Pixel 7 Pro", AppiumConfig.GetDeviceName());
         }
 
         /// <summary>

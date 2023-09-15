@@ -9,6 +9,7 @@ using OpenMaqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using Selenium.Axe;
+using SixLabors.ImageSharp;
 using System;
 using System.IO;
 using System.Reflection;
@@ -74,7 +75,8 @@ namespace OpenMaqs.BaseSeleniumTest
         public static string CaptureScreenshot(this IWebDriver webDriver, ISeleniumTestObject testObject, string directory, string fileNameWithoutExtension, ScreenshotImageFormat imageFormat = ScreenshotImageFormat.Png)
         {
             Screenshot screenShot = ((ITakesScreenshot)webDriver).GetScreenshot();
-
+            Image image = Image.Load(screenShot.AsByteArray);
+            
             // Make sure the directory exists
             if (!Directory.Exists(directory))
             {
@@ -85,7 +87,29 @@ namespace OpenMaqs.BaseSeleniumTest
             string path = Path.Combine(directory, $"{fileNameWithoutExtension}.{imageFormat}");
 
             // Save the screenshot
-            screenShot.SaveAsFile(path, imageFormat);
+            switch (imageFormat)
+            {
+                case ScreenshotImageFormat.Jpeg:
+                    image.SaveAsJpeg(path);
+                    break;
+                case ScreenshotImageFormat.Png: 
+                    image.SaveAsPng(path); 
+                    break;
+                case ScreenshotImageFormat.Bmp:
+                    image.SaveAsBmp(path);
+                    break;
+                case ScreenshotImageFormat.Gif:
+                    image.SaveAsGif(path);
+                    break;
+                case ScreenshotImageFormat.Tiff: 
+                    image.SaveAsTiff(path); 
+                    break;
+                default:
+                    image.SaveAsPng(path);
+                    break;
+
+            }
+
             testObject.AddAssociatedFile(path);
 
             return path;
