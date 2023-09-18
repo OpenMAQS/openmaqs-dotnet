@@ -98,7 +98,7 @@ namespace OpenMaqs.BaseDatabaseTest
                 case "ODP":
                 case "ORACLE":
                     throw new NotImplementedException(@"Oracle database is no longer directly supported.  
-See https://OpenMAQS.github.io/maqs-dotnet/#/MAQS_8/Database/DatabaseFAQ?id=how-can-to-connect-to-an-oracle-sql-database for how to connect to an Oracle database.");
+See https://openmaqs.github.io/maqs-dotnet/#/MAQS_8/Database/DatabaseFAQ?id=how-can-to-connect-to-an-oracle-sql-database for how to connect to an Oracle database.");
                 default:
                     provider = GetCustomProviderType(providerType);
                     break;
