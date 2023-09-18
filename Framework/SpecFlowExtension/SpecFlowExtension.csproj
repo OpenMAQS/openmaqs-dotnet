@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net471;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <PackageId>CognizantSoftvision.Maqs.SpecFlow</PackageId>
     <Product>CognizantSoftvision.Maqs.SpecFlow</Product>
     <AssemblyName>CognizantSoftvision.Maqs.SpecFlow</AssemblyName>
