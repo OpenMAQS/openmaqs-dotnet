@@ -6,10 +6,10 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
-		<PackageId>OpenMaqs.Database</PackageId>
-		<AssemblyName>OpenMaqs.BaseDatabaseTest</AssemblyName>
-		<RootNamespace>OpenMaqs.BaseDatabaseTest</RootNamespace>
+		<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+		<PackageId>CognizantSoftvision.Maqs.Database</PackageId>
+		<AssemblyName>CognizantSoftvision.Maqs.BaseDatabaseTest</AssemblyName>
+		<RootNamespace>CognizantSoftvision.Maqs.BaseDatabaseTest</RootNamespace>
 		<ApplicationIcon>MAQS.ico</ApplicationIcon>
 		<Title>Database Module</Title>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

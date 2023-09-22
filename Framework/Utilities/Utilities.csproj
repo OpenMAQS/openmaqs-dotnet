@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <PackageId>OpenMaqs.Utilities</PackageId>
     <Product>OpenMaqs.Utilities</Product>
     <AssemblyName>OpenMaqs.Utilities</AssemblyName>

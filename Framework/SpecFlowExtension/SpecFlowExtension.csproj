@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net471;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <PackageId>OpenMaqs.SpecFlow</PackageId>
     <Product>OpenMaqs.SpecFlow</Product>
     <AssemblyName>OpenMaqs.SpecFlow</AssemblyName>
