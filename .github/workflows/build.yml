@@ -369,9 +369,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -413,9 +411,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -639,18 +635,17 @@ jobs:
           Write-Host "Finished updating relative paths"
           
       - name: Cache SonarCloud packages
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: ~\sonar\cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Cache SonarCloud scanner
         id: cache-sonar-scanner
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: .\.sonar\scanner
           key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
       - name: Install SonarCloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
@@ -663,7 +658,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"CognizantOpenSource_maqs-dotnet" /o:"cognizantopensource" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
           dotnet build Framework/Base.sln -p:Version=${{ needs.getVersion.outputs.buildNumber }}
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
  
