@@ -24,7 +24,7 @@ jobs:
       id: wait
       shell: pwsh
       run: |
-            $event = ${{ github.event_name }}
+            $event = "${{ github.event_name }}"
             if($event -eq "workflow_dispatch")
             {
               Write-Host "Manually triggered workflow, skipping wait"
