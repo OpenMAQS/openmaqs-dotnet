@@ -24,7 +24,18 @@ jobs:
       id: wait
       shell: pwsh
       run: |
-            $runID = ${{ github.run_id }} 
+            $event = "${{ github.event_name }}"
+            if($event -eq "workflow_dispatch")
+            {
+              Write-Host "Manually triggered workflow, skipping wait"
+              return
+            }
+            if($event -eq "pull_request")
+            {
+              Write-Host "Pull request, skipping wait"
+              return
+            }
+            $runID = ${{ github.run_id }}
             $endPoint = "https://api.github.com/repos/${{github.repository}}/actions/runs"
 
             $timeout = New-TimeSpan -Minutes 60
