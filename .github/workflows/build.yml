@@ -19,7 +19,6 @@ jobs:
   waitOld:
     name: Wait For Older Runs To Complete
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
     steps:
     - name: Wait
       id: wait
