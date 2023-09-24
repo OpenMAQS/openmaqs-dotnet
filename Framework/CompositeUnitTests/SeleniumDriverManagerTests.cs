@@ -108,7 +108,7 @@ namespace CompositeUnitTests
 
             this.ManagerStore.Add("test", newDriver);
 
-            this.TestObject.WebDriver.Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/async.html");
+            this.TestObject.WebDriver.Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/async.html");
 
             Assert.AreNotEqual(this.TestObject.WebDriver.Url, this.ManagerStore.GetManager<SeleniumDriverManager>("test").GetWebDriver().Url);
         }
@@ -123,7 +123,7 @@ namespace CompositeUnitTests
             newDriver.GetWebDriver().Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation");
             this.ManagerStore.Add("test", newDriver);
 
-            this.TestObject.WebDriver.Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/async.html");
+            this.TestObject.WebDriver.Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/async.html");
 
             LazyElement topNew = new LazyElement(this.TestObject, newDriver.GetWebDriver(), By.CssSelector("*"));
             LazyElement topDefault = new LazyElement(this.TestObject, By.CssSelector("*"));
