@@ -28,7 +28,7 @@ namespace WebServiceTesterUnitTesting
         /// <summary>
         /// Expected updated url
         /// </summary>
-        private const string UpdatedUrl = "https://github.com/OpenMAQS/maqs-dotnet";
+        private const string UpdatedUrl = "https://github.com/OpenMAQS/openmaqs-dotnet";
 
         /// <summary>
         /// Timeout override
@@ -98,7 +98,7 @@ namespace WebServiceTesterUnitTesting
         /// <returns>The base web service url</returns>
         protected override Uri GetBaseWebServiceUri()
         {
-            return new Uri(this.GetBaseWebServiceUrl() + "/maqs-dotnet");
+            return new Uri(this.GetBaseWebServiceUrl() + "/openmaqs-dotnet");
         }
 
         /// <summary>
