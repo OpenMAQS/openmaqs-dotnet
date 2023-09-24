@@ -104,7 +104,7 @@ namespace CompositeUnitTests
         public void SeparateInteractions()
         {
             SeleniumDriverManager newDriver = new SeleniumDriverManager(() => WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.HeadlessChrome), this.TestObject);
-            newDriver.GetWebDriver().Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation");
+            newDriver.GetWebDriver().Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/");
 
             this.ManagerStore.Add("test", newDriver);
 
@@ -120,7 +120,7 @@ namespace CompositeUnitTests
         public void SeparateLazyElementInteractions()
         {
             SeleniumDriverManager newDriver = new SeleniumDriverManager(() => WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.HeadlessChrome), this.TestObject);
-            newDriver.GetWebDriver().Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation");
+            newDriver.GetWebDriver().Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/");
             this.ManagerStore.Add("test", newDriver);
 
             this.TestObject.WebDriver.Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/async.html");
