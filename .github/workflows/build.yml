@@ -24,6 +24,17 @@ jobs:
       id: wait
       shell: pwsh
       run: |
+            $event = "${{ github.event_name }}"
+            if($event -eq "workflow_dispatch")
+            {
+              Write-Host "Manually triggered workflow, skipping wait"
+              return
+            }
+            if($event -eq "pull_request")
+            {
+              Write-Host "Pull request, skipping wait"
+              return
+            }
             $runID = ${{ github.run_id }}
             $endPoint = "https://api.github.com/repos/${{github.repository}}/actions/runs"
 
@@ -96,9 +107,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: builder
         env:
           GlobalMaqs:ConfigJsonEnvRunOverride: ENV
@@ -127,7 +136,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
+            6.0.201
       - name: Configure Windows for automation
         uses: ./.github/actions/setup-winapp
       - name: Install Appium
@@ -162,9 +171,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
         with:
@@ -193,9 +200,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -219,9 +224,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - name: Start test service
         run: Start-Process -FilePath "dotnet" -ArgumentList "run --project Docker/MAQSService/MainTestService/MainTestService.csproj"
         shell: pwsh
@@ -248,9 +251,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
@@ -283,9 +284,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
@@ -312,9 +311,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
@@ -341,9 +338,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
@@ -369,9 +364,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -413,9 +406,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -441,9 +432,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - name: Build the docker-compose mongo stack
@@ -473,9 +462,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -501,9 +488,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -529,9 +514,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - run: dotnet restore Framework/Base.sln
         shell: pwsh
       - run: choco upgrade firefox
@@ -563,9 +546,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
             6.0.201
-            7.0.203
       - id: browserupdate
         uses: ./.github/workflows/setupwinbrowser-action
       - name: 'BrowserStack Env Setup'
@@ -593,10 +574,10 @@ jobs:
     runs-on: windows-2019
     needs: [test-appium, test-winapp, test-utils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen, getVersion]
     steps:
-      - name: Set up JDK 11
+      - name: Set up JDK 17
         uses: actions/setup-java@v1
         with:
-          java-version: 1.11
+          java-version: 17
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
@@ -639,18 +620,17 @@ jobs:
           Write-Host "Finished updating relative paths"
 
       - name: Cache SonarCloud packages
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: ~\sonar\cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Cache SonarCloud scanner
         id: cache-sonar-scanner
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: .\.sonar\scanner
           key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
       - name: Install SonarCloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
@@ -663,7 +643,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"OpenMAQS_maqs-dotnet" /o:"OpenMAQS" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
           dotnet build Framework/Base.sln -p:Version=${{ needs.getVersion.outputs.buildNumber }}
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
 
@@ -698,8 +678,7 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
         with:
           dotnet-version: |
-            3.1.417
-
+            6.0.201
       - name: Install dependencies
         run: dotnet restore Framework/Base.sln
 
@@ -727,8 +706,7 @@ jobs:
       uses: xt0rted/setup-dotnet@v1.0.0
       with:
         dotnet-version: |
-          3.1.417
-
+          6.0.201
     - uses: actions/download-artifact@v2
       with:
         name: 'packages'
