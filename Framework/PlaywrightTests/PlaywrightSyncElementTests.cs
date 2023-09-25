@@ -205,7 +205,7 @@ namespace PlaywrightTests
         [TestMethod]
         public void InnerHTMLTest()
         {
-            Assert.IsTrue(Models[this.TestObject].Footer.InnerHTML().Contains("Softvision"));
+            Assert.IsTrue(Models[this.TestObject].Footer.InnerHTML().Contains("MAQS"));
         }
 
         /// <summary>
@@ -214,7 +214,7 @@ namespace PlaywrightTests
         [TestMethod]
         public void InnerTextTest()
         {
-            Assert.IsTrue(Models[this.TestObject].Footer.InnerText().Contains("Softvision"));
+            Assert.IsTrue(Models[this.TestObject].Footer.InnerText().Contains("MAQS"));
         }
 
         /// <summary>
