@@ -31,7 +31,7 @@ namespace UtilitiesUnitTesting
         [ClassCleanup]
         public static void DeleteArtificats()
         {
-            Directory.Delete(customPath, true);
+                Directory.Delete(customPath, true);
         }
 
         /// <summary>
