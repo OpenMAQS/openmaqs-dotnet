@@ -957,6 +957,26 @@ namespace FrameworkUnitTests
             throw new NotImplementedException();
         }
 
+        public Stream GetStream(UniqueId uid, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Stream GetStream(int index, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Stream GetStream(UniqueId uid, BodyPart part, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Stream GetStream(int index, BodyPart part, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<Stream> GetStreamAsync(UniqueId uid, int offset, int count, CancellationToken cancellationToken = default, ITransferProgress progress = null)
         {
             throw new NotImplementedException();
@@ -993,6 +1013,26 @@ namespace FrameworkUnitTests
         }
 
         public Task<Stream> GetStreamAsync(int index, string section, int offset, int count, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Stream> GetStreamAsync(UniqueId uid, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Stream> GetStreamAsync(int index, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Stream> GetStreamAsync(UniqueId uid, BodyPart part, CancellationToken cancellationToken = default, ITransferProgress progress = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Stream> GetStreamAsync(int index, BodyPart part, CancellationToken cancellationToken = default, ITransferProgress progress = null)
         {
             throw new NotImplementedException();
         }
