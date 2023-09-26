@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<VersionPrefix>9.0.0</VersionPrefix>
@@ -6,7 +6,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
 		<PackageId>CognizantSoftvision.Maqs.Appium</PackageId>
 		<Product>CognizantSoftvision.Maqs.Appium</Product>
 		<AssemblyName>CognizantSoftvision.Maqs.BaseAppiumTest</AssemblyName>
@@ -49,12 +49,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Appium.WebDriver" Version="5.0.0-beta01" />
+		<PackageReference Include="Appium.WebDriver" Version="5.0.0-rc.1" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

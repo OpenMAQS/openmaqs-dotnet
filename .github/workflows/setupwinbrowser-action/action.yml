@@ -5,3 +5,5 @@ runs:
   steps:
     - run: choco upgrade googlechrome
       shell: pwsh 
+    - run: choco upgrade firefox
+      shell: pwsh
