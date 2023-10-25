@@ -81,7 +81,7 @@ jobs:
               $header = @{Authorization = 'Bearer ${{ secrets.GITHUB_TOKEN }}' }
               $endPoint = "https://api.github.com/repos/${{github.repository}}/releases"
               $info = Invoke-RestMethod -Uri $endPoint -Headers $header
-              $version = $info.name[0].Trim("v")
+              $version = $info.name[0].ToString().Trim("v")
             }
             
             Write-Host "::set-output name=BUILD_NUMBER::$($version)"
