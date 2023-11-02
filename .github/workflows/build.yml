@@ -657,7 +657,7 @@ jobs:
           reporter: dotnet-trx
           
   createNugetPacakges:
-    name: Create NuGet pacakges
+    name: Create NuGet packages
     runs-on: windows-2019
     needs: [getVersion]
     steps:
