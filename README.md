@@ -1,4 +1,4 @@
-![MAQS Logo](C:\Users\Jon\Documents\GitHub\openmaqs-dotnet\docs\resources\maqsfull.jpg?raw=true)
+![MAQS Logo](https://github.com/OpenMAQS/openmaqs-java/blob/main/docs/resources/maqsfull.png?raw=true)
 
 
 | Check | Status                                                                                                                                                                                                                               |  
