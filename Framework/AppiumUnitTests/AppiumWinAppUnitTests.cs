@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="AppiumWinAppUnitTests.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test class for windows application driver related functions</summary>
 //--------------------------------------------------

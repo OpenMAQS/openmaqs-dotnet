@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="DatabaseSQLiteUnitTestsWithDriver.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit tests for SQLITE provider</summary>
 //--------------------------------------------------

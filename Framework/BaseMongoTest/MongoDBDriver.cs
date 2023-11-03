@@ -1,5 +1,5 @@
 ﻿// <copyright file="MongoDBDriver.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the driver for the mongo collection object</summary>
 //--------------------------------------------------

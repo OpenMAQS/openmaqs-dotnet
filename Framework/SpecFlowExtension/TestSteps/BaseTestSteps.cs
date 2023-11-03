@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="BaseTestSteps.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for general SpecFlow tests</summary>
 //--------------------------------------------------

@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="ExtendableTestSteps.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Extendable class for defining a test steps class</summary>
 //--------------------------------------------------

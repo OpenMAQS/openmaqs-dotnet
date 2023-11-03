@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="EmailConfig.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting email specific configuration values</summary>
 //--------------------------------------------------

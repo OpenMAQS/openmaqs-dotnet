@@ -118,7 +118,7 @@ jobs:
   test-winapp:
     name: WinApp
     needs: waitOld
-    runs-on: windows-2022
+    runs-on: windows-2023
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -496,7 +496,7 @@ jobs:
   test-selenutil:
     name: Selenium Utils
     needs: waitOld
-    runs-on: windows-2022
+    runs-on: windows-2023
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core

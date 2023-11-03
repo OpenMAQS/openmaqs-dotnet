@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="EmailUnitWithoutDriver.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test email driver without base email test</summary>
 //--------------------------------------------------

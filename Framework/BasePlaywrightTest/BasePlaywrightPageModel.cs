@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="BasePlaywrightPageModel.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Playwright page model class</summary>
 //--------------------------------------------------

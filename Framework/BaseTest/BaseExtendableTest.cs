@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="BaseExtendableTest.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base code for test classes that setup test objects like web drivers or database connections</summary>
 //--------------------------------------------------
@@ -25,7 +25,7 @@ namespace OpenMAQS.Maqs.BaseTest
         }
 
         /// <summary>
-        /// Gets or sets the test object 
+        /// Gets or sets the test object
         /// </summary>void CreateNewTestObject
         protected new T TestObject
         {

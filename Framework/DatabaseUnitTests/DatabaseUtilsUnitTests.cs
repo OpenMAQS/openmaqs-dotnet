@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
 // <copyright file="DatabaseUtilsUnitTests.cs" company="OpenMAQS">
-//  Copyright 2022 OpenMAQS, All rights Reserved
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Database base utilities unit tests</summary>
 //--------------------------------------------------
