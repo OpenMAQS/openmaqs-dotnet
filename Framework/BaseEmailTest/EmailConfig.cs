@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailConfig.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EmailConfig.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting email specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace OpenMAQS.Maqs.BaseEmailTest
 {
     /// <summary>
     /// Email configuration class

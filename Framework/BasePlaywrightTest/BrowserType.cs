@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="BrowserType.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BrowserType.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Known browser types</summary>
 //--------------------------------------------------
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace OpenMAQS.Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Known browser types

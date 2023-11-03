@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoDBConfig.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="MongoDBConfig.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting MongoDB specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace OpenMAQS.Maqs.BaseMongoTest
 {
     /// <summary>
     /// Config class

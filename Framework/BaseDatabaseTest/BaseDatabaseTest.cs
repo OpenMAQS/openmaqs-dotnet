@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseDatabaseTest.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseDatabaseTest.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base database test class</summary>
 //--------------------------------------------------
 
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseTest;
+using OpenMAQS.Maqs.Utilities.Logging;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace OpenMAQS.Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Generic base database test class

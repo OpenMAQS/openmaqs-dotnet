@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="EventFiringDatabaseDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EventFiringDatabaseDriver.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The event firing database interactions</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace OpenMAQS.Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Wrap basic firing database interactions

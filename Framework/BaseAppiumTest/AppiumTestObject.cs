@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumTestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumTestObject.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds Appium context data</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseTest;
+using OpenMAQS.Maqs.Utilities.Logging;
 using OpenQA.Selenium.Appium;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace OpenMAQS.Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium test context data

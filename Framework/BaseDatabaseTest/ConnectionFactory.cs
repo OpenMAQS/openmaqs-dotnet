@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="ConnectionFactory.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ConnectionFactory.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting database specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseDatabaseTest.Providers;
+using OpenMAQS.Maqs.BaseDatabaseTest.Providers;
 using System;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace OpenMAQS.Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Config class

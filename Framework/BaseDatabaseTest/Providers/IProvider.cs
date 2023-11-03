@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="IProvider.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IProvider.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>IProvider interface</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest.Providers
+namespace OpenMAQS.Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The Provider interface.

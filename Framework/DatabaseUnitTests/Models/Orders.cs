@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="Orders.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="Orders.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Model representing orders table</summary>
 //--------------------------------------------------

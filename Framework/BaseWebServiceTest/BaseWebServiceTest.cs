@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseWebServiceTest.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseWebServiceTest.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base web service test class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseTest;
+using OpenMAQS.Maqs.Utilities.Logging;
 using System;
 using System.Net.Http;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace OpenMAQS.Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Generic base web service test class

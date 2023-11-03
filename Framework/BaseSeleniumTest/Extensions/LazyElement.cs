@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="LazyElement.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="LazyElement.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the LazyElement class</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions
+namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
 {
     /// <summary>
     /// Driver for dynamically finding and interacting with elements

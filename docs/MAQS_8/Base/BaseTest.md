@@ -47,7 +47,7 @@ this.BeforeLoggingTeardown(resultType);
 ## SoftAssert
 Gets or sets the SoftAssert objects.
 ```csharp
-SoftAssert.AreEqual("Automation - Cognizant Automation Test Site", WebDriver.Title, "Title Test", "Title is incorrect");
+SoftAssert.AreEqual("Automation - OpenMAQS Automation Test Site", WebDriver.Title, "Title Test", "Title is incorrect");
 ```
 
 ## Log

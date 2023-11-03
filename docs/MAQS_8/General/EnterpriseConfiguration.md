@@ -216,8 +216,8 @@ Primarily uses with the .Net Framework implementation of MAQS.
   <AppiumCapsMaqs>
     <!-- Remote settings -->
     <add key="sauce:options" value="{username:'S_NAME', accessKey:'S_KEY', appiumVersion:'1.20.2' }"  />
-    <add key="appActivity" value="com.Cognizant.appiumtesting.maqsregistrydemo.LoginPage" />
-    <add key="appPackage" value="com.Cognizant.appiumtesting.maqsregistrydemo" /> 
+    <add key="appActivity" value="com.OpenMAQS.appiumtesting.maqsregistrydemo.LoginPage" />
+    <add key="appPackage" value="com.OpenMAQS.appiumtesting.maqsregistrydemo" /> 
   </AppiumCapsMaqs>
   <DatabaseMaqs>
     <!--<add key="DataBaseProviderType" value="SQLSERVER" />

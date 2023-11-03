@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="EventFiringEmailDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EventFiringEmailDriver.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The basic database interactions</summary>
 //--------------------------------------------------
@@ -11,7 +11,7 @@ using MimeKit;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace OpenMAQS.Maqs.BaseEmailTest
 {
     /// <summary>
     /// Wraps the basic database interactions

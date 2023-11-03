@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EmailDriver.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The basic email interactions</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using MailKit;
 using MailKit.Net.Imap;
 using MailKit.Search;
@@ -15,7 +15,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseEmailTest
+namespace OpenMAQS.Maqs.BaseEmailTest
 {
     /// <summary>
     /// Wraps the basic email interactions

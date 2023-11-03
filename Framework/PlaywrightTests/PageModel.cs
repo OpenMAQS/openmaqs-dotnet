@@ -1,10 +1,10 @@
 ﻿//-----------------------------------------------------
-// <copyright file="PageModel.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PageModel.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>A test Playwright page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
+using OpenMAQS.Maqs.BasePlaywrightTest;
 using System.Diagnostics.CodeAnalysis;
 
 namespace PlaywrightTests

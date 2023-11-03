@@ -1,11 +1,11 @@
 //--------------------------------------------------
-// <copyright file="TestResultType.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="TestResultType.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test result type enumeration</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace OpenMAQS.Maqs.Utilities.Logging
 {
     /// <summary>
     /// The type of result

@@ -1,14 +1,14 @@
 //--------------------------------------------------
-// <copyright file="AppiumConfig.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumConfig.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the Appium Configuration class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace OpenMAQS.Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Appium Configuration class

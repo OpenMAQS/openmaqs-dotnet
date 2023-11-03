@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseAppiumPageModel.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseAppiumPageModel.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Appium page model class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using OpenMAQS.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.Utilities.Performance;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace CognizantSoftvision.Maqs.BaseAppiumTest
+namespace OpenMAQS.Maqs.BaseAppiumTest
 {
     /// <summary>
     /// Base Appium page model

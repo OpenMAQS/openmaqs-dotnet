@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseTestSteps.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Base teststeps code for general SpecFlow tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using OpenMAQS.Maqs.BaseTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TechTalk.SpecFlow;
-using MaqsBase = CognizantSoftvision.Maqs.BaseTest.BaseTest;
+using MaqsBase = OpenMAQS.Maqs.BaseTest.BaseTest;
 
-namespace CognizantSoftvision.Maqs.SpecFlow.TestSteps
+namespace OpenMAQS.Maqs.SpecFlow.TestSteps
 {
     /// <summary>
     /// Base for TestSteps classes

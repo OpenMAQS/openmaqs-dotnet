@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseUnitTestsWithDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="DatabaseUnitTestsWithDriver.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Database base test unit tests</summary>
 //--------------------------------------------------
 
-using CognizantSoftvision.Maqs.BaseDatabaseTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseDatabaseTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using DatabaseUnitTests.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data;

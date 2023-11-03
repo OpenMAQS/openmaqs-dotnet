@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="ExtendableTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ExtendableTestSteps.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Extendable class for defining a test steps class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
-using CognizantSoftvision.Maqs.Utilities.Performance;
+using OpenMAQS.Maqs.BaseTest;
+using OpenMAQS.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.Utilities.Performance;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TechTalk.SpecFlow;
 
-namespace CognizantSoftvision.Maqs.SpecFlow
+namespace OpenMAQS.Maqs.SpecFlow
 {
     /// <summary>
     /// Abstract a TestSteps class

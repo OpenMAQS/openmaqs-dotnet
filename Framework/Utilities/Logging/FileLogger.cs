@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="FileLogger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="FileLogger.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Writes event logs to plain text file</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using System;
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace OpenMAQS.Maqs.Utilities.Logging
 {
     /// <summary>
     ///  Helper class for adding logs to a plain text file. Allows configurable file path.

@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumUtilities.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumUtilities.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Utilities class for generic selenium methods</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseSeleniumTest.Extensions;
+using OpenMAQS.Maqs.Utilities.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using Selenium.Axe;
@@ -14,7 +14,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest
+namespace OpenMAQS.Maqs.BaseSeleniumTest
 {
     /// <summary>
     /// Static class for the selenium utilities

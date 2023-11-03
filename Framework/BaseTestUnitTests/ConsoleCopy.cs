@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="ConsoleCopy.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ConsoleCopy.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Copy console output to a file for testing. Copied off the Internet.</summary>
 //--------------------------------------------------

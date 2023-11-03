@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SQLServerProvider.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SQLServerProvider.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>SQLServerProvider class</summary>
 //--------------------------------------------------
 
 using System.Data.SqlClient;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest.Providers
+namespace OpenMAQS.Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The SQL server provider.

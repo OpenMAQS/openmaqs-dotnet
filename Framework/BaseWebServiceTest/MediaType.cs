@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="MediaType.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="MediaType.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web service MediaType class page</summary>
 //--------------------------------------------------
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace OpenMAQS.Maqs.BaseWebServiceTest
 {
     /// <summary>
     ///  Test media type of web service

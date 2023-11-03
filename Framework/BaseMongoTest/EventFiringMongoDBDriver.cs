@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="EventFiringMongoDBDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EventFiringMongoDBDriver.cs" company="OpenMAQS">
+//  Copyright 2022 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The event firing mongoDB collection interactions</summary>
 //--------------------------------------------------
@@ -8,7 +8,7 @@ using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace OpenMAQS.Maqs.BaseMongoTest
 {
     /// <summary>
     /// Wrap basic firing database interactions
