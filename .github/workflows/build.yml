@@ -246,13 +246,13 @@ jobs:
           node-version: '16'
       - name: Install Playwright
         run: |
-            dotnet build Framework/PlaywrightTests/PlaywrightTests.csproj -o Framework/PlaywrightTests/build
-            pwsh Framework/PlaywrightTests/build/playwright.ps1 install-deps
-            pwsh Framework/PlaywrightTests/build/playwright.ps1 install
+            dotnet build Framework/PlaywrightUnitTests/PlaywrightUnitTests.csproj -o Framework/PlaywrightUnitTests/build
+            pwsh Framework/PlaywrightUnitTests/build/playwright.ps1 install-deps
+            pwsh Framework/PlaywrightUnitTests/build/playwright.ps1 install
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/PlaywrightTests/PlaywrightTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/Playwright/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/Playwright/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
+          bt-param: 'Framework/PlaywrightUnitTests/PlaywrightUnitTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/Playwright/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/Playwright/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
           artifact-name: 'playwright'
       - uses: actions/upload-artifact@v2
         if: always()
