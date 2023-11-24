@@ -96,7 +96,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - id: builder
         env:
           GlobalMaqs:ConfigJsonEnvRunOverride: ENV
@@ -125,7 +125,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - name: Configure Windows for automation
         uses: ./.github/actions/setup-winapp
       - name: Install Appium
@@ -160,7 +160,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
         with:
@@ -189,7 +189,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -213,7 +213,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - name: Start test service
         run: Start-Process -FilePath "dotnet" -ArgumentList "run --project Docker/MAQSService/MainTestService/MainTestService.csproj"
         shell: pwsh
@@ -240,7 +240,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
@@ -273,7 +273,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
@@ -300,7 +300,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
@@ -327,7 +327,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - name: Build the docker-compose stack
         run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
@@ -353,7 +353,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -395,7 +395,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -421,7 +421,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - name: Build the docker-compose mongo stack
@@ -451,7 +451,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -477,7 +477,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -503,7 +503,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - run: dotnet restore Framework/Base.sln
         shell: pwsh
       - run: choco upgrade firefox
@@ -535,7 +535,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setupwinbrowser-action
       - name: 'BrowserStack Env Setup'
@@ -667,7 +667,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.x.x
+            8.x.x
       - name: Install dependencies
         run: dotnet restore Framework/Base.sln
 
@@ -695,7 +695,7 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: |
-          6.x.x
+          8.x.x
     - uses: actions/download-artifact@v2
       with:
         name: 'packages'
