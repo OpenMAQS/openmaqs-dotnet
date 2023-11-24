@@ -40,11 +40,6 @@
       <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
         <Configuration>
           <CodeCoverage>
-              <EnableStaticManagedInstrumentation>False</EnableStaticManagedInstrumentation>
-              <EnableDynamicManagedInstrumentation>True</EnableDynamicManagedInstrumentation>
-              <EnableStaticNativeInstrumentation>False</EnableStaticNativeInstrumentation>
-              <EnableDynamicNativeInstrumentation>False</EnableDynamicNativeInstrumentation>
-              <UseVerifiableInstrumentation>False</UseVerifiableInstrumentation>
             <ModulePaths>
               <Exclude>
                 <ModulePath>.*UnitTests.*</ModulePath>
