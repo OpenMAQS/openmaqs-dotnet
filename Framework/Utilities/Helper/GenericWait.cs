@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="GenericWait.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="GenericWait.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Generic wait</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace OpenMAQS.Maqs.Utilities.Helper
 {
     /// <summary>
     /// Generic wait class

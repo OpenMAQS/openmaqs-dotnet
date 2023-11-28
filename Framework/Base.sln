@@ -56,7 +56,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseCompositeTest", "BaseCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasePlaywrightTest", "BasePlaywrightTest\BasePlaywrightTest.csproj", "{2D0BDB8F-2A16-410B-95FC-E8C594FD0243}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaywrightTests", "PlaywrightTests\PlaywrightTests.csproj", "{BF775D51-3CB4-498B-9D57-0579DC34EAAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaywrightUnitTests", "PlaywrightUnitTests\PlaywrightUnitTests.csproj", "{BF775D51-3CB4-498B-9D57-0579DC34EAAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -148,7 +148,6 @@ Global
 		{BF775D51-3CB4-498B-9D57-0579DC34EAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF775D51-3CB4-498B-9D57-0579DC34EAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF775D51-3CB4-498B-9D57-0579DC34EAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF775D51-3CB4-498B-9D57-0579DC34EAAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

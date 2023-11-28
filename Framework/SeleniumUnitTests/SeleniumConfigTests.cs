@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumConfigTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumConfigTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test class for config files</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseSeleniumTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -272,7 +272,7 @@ namespace SeleniumUnitTests
             {
                 Config.AddTestSettingValues(new Dictionary<string, string> { ["username"] = "BrowserStack_Username" }, ConfigSection.RemoteSeleniumCapsMaqs);
                 driver = WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.Remote);
-                driver.Navigate().GoToUrl("https://www.cognizantsoftvision.com/");
+                driver.Navigate().GoToUrl("https://www.OpenMAQS.com/");
             }
             catch (Exception e)
             {

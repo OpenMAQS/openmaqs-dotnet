@@ -1,16 +1,16 @@
 ﻿//--------------------------------------------------
-// <copyright file="FileLoggerThreadSafetyTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="FileLoggerThreadSafetyTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Thread safe file logger unit tests</summary>
 //--------------------------------------------------
 
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using UtilityLogger = CognizantSoftvision.Maqs.Utilities.Logging.Logger;
+using UtilityLogger = OpenMAQS.Maqs.Utilities.Logging.Logger;
 
 namespace UtilitiesUnitTesting
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace OpenMAQS.Maqs.Utilities.Helper
 {
     /// <summary>
     /// Elements of config files which need to be validated on load

@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="BaseSeleniumTest.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BaseSeleniumTest.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>This is the base Selenium test class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseTest;
+using OpenMAQS.Maqs.Utilities.Logging;
 using OpenQA.Selenium;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest
+namespace OpenMAQS.Maqs.BaseSeleniumTest
 {
     /// <summary>
     /// Generic base Selenium test class

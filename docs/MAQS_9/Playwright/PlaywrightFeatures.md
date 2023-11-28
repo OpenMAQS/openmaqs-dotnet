@@ -44,7 +44,7 @@ this.Log.LogMessage("I am testing with MAQS");
 ## TestObject
 The TestObject can be thought of as your test context.  It holds all the MAQS test execution replated data.  This includes the Playwright driver, logger, soft asserts, performance timers, plus more.
 ```csharp
-this.TestObject.PageDriver.Goto("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/");
+this.TestObject.PageDriver.Goto("https://openmaqs.github.io/TestingSite/Automation/");
 this.TestObject.Log.LogMessage("I am testing with MAQS");
 ```
 *Notes:*  
@@ -56,7 +56,7 @@ Syncronys element wrapper
 
 ## Sample code
 ```csharp
-using Cognizant.Maqs.BasePlaywrightTest;
+using OpenMAQS.Maqs.BasePlaywrightTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests

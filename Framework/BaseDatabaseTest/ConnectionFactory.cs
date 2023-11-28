@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="ConnectionFactory.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ConnectionFactory.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting database specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseDatabaseTest.Providers;
+using OpenMAQS.Maqs.BaseDatabaseTest.Providers;
 using System;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace OpenMAQS.Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Config class
@@ -98,7 +98,7 @@ namespace CognizantSoftvision.Maqs.BaseDatabaseTest
                 case "ODP":
                 case "ORACLE":
                     throw new NotImplementedException(@"Oracle database is no longer directly supported.  
-See https://cognizantopensource.github.io/maqs-dotnet/#/MAQS_8/Database/DatabaseFAQ?id=how-can-to-connect-to-an-oracle-sql-database for how to connect to an Oracle database.");
+See https://openmaqs.github.io/openmaqs-dotnet/#/MAQS_8/Database/DatabaseFAQ?id=how-can-to-connect-to-an-oracle-sql-database for how to connect to an Oracle database.");
                 default:
                     provider = GetCustomProviderType(providerType);
                     break;

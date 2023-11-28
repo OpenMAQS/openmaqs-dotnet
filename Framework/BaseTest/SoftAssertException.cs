@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SoftAssertException.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SoftAssertException.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Exception class for soft asserts</summary>
 //--------------------------------------------------
 using System;
 using System.Runtime.Serialization;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMAQS.Maqs.BaseTest
 {
     /// <summary>
     /// Soft assert exceptions

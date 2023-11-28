@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="IWebServiceTestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IWebServiceTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web service test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using OpenMAQS.Maqs.BaseTest;
 using System;
 using System.Net.Http;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace OpenMAQS.Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Web service test object interface
