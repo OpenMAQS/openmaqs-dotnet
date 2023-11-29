@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseDriverManager.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="DatabaseDriverManager.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Database driver</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseTest;
+using OpenMAQS.Maqs.Utilities.Logging;
 using System;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace OpenMAQS.Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Database driver

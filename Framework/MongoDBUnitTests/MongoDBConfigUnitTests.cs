@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoDBConfigUnitTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="MongoDBConfigUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Unit test database configuration test</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseMongoTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseMongoTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 

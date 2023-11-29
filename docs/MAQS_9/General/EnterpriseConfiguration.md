@@ -216,8 +216,8 @@ Primarily uses with the .Net Framework implementation of MAQS.
   <AppiumCapsMaqs>
     <!-- Remote settings -->
     <add key="sauce:options" value="{username:'S_NAME', accessKey:'S_KEY', appiumVersion:'1.20.2' }"  />
-    <add key="appActivity" value="com.Cognizant.appiumtesting.maqsregistrydemo.LoginPage" />
-    <add key="appPackage" value="com.Cognizant.appiumtesting.maqsregistrydemo" /> 
+    <add key="appActivity" value="com.OpenMAQS.appiumtesting.maqsregistrydemo.LoginPage" />
+    <add key="appPackage" value="com.OpenMAQS.appiumtesting.maqsregistrydemo" /> 
   </AppiumCapsMaqs>
   <DatabaseMaqs>
     <!--<add key="DataBaseProviderType" value="SQLSERVER" />
@@ -246,7 +246,7 @@ Primarily uses with the .Net Framework implementation of MAQS.
   </EmailMaqs>
   <SeleniumMaqs>
     <!-- Root to website -->
-    <add key="WebSiteBase" value="https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/" />
+    <add key="WebSiteBase" value="https://openmaqs.github.io/TestingSite/Automation/" />
 
     <!--Local browser settings
     <add key="Browser" value="Chrome"/>
@@ -367,7 +367,7 @@ Primarily uses with the .Net Core implementation of MAQS.
     "EmailTimeout": "10000"
   },
   "SeleniumMaqs": {
-    "WebSiteBase": "https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/",
+    "WebSiteBase": "https://openmaqs.github.io/TestingSite/Automation/",
     "Browser": "Chrome",
 	"HubUrl": "http://localhost:4444/wd/hub",
 	"RemoteBrowser": "Chrome",

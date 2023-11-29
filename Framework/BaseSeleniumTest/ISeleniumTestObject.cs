@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="ISeleniumTestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ISeleniumTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds Selenium test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using OpenMAQS.Maqs.BaseTest;
 using OpenQA.Selenium;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest
+namespace OpenMAQS.Maqs.BaseSeleniumTest
 {
     /// <summary>
     /// Selenium test object interface

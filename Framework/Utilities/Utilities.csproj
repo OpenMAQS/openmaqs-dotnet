@@ -7,28 +7,28 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
-    <PackageId>CognizantSoftvision.Maqs.Utilities</PackageId>
-    <Product>CognizantSoftvision.Maqs.Utilities</Product>
-    <AssemblyName>CognizantSoftvision.Maqs.Utilities</AssemblyName>
-    <RootNamespace>CognizantSoftvision.Maqs.Utilities</RootNamespace>
+    <PackageId>OpenMAQS.Maqs.Utilities</PackageId>
+    <Product>OpenMAQS.Maqs.Utilities</Product>
+    <AssemblyName>OpenMAQS.Maqs.Utilities</AssemblyName>
+    <RootNamespace>OpenMAQS.Maqs.Utilities</RootNamespace>
     <ApplicationIcon>MAQS.ico</ApplicationIcon>
 	<Title>MAQS Utilities</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Authors>CognizantSoftvision</Authors>
-    <Company>CognizantSoftvision</Company>
-    <Description>Utilities extension for Cognizant Softvision's modular automation quick start</Description>
-    <Copyright>Copyright © Cognizant $([System.DateTime]::Now.Year)</Copyright>
+    <Authors>OpenMAQS</Authors>
+    <Company>OpenMAQS</Company>
+    <Description>Utilities extension for Open MAQS' modular automation quick start</Description>
+    <Copyright>Copyright © OpenMAQS $([System.DateTime]::Now.Year)</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>MAQS.png</PackageIcon>
-	<PackageIconUrl>https://raw.githubusercontent.com/CognizantOpenSource/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/CognizantOpenSource/maqs-dotnet</PackageProjectUrl>
+	<PackageIconUrl>https://raw.githubusercontent.com/OpenMAQS/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/OpenMAQS/openmaqs-dotnet</PackageProjectUrl>
     <PackageTags>test automation NUnit MSTest TestFramework</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <RepositoryUrl>https://github.com/CognizantOpenSource/maqs-dotnet</RepositoryUrl>
+    <RepositoryUrl>https://github.com/OpenMAQS/openmaqs-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>
-      Release Notes can be found at https://github.com/CognizantOpenSource/maqs-dotnet/releases
+      Release Notes can be found at https://github.com/OpenMAQS/openmaqs-dotnet/releases
     </PackageReleaseNotes>
     <DebugSymbols>true</DebugSymbols>
     <IncludeSymbols>true</IncludeSymbols>
@@ -43,11 +43,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

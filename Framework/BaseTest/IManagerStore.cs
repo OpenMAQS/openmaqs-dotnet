@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="IManagerStore.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IManagerStore.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>manager store interface</summary>
 //--------------------------------------------------
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMAQS.Maqs.BaseTest
 {
     /// <summary>
     /// Manager store interface

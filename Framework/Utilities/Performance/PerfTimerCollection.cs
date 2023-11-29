@@ -1,17 +1,17 @@
 ﻿//--------------------------------------------------
-// <copyright file="PerfTimerCollection.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PerfTimerCollection.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Performance Timer Collection Class</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.Utilities.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace CognizantSoftvision.Maqs.Utilities.Performance
+namespace OpenMAQS.Maqs.Utilities.Performance
 {
     /// <summary>
     /// Response timer collection class -  Object to be owned by Test Class (Object), and passed to page Constructors to insert Performance Timers 

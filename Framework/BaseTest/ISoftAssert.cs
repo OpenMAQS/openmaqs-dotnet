@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="ISoftAssert.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ISoftAssert.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Soft assert interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.Utilities.Logging;
 using System;
 using System.Reflection;
 
-namespace CognizantSoftvision.Maqs.BaseTest
+namespace OpenMAQS.Maqs.BaseTest
 {
     /// <summary>
     /// Interface for soft assert

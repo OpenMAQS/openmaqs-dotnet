@@ -52,8 +52,8 @@ Enables methods for soft asserts.
 
 ## Sample code
 ```csharp
-using Cognizant.Maqs.BaseAppiumTest;
-using Cognizant.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseAppiumTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Support.UI;

@@ -37,7 +37,7 @@ this.Log.LogMessage("I am testing with MAQS");
 ## TestObject
 The TestObject can be thought of as your test context.  It holds all the MAQS test execution replated data.  This includes the Selenium driver, logger, soft asserts, performance timers, plus more.
 ```csharp
-this.TestObject.WebDriver.Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/");
+this.TestObject.WebDriver.Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/");
 this.TestObject.Log.LogMessage("I am testing with MAQS");
 ```
 *Notes:*  
@@ -64,7 +64,7 @@ Contains functions for interacting with IWebElement objects
 
 ## Sample code
 ```csharp
-using Cognizant.Maqs.BaseSeleniumTest;
+using OpenMAQS.Maqs.BaseSeleniumTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests

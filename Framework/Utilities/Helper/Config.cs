@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="Config.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="Config.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting application configuration values</summary>
 //--------------------------------------------------
@@ -16,7 +16,7 @@ using System.Text;
 using System.Xml.Linq;
 using VSTestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace OpenMAQS.Maqs.Utilities.Helper
 {
     /// <summary>
     /// Config class

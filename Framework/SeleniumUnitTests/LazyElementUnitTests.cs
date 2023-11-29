@@ -1,13 +1,13 @@
 ﻿//-----------------------------------------------------
-// <copyright file="LazyElementUnitTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="LazyElementUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test the lazy element unit tests</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.BaseSeleniumTest.Extensions;
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseSeleniumTest;
+using OpenMAQS.Maqs.BaseSeleniumTest.Extensions;
+using OpenMAQS.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;

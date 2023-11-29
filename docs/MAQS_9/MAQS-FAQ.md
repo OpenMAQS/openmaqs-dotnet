@@ -24,7 +24,7 @@ Templates can be found in the [Visual Studio Marketplace](https://marketplace.vi
    - Playwright tests (Visual Studio and NUnit versions)
    - Playwright page object model
    - Web Service tests (Visual Studio and NUnit versions)
-- DotNet Core project templates - https://www.nuget.org/packages/Cognizant.Maqs.Templates 
+- DotNet Core project templates - https://www.nuget.org/profiles/OpenMAQS 
    - Appium (with tests and page object models) 
    - Base
    - Composite (mix and match all MAQS capabilities)  
@@ -73,7 +73,7 @@ A .runsettings file can be added as a test setting to add additional configurati
 ### Adding Run Settings
 To add a .runsettings file to a test solution, go to the top toolbar and under Test → Test Settings, choose the "Select Test Settings File" option, and finally add a .runsettings file.  
 ![Remote Browser Settings](resources/AddNewTestSettings.png)  
-Since there is no way to have Visual Studio generate a template of a .runsettings file, you can instead add an example .runsettings file to your solution such as this one found on Microsoft's MSDN website: https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2022
+Since there is no way to have Visual Studio generate a template of a .runsettings file, you can instead add an example .runsettings file to your solution such as this one found on Microsoft's MSDN website: https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2023
 
 # MSTest V2 documentation
 

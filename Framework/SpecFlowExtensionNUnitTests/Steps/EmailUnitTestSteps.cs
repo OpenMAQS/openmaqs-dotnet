@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="EmailUnitTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EmailUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BaseEmailTestSteps</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseEmailTest;
-using CognizantSoftvision.Maqs.SpecFlow.TestSteps;
+using OpenMAQS.Maqs.BaseEmailTest;
+using OpenMAQS.Maqs.SpecFlow.TestSteps;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 

@@ -1,11 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="WebDriverFactoryUnitTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebDriverFactoryUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test the WebDriverFactory</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BaseSeleniumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseSeleniumTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;

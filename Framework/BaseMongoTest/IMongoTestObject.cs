@@ -1,14 +1,14 @@
 ﻿//--------------------------------------------------
-// <copyright file="IMongoTestObject.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IMongoTestObject.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Holds Mongo test object interface</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseTest;
+using OpenMAQS.Maqs.BaseTest;
 using MongoDB.Driver;
 using System;
 
-namespace CognizantSoftvision.Maqs.BaseMongoTest
+namespace OpenMAQS.Maqs.BaseMongoTest
 {
     /// <summary>
     /// Mongo test object interface

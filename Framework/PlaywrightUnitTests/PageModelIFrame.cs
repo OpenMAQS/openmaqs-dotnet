@@ -1,10 +1,11 @@
 ﻿//-----------------------------------------------------
-// <copyright file="PageModelOther.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PageModelOther.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Another test Playwright page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
+using OpenMAQS.Maqs.BasePlaywrightTest;
+using Microsoft.Playwright;
 using System.Diagnostics.CodeAnalysis;
 
 namespace PlaywrightTests
@@ -13,15 +14,15 @@ namespace PlaywrightTests
     /// Playwright page model class for testing
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public class PageModelOther : BasePlaywrightPageModel
+    public class PageModelIFrame : BasePlaywrightPageModel
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PageModel"/> class
         /// </summary>
         /// <param name="testObject">The base Playwright test object</param>
         /// <param name="otherDriver">Page driver to use instead of the default</param>
-        public PageModelOther(IPlaywrightTestObject testObject, PageDriver otherDriver)
-            : base(testObject, otherDriver)
+        public PageModelIFrame(IPlaywrightTestObject testObject)
+            : base(testObject)
         {
         }
 
@@ -30,24 +31,34 @@ namespace PlaywrightTests
         /// </summary>
         public static string Url
         {
-            get { return PlaywrightConfig.WebBase() + "async.html"; }
+            get { return PlaywrightConfig.WebBase() + "iFrame.html"; }
         }
 
+
         /// <summary>
-        /// Root body
+        /// Test frame
         /// </summary>
-        private PlaywrightSyncElement Body
+        private IFrameLocator Frame
         {
-            get { return new PlaywrightSyncElement(this.PageDriver, "BODY"); }
+            get { return this.PageDriver.AsyncPage.FrameLocator("#frame"); }
         }
 
         /// <summary>
         /// Get loaded label
         /// </summary>
-        public PlaywrightSyncElement LoadedPlaywrightElement
+        public PlaywrightSyncElement ShowDialog
         {
-            get { return new PlaywrightSyncElement(Body, "#loading-div-text[style='']"); }
+            get { return new PlaywrightSyncElement(Frame, "#showDialog1"); }
         }
+
+        /// <summary>
+        /// Get loaded label
+        /// </summary>
+        public PlaywrightSyncElement CloseDialog
+        {
+            get { return new PlaywrightSyncElement(Frame, "#CloseButtonShowDialog"); }
+        }
+
 
         /// <summary>
         /// Open the page
@@ -63,7 +74,7 @@ namespace PlaywrightTests
         /// <returns>True if the page was loaded</returns>
         public override bool IsPageLoaded()
         {
-            return LoadedPlaywrightElement.IsEventualyVisible();
+            return ShowDialog.IsEventualyVisible();
         }
     }
 }
