@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="PerfTimer.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PerfTimer.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Performance Timer Class</summary>
 //--------------------------------------------------
 using System;
 using System.Xml.Serialization;
 
-namespace CognizantSoftvision.Maqs.Utilities.Performance
+namespace OpenMAQS.Maqs.Utilities.Performance
 {
     /// <summary>
     /// Response timer class - holds a single response timer

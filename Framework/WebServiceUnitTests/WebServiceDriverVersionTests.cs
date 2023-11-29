@@ -1,5 +1,5 @@
-﻿using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+﻿using OpenMAQS.Maqs.BaseWebServiceTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using WebServiceTesterUnitTesting.Model;

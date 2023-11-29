@@ -1,11 +1,10 @@
 ﻿//-----------------------------------------------------
-// <copyright file="PageModelOther.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PageModelOther.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Another test Playwright page object model</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
-using Microsoft.Playwright;
+using OpenMAQS.Maqs.BasePlaywrightTest;
 using System.Diagnostics.CodeAnalysis;
 
 namespace PlaywrightTests
@@ -14,15 +13,15 @@ namespace PlaywrightTests
     /// Playwright page model class for testing
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public class PageModelIFrame : BasePlaywrightPageModel
+    public class PageModelOther : BasePlaywrightPageModel
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PageModel"/> class
         /// </summary>
         /// <param name="testObject">The base Playwright test object</param>
         /// <param name="otherDriver">Page driver to use instead of the default</param>
-        public PageModelIFrame(IPlaywrightTestObject testObject)
-            : base(testObject)
+        public PageModelOther(IPlaywrightTestObject testObject, PageDriver otherDriver)
+            : base(testObject, otherDriver)
         {
         }
 
@@ -31,34 +30,24 @@ namespace PlaywrightTests
         /// </summary>
         public static string Url
         {
-            get { return PlaywrightConfig.WebBase() + "iFrame.html"; }
-        }
-
-
-        /// <summary>
-        /// Test frame
-        /// </summary>
-        private IFrameLocator Frame
-        {
-            get { return this.PageDriver.AsyncPage.FrameLocator("#frame"); }
+            get { return PlaywrightConfig.WebBase() + "async.html"; }
         }
 
         /// <summary>
-        /// Get loaded label
+        /// Root body
         /// </summary>
-        public PlaywrightSyncElement ShowDialog
+        private PlaywrightSyncElement Body
         {
-            get { return new PlaywrightSyncElement(Frame, "#showDialog1"); }
+            get { return new PlaywrightSyncElement(this.PageDriver, "BODY"); }
         }
 
         /// <summary>
         /// Get loaded label
         /// </summary>
-        public PlaywrightSyncElement CloseDialog
+        public PlaywrightSyncElement LoadedPlaywrightElement
         {
-            get { return new PlaywrightSyncElement(Frame, "#CloseButtonShowDialog"); }
+            get { return new PlaywrightSyncElement(Body, "#loading-div-text[style='']"); }
         }
-
 
         /// <summary>
         /// Open the page
@@ -74,7 +63,7 @@ namespace PlaywrightTests
         /// <returns>True if the page was loaded</returns>
         public override bool IsPageLoaded()
         {
-            return ShowDialog.IsEventualyVisible();
+            return LoadedPlaywrightElement.IsEventualyVisible();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace OpenMAQS.Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Playwright page driver

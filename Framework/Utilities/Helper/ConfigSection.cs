@@ -1,13 +1,13 @@
 //--------------------------------------------------
-// <copyright file="ConfigSection.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="ConfigSection.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Configuration sections</summary>
 //--------------------------------------------------
 
 using System;
 
-namespace CognizantSoftvision.Maqs.Utilities.Helper
+namespace OpenMAQS.Maqs.Utilities.Helper
 {
     /// <summary>
     /// The configuration sections

@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="SqliteProvider.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SqliteProvider.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>SQLiteProvider class</summary>
 //--------------------------------------------------
 
 using Microsoft.Data.Sqlite;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest.Providers
+namespace OpenMAQS.Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The Sqlite provider.

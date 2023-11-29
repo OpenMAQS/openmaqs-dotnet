@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="Files.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="Files.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Employee model</summary>
 //--------------------------------------------------

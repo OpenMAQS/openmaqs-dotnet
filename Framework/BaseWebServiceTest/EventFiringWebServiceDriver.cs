@@ -1,6 +1,6 @@
 ﻿//--------------------------------------------------
-// <copyright file="EventFiringWebServiceDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EventFiringWebServiceDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>The event firing basic http client interactions</summary>
 //--------------------------------------------------
@@ -9,7 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace OpenMAQS.Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Wrap basic http client interactions

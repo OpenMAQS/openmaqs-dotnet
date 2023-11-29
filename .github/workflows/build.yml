@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       override:
-        description: 'Version Number'     
+        description: 'Version Number'
         required: true
         default: '0.0.0'
 
@@ -33,12 +33,12 @@ jobs:
             do {
                 $result = Invoke-RestMethod -Uri $endPoint
                 $builds = $result.workflow_runs | Where-Object {$_.name -eq  "Build" -and ($_.status -eq "in_progress" -or $_.status -eq "queued") -and $_.id -lt  $runID}
-                
+
                 # Check if there were any older build runs still going, if not we waited long enough
-                if (!$builds) 
-                { 
+                if (!$builds)
+                {
                   Write-Host "Are now top of the run queue"
-                  return 
+                  return
                 }
 
                 Start-Sleep -s 60
@@ -58,15 +58,15 @@ jobs:
         if: github.event_name == 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
   getVersion:
     name: Get package version
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     needs: draftRelease
     outputs:
       buildNumber: ${{ steps.ver.outputs.BUILD_NUMBER }}
-    
-    steps: 
+
+    steps:
     - name: GetVersion
       id: ver
       shell: pwsh
@@ -83,7 +83,7 @@ jobs:
               $info = Invoke-RestMethod -Uri $endPoint -Headers $header
               $version = $info.name[0].ToString().Trim("v")
             }
-            
+
             Write-Host "::set-output name=BUILD_NUMBER::$($version)"
 
   test-untils:
@@ -93,10 +93,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - id: builder
         env:
           GlobalMaqs:ConfigJsonEnvRunOverride: ENV
@@ -114,7 +114,7 @@ jobs:
           path: |
             artifactTests/untils/**/*.xml
             artifactTests/untils/testResults/
- 
+
   test-winapp:
     name: WinApp
     needs: waitOld
@@ -122,10 +122,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - name: Configure Windows for automation
         uses: ./.github/actions/setup-winapp
       - name: Install Appium
@@ -157,15 +157,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }} 
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -178,7 +178,7 @@ jobs:
           path: |
             artifactTests/appium/**/*.xml
             artifactTests/appium/testResults/
-  
+
   test-base:
     name: Base
     needs: waitOld
@@ -186,10 +186,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -202,7 +202,7 @@ jobs:
           path: |
             artifactTests/base/**/*.xml
             artifactTests/base/testResults/
- 
+
   test-webservice:
     name: WebService
     needs: waitOld
@@ -210,10 +210,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - name: Start test service
         run: Start-Process -FilePath "dotnet" -ArgumentList "run --project Docker/MAQSService/MainTestService/MainTestService.csproj"
         shell: pwsh
@@ -237,22 +237,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
       - name: Install Playwright
         run: |
-            dotnet build Framework/PlaywrightTests/PlaywrightTests.csproj -o Framework/PlaywrightTests/build
-            pwsh Framework/PlaywrightTests/build/playwright.ps1 install-deps
-            pwsh Framework/PlaywrightTests/build/playwright.ps1 install    
+            dotnet build Framework/PlaywrightUnitTests/PlaywrightUnitTests.csproj -o Framework/PlaywrightUnitTests/build
+            pwsh Framework/PlaywrightUnitTests/build/playwright.ps1 install-deps
+            pwsh Framework/PlaywrightUnitTests/build/playwright.ps1 install
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/PlaywrightTests/PlaywrightTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/Playwright/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/Playwright/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover' 
+          bt-param: 'Framework/PlaywrightUnitTests/PlaywrightUnitTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/Playwright/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/Playwright/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
           artifact-name: 'playwright'
       - uses: actions/upload-artifact@v2
         if: always()
@@ -261,7 +261,7 @@ jobs:
           name: playwrightResults
           path: |
             artifactTests/Playwright/**/*.xml
-            artifactTests/Playwright/testResults/ 
+            artifactTests/Playwright/testResults/
 
   test-mongo:
     name: Mongo
@@ -270,12 +270,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -297,12 +297,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -324,12 +324,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -350,10 +350,10 @@ jobs:
     runs-on: windows-2019
     steps:
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -361,9 +361,9 @@ jobs:
       - name: Install Playwright
         run: |
             npx playwright install-deps
-            npx playwright install 
+            npx playwright install
             dotnet build Framework/FrameworkUnitTests/FrameworkUnitTests.csproj -o Framework/FrameworkUnitTests/build
-            pwsh Framework/FrameworkUnitTests/build/playwright.ps1 install  
+            pwsh Framework/FrameworkUnitTests/build/playwright.ps1 install
       - run: dotnet restore Framework/FrameworkUnitTests/FrameworkUnitTests.csproj
         shell: pwsh
       - id: browserupdate
@@ -392,10 +392,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -418,16 +418,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - name: Build the docker-compose mongo stack
-        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - name: Build the docker-compose email stack
-        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p CognizantOpenSource/maqs-dotnet up -d
+        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -448,10 +448,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -474,10 +474,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - id: builder
@@ -500,10 +500,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - run: dotnet restore Framework/Base.sln
         shell: pwsh
       - run: choco upgrade firefox
@@ -532,17 +532,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - id: browserupdate
         uses: ./.github/workflows/setupwinbrowser-action
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}  
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -573,7 +573,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           path: ${{ github.workspace }}/Results
-          
+
       - name: Update coverage mappings
         shell: pwsh
         run: |
@@ -592,7 +592,7 @@ jobs:
           foreach ($file in $files)
           {
               Write-Host "Updating" $file
-              Replace $file.FullName '(?<=fullPath=")(([-\w\d\s/\\:]+)(?=[\\/][Ff]ramework))' $sourcePath 
+              Replace $file.FullName '(?<=fullPath=")(([-\w\d\s/\\:]+)(?=[\\/][Ff]ramework))' $sourcePath
               Replace $file.FullName '(?<=fullPath="[-\w\d\s/.\\:]+)((/)(?=[-\w\d\s/.]+"))' "\"
           }
 
@@ -607,7 +607,7 @@ jobs:
           }
 
           Write-Host "Finished updating relative paths"
-          
+
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
         with:
@@ -635,18 +635,18 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
           dotnet build Framework/Base.sln -p:Version=${{ needs.getVersion.outputs.buildNumber }}
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
- 
+
   report:
     name: Report
     runs-on: ubuntu-latest
     needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-email, test-playwright, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen]
-    if: always()  
+    if: always()
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
           path: ${{ github.workspace }}/Results
-      - name: Test Report    
+      - name: Test Report
         # Skip because dependabot cannot access the associated resources
         if: github.actor != 'dependabot[bot]'
         uses: dorny/test-reporter@v1
@@ -655,19 +655,19 @@ jobs:
           name: ReportResults
           path: ${{ github.workspace }}/Results/**/*.trx    # Path to test results
           reporter: dotnet-trx
-          
+
   createNugetPacakges:
     name: Create NuGet packages
     runs-on: windows-2019
     needs: [getVersion]
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Setup .NET Core
-        uses: xt0rted/setup-dotnet@v1.0.0
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: |
-            6.0.201
+            8.x.x
       - name: Install dependencies
         run: dotnet restore Framework/Base.sln
 
@@ -683,27 +683,27 @@ jobs:
           path: |
             artifactTests/packages/**/*.nupkg
             artifactTests/packages/**/*.snupkg
-            
+
   publish:
     name: Publish NuGet - v${{ needs.getVersion.outputs.buildNumber }}
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&  github.event_name != 'schedule'
     needs: [getVersion, createNugetPacakges, sonar]
     runs-on: windows-2019
-    environment: nuget 
+    environment: nuget
     steps:
     - name: Setup .NET Core
-      uses: xt0rted/setup-dotnet@v1.0.0
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: |
-          6.0.201
+          8.x.x
     - uses: actions/download-artifact@v2
       with:
         name: 'packages'
         path: ${{ github.workspace }}/packages
-        
+
     - name: Deploy to nuget
       run: dotnet nuget push ${{ github.workspace }}/packages/**/*.nupkg --api-key ${{ secrets.APIKEY }} --source https://api.nuget.org/v3/index.json
-    
+
     - name: Publish GitHub release v${{ needs.getVersion.outputs.buildNumber }}
       uses: actions/github-script@v4
       with:
@@ -713,10 +713,10 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo
           })
-          
+
           var id = "NA"
           var data = result.data
-          for(var key in data){ 
+          for(var key in data){
               if(data[key].tag_name == "v${{ needs.getVersion.outputs.buildNumber }}" && data[key].draft == true)
               {
                   github.repos.updateRelease({

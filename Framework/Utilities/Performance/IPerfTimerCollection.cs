@@ -1,13 +1,13 @@
 ﻿//--------------------------------------------------
-// <copyright file="IPerfTimerCollection.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IPerfTimerCollection.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Interface for performance timer collection</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.Utilities.Logging;
 using System.Collections.Generic;
 
-namespace CognizantSoftvision.Maqs.Utilities.Performance
+namespace OpenMAQS.Maqs.Utilities.Performance
 {
     /// <summary>
     /// Performance timer collection interface
