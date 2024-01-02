@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="PlaywrightConfig.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="PlaywrightConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting Playwright specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace CognizantSoftvision.Maqs.BasePlaywrightTest
+namespace OpenMAQS.Maqs.BasePlaywrightTest
 {
     /// <summary>
     /// Config class

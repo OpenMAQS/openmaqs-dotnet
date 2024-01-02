@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="SeleniumConfig.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="SeleniumConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting selenium specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -13,7 +13,7 @@ using System.IO;
 using System.Reflection;
 using WebDriverManager.Helpers;
 
-namespace CognizantSoftvision.Maqs.BaseSeleniumTest
+namespace OpenMAQS.Maqs.BaseSeleniumTest
 {
     /// <summary>
     /// Config class

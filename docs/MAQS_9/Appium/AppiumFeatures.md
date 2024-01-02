@@ -31,7 +31,7 @@ this.Log.LogMessage("I am testing with MAQS");
 ## TestObject
 The TestObject can be thought of as your test context.  It holds all the MAQS test execution replated data.  This includes the web service driver, logger, soft asserts, performance timers, plus more.
 ```csharp
-this.TestObject.WebDriver.Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/");
+this.TestObject.WebDriver.Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/");
 this.TestObject.Log.LogMessage("I am testing with MAQS");
 ```
 *Notes:*  
@@ -52,8 +52,8 @@ Enables methods for soft asserts.
 
 ## Sample code
 ```csharp
-using Cognizant.Maqs.BaseAppiumTest;
-using Cognizant.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseAppiumTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Support.UI;

@@ -1,12 +1,12 @@
 ﻿//-----------------------------------------------------
-// <copyright file="BasePlaywrightTestTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="BasePlaywrightTestTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test different base test combinations</summary>
 //-----------------------------------------------------
-using CognizantSoftvision.Maqs.BasePlaywrightTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BasePlaywrightTest;
+using OpenMAQS.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
 

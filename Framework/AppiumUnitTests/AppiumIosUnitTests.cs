@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumIosUnitTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumIosUnitTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Test class for ios related functions</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseAppiumTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+using OpenMAQS.Maqs.BaseAppiumTest;
+using OpenMAQS.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;

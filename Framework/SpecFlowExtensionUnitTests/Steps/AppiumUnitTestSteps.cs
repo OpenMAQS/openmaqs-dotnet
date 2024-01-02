@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="AppiumUnitTestSteps.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="AppiumUnitTestSteps.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>TestSteps class that inherits from BaseAppiumTestSteps</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseAppiumTest;
-using CognizantSoftvision.Maqs.SpecFlow.TestSteps;
+using OpenMAQS.Maqs.BaseAppiumTest;
+using OpenMAQS.Maqs.SpecFlow.TestSteps;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 

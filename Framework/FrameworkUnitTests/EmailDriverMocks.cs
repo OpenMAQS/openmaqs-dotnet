@@ -1,6 +1,6 @@
 //--------------------------------------------------
-// <copyright file="EmailDriverMocks.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="EmailDriverMocks.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Email driver mocks</summary>
 //--------------------------------------------------

@@ -1,11 +1,11 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceWithDriver.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceWithDriver.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web service general unit tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseWebServiceTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics.CodeAnalysis;

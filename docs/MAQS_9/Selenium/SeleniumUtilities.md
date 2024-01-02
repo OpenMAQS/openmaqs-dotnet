@@ -52,7 +52,7 @@ IWebDriver tempDriver = WebDriverFactory.GetBrowserWithDefaultConfiguration(Brow
 try
 {
     //Do something
-    tempDriver.GetWebDriver().Navigate().GoToUrl("https://cognizantopensource.github.io/maqs-dotnet-templates/Static/Automation/");
+    tempDriver.GetWebDriver().Navigate().GoToUrl("https://openmaqs.github.io/TestingSite/Automation/");
 }
 finally
 {

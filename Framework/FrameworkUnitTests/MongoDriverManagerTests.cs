@@ -1,12 +1,12 @@
 ﻿//--------------------------------------------------
-// <copyright file="MongoDriverManagerTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="MongoDriverManagerTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Mongo database driver store tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseMongoTest;
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseMongoTest;
+using OpenMAQS.Maqs.BaseWebServiceTest;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Bson;
 using System.Diagnostics.CodeAnalysis;

@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="IFileLogger.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="IFileLogger.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>File logger interface</summary>
 //--------------------------------------------------
-namespace CognizantSoftvision.Maqs.Utilities.Logging
+namespace OpenMAQS.Maqs.Utilities.Logging
 {
     /// <summary>
     /// Interface for file logger

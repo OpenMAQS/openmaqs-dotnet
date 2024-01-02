@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceUtils.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceUtils.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web service utilities</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Helper;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace CognizantSoftvision.Maqs.BaseWebServiceTest
+namespace OpenMAQS.Maqs.BaseWebServiceTest
 {
     /// <summary>
     /// Web service utilities

@@ -1,15 +1,15 @@
 ﻿//--------------------------------------------------
-// <copyright file="DatabaseConfig.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="DatabaseConfig.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Helper class for getting database specific configuration values</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseDatabaseTest.Providers;
-using CognizantSoftvision.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.BaseDatabaseTest.Providers;
+using OpenMAQS.Maqs.Utilities.Helper;
 using System.Collections.Generic;
 using System.Data;
 
-namespace CognizantSoftvision.Maqs.BaseDatabaseTest
+namespace OpenMAQS.Maqs.BaseDatabaseTest
 {
     /// <summary>
     /// Config class

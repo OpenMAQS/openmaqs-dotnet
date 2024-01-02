@@ -1,5 +1,5 @@
-﻿using CognizantSoftvision.Maqs.Utilities.Helper;
-using CognizantSoftvision.Maqs.Utilities.Logging;
+﻿using OpenMAQS.Maqs.Utilities.Helper;
+using OpenMAQS.Maqs.Utilities.Logging;
 
 namespace BaseTestUnitTests
 {

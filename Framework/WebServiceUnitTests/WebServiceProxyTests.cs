@@ -1,10 +1,10 @@
 ﻿//--------------------------------------------------
-// <copyright file="WebServiceProxyTests.cs" company="Cognizant">
-//  Copyright 2022 Cognizant, All rights Reserved
+// <copyright file="WebServiceProxyTests.cs" company="OpenMAQS">
+//  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
 // <summary>Web Service Proxy Tests</summary>
 //--------------------------------------------------
-using CognizantSoftvision.Maqs.BaseWebServiceTest;
+using OpenMAQS.Maqs.BaseWebServiceTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Concurrent;
