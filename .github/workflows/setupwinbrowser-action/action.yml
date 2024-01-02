@@ -3,7 +3,7 @@ description: 'Make sure latest browser version is installed'
 runs:
   using: "composite"
   steps:
-    - run: choco upgrade googlechrome
+    - run: choco upgrade googlechrome --ignore-checksums
       shell: pwsh 
-    - run: choco upgrade firefox
+    - run: choco upgrade firefox --ignore-checksums
       shell: pwsh
