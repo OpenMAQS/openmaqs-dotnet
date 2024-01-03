@@ -308,7 +308,7 @@ namespace SeleniumUnitTests
             WebDriver.Wait().ForPageLoad();
             string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", "bmp");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Bmp", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Bmp' format");
+            Assert.AreEqual(".bmp", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Bmp' format");
             File.Delete(screenShotPath);
         }
 
@@ -323,7 +323,7 @@ namespace SeleniumUnitTests
             WebDriver.Wait().ForPageLoad();
             string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", "gif");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Gif", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Gif' format");
+            Assert.AreEqual(".gif", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Gif' format");
             File.Delete(screenShotPath);
         }
 
@@ -338,7 +338,7 @@ namespace SeleniumUnitTests
             WebDriver.Wait().ForPageLoad();
             string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: "jpeg");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Jpeg", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Jpeg' format");
+            Assert.AreEqual(".jpeg", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Jpeg' format");
             File.Delete(screenShotPath);
         }
 
@@ -353,7 +353,7 @@ namespace SeleniumUnitTests
             WebDriver.Wait().ForPageLoad();
             string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: "png");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Png", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Png' format");
+            Assert.AreEqual(".png", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Png' format");
             File.Delete(screenShotPath);
         }
 
@@ -368,7 +368,7 @@ namespace SeleniumUnitTests
             WebDriver.Wait().ForPageLoad();
             string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", "tiff");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Tiff", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Tiff' format");
+            Assert.AreEqual(".tiff", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Tiff' format");
             File.Delete(screenShotPath);
         }
 
