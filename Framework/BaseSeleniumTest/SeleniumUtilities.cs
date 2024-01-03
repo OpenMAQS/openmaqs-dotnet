@@ -10,7 +10,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Events;
 using Selenium.Axe;
 using System;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Reflection;
 using System.Text;
