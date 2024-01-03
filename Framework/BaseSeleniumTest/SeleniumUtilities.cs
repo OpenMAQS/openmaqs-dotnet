@@ -71,7 +71,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         /// <param name="fileNameWithoutExtension">Filename without extension</param>
         /// <param name="imageFormat">Optional Screenshot Image format parameter; Default imageFormat is PNG, hardcoded due to enum being deprecated</param>
         /// <returns>Path to the log file</returns>
-        public static string CaptureScreenshot(this IWebDriver webDriver, ISeleniumTestObject testObject, string directory, string fileNameWithoutExtension, string imageFormat = ".png")
+        public static string CaptureScreenshot(this IWebDriver webDriver, ISeleniumTestObject testObject, string directory, string fileNameWithoutExtension, string imageFormat = "png")
         {
             Screenshot screenShot = ((ITakesScreenshot)webDriver).GetScreenshot();
 
@@ -502,15 +502,15 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
             switch (SeleniumConfig.GetImageFormat().ToUpper())
             {
                 case "BMP":
-                    return ".bmp";
+                    return "bmp";
                 case "GIF":
-                    return ".gif";
+                    return "gif";
                 case "JPEG":
-                    return ".jpeg";
+                    return "jpeg";
                 case "PNG":
-                    return ".png";
+                    return "png";
                 case "TIFF":
-                    return ".tiff";
+                    return "tiff";
                 default:
                     throw new ArgumentException($"ImageFormat '{SeleniumConfig.GetImageFormat()}' is not a valid option");
             }
