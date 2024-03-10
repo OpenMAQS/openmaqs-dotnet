@@ -69,9 +69,9 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         /// <param name="testObject">The test object to associate the screenshot with</param>
         /// <param name="directory">The directory file path</param>
         /// <param name="fileNameWithoutExtension">Filename without extension</param>
-        /// <param name="imageFormat">Optional Screenshot Image format parameter; Default imageFormat is PNG</param>
+        /// <param name="imageFormat">Optional Screenshot Image format parameter; Default imageFormat is PNG, hardcoded due to enum being deprecated</param>
         /// <returns>Path to the log file</returns>
-        public static string CaptureScreenshot(this IWebDriver webDriver, ISeleniumTestObject testObject, string directory, string fileNameWithoutExtension, ScreenshotImageFormat imageFormat = ScreenshotImageFormat.Png)
+        public static string CaptureScreenshot(this IWebDriver webDriver, ISeleniumTestObject testObject, string directory, string fileNameWithoutExtension, string imageFormat = "png")
         {
             Screenshot screenShot = ((ITakesScreenshot)webDriver).GetScreenshot();
 
@@ -85,7 +85,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
             string path = Path.Combine(directory, $"{fileNameWithoutExtension}.{imageFormat}");
 
             // Save the screenshot
-            screenShot.SaveAsFile(path, imageFormat);
+            screenShot.SaveAsFile(path);
             testObject.AddAssociatedFile(path);
 
             return path;
@@ -497,20 +497,20 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         /// Gets the Screenshot Format to save images
         /// </summary>
         /// <returns>Desired ImageFormat Type</returns>
-        public static ScreenshotImageFormat GetScreenShotFormat()
+        public static string GetScreenShotFormat()
         {
             switch (SeleniumConfig.GetImageFormat().ToUpper())
             {
                 case "BMP":
-                    return ScreenshotImageFormat.Bmp;
+                    return "bmp";
                 case "GIF":
-                    return ScreenshotImageFormat.Gif;
+                    return "gif";
                 case "JPEG":
-                    return ScreenshotImageFormat.Jpeg;
+                    return "jpeg";
                 case "PNG":
-                    return ScreenshotImageFormat.Png;
+                    return "png";
                 case "TIFF":
-                    return ScreenshotImageFormat.Tiff;
+                    return "tiff";
                 default:
                     throw new ArgumentException($"ImageFormat '{SeleniumConfig.GetImageFormat()}' is not a valid option");
             }
