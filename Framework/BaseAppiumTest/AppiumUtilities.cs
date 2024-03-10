@@ -62,7 +62,7 @@ namespace OpenMAQS.Maqs.BaseAppiumTest
             Screenshot screenshot = ((ITakesScreenshot)appiumDriver).GetScreenshot();
 
             string path = Path.Combine(directory, $"{fileNameWithoutExtension}.Png");
-            screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
+            screenshot.SaveAsFile(path);
 
             testObject.AddAssociatedFile(path);
         }
