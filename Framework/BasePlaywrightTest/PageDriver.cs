@@ -154,10 +154,10 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
             this.AsyncPage.TapAsync(selector, options).Wait();
         }
 
-        /// <inheritdoc cref = "IPage.TypeAsync" /> 
-        public void Type(string selector, string text, PageTypeOptions? options = null)
+        /// <inheritdoc cref = "IPage.FillAsync" /> 
+        public void Type(string selector, string text, PageFillOptions? options = null)
         {
-            this.AsyncPage.TypeAsync(selector, text, options).Wait();
+            this.AsyncPage.FillAsync(selector, text, options).Wait();
         }
 
         /// <inheritdoc cref = "IPage.UncheckAsync" /> 
