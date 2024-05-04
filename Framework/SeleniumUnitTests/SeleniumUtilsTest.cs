@@ -11,12 +11,14 @@ using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
-using Selenium.Axe;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Deque.AxeCore.Selenium;
+using TWP.Selenium.Axe.Html;
+using Deque.AxeCore.Commons;
 
 namespace SeleniumUnitTests
 {
