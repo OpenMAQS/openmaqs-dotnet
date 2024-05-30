@@ -56,7 +56,7 @@
 		</PackageReference>
 		<PackageReference Include="Microsoft.Playwright" Version="1.21.0" />
 		<PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
-		<PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+		<PackageReference Include="MSTest.TestFramework" Version="3.4.2" />
 	</ItemGroup>
 
 	<ItemGroup>
