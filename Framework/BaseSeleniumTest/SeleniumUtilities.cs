@@ -4,15 +4,18 @@
 // </copyright>
 // <summary>Utilities class for generic selenium methods</summary>
 //--------------------------------------------------
+using Deque.AxeCore.Commons;
+using Deque.AxeCore.Selenium;
 using OpenMAQS.Maqs.BaseSeleniumTest.Extensions;
 using OpenMAQS.Maqs.Utilities.Logging;
 using OpenQA.Selenium;
+using OpenQA.Selenium.DevTools;
 using OpenQA.Selenium.Support.Events;
-using Selenium.Axe;
 using System;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using TWP.Selenium.Axe.Html;
 
 namespace OpenMAQS.Maqs.BaseSeleniumTest
 {
@@ -241,12 +244,6 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
                 throw new InvalidOperationException($"Accessibility violations, see: {report} for more details.");
             }
 
-            // Throw exception if the accessibility check had any errors
-            if (results.Error?.Length > 0)
-            {
-                throw new InvalidOperationException($"Accessibility check failure, see: {report} for more details.");
-            }
-
             // Return report path
             return report;
         }
@@ -406,11 +403,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
                 foreach (var item in element.Nodes)
                 {
                     message.AppendLine($"{"\t"}{"\t"}HTML element: {item.Html}");
-
-                    foreach (var target in item.Target)
-                    {
-                        message.AppendLine($"{"\t"}{"\t"}Selector: {target}");
-                    }
+                    message.AppendLine($"{"\t"}{"\t"}Selector: {item.Target}");
                 }
 
                 message.AppendLine(string.Empty);
