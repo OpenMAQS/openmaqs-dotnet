@@ -348,7 +348,7 @@ namespace PlaywrightTests
         public void EvalOnSelectorAllTest()
         {
             var result = Models[this.TestObject].ComputerPartsAllOptions.EvaluateAll<bool>("(divs, min) => divs.length > min", 1);
-            Assert.AreEqual(true, result);
+            Assert.IsTrue(result);
         }
 
         /// <summary>
