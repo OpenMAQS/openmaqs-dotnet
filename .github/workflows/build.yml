@@ -151,7 +151,8 @@ jobs:
   test-appium:
     name: Appium
     # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    if: github.actor != 'dependabot[bot]'
+    # if: github.actor != 'dependabot[bot]'
+    if: false  # Skip as Open MAQS does not currently have a Browserstack account
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
@@ -526,7 +527,8 @@ jobs:
   test-selengen:
     name: Selenium General
     # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    if: github.actor != 'dependabot[bot]'
+    # if: github.actor != 'dependabot[bot]'
+    if: false  # Skip as Open MAQS does not currently have a Browserstack account
     needs: waitOld
     runs-on: windows-2019
     steps:
