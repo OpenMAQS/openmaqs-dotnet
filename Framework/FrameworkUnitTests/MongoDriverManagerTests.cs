@@ -74,7 +74,6 @@ namespace FrameworkUnitTests
             MongoDriverManager<BsonDocument> newmanager = new MongoDriverManager<BsonDocument>(MongoDBConfig.GetConnectionString(), MongoDBConfig.GetDatabaseString(), MongoDBConfig.GetCollectionString(), this.TestObject);
             this.ManagerStore.Add("test", newmanager);
 
-            Assert.AreNotEqual(this.TestObject.MongoDBDriver, this.ManagerStore.GetManager<MongoDriverManager<BsonDocument>>("test"));
             Assert.AreNotEqual(this.TestObject.MongoDBManager.Get(), this.ManagerStore.GetManager<MongoDriverManager<BsonDocument>>("test").Get());
             Assert.AreEqual(newmanager.GetMongoDriver(), this.ManagerStore.GetManager<MongoDriverManager<BsonDocument>>("test").GetMongoDriver());
         }
@@ -90,7 +89,6 @@ namespace FrameworkUnitTests
             MongoDriverManager<BsonDocument> newDriver = new MongoDriverManager<BsonDocument>(() => newCollection, this.TestObject);
             this.ManagerStore.Add("test", newDriver);
 
-            Assert.AreNotEqual(this.TestObject.MongoDBDriver, this.ManagerStore.GetManager<MongoDriverManager<BsonDocument>>("test"));
             Assert.AreNotEqual(this.TestObject.MongoDBManager.Get(), this.ManagerStore.GetManager<MongoDriverManager<BsonDocument>>("test").Get());
             Assert.AreEqual(newCollection, (this.ManagerStore.GetManager<MongoDriverManager<BsonDocument>>("test")).GetMongoDriver().Collection);
         }
