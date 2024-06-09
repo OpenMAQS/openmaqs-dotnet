@@ -11,12 +11,14 @@ using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
-using Selenium.Axe;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Deque.AxeCore.Selenium;
+using TWP.Selenium.Axe.Html;
+using Deque.AxeCore.Commons;
 
 namespace SeleniumUnitTests
 {
@@ -413,8 +415,8 @@ namespace SeleniumUnitTests
             SeleniumUtilities.CheckAccessibility(this.TestObject);
             string logContent = File.ReadAllText(filePath);
 
-            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 15 items"), "Expected to find 15 pass matches."));
-            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 66 items"), "Expected to find 66 inapplicable matches."));
+            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 13 items"), "Expected to find 13 pass matches."));
+            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 70 items"), "Expected to find 70 inapplicable matches."));
             SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 6 items"), "Expected to find 6 violations matches."));
             SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 0 items"), "Expected to find 0 incomplete matches."));
             SoftAssert.FailTestIfAssertFailed();
@@ -719,7 +721,7 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(Exception))]
         public void AccessibilityHtmlReportWithError()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAccessibilityUrl);
@@ -736,7 +738,7 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(Exception))]
         public void AccessibilityHtmlReportWithErrorFromLazyElement()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);

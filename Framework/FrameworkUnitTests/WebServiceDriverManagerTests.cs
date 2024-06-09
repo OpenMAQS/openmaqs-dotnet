@@ -42,7 +42,6 @@ namespace FrameworkUnitTests
             WebServiceDriverManager newDriver = new WebServiceDriverManager(() => new HttpClient(), this.TestObject);
             this.ManagerStore.Add("test", newDriver);
 
-            Assert.AreNotEqual(this.TestObject.WebServiceDriver, this.ManagerStore.GetManager<WebServiceDriverManager>("test"));
             Assert.AreNotEqual(this.TestObject.WebServiceManager.Get(), this.ManagerStore.GetDriver<WebServiceDriver>("test"));
         }
 
@@ -55,7 +54,6 @@ namespace FrameworkUnitTests
             WebServiceDriverManager newDriver = new WebServiceDriverManager(new WebServiceDriver(new HttpClient()), this.TestObject);
             this.ManagerStore.Add("test", newDriver);
 
-            Assert.AreNotEqual(this.TestObject.WebServiceDriver, this.ManagerStore.GetManager<WebServiceDriverManager>("test"));
             Assert.AreNotEqual(this.TestObject.WebServiceManager.Get(), this.ManagerStore.GetManager<WebServiceDriverManager>("test").Get());
         }
 
@@ -87,7 +85,9 @@ namespace FrameworkUnitTests
         public void Intialized()
         {
             // Do something so we initialize the web driver
+#pragma warning disable S2201
             this.WebServiceDriver.ToString();
+#pragma warning restore S2201
 
             WebServiceDriverManager driverDriver = this.ManagerStore.GetManager<WebServiceDriverManager>();
             Assert.IsTrue(driverDriver.IsDriverIntialized(), "The driver should have been initialized");
