@@ -11,12 +11,14 @@ using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
-using Selenium.Axe;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Deque.AxeCore.Selenium;
+using TWP.Selenium.Axe.Html;
+using Deque.AxeCore.Commons;
 
 namespace SeleniumUnitTests
 {
@@ -306,9 +308,9 @@ namespace SeleniumUnitTests
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
             WebDriver.Wait().ForPageLoad();
-            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", ScreenshotImageFormat.Bmp);
+            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", "bmp");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Bmp", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Bmp' format");
+            Assert.AreEqual(".bmp", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Bmp' format");
             File.Delete(screenShotPath);
         }
 
@@ -321,9 +323,9 @@ namespace SeleniumUnitTests
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
             WebDriver.Wait().ForPageLoad();
-            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", ScreenshotImageFormat.Gif);
+            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", "gif");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Gif", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Gif' format");
+            Assert.AreEqual(".gif", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Gif' format");
             File.Delete(screenShotPath);
         }
 
@@ -336,9 +338,9 @@ namespace SeleniumUnitTests
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
             WebDriver.Wait().ForPageLoad();
-            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: ScreenshotImageFormat.Jpeg);
+            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: "jpeg");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Jpeg", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Jpeg' format");
+            Assert.AreEqual(".jpeg", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Jpeg' format");
             File.Delete(screenShotPath);
         }
 
@@ -351,9 +353,9 @@ namespace SeleniumUnitTests
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
             WebDriver.Wait().ForPageLoad();
-            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: ScreenshotImageFormat.Png);
+            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: "png");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Png", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Png' format");
+            Assert.AreEqual(".png", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Png' format");
             File.Delete(screenShotPath);
         }
 
@@ -366,9 +368,9 @@ namespace SeleniumUnitTests
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
             WebDriver.Wait().ForPageLoad();
-            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", ScreenshotImageFormat.Tiff);
+            string screenShotPath = SeleniumUtilities.CaptureScreenshot(WebDriver, TestObject, "TempTestDirectory", "TempTestFilePath", "tiff");
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".Tiff", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Tiff' format");
+            Assert.AreEqual(".tiff", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Tiff' format");
             File.Delete(screenShotPath);
         }
 
@@ -395,7 +397,7 @@ namespace SeleniumUnitTests
         [TestCategory(TestCategories.Selenium)]
         public void GetImageFormatFromConfig()
         {
-            Assert.AreEqual(ScreenshotImageFormat.Png, SeleniumUtilities.GetScreenShotFormat(), "The Incorrect Image Format was returned, expected: " + Config.GetGeneralValue("ImageFormat"));
+            Assert.AreEqual("png", SeleniumUtilities.GetScreenShotFormat(), "The Incorrect Image Format was returned, expected: " + Config.GetGeneralValue("ImageFormat"));
         }
 
         /// <summary>
@@ -413,8 +415,8 @@ namespace SeleniumUnitTests
             SeleniumUtilities.CheckAccessibility(this.TestObject);
             string logContent = File.ReadAllText(filePath);
 
-            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 15 items"), "Expected to find 15 pass matches."));
-            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 66 items"), "Expected to find 66 inapplicable matches."));
+            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 13 items"), "Expected to find 13 pass matches."));
+            SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 70 items"), "Expected to find 70 inapplicable matches."));
             SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 6 items"), "Expected to find 6 violations matches."));
             SoftAssert.Assert(() => Assert.IsTrue(logContent.Contains("Found 0 items"), "Expected to find 0 incomplete matches."));
             SoftAssert.FailTestIfAssertFailed();
@@ -719,7 +721,7 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(Exception))]
         public void AccessibilityHtmlReportWithError()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAccessibilityUrl);
@@ -736,7 +738,7 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(Exception))]
         public void AccessibilityHtmlReportWithErrorFromLazyElement()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
