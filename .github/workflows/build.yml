@@ -150,9 +150,6 @@ jobs:
 
   test-appium:
     name: Appium
-    # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    # if: github.actor != 'dependabot[bot]'
-    if: false  # Skip as Open MAQS does not currently have a Browserstack account
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
@@ -526,9 +523,6 @@ jobs:
 
   test-selengen:
     name: Selenium General
-    # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    # if: github.actor != 'dependabot[bot]'
-    if: false  # Skip as Open MAQS does not currently have a Browserstack account
     needs: waitOld
     runs-on: windows-2019
     steps:
@@ -560,11 +554,9 @@ jobs:
 
   sonar:
     name: Sonar
-    # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    if: github.actor != 'dependabot[bot]'
     runs-on: windows-2019
     # Skip test-appium and test-selengen until project gets BrowserStack or SauceLabs
-    needs: [test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, getVersion]
+    needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen, getVersion]
     steps:
       - name: Set up JDK 17
         uses: actions/setup-java@v1
