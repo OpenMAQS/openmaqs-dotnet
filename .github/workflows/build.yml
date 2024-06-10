@@ -167,7 +167,7 @@ jobs:
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/BrowserStack.RunSettings --filter FullyQualifiedName!~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/appium/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/appium/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"AppiumCapsMaqs:bstack:options:accessKey\",value=\"${{ secrets.BROWSERSTACK_ACCESS_KEY }}\")'''
+          bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/BrowserStack.RunSettings --filter FullyQualifiedName!~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/appium/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/appium/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=/"AppiumCapsMaqs:bstack:options:accessKey/",value=/"${{ secrets.BROWSERSTACK_ACCESS_KEY }}/")'''
       - uses: actions/upload-artifact@v2
         if: always()
         name: "Upload test artifact"
@@ -542,7 +542,7 @@ jobs:
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName!~SeleniumNUnitTest)&(FullyQualifiedName!~Proxy)&(FullyQualifiedName!~SeleniumConfigTests)&(FullyQualifiedName!~SeleniumPageObjectUnitTest)&(FullyQualifiedName!~LazyElementUnitTests)&(FullyQualifiedName!~SeleniumUnitTests.SeleniumUnitTest)&(FullyQualifiedName!~SeleniumWebElementTest)&(FullyQualifiedName!~SeleniumUtilsTest)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selengen/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selengen/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"RemoteSeleniumCapsMaqs:bstack:options:accessKey\",value=\"${{ secrets.BROWSERSTACK_ACCESS_KEY }}\")'' ''TestRunParameters.Parameter(name=\"SeleniumMaqs:RunOnBrowserStack\",value=\"NO\")'''
+          bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName!~SeleniumNUnitTest)&(FullyQualifiedName!~Proxy)&(FullyQualifiedName!~SeleniumConfigTests)&(FullyQualifiedName!~SeleniumPageObjectUnitTest)&(FullyQualifiedName!~LazyElementUnitTests)&(FullyQualifiedName!~SeleniumUnitTests.SeleniumUnitTest)&(FullyQualifiedName!~SeleniumWebElementTest)&(FullyQualifiedName!~SeleniumUtilsTest)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selengen/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selengen/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=/"RemoteSeleniumCapsMaqs:bstack:options:accessKey/",value=/"${{ secrets.BROWSERSTACK_ACCESS_KEY }}/")'' ''TestRunParameters.Parameter(name=/"SeleniumMaqs:RunOnBrowserStack/",value=/"NO/")'''
       - uses: actions/upload-artifact@v2
         if: always()
         name: "Upload test artifact"
@@ -555,7 +555,6 @@ jobs:
   sonar:
     name: Sonar
     runs-on: windows-2019
-    # Skip test-appium and test-selengen until project gets BrowserStack or SauceLabs
     needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen, getVersion]
     steps:
       - name: Set up JDK 17
