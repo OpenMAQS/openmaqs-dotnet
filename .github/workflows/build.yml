@@ -633,8 +633,7 @@ jobs:
   report:
     name: Report
     runs-on: ubuntu-latest
-    # Skip test-appium and test-selengen until project gets BrowserStack or SauceLabs
-    needs: [test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, getVersion]
+    needs: [test-appium, test-selengen, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, getVersion]
     if: always()
     steps:
       - uses: actions/checkout@v2
@@ -642,8 +641,6 @@ jobs:
         with:
           path: ${{ github.workspace }}/Results
       - name: Test Report
-        # Skip because dependabot cannot access the associated resources
-        if: github.actor != 'dependabot[bot]'
         uses: dorny/test-reporter@v1
         continue-on-error: true
         with:
