@@ -300,7 +300,7 @@ jobs:
           dotnet-version: |
             8.x.x
       - name: Build the docker-compose stack
-        run: docker compose -f Docker/MAQSSQLServer/docker-compose.yml -p openmaqs_maqs-dotnet up -d
+        run: docker compose -f Docker/MAQSSQLServer/docker-compose.yml -p openmaqs-maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
