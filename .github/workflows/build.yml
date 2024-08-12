@@ -301,6 +301,9 @@ jobs:
             8.x.x
       - name: Build the docker-compose stack
         run: docker compose -f Docker/MAQSSQLServer/docker-compose.yml -p openmaqs_maqs-dotnet up -d
+      - name: Wait for DB to come online
+        run: sleep 10s
+        shell: bash
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
