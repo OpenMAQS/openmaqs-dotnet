@@ -150,8 +150,6 @@ jobs:
 
   test-appium:
     name: Appium
-    # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    if: github.actor != 'dependabot[bot]'
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
@@ -169,7 +167,7 @@ jobs:
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/BrowserStack.RunSettings --filter FullyQualifiedName!~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/appium/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/appium/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"AppiumCapsMaqs:bstack:options:accessKey\",value=\"${{ secrets.BROWSERSTACK_ACCESS_KEY }}\")'''
+          bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/BrowserStack.RunSettings --filter FullyQualifiedName!~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/appium/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/appium/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name="AppiumCapsMaqs:bstack:options:accessKey",value="${{ secrets.BROWSERSTACK_ACCESS_KEY }}")'''
       - uses: actions/upload-artifact@v2
         if: always()
         name: "Upload test artifact"
@@ -275,7 +273,7 @@ jobs:
           dotnet-version: |
             8.x.x
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
+        run: docker compose -f Docker/MAQSMongoDB/docker-compose.yml -p openmaqs_maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -302,7 +300,10 @@ jobs:
           dotnet-version: |
             8.x.x
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSSQLServer/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
+        run: docker compose -f Docker/MAQSSQLServer/docker-compose.yml -p openmaqs_maqs-dotnet up -d
+      - name: Wait for DB to come online
+        run: sleep 10s
+        shell: bash
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -329,7 +330,7 @@ jobs:
           dotnet-version: |
             8.x.x
       - name: Build the docker-compose stack
-        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
+        run: docker compose -f Docker/MAQSEmail/docker-compose.yml -p openmaqs_maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -347,7 +348,7 @@ jobs:
   test-framework:
     name: Framework
     needs: waitOld
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
@@ -425,9 +426,9 @@ jobs:
       - id: browserupdate
         uses: ./.github/workflows/setuplinbrowser-action
       - name: Build the docker-compose mongo stack
-        run: docker-compose -f Docker/MAQSMongoDB/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
+        run: docker compose -f Docker/MAQSMongoDB/docker-compose.yml -p openmaqs_maqs-dotnet up -d
       - name: Build the docker-compose email stack
-        run: docker-compose -f Docker/MAQSEmail/docker-compose.yml -p OpenMAQS/maqs-dotnet up -d
+        run: docker compose -f Docker/MAQSEmail/docker-compose.yml -p openmaqs_maqs-dotnet up -d
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -525,10 +526,8 @@ jobs:
 
   test-selengen:
     name: Selenium General
-    # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    if: github.actor != 'dependabot[bot]'
     needs: waitOld
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -546,7 +545,7 @@ jobs:
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName!~SeleniumNUnitTest)&(FullyQualifiedName!~Proxy)&(FullyQualifiedName!~SeleniumConfigTests)&(FullyQualifiedName!~SeleniumPageObjectUnitTest)&(FullyQualifiedName!~LazyElementUnitTests)&(FullyQualifiedName!~SeleniumUnitTests.SeleniumUnitTest)&(FullyQualifiedName!~SeleniumWebElementTest)&(FullyQualifiedName!~SeleniumUtilsTest)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selengen/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selengen/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name=\"RemoteSeleniumCapsMaqs:bstack:options:accessKey\",value=\"${{ secrets.BROWSERSTACK_ACCESS_KEY }}\")'' ''TestRunParameters.Parameter(name=\"SeleniumMaqs:RunOnBrowserStack\",value=\"NO\")'''
+          bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName!~SeleniumNUnitTest)&(FullyQualifiedName!~Proxy)&(FullyQualifiedName!~SeleniumConfigTests)&(FullyQualifiedName!~SeleniumPageObjectUnitTest)&(FullyQualifiedName!~LazyElementUnitTests)&(FullyQualifiedName!~SeleniumUnitTests.SeleniumUnitTest)&(FullyQualifiedName!~SeleniumWebElementTest)&(FullyQualifiedName!~SeleniumUtilsTest)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selengen/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selengen/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name="RemoteSeleniumCapsMaqs:bstack:options:accessKey",value="${{ secrets.BROWSERSTACK_ACCESS_KEY }}")'' ''TestRunParameters.Parameter(name="SeleniumMaqs:RunOnBrowserStack",value="NO")'''
       - uses: actions/upload-artifact@v2
         if: always()
         name: "Upload test artifact"
@@ -558,9 +557,7 @@ jobs:
 
   sonar:
     name: Sonar
-    # Skip when dependabot PR - Dependabot PRs cannot access action secrets
-    if: github.actor != 'dependabot[bot]'
-    runs-on: windows-2019
+    runs-on: windows-2022
     needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen, getVersion]
     steps:
       - name: Set up JDK 17
@@ -639,7 +636,7 @@ jobs:
   report:
     name: Report
     runs-on: ubuntu-latest
-    needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-email, test-playwright, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen]
+    needs: [test-appium, test-selengen, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, getVersion]
     if: always()
     steps:
       - uses: actions/checkout@v2
@@ -647,8 +644,6 @@ jobs:
         with:
           path: ${{ github.workspace }}/Results
       - name: Test Report
-        # Skip because dependabot cannot access the associated resources
-        if: github.actor != 'dependabot[bot]'
         uses: dorny/test-reporter@v1
         continue-on-error: true
         with:
@@ -658,7 +653,7 @@ jobs:
 
   createNugetPacakges:
     name: Create NuGet packages
-    runs-on: windows-2019
+    runs-on: windows-2022
     needs: [getVersion]
     steps:
       - uses: actions/checkout@v2
@@ -688,7 +683,7 @@ jobs:
     name: Publish NuGet - v${{ needs.getVersion.outputs.buildNumber }}
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&  github.event_name != 'schedule'
     needs: [getVersion, createNugetPacakges, sonar]
-    runs-on: windows-2019
+    runs-on: windows-2022
     environment: nuget
     steps:
     - name: Setup .NET Core

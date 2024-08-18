@@ -215,9 +215,9 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         }
 
         /// <inheritdoc cref = "ILocator.TypeAsync" /> 
-        public void Type(string text, LocatorTypeOptions? options = null)
+        public void Type(string text, LocatorFillOptions? options = null)
         {
-            ElementLocator().TypeAsync(text, options).Wait();
+            ElementLocator().FillAsync(text, options).Wait();
         }
 
         /// <inheritdoc cref = "ILocator.UncheckAsync" /> 
