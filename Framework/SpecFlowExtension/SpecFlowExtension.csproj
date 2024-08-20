@@ -43,7 +43,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Appium.WebDriver" version="5.0.0" />
+    <PackageReference Include="Appium.WebDriver" version="5.1.0" />
     <PackageReference Include="Dapper" version="2.1.35" />
     <PackageReference Include="Gherkin" version="29.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
@@ -52,6 +52,7 @@
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter" Version="3.5.2" />
     <PackageReference Include="MSTest.TestFramework" version="3.5.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NUnit" version="4.0.0" />
     <PackageReference Include="SpecFlow" version="3.9.74" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
