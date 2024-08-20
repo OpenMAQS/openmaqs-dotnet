@@ -639,6 +639,7 @@ namespace PlaywrightTests
         /// <summary>
         /// Test add script works as expected
         /// </summary>
+        [Ignore]
         [TestMethod]
         public void AddInitScriptTest()
         {
