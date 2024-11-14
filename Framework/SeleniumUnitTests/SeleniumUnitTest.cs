@@ -656,6 +656,7 @@ namespace SeleniumUnitTests
         public void SeleniumSoftAssertEmptyMessageTest()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
+            WebDriver.Wait().ForPageLoad();
             SoftAssert.Assert(() => Assert.IsTrue(WebDriver.Title.Contains("Automation"), "", "Title is incorrect"));
             SoftAssert.FailTestIfAssertFailed();
         }
