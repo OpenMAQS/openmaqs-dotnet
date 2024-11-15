@@ -91,7 +91,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -106,7 +106,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/UtilitiesUnitTests/UtilitiesUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/untils/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/untils/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -120,7 +120,7 @@ jobs:
     needs: waitOld
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -139,7 +139,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter FullyQualifiedName~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/winapp/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/winapp/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -153,7 +153,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -168,7 +168,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/AppiumUnitTests/AppiumUnitTests.csproj --settings Framework/BrowserStack.RunSettings --filter FullyQualifiedName!~AppiumWinAppUnitTests --logger trx --results-directory "${{github.workspace}}/artifactTests/appium/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/appium/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name="AppiumCapsMaqs:bstack:options:accessKey",value="${{ secrets.BROWSERSTACK_ACCESS_KEY }}")'''
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -182,7 +182,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -192,7 +192,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/BaseTestUnitTests/BaseTestUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/base/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/base/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -206,7 +206,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -219,7 +219,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/WebServiceUnitTests/WebServiceUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/webservice/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/webservice/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -233,7 +233,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -252,7 +252,7 @@ jobs:
         with:
           bt-param: 'Framework/PlaywrightUnitTests/PlaywrightUnitTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/Playwright/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/Playwright/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
           artifact-name: 'playwright'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -266,7 +266,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -279,7 +279,7 @@ jobs:
         with:
           bt-param: 'Framework/MongoDBUnitTests/MongoDBUnitTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/mongo/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/mongo/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover' 
           artifact-name: 'mongo'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -293,7 +293,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -309,7 +309,7 @@ jobs:
         with:
           bt-param: 'Framework/DatabaseUnitTests/DatabaseUnitTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/database/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/database/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover' 
           artifact-name: 'database'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -323,7 +323,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -336,7 +336,7 @@ jobs:
         with:
           bt-param: 'Framework/EmailUnitTests/EmailUnitTests.csproj  --settings Framework/Parallel.RunSettings   --logger trx --results-directory "${{github.workspace}}/artifactTests/email/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/email/"  /p:CollectCoverage=true /p:CoverletOutputFormat=opencover' 
           artifact-name: 'email'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -355,7 +355,7 @@ jobs:
         with:
           dotnet-version: |
             8.x.x
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
@@ -377,7 +377,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/FrameworkUnitTests/FrameworkUnitTests.csproj -f netcoreapp3.1 --settings Framework/Parallel.RunSettings --logger trx --results-directory "${{github.workspace}}/artifactTests/framework/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/framework/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -391,7 +391,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -403,7 +403,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/SpecFlowExtensionUnitTests/SpecFlowExtensionUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/specflow/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/specflow/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -417,7 +417,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -433,7 +433,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/CompositeUnitTests/CompositeUnitTests.csproj --settings Framework/Parallel.RunSettings --logger trx --results-directory "${{github.workspace}}/artifactTests/composite/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/composite/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -447,7 +447,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -459,7 +459,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/SpecFlowExtensionNUnitTests/SpecFlowExtensionNUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/specflownunit/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/specflownunit/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -473,7 +473,7 @@ jobs:
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -485,7 +485,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName~SeleniumUnitTests.LazyElementUnitTests)|(FullyQualifiedName~SeleniumPageObjectUnitTest)|(FullyQualifiedName~SeleniumWebElementTest)|(FullyQualifiedName~Proxy)"  --logger trx --results-directory "${{github.workspace}}/artifactTests/selenpomlazy/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selenpomlazy/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -499,7 +499,7 @@ jobs:
     needs: waitOld
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -515,7 +515,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName~SeleniumUnitTests.SeleniumNUnitTest)|(FullyQualifiedName~SeleniumUnitTests.SeleniumUnitTest)|(FullyQualifiedName~SeleniumUnitTests.SeleniumUtilsTest)|(FullyQualifiedName~SeleniumUnitTests.SeleniumConfigTests)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selenutil/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selenutil/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -529,7 +529,7 @@ jobs:
     needs: waitOld
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
@@ -546,7 +546,7 @@ jobs:
         uses: ./.github/workflows/buildtest-action
         with:
           bt-param: 'Framework/SeleniumUnitTests/SeleniumUnitTests.csproj --settings Framework/Parallel.RunSettings --filter "(FullyQualifiedName!~SeleniumNUnitTest)&(FullyQualifiedName!~Proxy)&(FullyQualifiedName!~SeleniumConfigTests)&(FullyQualifiedName!~SeleniumPageObjectUnitTest)&(FullyQualifiedName!~LazyElementUnitTests)&(FullyQualifiedName!~SeleniumUnitTests.SeleniumUnitTest)&(FullyQualifiedName!~SeleniumWebElementTest)&(FullyQualifiedName!~SeleniumUtilsTest)" --logger trx --results-directory "${{github.workspace}}/artifactTests/selengen/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/selengen/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -- ''TestRunParameters.Parameter(name="RemoteSeleniumCapsMaqs:bstack:options:accessKey",value="${{ secrets.BROWSERSTACK_ACCESS_KEY }}")'' ''TestRunParameters.Parameter(name="SeleniumMaqs:RunOnBrowserStack",value="NO")'''
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
@@ -564,10 +564,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
           path: ${{ github.workspace }}/Results
 
@@ -639,8 +639,8 @@ jobs:
     needs: [test-appium, test-selengen, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, getVersion]
     if: always()
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
         with:
           path: ${{ github.workspace }}/Results
       - name: Test Report
@@ -656,7 +656,7 @@ jobs:
     runs-on: windows-2022
     needs: [getVersion]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
@@ -670,7 +670,7 @@ jobs:
         run: |
           dotnet build Framework/Base.sln --no-restore --configuration Release -p:Version=${{needs.getVersion.outputs.buildNumber}} -p:BaseOutputPath="${{github.workspace}}/artifactTests/packages/"
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload NuGet packages artifact"
         with:
@@ -691,7 +691,7 @@ jobs:
       with:
         dotnet-version: |
           8.x.x
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v4
       with:
         name: 'packages'
         path: ${{ github.workspace }}/packages
