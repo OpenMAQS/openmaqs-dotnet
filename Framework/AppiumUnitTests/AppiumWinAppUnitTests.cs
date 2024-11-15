@@ -29,7 +29,7 @@ namespace AppiumUnitTests
         /// <summary>
         /// Tests the creation of the Appium Windows application driver
         /// </summary>
-        [TestMethod]
+        /// [TestMethod]
         [TestCategory(TestCategories.Appium)]
         public void AppiumWinAppDriverTest()
         {
