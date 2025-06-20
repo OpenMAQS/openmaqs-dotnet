@@ -895,7 +895,7 @@ namespace EmailUnitTests
         {
             using (FileStream stream = File.OpenRead(filePath))
             {
-                using (HashAlgorithm hashAlgorithm = new SHA1CryptoServiceProvider())
+                using (HashAlgorithm hashAlgorithm = SHA1.Create())
                 {
                     byte[] hashArray = hashAlgorithm.ComputeHash(stream);
                     return BitConverter.ToString(hashArray);
