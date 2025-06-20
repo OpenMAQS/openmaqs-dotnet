@@ -439,7 +439,7 @@ namespace SeleniumUnitTests
         {
             NavigateToUrl();
             WebDriver.SlowType(firstNameTextBox, "Test input slowtype");
-            Assert.AreEqual("Test input slowtype", WebDriver.Wait().ForClickableElement(firstNameTextBox).GetAttribute("value"));
+            Assert.AreEqual("Test input slowtype", WebDriver.Wait().ForClickableElement(firstNameTextBox).GetDomAttribute("value"));
         }
 
         /// <summary>

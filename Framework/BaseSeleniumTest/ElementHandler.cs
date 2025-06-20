@@ -87,7 +87,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         /// <returns>The text in the textbox</returns>
         public static string GetElementAttribute(this IWebElement element, string attribute = "value")
         {
-            return element.GetAttribute(attribute);
+            return element.GetDomAttribute(attribute);
         }
 
         /// <summary>

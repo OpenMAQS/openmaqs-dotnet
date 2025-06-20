@@ -381,7 +381,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
                         string sub = text.Split(navigationChars)[0];
                         element = this.GetElement(this.GetRawVisibleElement);
 
-                        if (!sub.EndsWith(element.GetAttribute("value")))
+                        if (!sub.EndsWith(element.GetDomAttribute("value")))
                         {
                             throw;
                         }
@@ -660,7 +660,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
             return GenericWait.Wait<string>(
                 () =>
                 {
-                    return this.GetElement(this.GetRawExistingElement).GetAttribute(attributeName);
+                    return this.GetElement(this.GetRawExistingElement).GetDomAttribute(attributeName);
                 },
             this.WaitTime(),
             this.TimeoutTime());
@@ -677,7 +677,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
             return GenericWait.Wait<string>(
                 () =>
                 {
-                    return this.GetElement(this.GetRawVisibleElement).GetAttribute("value");
+                    return this.GetElement(this.GetRawVisibleElement).GetDomAttribute("value");
                 },
             this.WaitTime(),
             this.TimeoutTime());

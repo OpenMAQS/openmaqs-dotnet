@@ -532,7 +532,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
             return driver =>
             {
                 var element = searchContext.FindElement(by);
-                var elementValue = element.GetAttribute(attribute);
+                var elementValue = element.GetDomAttribute(attribute);
                 return (elementValue != null && elementValue.ToUpper().Contains(textValue.ToUpper())) ? element : null;
             };
         }
@@ -550,7 +550,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
             return driver =>
             {
                 var element = searchContext.FindElement(by);
-                var elementValue = element.GetAttribute(attribute);
+                var elementValue = element.GetDomAttribute(attribute);
                 return (elementValue != null && elementValue.Equals(textValue)) ? element : null;
             };
         }

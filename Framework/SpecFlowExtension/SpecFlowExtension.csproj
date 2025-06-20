@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <PackageId>OpenMAQS.Maqs.SpecFlow</PackageId>
     <Product>OpenMAQS.Maqs.SpecFlow</Product>
     <AssemblyName>OpenMAQS.Maqs.SpecFlow</AssemblyName>
