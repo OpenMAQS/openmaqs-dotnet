@@ -10,7 +10,7 @@ using NUnit.Framework.Internal;
 using NUnit.Framework;
 using System;
 
-namespace OpenMAQS.Maqs.BaseTest
+namespace OpenMAQS.Maqs.Utilities.Helper
 {
     /// <summary>
     /// A simple ExpectedExceptionAttribute
