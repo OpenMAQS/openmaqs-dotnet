@@ -64,7 +64,7 @@ namespace BaseTestUnitTests
         [TestCategory(TestCategories.Framework)]
         public void SoftAssertExceptionWithNoMessage()
         {
-            MicroAssert.ThrowsException<SoftAssertException>(() => throw new SoftAssertException(), string.Empty);
+            MicroAssert.Throws<SoftAssertException>(() => throw new SoftAssertException(), string.Empty);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace BaseTestUnitTests
         public void SoftAssertExceptionWithMessage()
         {
             string error = "ERROR";
-            MicroAssert.ThrowsException<SoftAssertException>(() => throw new SoftAssertException(error), error);
+            MicroAssert.Throws<SoftAssertException>(() => throw new SoftAssertException(error), error);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace BaseTestUnitTests
         public void SoftAssertExceptionWithInnerException()
         {
             string error = "ERROR";
-            MicroAssert.ThrowsException<SoftAssertException>(() => throw new SoftAssertException(error, new Exception()), error);
+            MicroAssert.Throws<SoftAssertException>(() => throw new SoftAssertException(error, new Exception()), error);
         }
 
         /// <summary>

@@ -895,7 +895,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
                 messageBuilder.AppendLine($"Locator: {this.By}");
                 messageBuilder.AppendLine($"Because: {e.Message}");
 
-                throw new ElementNotVisibleException(messageBuilder.ToString(), e);
+                throw new (messageBuilder.ToString(), e);
             }
         }
 
@@ -920,7 +920,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
                 messageBuilder.AppendLine($"Locator: {this.By}");
                 messageBuilder.AppendLine($"Because: {e.Message}");
 
-                throw new ElementNotVisibleException(messageBuilder.ToString(), e);
+                throw new ElementNotInteractableException(messageBuilder.ToString(), e);
             }
         }
     }
