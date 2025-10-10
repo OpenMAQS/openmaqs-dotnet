@@ -34,170 +34,170 @@ namespace FrameworkUnitTests
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void MailBoxNamesError()
         {
-            EmailDriver.GetMailBoxNames();
+            Assert.Throws<TimeoutException>(() => EmailDriver.GetMailBoxNames());
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void MailoxError()
         {
-            EmailDriver.GetMailbox(string.Empty);
+            Assert.Throws<TimeoutException>(() => EmailDriver.GetMailbox(string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void SelectBoxError()
         {
-            EmailDriver.SelectMailbox(string.Empty);
+            Assert.Throws<TimeoutException>(() => EmailDriver.SelectMailbox(string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
+        //[ExpectedException(typeof(NullReferenceException))]
         public void CreateMailboxError()
         {
-            EmailDriver.CreateMailbox(string.Empty);
+            Assert.Throws<NullReferenceException>(() => EmailDriver.CreateMailbox(string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(FormatException))]
+        //[ExpectedException(typeof(FormatException))]
         public void GetMessageError()
         {
-            EmailDriver.GetMessage(string.Empty);
+            Assert.Throws<FormatException>(() => EmailDriver.GetMessage(string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void GetAllMessageHeadersError()
         {
-            EmailDriver.GetAllMessageHeaders(string.Empty);
+            Assert.Throws<TimeoutException>(() => EmailDriver.GetAllMessageHeaders(string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotImplementedException))]
+        //[ExpectedException(typeof(NotImplementedException))]
         public void DeleteMessageError()
         {
-            EmailDriver.DeleteMessage(string.Empty);
+            Assert.Throws<NotImplementedException>(() => EmailDriver.DeleteMessage(string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotImplementedException))]
+        //[ExpectedException(typeof(NotImplementedException))]
         public void DeleteMimeMessageError()
         {
-            EmailDriver.DeleteMessage(new MimeMessage());
+            Assert.Throws<NotImplementedException>(() => EmailDriver.DeleteMessage(new MimeMessage()));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotImplementedException))]
+        //[ExpectedException(typeof(NotImplementedException))]
         public void MoveMimeMessageError()
         {
-            EmailDriver.MoveMailMessage(new MimeMessage(), string.Empty);
+            Assert.Throws<NotImplementedException>(() => EmailDriver.MoveMailMessage(new MimeMessage(), string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotImplementedException))]
+        //[ExpectedException(typeof(NotImplementedException))]
         public void MoveMessageError()
         {
-            EmailDriver.MoveMailMessage(string.Empty, string.Empty);
+            Assert.Throws<NotImplementedException>(() => EmailDriver.MoveMailMessage(string.Empty, string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotImplementedException))]
+        //[ExpectedException(typeof(NotImplementedException))]
         public void GetAttachmentsError()
         {
-            EmailDriver.GetAttachments(string.Empty);
+            Assert.Throws<NotImplementedException>(() => EmailDriver.GetAttachments(string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
+        //[ExpectedException(typeof(NotSupportedException))]
         public void GetMimeAttachmentsError()
         {
-            EmailDriver.GetAttachments(EmailDriverMocks.GetMocMime());
+            Assert.Throws<NotSupportedException>(() => EmailDriver.GetAttachments(EmailDriverMocks.GetMocMime()));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
+        //[ExpectedException(typeof(NotSupportedException))]
         public void DownloadAttachmentsToError()
         {
-            EmailDriver.DownloadAttachments(EmailDriverMocks.GetMocMime(), string.Empty);
+            Assert.Throws<NotSupportedException>(() => EmailDriver.DownloadAttachments(EmailDriverMocks.GetMocMime(), string.Empty));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
+        //[ExpectedException(typeof(NotSupportedException))]
         public void DownloadAttachmentsError()
         {
-            EmailDriver.DownloadAttachments(EmailDriverMocks.GetMocMime());
+            Assert.Throws<NotSupportedException>(() => EmailDriver.DownloadAttachments(EmailDriverMocks.GetMocMime()));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void SearchMessagesError()
         {
-            EmailDriver.SearchMessages(null);
+            Assert.Throws<TimeoutException>(() => EmailDriver.SearchMessages(null));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
+        //[ExpectedException(typeof(NullReferenceException))]
         public void GetContentTypesError()
         {
-            EmailDriver.GetContentTypes(null);
+            Assert.Throws<NullReferenceException>(() => EmailDriver.GetContentTypes(null));
         }
 
         /// <summary>
         /// Make sure email driver throws the correct exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
+        //[ExpectedException(typeof(NullReferenceException))]
         public void GetBodyByContentTypesError()
         {
-            EmailDriver.GetBodyByContentTypes(null, string.Empty);
+            Assert.Throws<NullReferenceException>(() => EmailDriver.GetBodyByContentTypes(null, string.Empty));
         }
     }
 }
