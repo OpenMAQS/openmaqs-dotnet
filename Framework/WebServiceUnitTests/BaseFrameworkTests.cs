@@ -8,6 +8,7 @@ using OpenMAQS.Maqs.BaseTest;
 using OpenMAQS.Maqs.BaseWebServiceTest;
 using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MicroAssert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 using NUnit.Framework;
 using System.Diagnostics.CodeAnalysis;
 
@@ -36,10 +37,10 @@ namespace WebServiceTesterUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Framework)]
-        [ExpectedException(typeof(AssertFailedException))]
+        //[ExpectedException(typeof(AssertFailedException))]
         public new void SoftAssertWithFailure()
         {
-            base.SoftAssertWithFailure();
+            MicroAssert.Throws<AssertFailedException>(() => base.SoftAssertWithFailure());
         }
 
         /// <summary>

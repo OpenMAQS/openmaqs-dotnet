@@ -76,14 +76,14 @@ namespace WebServiceTesterUnitTesting
         [TestMethod]
         [TestCategory(TestCategories.WebService)]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void WebServiceTimeout()
         {
             var httpClient = this.GetHttpClient();
             httpClient.Timeout = TimeSpan.FromTicks(1);
             this.WebServiceDriver = new WebServiceDriver(httpClient);
 
-            this.WebServiceDriver.Get("/api/String/1", "text/plain");
+            Assert.Throws<TimeoutException>(() => this.WebServiceDriver.Get("/api/String/1", "text/plain"));
 
             Assert.Fail("Get call should have timed out");
         }

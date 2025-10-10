@@ -66,10 +66,10 @@ namespace WebServiceTesterUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.WebService)]
-        [ExpectedException(typeof(HttpRequestException))]
+        //[ExpectedException(typeof(HttpRequestException))]
         public void EnsureSuccessStatusCodeThrownException()
         {
-            this.WebServiceDriver.Post("notaurl", "image/GIF", null);
+            Assert.Throws<HttpRequestException>(() => this.WebServiceDriver.Post("notaurl", "image/GIF", null));
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace WebServiceTesterUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.WebService)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        //[ExpectedException(typeof(InvalidOperationException))]
         public void WebServiceUtilsDeserializeResponseThrownException()
         {
             HttpResponseMessage response = new HttpResponseMessage
@@ -140,7 +140,7 @@ namespace WebServiceTesterUnitTesting
                 Content = new StringContent("BAD_FORMAT")
             };
 
-            WebServiceUtils.DeserializeResponse<ProductJson>(response, new List<MediaTypeFormatter> { new CustomXmlMediaTypeFormatter("image/gif", typeof(ProductJson)) });
+            Assert.Throws<InvalidOperationException>(() => WebServiceUtils.DeserializeResponse<ProductJson>(response, new List<MediaTypeFormatter> { new CustomXmlMediaTypeFormatter("image/gif", typeof(ProductJson)) }));
         }
 
         /// <summary>
@@ -148,10 +148,10 @@ namespace WebServiceTesterUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.WebService)]
-        [ExpectedException(typeof(NotSupportedException))]
+        //[ExpectedException(typeof(NotSupportedException))]
         public void MakeStreamContentThrowException()
         {
-            WebServiceUtils.MakeStreamContent<ProductJson>(Product, Encoding.UTF8, "notsupported");
+            Assert.Throws<NotSupportedException>(() => WebServiceUtils.MakeStreamContent<ProductJson>(Product, Encoding.UTF8, "notsupported"));
         }
 
         /// <summary>
@@ -159,10 +159,10 @@ namespace WebServiceTesterUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.WebService)]
-        [ExpectedException(typeof(NotSupportedException))]
+        //[ExpectedException(typeof(NotSupportedException))]
         public void MakeStringContentThrowException()
         {
-            WebServiceUtils.MakeStringContent<ProductJson>(Product, Encoding.UTF8, "notsupported");
+            Assert.Throws<NotSupportedException>(() => WebServiceUtils.MakeStringContent<ProductJson>(Product, Encoding.UTF8, "notsupported"));
         }
     }
 }
