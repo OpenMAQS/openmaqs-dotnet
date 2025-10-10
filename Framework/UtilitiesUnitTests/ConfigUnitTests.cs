@@ -322,7 +322,7 @@ namespace UtilitiesUnitTesting
         /// Tests that an exception is thrown when a field is not present
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(MaqsConfigException))]
+        //[MyExpectedException(typeof(MaqsConfigException))]
         public void ConfigFieldsMissing()
         {
             ConfigValidation configValidation = new ConfigValidation()
@@ -333,17 +333,17 @@ namespace UtilitiesUnitTesting
                 }
             };
 
-            Config.Validate(ConfigSection.WebServiceMaqs, configValidation);
+            Assert.Throws<MaqsConfigException>(() => Config.Validate(ConfigSection.WebServiceMaqs, configValidation));
         }
 
         /// <summary>
         /// Tests that we can use the inner exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(MaqsConfigException))]
+        //[MyExpectedException(typeof(MaqsConfigException))]
         public void MaqsConfigInnerException()
         {
-            throw new MaqsConfigException(string.Empty, new MaqsConfigException(string.Empty));
+            Assert.Throws<MaqsConfigException>(() => throw new MaqsConfigException(string.Empty, new MaqsConfigException(string.Empty)));
         }
 
         /// <summary>
@@ -386,10 +386,10 @@ namespace UtilitiesUnitTesting
         /// Tests that an exception is thrown when the fields to validate is null
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(MaqsConfigException))]
+        //[MyExpectedException(typeof(MaqsConfigException))]
         public void ConfigFieldsNull()
         {
-            Config.Validate(ConfigSection.WebServiceMaqs, null);
+            Assert.Throws<MaqsConfigException>(() => Config.Validate(ConfigSection.WebServiceMaqs, null));
         }
 
         /// <summary>

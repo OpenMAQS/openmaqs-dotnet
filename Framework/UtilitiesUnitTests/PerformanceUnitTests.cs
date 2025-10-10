@@ -182,12 +182,12 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void PerfStartTimerThrowException()
         {
             IPerfTimerCollection p = this.PerfTimerCollection;
             p.StartTimer("alreadyStarted");
-            p.StartTimer("alreadyStarted");
+            Assert.Throws<ArgumentException>(() => p.StartTimer("alreadyStarted"));
         }
 
         /// <summary>
@@ -195,11 +195,11 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void PerfEndTimerThrowException()
         {
             IPerfTimerCollection p = this.PerfTimerCollection;
-            p.StopTimer("notStarted");
+            Assert.Throws<ArgumentException>(() => p.StopTimer("notStarted"));
         }
 
         /// <summary>

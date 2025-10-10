@@ -37,10 +37,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(MaqsLoggingConfigException))]
+        //[MyExpectedException(typeof(MaqsLoggingConfigException))]
         public void MaqsLoggingConfigInnerException()
         {
-            throw new MaqsLoggingConfigException(string.Empty, new MaqsLoggingConfigException(string.Empty));
+            Assert.Throws<MaqsLoggingConfigException>(() => throw new MaqsLoggingConfigException(string.Empty, new MaqsLoggingConfigException(string.Empty)));
         }
 
         /// <summary>
@@ -64,12 +64,12 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(MaqsLoggingConfigException))]
+        //[MyExpectedException(typeof(MaqsLoggingConfigException))]
         [Ignore("This test is not working as expected.  It should throw a config exception, but it is not.")]
         public void GetLoggingEnabledSettingsDefault()
         {
             Config.AddTestSettingValues("Log", "Default", "GlobalMaqs");
-            LoggingConfig.GetLoggingEnabledSetting();
+            Assert.Throws<MaqsLoggingConfigException>(() => LoggingConfig.GetLoggingEnabledSetting());
         }
 
         /// <summary>
@@ -93,11 +93,11 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(MaqsLoggingConfigException))]
+        //[MyExpectedException(typeof(MaqsLoggingConfigException))]
         public void GetLoggingLevelSettingsDefault()
         {
             Config.AddTestSettingValues("LogLevel", "Default", "GlobalMaqs");
-            LoggingConfig.GetLoggingLevelSetting();
+            Assert.Throws<MaqsLoggingConfigException>(() => LoggingConfig.GetLoggingLevelSetting());
         }
 
         /// <summary>
@@ -168,15 +168,15 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(MaqsLoggingConfigException))]
+        //[MyExpectedException(typeof(MaqsLoggingConfigException))]
         public void GetLoggerDefault()
         {
             Config.AddTestSettingValues("Log", LoggingEnabled.YES.ToString(), "GlobalMaqs");
             Config.AddTestSettingValues("LogType", "Default", "GlobalMaqs");
-            LoggerFactory.GetLogger(StringProcessor.SafeFormatter(
+            Assert.Throws<MaqsLoggingConfigException>(() => LoggerFactory.GetLogger(StringProcessor.SafeFormatter(
                     "{0} - {1}",
                     "Test",
-                    DateTime.UtcNow.ToString("yyyy-MM-dd-hh-mm-ss-ffff", CultureInfo.InvariantCulture)));
+                    DateTime.UtcNow.ToString("yyyy-MM-dd-hh-mm-ss-ffff", CultureInfo.InvariantCulture))));
         }
     }
 }

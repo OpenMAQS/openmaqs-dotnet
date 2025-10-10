@@ -194,11 +194,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException), "The input should not exist so this will throw an exception.")]
+        //[MyExpectedException(typeof(TimeoutException))] // The input should not exist so this will throw an exception.
         public void LazyTimeOutForMissingElement()
         {
             this.WebDriver.SetWaitDriver(new OpenQA.Selenium.Support.UI.WebDriverWait(this.WebDriver, TimeSpan.FromSeconds(1)));
-            Assert.AreEqual("THISCHECKSHOULDFAIL", this.MissingItem.Text);
+            Assert.Throws<TimeoutException>(() => Assert.AreEqual("THISCHECKSHOULDFAIL", this.MissingItem.Text));
         }
 
         /// <summary>
@@ -206,11 +206,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException), "The input should be disabled so this will throw an exception.")]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void LazyTimeOutForElementInWrongState()
         {
             this.WebDriver.SetWaitDriver(new OpenQA.Selenium.Support.UI.WebDriverWait(this.WebDriver, TimeSpan.FromSeconds(1)));
-            this.DisabledItem.Click();
+            Assert.Throws<TimeoutException>(() => this.DisabledItem.Click());
         }
 
         /// <summary>
@@ -288,14 +288,14 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException), "Finding shadow root should timeout.")]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void LazyShadowRootTimeout()
         {
             // Create the lazy element and use it
             LazyElement footer = new LazyElement(this.TestObject, By.CssSelector("FOOTER P"), "Footer");
 
             // Make sure we don't get a shadow root back
-            Assert.IsNull(footer.GetShadowRoot(), "There is no shadow root so fail");
+            Assert.Throws<TimeoutException>(() => Assert.IsNull(footer.GetShadowRoot(), "There is no shadow root so fail"));
         }
 
         /// <summary>
@@ -564,11 +564,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException), "The input should be disabled so this will throw an exception.")]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void LazyElementSendKeysWithParent()
         {
             this.WebDriver.SetWaitDriver(new OpenQA.Selenium.Support.UI.WebDriverWait(this.WebDriver, TimeSpan.FromSeconds(1)));
-            this.DisabledInput.SendKeys("test");
+            Assert.Throws<TimeoutException>(() => this.DisabledInput.SendKeys("test"));
         }
 
         /// <summary>
@@ -668,11 +668,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException), "The input should be disabled so this will throw an exception.")]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void LazyElementSubmitWithParent()
         {
             this.WebDriver.SetWaitDriver(new OpenQA.Selenium.Support.UI.WebDriverWait(this.WebDriver, TimeSpan.FromSeconds(1)));
-            this.DisabledInput.Submit();
+            Assert.Throws<TimeoutException>(() => this.DisabledInput.Submit());
         }
 
         /// <summary>
@@ -1077,12 +1077,12 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException), "The input should be disabled so this will throw an exception.")]
+        //[MyExpectedException(typeof(TimeoutException))] // The input should be disabled so this will throw an exception.
         public void LazyElementFindElementRespectAction()
         {
             IWebElement firstElement = this.DivRoot.FindElement(this.DisabledItem.By);
             this.WebDriver.SetWaitDriver(new OpenQA.Selenium.Support.UI.WebDriverWait(this.WebDriver, TimeSpan.FromSeconds(1)));
-            firstElement.Click();
+            Assert.Throws<TimeoutException>(() => firstElement.Click());
         }
 
         /// <summary>
@@ -1133,7 +1133,7 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException), "The input should be disabled so this will throw an exception.")]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void LazyElementFindElementsRespectAction()
         {
             IWebElement firstElement = this.DivRoot.FindElements(this.DisabledItem.By)[0];
@@ -1142,7 +1142,7 @@ namespace SeleniumUnitTests
             this.WebDriver.Navigate().GoToUrl(SeleniumConfig.GetWebSiteBase());
 
             this.WebDriver.SetWaitDriver(new OpenQA.Selenium.Support.UI.WebDriverWait(this.WebDriver, TimeSpan.FromSeconds(1)));
-            firstElement.Click();
+            Assert.Throws<TimeoutException>(() => firstElement.Click());
         }
 
         /// <summary>

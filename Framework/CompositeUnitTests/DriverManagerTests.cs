@@ -79,15 +79,14 @@ namespace CompositeUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Framework)]
-        [ExpectedException(typeof(ArgumentException))]
-
+        //[MyExpectedException(typeof(ArgumentException))]
         public void ThrowDriverAlreadyExist()
         {
             IManagerStore dictionary = GetManagerStore();
             dictionary.Add(GetManager());
-            dictionary.Add(GetManager());
+            Assert.Throws<ArgumentException>(() => dictionary.Add(GetManager()));
 
-            Assert.Fail("Previous line should have failed the test.");
+            //Assert.Fail("Previous line should have failed the test.");
         }
 
         /// <summary>
@@ -95,15 +94,15 @@ namespace CompositeUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Framework)]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
 
         public void ThrowNamedDriverAlreadyExist()
         {
             IManagerStore dictionary = GetManagerStore();
             dictionary.Add(string.Empty, GetManager());
-            dictionary.Add(string.Empty, GetManager());
+            Assert.Throws<ArgumentException>(() => dictionary.Add(string.Empty, GetManager()));
 
-            Assert.Fail("Previous line should have failed the test.");
+            //Assert.Fail("Previous line should have failed the test.");
         }
 
         /// <summary>

@@ -570,13 +570,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(InvalidOperationException), "Expected an accessibility exception to be thrown")]
+        //[MyExpectedException(typeof(InvalidOperationException))] //Expected an accessibility exception to be thrown
         public void AccessibilityCheckThrows()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAccessibilityUrl);
             WebDriver.Wait().ForPageLoad();
 
-            SeleniumUtilities.CheckAccessibility(this.TestObject, true);
+            Assert.Throws<InvalidOperationException>(() => SeleniumUtilities.CheckAccessibility(this.TestObject, true));
         }
 
         /// <summary>
@@ -721,13 +721,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(Exception))]
+        //[MyExpectedException(typeof(Exception))]
         public void AccessibilityHtmlReportWithError()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAccessibilityUrl);
             WebDriver.Wait().ForPageLoad();
 
-            WebDriver.CreateAccessibilityHtmlReport(this.TestObject, () => new AxeResult(JObject.Parse(AxeResultWithError)));
+            Assert.Throws<Exception>(() => WebDriver.CreateAccessibilityHtmlReport(this.TestObject, () => new AxeResult(JObject.Parse(AxeResultWithError))));
 
             string file = this.TestObject.GetArrayOfAssociatedFiles().Last(x => x.EndsWith(".html"));
             Assert.IsTrue(new FileInfo(file).Length > 0, "Accessibility report is empty");
@@ -738,7 +738,7 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(Exception))]
+        //[MyExpectedException(typeof(Exception))]
         public void AccessibilityHtmlReportWithErrorFromLazyElement()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
@@ -746,7 +746,7 @@ namespace SeleniumUnitTests
 
             LazyElement foodTable = new LazyElement(this.TestObject, By.Id("FoodTable"));
 
-            foodTable.CreateAccessibilityHtmlReport(this.TestObject, () => new AxeResult(JObject.Parse(AxeResultWithError)));
+            Assert.Throws<Exception>(() => foodTable.CreateAccessibilityHtmlReport(this.TestObject, () => new AxeResult(JObject.Parse(AxeResultWithError))));
 
             string file = this.TestObject.GetArrayOfAssociatedFiles().Last(x => x.EndsWith(".html"));
             Assert.IsTrue(new FileInfo(file).Length > 0, "Accessibility report is empty");
@@ -757,13 +757,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        //[MyExpectedException(typeof(InvalidOperationException))]
         public void AccessibilityHtmlReportWithViolation()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAccessibilityUrl);
             WebDriver.Wait().ForPageLoad();
 
-            WebDriver.CreateAccessibilityHtmlReport(this.TestObject, true);
+            Assert.Throws<Exception>( () => WebDriver.CreateAccessibilityHtmlReport(this.TestObject, true));
         }
 
         /// <summary>

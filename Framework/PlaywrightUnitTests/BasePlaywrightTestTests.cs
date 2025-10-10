@@ -9,6 +9,7 @@ using OpenMAQS.Maqs.Utilities.Helper;
 using OpenMAQS.Maqs.Utilities.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics.CodeAnalysis;
+using System;
 
 namespace PlaywrightTests
 {
@@ -64,11 +65,11 @@ namespace PlaywrightTests
         /// Make sure test passes with correct expected exception
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(AssertFailedException))]
+        //[MyExpectedException(typeof(AssertFailedException))]
         public void TestFailsAsExpected()
         {
             this.PageDriver.Goto(PlaywrightConfig.WebBase());
-            throw new AssertFailedException();
+            Assert.Throws<AssertFailedException>(() => throw new AssertFailedException());
         }
 
         /// <summary>

@@ -51,10 +51,10 @@ namespace BaseTestUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Framework)]
-        [ExpectedException(typeof(AssertFailedException))]
+        //[MyExpectedException(typeof(AssertFailedException))]
         public void SoftAssertWithFailureBase()
         {
-            this.SoftAssertWithFailure();
+            MicroAssert.Throws<AssertFailedException>(() => this.SoftAssertWithFailure());
         }
 
         /// <summary>
@@ -95,13 +95,13 @@ namespace BaseTestUnitTests
         [TestMethod]
         [SoftAssertExpectedAsserts("one")]
         [Category(TestCategories.Framework)]
-        [ExpectedException(typeof(AssertFailedException))]
+        //[MyExpectedException(typeof(AssertFailedException))]
         public void SoftAssertDoesNotAssertExpected()
         {
             var tester = GetBaseTest();
             tester.TestContext = this.TestContext;
             tester.MaqsSetup();
-            tester.MaqsTeardown();
+            MicroAssert.Throws<AssertFailedException>(() => tester.MaqsTeardown());
         }
 
         /// <summary>
@@ -154,14 +154,14 @@ namespace BaseTestUnitTests
         [TestMethod]
         [SoftAssertExpectedAsserts("one")]
         [Category(TestCategories.Framework)]
-        [ExpectedException(typeof(AggregateException))]
+        //[ExpectedException(typeof(AggregateException))]
         public void FailSoftAssertIfExpectedAssertsAreNotCalled()
         {
             var tester = GetBaseTest();
             tester.TestContext = this.TestContext;
             tester.MaqsSetup();
 
-            tester.SoftAssert.FailTestIfAssertFailed();
+            MicroAssert.Throws<AggregateException>(() => tester.SoftAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>

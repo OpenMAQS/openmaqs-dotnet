@@ -323,13 +323,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(WebDriverTimeoutException), "Right-Click did not raise appropriate exception on element not being found")]
+        //[MyExpectedException(typeof(WebDriverTimeoutException))] //Right-Click did not raise appropriate exception on element not being found
         public void RightClickToTriggerContextMenuNotFound()
         {
             this.NavigateToUrl(siteAutomationUrl);
 
             // Trigger a right click event against non-existent element
-            this.WebDriver.RightClick(By.CssSelector(".none"));
+            Assert.Throws<WebDriverTimeoutException>(() => this.WebDriver.RightClick(By.CssSelector(".none")));
         }
 
         /// <summary>
@@ -337,13 +337,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(WebDriverTimeoutException), "Right-Click did not raise appropriate exception on element not being found")]
+        //[MyExpectedException(typeof(WebDriverTimeoutException))] // Right-Click did not raise appropriate exception on element not being found
         public void RightClickToTriggerContextMenuNotFoundLazy()
         {
             this.NavigateToUrl(siteAutomationUrl);
 
             // Trigger a right click event against non-existent element
-            new LazyElement(this.TestObject, By.CssSelector(".none")).RightClick();
+            Assert.Throws<WebDriverTimeoutException>(() => new LazyElement(this.TestObject, By.CssSelector(".none")).RightClick());
         }
 
         /// <summary>

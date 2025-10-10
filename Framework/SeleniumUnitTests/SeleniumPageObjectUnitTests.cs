@@ -10,6 +10,7 @@ using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Diagnostics.CodeAnalysis;
+using System;
 
 namespace SeleniumUnitTests
 {
@@ -48,6 +49,7 @@ namespace SeleniumUnitTests
         [TestCategory(TestCategories.Selenium)]
         public void PageModelWebDriver()
         {
+            Log.LogMessage($"SystemType: {typeof(AggregateException)}");
             Assert.AreEqual(this.WebDriver, this.getPageModel().GetWebDriver());
         }
 
