@@ -466,7 +466,8 @@ namespace SeleniumUnitTests
         {
             // Make sure we can set the value
             this.InputBox.SendKeys("test");
-            Assert.AreEqual("test", this.InputBox.GetAttribute("value"));
+            string resp = this.InputBox.GetElementAttribute("value");
+            Assert.AreEqual("test", resp);
 
             // Make sure the value is cleared
             this.InputBox.Clear();

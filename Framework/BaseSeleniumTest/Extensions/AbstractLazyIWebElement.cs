@@ -677,7 +677,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
             return GenericWait.Wait<string>(
                 () =>
                 {
-                    return this.GetElement(this.GetRawVisibleElement).GetDomAttribute("value");
+                    return this.GetElement(this.GetRawVisibleElement).GetAttribute("value");
                 },
             this.WaitTime(),
             this.TimeoutTime());

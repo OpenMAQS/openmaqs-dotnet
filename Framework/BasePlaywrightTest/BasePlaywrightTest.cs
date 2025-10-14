@@ -75,7 +75,15 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
                 {
                     return;
                 }
+                if (this.TestObject.GetDriverManager<PlaywrightDriverManager>().IsDriverIntialized() && this.Log is IFileLogger && resultType != TestResultType.PASS && this.LoggingEnabledSetting != LoggingEnabled.NO)
+                {
+                    PlaywrightUtilities.CaptureScreenshot(this.PageDriver, this.TestObject, " Final");
 
+                    //if (SeleniumConfig.GetSavePagesourceOnFail())
+                    //{
+                    //    SeleniumUtilities.SavePageSource(this.WebDriver, this.TestObject, "FinalPageSource");
+                    //}
+                }
                 // The test did not pass or we want it logged regardless
                 if (this.LoggingEnabledSetting == LoggingEnabled.YES || resultType != TestResultType.PASS)
                 {

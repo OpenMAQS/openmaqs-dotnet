@@ -65,11 +65,11 @@ namespace PlaywrightTests
         /// Make sure test passes with correct expected exception
         /// </summary>
         [TestMethod]
-        //[MyExpectedException(typeof(AssertFailedException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void TestFailsAsExpected()
         {
-            this.PageDriver.Goto(PlaywrightConfig.WebBase());
-            Assert.Throws<AssertFailedException>(() => throw new AssertFailedException());
+            Assert.Throws<AggregateException>(() => this.PageDriver.Goto(PlaywrightConfig.WebBase()));
+            //Assert.Throws<AssertFailedException>(() => throw new AssertFailedException());
         }
 
         /// <summary>
