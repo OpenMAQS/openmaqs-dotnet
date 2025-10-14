@@ -466,12 +466,12 @@ namespace SeleniumUnitTests
         {
             // Make sure we can set the value
             this.InputBox.SendKeys("test");
-            string resp = this.InputBox.GetElementAttribute("value");
+            string resp = this.InputBox.GetDomProperty("value");
             Assert.AreEqual("test", resp);
 
             // Make sure the value is cleared
             this.InputBox.Clear();
-            Assert.AreEqual(string.Empty, this.InputBox.GetAttribute("value"));
+            Assert.AreEqual(string.Empty, this.InputBox.GetDomProperty("value"));
         }
 
         /// <summary>
