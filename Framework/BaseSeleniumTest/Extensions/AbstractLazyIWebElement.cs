@@ -381,7 +381,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
                         string sub = text.Split(navigationChars)[0];
                         element = this.GetElement(this.GetRawVisibleElement);
 
-                        if (!sub.EndsWith(element.GetDomAttribute("value")))
+                        if (!sub.EndsWith(element.GetDomProperty("value")))
                         {
                             throw;
                         }

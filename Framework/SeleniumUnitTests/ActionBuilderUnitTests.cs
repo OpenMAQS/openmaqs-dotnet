@@ -194,7 +194,7 @@ namespace SeleniumUnitTests
             this.WebDriver.Navigate().GoToUrl(siteAutomationUrl);
             this.WebDriver.Wait().ForPageLoad();
             this.WebDriver.SlideElement(slider, 50);
-            Assert.AreEqual("4", this.WebDriver.FindElement(sliderLabelNumber).GetDomAttribute("value"));
+            Assert.AreEqual("4", this.WebDriver.FindElement(sliderLabelNumber).GetDomProperty("value"));
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace SeleniumUnitTests
             this.WebDriver.Navigate().GoToUrl(siteAutomationUrl);
             this.WebDriver.Wait().ForPageLoad();
             new LazyElement(this.TestObject, slider).SlideElement(50);
-            Assert.AreEqual("4", this.WebDriver.FindElement(sliderLabelNumber).GetDomAttribute("value"));
+            Assert.AreEqual("4", this.WebDriver.FindElement(sliderLabelNumber).GetDomProperty("value"));
         }
 
         /// <summary>

@@ -336,7 +336,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         /// <param name="e">Event object</param>
         private void WebDriver_ElementValueChanged(object sender, WebElementEventArgs e)
         {
-            string element = e.Element.GetDomAttribute("value");
+            string element = e.Element.GetDomProperty("value");
             Log.LogMessage(MessageType.INFORMATION, $"Element value changed: {element}");
         }
 

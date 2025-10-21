@@ -19,6 +19,7 @@ using System.Text.RegularExpressions;
 using Deque.AxeCore.Selenium;
 using TWP.Selenium.Axe.Html;
 using Deque.AxeCore.Commons;
+using AngleSharp.Dom;
 
 namespace SeleniumUnitTests
 {
@@ -727,9 +728,10 @@ namespace SeleniumUnitTests
             WebDriver.Navigate().GoToUrl(TestSiteAccessibilityUrl);
             WebDriver.Wait().ForPageLoad();
 
-            Assert.Throws<Exception>(() => WebDriver.CreateAccessibilityHtmlReport(this.TestObject, () => new AxeResult(JObject.Parse(AxeResultWithError))));
-
-            string file = this.TestObject.GetArrayOfAssociatedFiles().Last(x => x.EndsWith(".html"));
+            Assert.Throws<Exception>(() => WebDriver.CreateAccessibilityHtmlReport(this.TestObject,true));
+            //WebDriver.CreateAccessibilityHtmlReport(this.TestObject, () => new AxeResult(JObject.Parse(AxeResultWithError)));
+            var filelist = this.TestObject.GetArrayOfAssociatedFiles();
+            string file = filelist.Last(x => x.EndsWith(".html"));
             Assert.IsTrue(new FileInfo(file).Length > 0, "Accessibility report is empty");
         }
 
@@ -746,7 +748,7 @@ namespace SeleniumUnitTests
 
             LazyElement foodTable = new LazyElement(this.TestObject, By.Id("FoodTable"));
 
-            Assert.Throws<Exception>(() => foodTable.CreateAccessibilityHtmlReport(this.TestObject, () => new AxeResult(JObject.Parse(AxeResultWithError))));
+            Assert.Throws<Exception>(() => foodTable.CreateAccessibilityHtmlReport(this.TestObject, () => WebDriver.Analyze(foodTable), true));
 
             string file = this.TestObject.GetArrayOfAssociatedFiles().Last(x => x.EndsWith(".html"));
             Assert.IsTrue(new FileInfo(file).Length > 0, "Accessibility report is empty");
