@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <AssemblyName>gHEGherkinExtensionNUnitTests</AssemblyName>
+    <AssemblyName>GherkinExtensionNUnitTests</AssemblyName>
 
     <RootNamespace>GherkinExtensionNUnitTests</RootNamespace>
 
