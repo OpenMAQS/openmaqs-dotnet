@@ -54,7 +54,7 @@ namespace PlaywrightTests
         {
             Assert.IsFalse(Models[this.TestObject].Checkbox1.IsChecked());
             Models[this.TestObject].Checkbox1.Check();
-            Assert.IsFalse(Models[this.TestObject].Checkbox1.IsChecked());
+            Assert.IsTrue(Models[this.TestObject].Checkbox1.IsChecked());
         }
 
         /// <summary>
