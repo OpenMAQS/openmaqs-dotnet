@@ -122,10 +122,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
-            8.x.x
+            8.0.x
       - name: Configure Windows for automation
         uses: ./.github/actions/setup-winapp
       - name: Install Appium
@@ -208,10 +208,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
-            8.x.x
+            8.0.x
       - name: Start test service
         run: Start-Process -FilePath "dotnet" -ArgumentList "run --project Docker/MAQSService/MainTestService/MainTestService.csproj"
         shell: pwsh
@@ -231,7 +231,7 @@ jobs:
   test-playwright:
     name: Playwright
     needs: waitOld
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET Core

@@ -119,7 +119,7 @@ namespace SeleniumUnitTests
             string expectedValue = "Tester";
             NavigateToUrl();
             WebDriver.SetTextBox(firstNameTextBox, expectedValue);
-            string actualValue = WebDriver.GetElementAttribute(firstNameTextBox);
+            string actualValue = WebDriver.GetElementProperty(firstNameTextBox);
             VerifyText(actualValue, expectedValue);
         }
 
@@ -134,7 +134,7 @@ namespace SeleniumUnitTests
             NavigateToUrl();
             LazyElement lazy = new LazyElement(this.TestObject, firstNameTextBox);
             lazy.SetTextBox(expectedValue);
-            string actualValue = WebDriver.GetElementAttribute(firstNameTextBox);
+            string actualValue = WebDriver.GetElementProperty(firstNameTextBox);
             VerifyText(actualValue, expectedValue);
         }
 

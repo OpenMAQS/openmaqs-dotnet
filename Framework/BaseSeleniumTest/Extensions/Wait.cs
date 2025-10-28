@@ -160,6 +160,47 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest.Extensions
         }
 
         /// <summary>
+        /// Wait for the element property to contain the correct text value
+        /// </summary>
+        /// <param name="by">'by' selector for the element</param>
+        /// <param name="textValue">Text String expected within value of property</param>
+        /// <param name="property">property name as a String</param>
+        /// <returns>Element if the property contained given string</returns>
+        public IWebElement ForPropertyTextContains(By by, string textValue, string property)
+        {
+            this.webDriverWait.Message = $"Waiting for element that has property '{property}' which contains the value '{textValue}'";
+
+            try
+            {
+                return this.webDriverWait.Until(AttributeContainsExpectedText(by, textValue, property, this.searchItem));
+            }
+            catch
+            {
+                throw new NotFoundException($"The element property {property} inside '{by}' with the value of {textValue} was not found");
+            }
+        }
+
+        /// <summary>
+        /// Wait for the element property to equal the correct text value
+        /// </summary>
+        /// <param name="by">'by' selector for the element</param>
+        /// <param name="textValue">Text String expected to equal value of property</param>
+        /// <param name="property">Property name as a String</param>
+        /// <returns>Element if the property equals given string</returns>
+        public IWebElement ForPropertyTextEquals(By by, string textValue, string property)
+        {
+            this.webDriverWait.Message = $"Waiting for element that has property '{property}' with the value of '{textValue}'";
+
+            try
+            {
+                return this.webDriverWait.Until(AttributeEqualsExpectedText(by, textValue, property, this.searchItem));
+            }
+            catch
+            {
+                throw new NotFoundException($"The element property {property} inside '{by}' with the value of {textValue} was not found");
+            }
+        }
+        /// <summary>
         /// Wait for the element to be visible and scrolls into view
         /// </summary>
         /// <param name="by">'by' selector for the element</param>
