@@ -32,7 +32,7 @@ namespace SeleniumUnitTests
         [Category(TestCategories.NUnit)]
         public void OpenBrowser()
         {
-            this.WebDriver.Navigate().GoToUrl("https://www.google.com");
+            this.WebDriver.Navigate().GoToUrl("https://www.bing.com");
         }
 
         /// <summary>
