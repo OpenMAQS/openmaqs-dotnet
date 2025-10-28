@@ -594,7 +594,7 @@ namespace SeleniumUnitTests
         {
             WebDriver.Navigate().GoToUrl("https://www.bing.com/");
             LazyElement lazyRoot = new LazyElement(this.TestObject, By.Name("q"));
-            lazyRoot.SendKeys("SEARCH" + Keys.Tab + "TXT");
+            lazyRoot.SendKeys("SEARCH" + Keys.Tab + Keys.Tab + "TXT");
             Assert.AreEqual("SEARCH", lazyRoot.GetValue());
         }
 
