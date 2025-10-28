@@ -430,7 +430,8 @@ namespace SeleniumUnitTests
         public void ElemListThrowException()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
-            IWebElement element = (IWebElement)Assert.Throws<NotFoundException>(() => WebDriver.Find().Element(NotInPage));
+
+            Assert.Throws<NotFoundException>(() => WebDriver.Find().Elements(NotInPage));
 
             //Assert.Fail($"Test should have thrown an unfound error, but found element {element} instead");
         }
