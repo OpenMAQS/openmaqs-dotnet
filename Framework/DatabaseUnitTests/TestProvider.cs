@@ -8,23 +8,23 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using OpenMAQS.Maqs.BaseDatabaseTest.Providers;
-using Microsoft.Data.Sqlite;
+using Microsoft.Data.SqlClient;
 
 namespace DatabaseUnitTests
 {
     /// <summary>
     /// The test provider class for testing
     /// </summary>
-    public class TestProvider : IProvider<SqliteConnection>
+    public class TestProvider : IProvider<SqlConnection>
     {
         /// <summary>
         /// Method used to setup a SQL connection client
         /// </summary>
         /// <param name="connectionString"> The connection string. </param>
         /// <returns> The <see cref="SqliteConnection"/> connection client. </returns>
-        public SqliteConnection SetupDataBaseConnection(string connectionString)
+        public SqlConnection SetupDataBaseConnection(string connectionString)
         {
-            SqliteConnection connection = new SqliteConnection
+            SqlConnection connection = new SqlConnection
             {
                 ConnectionString = connectionString
             };
