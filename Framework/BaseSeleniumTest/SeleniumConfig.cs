@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using WebDriverManager.Helpers;
+//using WebDriverManager.Helpers;
 
 namespace OpenMAQS.Maqs.BaseSeleniumTest
 {
@@ -305,36 +305,40 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         /// Gets the chrome version to use with WebDriverManager
         /// </summary>
         /// <returns></returns>
+        [Obsolete("WebDriver is no longer used. Specify the BrowserVersion in the browser options")]
         public static string GetChromeVersion()
         {
-            return Config.GetValueForSection(SELENIUMSECTION, "ChromeVersion", VersionResolveStrategy.MatchingBrowser);
+            return Config.GetValueForSection(SELENIUMSECTION, "ChromeVersion");
         }
 
         /// <summary>
         /// Gets the edge version to use with WebDriverManager
         /// </summary>
         /// <returns></returns>
+        [Obsolete("WebDriver is no longer used. Specify the BrowserVersion in the browser options")]
         public static string GetEdgeVersion()
         {
-            return Config.GetValueForSection(SELENIUMSECTION, "EdgeVersion", VersionResolveStrategy.MatchingBrowser);
+            return Config.GetValueForSection(SELENIUMSECTION, "EdgeVersion");
         }
 
         /// <summary>
         /// Gets the Firefox version to use with WebDriverManager
         /// </summary>
         /// <returns></returns>
+        [Obsolete("WebDriver is no longer used. Specify the BrowserVersion in the browser options")]
         public static string GetFirefoxVersion()
         {
-            return Config.GetValueForSection(SELENIUMSECTION, "FirefoxVersion", VersionResolveStrategy.Latest);
+            return Config.GetValueForSection(SELENIUMSECTION, "FirefoxVersion");
         }
 
         /// <summary>
         /// Gets the IE version to use with WebDriverManager
         /// </summary>
         /// <returns></returns>
+        [Obsolete("WebDriver is no longer used. Specify the BrowserVersion in the browser options")]
         public static string GetIEVersion()
         {
-            return Config.GetValueForSection(SELENIUMSECTION, "IEVersion", VersionResolveStrategy.Latest);
+            return Config.GetValueForSection(SELENIUMSECTION, "IEVersion");
         }
 
     }
