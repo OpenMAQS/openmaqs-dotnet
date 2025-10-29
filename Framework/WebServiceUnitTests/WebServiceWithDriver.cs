@@ -83,9 +83,8 @@ namespace WebServiceTesterUnitTesting
             httpClient.Timeout = TimeSpan.FromTicks(1);
             this.WebServiceDriver = new WebServiceDriver(httpClient);
 
-            Assert.Throws<TimeoutException>(() => this.WebServiceDriver.Get("/api/String/1", "text/plain"));
+            Assert.Throws<TimeoutException>(() => this.WebServiceDriver.Get("/api/String/1", "text/plain"), "Expected Timeout");
 
-            Assert.Fail("Get call should have timed out");
         }
     }
 }

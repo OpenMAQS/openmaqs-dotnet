@@ -65,7 +65,7 @@ namespace DatabaseUnitTests
         //[MyExpectedException(typeof(InvalidOperationException))]
         public void ExecuteThrowException()
         {
-            Assert.Throws<SqlException>(() => this.Execute(null));
+            Assert.Throws<InvalidOperationException>(() => this.Execute(null));
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace DatabaseUnitTests
 
                 this.Execute(null);
             }
-            catch (SqlException e)
+            catch (InvalidOperationException e)
             {
                 var message = StringProcessor.SafeFormatter("Failed because: {0}", e.Message);
                 Assert.IsTrue(this.eventString.Contains(message));
@@ -125,7 +125,7 @@ namespace DatabaseUnitTests
         //[MyExpectedException(typeof(InvalidOperationException))]
         public void QueryListThrowException()
         {
-            Assert.Throws<SqlException>(() => this.Query(null));
+            Assert.Throws<InvalidOperationException>(() => this.Query(null));
         }
 
         /// <summary>

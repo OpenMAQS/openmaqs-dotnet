@@ -28,7 +28,7 @@ namespace DatabaseUnitTests
         public void GetDatabaseConnectionStringTest()
         {
             string connection = DatabaseConfig.GetConnectionString();
-            Assert.AreEqual("Data Source=localhost;Initial Catalog=GlobalAutomation;Persist Security Info=True;User ID=sa;Password=globalMAQS2;Connection Timeout=30", connection);
+            Assert.AreEqual("Data Source=localhost;Initial Catalog=GlobalAutomation;Persist Security Info=True;User ID=sa;Password=globalMAQS2;Connection Timeout=30;TrustServerCertificate=True", connection);
         }
 
         /// <summary>
