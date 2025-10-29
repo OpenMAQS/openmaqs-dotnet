@@ -5,24 +5,24 @@
 // <summary>SQLServerProvider class</summary>
 //--------------------------------------------------
 
-using Microsoft.Data.Sqlite;
-//using System.Data.SqlClient;
+
+using Microsoft.Data.SqlClient;
 
 namespace OpenMAQS.Maqs.BaseDatabaseTest.Providers
 {
     /// <summary>
     /// The SQL server provider.
     /// </summary>
-    public class SqlServerProvider : IProvider<SqliteConnection>
+    public class SqlServerProvider : IProvider<SqlConnection>
     {
         /// <summary>
         /// Method used to create a new connection for SQL server databases
         /// </summary>
         /// <param name="connectionString"> The connection string. </param>
-        /// <returns> The <see cref="SqliteConnection"/> connection client. </returns>
-        public SqliteConnection SetupDataBaseConnection(string connectionString)
+        /// <returns> The <see cref="SqlConnection"/> connection client. </returns>
+        public SqlConnection SetupDataBaseConnection(string connectionString)
         {
-            SqliteConnection connection = new SqliteConnection
+            SqlConnection connection = new SqlConnection
             {
                 ConnectionString = connectionString
             };

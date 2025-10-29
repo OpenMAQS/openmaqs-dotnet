@@ -10,12 +10,13 @@ using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Data;
-using Microsoft.Data.Sqlite;
+using Microsoft.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DatabaseUnitTests
 {
     using global::DatabaseUnitTests.Models;
+    using Microsoft.Data.SqlClient;
     using System.Linq;
 
     /// <summary>
@@ -216,7 +217,7 @@ namespace DatabaseUnitTests
         //[MyExpectedException(typeof(SqliteException))]
         public void InsertThrowException()
         {
-            Assert.Throws<SqliteException>(() => this.Insert<string>(null));
+            Assert.Throws<SqlException>(() => this.Insert<string>(null));
         }
 
         /// <summary>
@@ -233,7 +234,7 @@ namespace DatabaseUnitTests
 
                 this.Insert<string>(null);
             }
-            catch (SqliteException e)
+            catch (SqlException e)
             {
                 var message = StringProcessor.SafeFormatter("Failed because: {0}", e.Message);
                 Assert.IsTrue(this.eventString.Contains(message));
