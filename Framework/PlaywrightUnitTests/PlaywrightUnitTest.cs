@@ -247,7 +247,7 @@ namespace PlaywrightUnitTests
 
             bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsTrue(false), "testSoftAssert", "message");
 
-            Assert.IsTrue(File.Exists(screenShotLocation), "Fail to find screenshot");
+            Assert.IsTrue(File.Exists(screenShotLocation), $"Fail to find screenshot: {screenShotLocation}");
             File.Delete(screenShotLocation);
             File.Delete(logLocation);
 
@@ -269,7 +269,7 @@ namespace PlaywrightUnitTests
 
             bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsTrue(false, "testSoftAssert", "message"), "1");
 
-            Assert.IsTrue(File.Exists(screenShotLocation), "Fail to find screenshot");
+            Assert.IsTrue(File.Exists(screenShotLocation), $"Fail to find screenshot: {screenShotLocation}");
             File.Delete(screenShotLocation);
             File.Delete(logLocation);
 
@@ -336,7 +336,7 @@ namespace PlaywrightUnitTests
 
             bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsFalse(true), "testSoftAssert", "message");
 
-            Assert.IsTrue(File.Exists(screenShotLocation), "Fail to find screenshot");
+            Assert.IsTrue(File.Exists(screenShotLocation), $"Fail to find screenshot: {screenShotLocation}");
             File.Delete(screenShotLocation);
 
             Assert.IsFalse(isFalse);
