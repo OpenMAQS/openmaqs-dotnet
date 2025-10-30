@@ -11,14 +11,14 @@ using System.IO;
 namespace OpenMAQS.Maqs.BasePlaywrightTest
 {
     /// <summary>
-    /// Static class for the selenium utilities
+    /// Static class for the playwright utilities
     /// </summary>
     public static class PlaywrightUtilities
     {
         /// <summary>
         /// Capture a screenshot during execution and associate to the testObject
         /// </summary>
-        /// <param name="Pagedriver">The PageDriver</param>
+        /// <param name="pageDriver">The PageDriver</param>
         /// <param name="testObject">The test object to associate and log to</param>
         /// <param name="appendName">Appends a name to the end of a filename</param>
         /// <returns>Boolean if the save of the image was successful</returns>

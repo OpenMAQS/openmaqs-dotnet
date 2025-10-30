@@ -193,5 +193,10 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         {
             return Config.GetValueForSection(PlaywrightSECTION, "ProxyAddress");
         }
+
+        internal static bool CapturePagesourceOnFail()
+        {
+            return Config.GetValueForSection(PlaywrightSECTION, "SavePagesourceOnFail").Equals("Yes", StringComparison.CurrentCultureIgnoreCase);
+        }
     }
 }
