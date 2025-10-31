@@ -287,7 +287,9 @@ namespace PlaywrightUnitTests
             this.Log = new FileLogger(string.Empty, "PlaywrightSoftAssertIsTrueFalseConditionPageSource.txt", MessageType.GENERIC, true);
             PlaywrightSoftAssert playwrightSoftAssert = new PlaywrightSoftAssert(TestObject);
             string logLocation = ((IFileLogger)this.Log).FilePath;
+            Log.LogMessage($"filepath is: {logLocation}");
             string pageSourceLocation = logLocation.Substring(0, logLocation.LastIndexOf('.')) + "_PS (1).txt";
+            Log.LogMessage($"pagesource file name is: {pageSourceLocation}");
 
             bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsTrue(false, "testSoftAssert", "message"));
 
@@ -372,11 +374,11 @@ namespace PlaywrightUnitTests
             PlaywrightSoftAssert playwrightSoftAssert = new PlaywrightSoftAssert(TestObject);
             string logLocation = ((IFileLogger)Log).FilePath;
             string pageSourceLocation = logLocation.Substring(0, logLocation.LastIndexOf('.')) + "_PS (1).txt";
-
+            Log.LogMessage($"pagesourcelocation: {pageSourceLocation}");
             bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsFalse(true), "testSoftAssert", "message");
 
             Assert.IsTrue(File.Exists(pageSourceLocation), "Fail to find page source");
-            File.Delete(pageSourceLocation);
+            //File.Delete(pageSourceLocation);
 
             Assert.IsFalse(isFalse);
         }
