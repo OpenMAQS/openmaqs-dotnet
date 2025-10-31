@@ -309,7 +309,7 @@ namespace PlaywrightUnitTests
             //WebDriver.Wait().ForPageLoad();
             string screenShotPath = PlaywrightUtilities.CaptureScreenshot(PageDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: ScreenshotType.Jpeg);
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
-            Assert.AreEqual(".jpeg", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Jpeg' format");
+            Assert.AreEqual(".Jpeg", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Jpeg' format");
             File.Delete(screenShotPath);
         }
 
