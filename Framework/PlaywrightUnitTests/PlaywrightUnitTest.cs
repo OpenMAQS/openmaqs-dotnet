@@ -267,7 +267,7 @@ namespace PlaywrightUnitTests
             string logLocation = ((IFileLogger)Log).FilePath;
             string screenShotLocation = $"{logLocation.Substring(0, logLocation.LastIndexOf('.'))} 1 (1).Png";
 
-            bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsTrue(false, "testSoftAssert", "message"), "1");
+            bool isFalse = playwrightSoftAssert.Assert(() => Assert.Fail("testSoftAssert"), "TestAssertOne", "Test assert fail message");
 
             Assert.IsTrue(File.Exists(screenShotLocation), $"Fail to find screenshot: {screenShotLocation}");
             File.Delete(screenShotLocation);
