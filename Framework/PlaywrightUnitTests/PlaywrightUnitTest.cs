@@ -25,7 +25,7 @@ namespace PlaywrightUnitTests
     /// </summary>
     [TestClass]
     [ExcludeFromCodeCoverage]
-    public class PlaywrightUnitTest : BasePlaywrightTest
+    public class PlaywrightUnitTests : BasePlaywrightTest
     {
         /// <summary>
         /// Unit testing site URL - Login page
@@ -265,7 +265,7 @@ namespace PlaywrightUnitTests
             this.Log = new FileLogger(string.Empty, "PlaywrightSoftAssertWithAssertIsTrueFalseCondition.txt", MessageType.GENERIC, true);
             PlaywrightSoftAssert playwrightSoftAssert = new PlaywrightSoftAssert(TestObject);
             string logLocation = ((IFileLogger)Log).FilePath;
-            string screenShotLocation = $"{logLocation.Substring(0, logLocation.LastIndexOf('.'))} 1 (1).Png";
+            string screenShotLocation = logLocation.Substring(0, logLocation.LastIndexOf('.')) + "_ONE(1).Png";
 
             bool isFalse = playwrightSoftAssert.Assert(() => Assert.Fail("testSoftAssert"), "TestAssertOne", "Test assert fail message");
 
@@ -281,21 +281,21 @@ namespace PlaywrightUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Playwright)]
-        public void PlaywrightSoftAssertIsTrueFalseConditionPageSource()
+        public void PwSAIsFailWithPageSource()
         {
             this.PageDriver.Goto(TestSiteAutomationUrl);
-            this.Log = new FileLogger(string.Empty, "PlaywrightSoftAssertIsTrueFalseConditionPageSource.txt", MessageType.GENERIC, true);
+            //this.Log = new FileLogger(string.Empty, "SAConditionPageSource.txt", MessageType.GENERIC, true);
             PlaywrightSoftAssert playwrightSoftAssert = new PlaywrightSoftAssert(TestObject);
             string logLocation = ((IFileLogger)this.Log).FilePath;
             Log.LogMessage($"filepath is: {logLocation}");
             string pageSourceLocation = logLocation.Substring(0, logLocation.LastIndexOf('.')) + "_PS (1).txt";
             Log.LogMessage($"pagesource file name is: {pageSourceLocation}");
 
-            bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsTrue(false, "testSoftAssert", "message"));
+            bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsTrue(false, "testSoftAssert", "message"), "SAPageSource", "Fail on purpose");
 
             Assert.IsTrue(File.Exists(pageSourceLocation), $"Fail to find page source file: {pageSourceLocation}");
             File.Delete(pageSourceLocation);
-            File.Delete(logLocation);
+            //File.Delete(logLocation);
 
             Assert.IsFalse(isFalse);
         }

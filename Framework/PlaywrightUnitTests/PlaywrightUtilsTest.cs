@@ -16,7 +16,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Playwright;
 
-namespace PlaywrightUnitTests
+namespace PlaywrightUtilsTest
 {
     /// <summary>
     /// Utility tests
