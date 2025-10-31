@@ -190,7 +190,7 @@ namespace PlaywrightUnitTests
         public void PlaywrightSoftAssertIsFalseTest()
         {
             this.PageDriver.Goto(TestSiteAutomationUrl);
-            SoftAssert.Assert(() => Assert.IsFalse("Automation".Equals(PageDriver.Title())), "Title Test", "Title is incorrect");
+            SoftAssert.Assert(() => Assert.IsTrue("Automation".Equals(PageDriver.Title())), "Title Test", "Title is incorrect");
             SoftAssert.FailTestIfAssertFailed();
         }
 

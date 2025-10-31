@@ -14,6 +14,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Microsoft.Playwright;
 
 namespace PlaywrightUnitTests
 {
@@ -306,7 +307,7 @@ namespace PlaywrightUnitTests
         {
             PageDriver.Goto(TestSiteUrl);
             //WebDriver.Wait().ForPageLoad();
-            string screenShotPath = PlaywrightUtilities.CaptureScreenshot(PageDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: "jpeg");
+            string screenShotPath = PlaywrightUtilities.CaptureScreenshot(PageDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: ScreenshotType.Jpeg);
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
             Assert.AreEqual(".jpeg", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Jpeg' format");
             File.Delete(screenShotPath);
@@ -321,7 +322,7 @@ namespace PlaywrightUnitTests
         {
             PageDriver.Goto(TestSiteUrl);
             //WebDriver.Wait().ForPageLoad();
-            string screenShotPath = PlaywrightUtilities.CaptureScreenshot(PageDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: "png");
+            string screenShotPath = PlaywrightUtilities.CaptureScreenshot(PageDriver, TestObject, "TempTestDirectory", "TempTestFilePath", imageFormat: ScreenshotType.Png);
             Assert.IsTrue(File.Exists(screenShotPath), "Fail to find screenshot");
             Assert.AreEqual(".png", Path.GetExtension(screenShotPath), "The screenshot format was not in '.Png' format");
             File.Delete(screenShotPath);
@@ -350,7 +351,7 @@ namespace PlaywrightUnitTests
         [TestCategory(TestCategories.Playwright)]
         public void GetImageFormatFromConfig()
         {
-            Assert.AreEqual("png", PlaywrightUtilities.GetScreenShotFormat(), "The Incorrect Image Format was returned, expected: " + Config.GetGeneralValue("ImageFormat"));
+            Assert.AreEqual(ScreenshotType.Png, PlaywrightUtilities.GetScreenShotFormat(), "The Incorrect Image Format was returned, expected: " + Config.GetGeneralValue("ImageFormat"));
         }
 
         ///// <summary>

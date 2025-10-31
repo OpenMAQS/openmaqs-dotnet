@@ -4,6 +4,7 @@
 // </copyright>
 // <summary>This is the base Playwright test class</summary>
 //--------------------------------------------------
+using Microsoft.Playwright;
 using OpenMAQS.Maqs.Utilities.Logging;
 using System;
 using System.IO;
@@ -65,7 +66,7 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         /// <param name="fileNameWithoutExtension">Filename without extension</param>
         /// <param name="imageFormat">Optional Screenshot Image format parameter; Default imageFormat is PNG, hardcoded due to enum being deprecated</param>
         /// <returns>Path to the log file</returns>
-        public static string CaptureScreenshot(this PageDriver pageDriver, IPlaywrightTestObject testObject, string directory, string fileNameWithoutExtension, string imageFormat = "png")
+        public static string CaptureScreenshot(this PageDriver pageDriver, IPlaywrightTestObject testObject, string directory, string fileNameWithoutExtension, ScreenshotType imageFormat = ScreenshotType.Jpeg)
         {
 
             // Make sure the directory exists
@@ -75,13 +76,14 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
             }
 
             // Calculate the file name
-            string path = Path.Combine(directory, $"{fileNameWithoutExtension}.{imageFormat}");
+            string path = Path.Combine(directory, $"{fileNameWithoutExtension}.{imageFormat.ToString()}");
 
             // Save the screenshot
             pageDriver.AsyncPage.ScreenshotAsync(new()
             {
                 Path = path,
                 FullPage = true,
+                Type = imageFormat
             }).Wait();
             testObject.AddAssociatedFile(path);
             return path;
@@ -165,14 +167,14 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         /// Gets the Screenshot Format to save images
         /// </summary>
         /// <returns>Desired ImageFormat Type</returns>
-        public static string GetScreenShotFormat()
+        public static ScreenshotType GetScreenShotFormat()
         {
             switch (PlaywrightConfig.GetImageFormat().ToUpper())
             {
                 case "JPEG":
-                    return "jpeg";
+                    return ScreenshotType.Jpeg;
                 case "PNG":
-                    return "png";
+                    return ScreenshotType.Png;
                 default:
                     throw new ArgumentException($"ImageFormat '{PlaywrightConfig.GetImageFormat()}' is not a valid option");
             }
