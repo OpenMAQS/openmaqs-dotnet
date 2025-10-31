@@ -286,12 +286,12 @@ namespace PlaywrightUnitTests
             this.PageDriver.Goto(TestSiteAutomationUrl);
             this.Log = new FileLogger(string.Empty, "PlaywrightSoftAssertIsTrueFalseConditionPageSource.txt", MessageType.GENERIC, true);
             PlaywrightSoftAssert playwrightSoftAssert = new PlaywrightSoftAssert(TestObject);
-            string logLocation = ((IFileLogger)Log).FilePath;
+            string logLocation = ((IFileLogger)this.Log).FilePath;
             string pageSourceLocation = logLocation.Substring(0, logLocation.LastIndexOf('.')) + "_PS (1).txt";
 
             bool isFalse = playwrightSoftAssert.Assert(() => Assert.IsTrue(false, "testSoftAssert", "message"));
 
-            Assert.IsTrue(File.Exists(pageSourceLocation), "Fail to find page source");
+            Assert.IsTrue(File.Exists(pageSourceLocation), $"Fail to find page source file: {pageSourceLocation}");
             File.Delete(pageSourceLocation);
             File.Delete(logLocation);
 
