@@ -265,9 +265,9 @@ namespace PlaywrightUnitTests
             this.Log = new FileLogger(string.Empty, "PlaywrightSoftAssertWithAssertIsTrueFalseCondition.txt", MessageType.GENERIC, true);
             PlaywrightSoftAssert playwrightSoftAssert = new PlaywrightSoftAssert(TestObject);
             string logLocation = ((IFileLogger)Log).FilePath;
-            string screenShotLocation = logLocation.Substring(0, logLocation.LastIndexOf('.')) + "_ONE(1).Png";
+            string screenShotLocation = logLocation.Substring(0, logLocation.LastIndexOf('.')) + " 1 (1).Png";
 
-            bool isFalse = playwrightSoftAssert.Assert(() => Assert.Fail("testSoftAssert"), "TestAssertOne", "Test assert fail message");
+            bool isFalse = playwrightSoftAssert.Assert(() => Assert.Fail("testSoftAssert"), "1", "Test assert fail message");
 
             Assert.IsTrue(File.Exists(screenShotLocation), $"Fail to find screenshot: {screenShotLocation}");
             File.Delete(screenShotLocation);
