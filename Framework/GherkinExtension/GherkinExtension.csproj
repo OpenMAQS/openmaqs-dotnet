@@ -45,15 +45,15 @@
   <ItemGroup>
     <PackageReference Include="Appium.WebDriver" version="8.0.1" />
     <PackageReference Include="Dapper" version="2.1.66" />
-    <PackageReference Include="Gherkin" version="35.1.0" />
+    <PackageReference Include="Gherkin" version="36.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="NUnit" version="3.14.0" />
-    <PackageReference Include="Reqnroll" version="3.1.2" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.9" />
+    <PackageReference Include="Reqnroll" version="3.2.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.10" />
     <PackageReference Include="System.Reflection.Emit" version="4.7.0" />
     <PackageReference Include="System.Reflection.Emit.Lightweight" version="4.7.0" />
     <PackageReference Include="System.Threading.Tasks.Extensions" version="4.6.3" />
