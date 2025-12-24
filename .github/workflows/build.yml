@@ -85,6 +85,7 @@ jobs:
             }
 
             Write-Host "::set-output name=BUILD_NUMBER::$($version)"
+            # Add-Content -Path $GITHUB_OUTPUT "BUILD_NUMBER=$($version)"
 
   test-untils:
     name: Utils
@@ -632,7 +633,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner -X begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
+          .\.sonar\scanner\dotnet-sonarscanner  begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" 
           dotnet build Framework/Base.sln -p:Version=${{ needs.getVersion.outputs.buildNumber }}
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
