@@ -84,8 +84,8 @@ jobs:
               $version = $info.name[0].ToString().Trim("v")
             }
 
-            Write-Host "::set-output name=BUILD_NUMBER::$($version)"
-            # Add-Content -Path $GITHUB_OUTPUT "BUILD_NUMBER=$($version)"
+            # Write-Host "::set-output name=BUILD_NUMBER::$($version)"
+            Add-Content -Path $GITHUB_OUTPUT "BUILD_NUMBER=$($version)"
 
   test-untils:
     name: Utils
