@@ -85,7 +85,7 @@ jobs:
             }
 
             # Write-Host "::set-output name=BUILD_NUMBER::$($version)"
-            Add-Content -Path $GITHUB_OUTPUT "BUILD_NUMBER=$($version)"
+            Add-Content -Path $env:GITHUB_OUTPUT "BUILD_NUMBER=$($version)"
 
   test-untils:
     name: Utils
