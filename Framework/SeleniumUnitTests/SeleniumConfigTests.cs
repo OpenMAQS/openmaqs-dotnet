@@ -113,15 +113,15 @@ namespace SeleniumUnitTests
         [TestCategory(TestCategories.Selenium)]
         [DataRow(true)]
         [DataRow(false)]
-        [ExpectedException(typeof(WebDriverException))]
+        //[MyExpectedException(typeof(WebDriverException))]
         public void RetryRefused(bool retry)
         {
-            WebDriverFactory.CreateDriver(() =>
+            Assert.Throws<WebDriverException>(() => WebDriverFactory.CreateDriver(() =>
             {
                 throw new WebDriverTimeoutException("refused");
-            }, retry);
+            }, retry));
 
-            Assert.Fail("Exception should have been thrown ");
+            //Assert.Fail("Exception should have been thrown ");
         }
 
         /// <summary>
@@ -336,35 +336,31 @@ namespace SeleniumUnitTests
         /// Verify that correct exception is returned when unrecognizable remote browser is found
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         [DoNotParallelize]
         public void GetBrowserRemoteThrowException()
         {
             string hubUrl = Config.GetGeneralValue("HubUrl");
             string remoteBrowser = Config.GetGeneralValue("RemoteBrowser");
 
-            try
-            {
-                Config.AddTestSettingValues(
-                    new Dictionary<string, string>
-                    {
-                        { "HubUrl", "http://localhost:4444/wd/hub" },
-                        { "RemoteBrowser", "NoBrowser" }
-                    },
-                   "SeleniumMaqs");
+            Config.AddTestSettingValues(
+                new Dictionary<string, string>
+                {
+                    { "HubUrl", "http://localhost:4444/wd/hub" },
+                    { "RemoteBrowser", "NoBrowser" }
+                },
+               "SeleniumMaqs");
 
-                WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.Remote);
-            }
-            finally
-            {
-                Config.AddTestSettingValues(
-                    new Dictionary<string, string>
-                    {
-                        { "HubUrl", hubUrl },
-                        { "RemoteBrowser", remoteBrowser }
-                    },
-                   "SeleniumMaqs");
-            }
+            Assert.Throws<ArgumentException>(() => WebDriverFactory.GetBrowserWithDefaultConfiguration(BrowserType.Remote));
+
+            Config.AddTestSettingValues(
+                new Dictionary<string, string>
+                {
+                    { "HubUrl", hubUrl },
+                    { "RemoteBrowser", remoteBrowser }
+                },
+               "SeleniumMaqs");
+
         }
 
         /// <summary>
@@ -439,10 +435,10 @@ namespace SeleniumUnitTests
         [TestMethod]
         public void BrowserTypeError()
         {
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetBrowserType("PHANTOMJS"));
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetBrowserType("PHANTOM JS"));
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetBrowserType("PHANTOM"));
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetBrowserType("OTHER"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetBrowserType("PHANTOMJS"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetBrowserType("PHANTOM JS"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetBrowserType("PHANTOM"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetBrowserType("OTHER"));
         }
 
         /// <summary>
@@ -466,10 +462,10 @@ namespace SeleniumUnitTests
         [TestMethod]
         public void RemoteBrowserTypeError()
         {
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("remote"));
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("HEADLESSCHROME"));
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("PHANTOM"));
-            Assert.ThrowsException<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("OTHER"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("remote"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("HEADLESSCHROME"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("PHANTOM"));
+            Assert.Throws<ArgumentException>(() => SeleniumConfig.GetRemoteBrowserType("OTHER"));
         }
 
         /// <summary>
@@ -547,7 +543,7 @@ namespace SeleniumUnitTests
 
         [TestMethod]
         [DoNotParallelize]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void CommandTimeoutNotANumberException()
         {
             string commandTimeout = Config.GetValueForSection(ConfigSection.SeleniumMaqs, "SeleniumCommandTimeout");
@@ -559,23 +555,13 @@ namespace SeleniumUnitTests
                     },
                    "SeleniumMaqs");
 
-            try
-            {
-                var commandTimeoutFromMethod = SeleniumConfig.GetCommandTimeout();
-                Assert.Fail($"We should throw an argument exception before we get to this assert.  Value was {commandTimeoutFromMethod}");
-
-
-            }
-            finally
-            {
-                Config.AddTestSettingValues(
-                    new Dictionary<string, string>
-                    {
-
-                         { "SeleniumCommandTimeout", commandTimeout }
-                    },
-                   "SeleniumMaqs");
-            }
+            var commandTimeoutFromMethod = Assert.Throws<ArgumentException>(() => SeleniumConfig.GetCommandTimeout());
+            Config.AddTestSettingValues(
+                new Dictionary<string, string>
+                {
+                    { "SeleniumCommandTimeout", commandTimeout }
+                },
+               "SeleniumMaqs");
         }
 
         /// <summary>

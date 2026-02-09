@@ -151,6 +151,15 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         }
 
         /// <summary>
+        /// Get the format we want to capture screenshots with
+        /// </summary>
+        /// <returns>The desired format</returns>
+        public static string GetImageFormat()
+        {
+            return Config.GetValueForSection(PlaywrightSECTION, "ImageFormat", "JPEG");
+        }
+
+        /// <summary>
         /// get the browser size
         /// </summary>
         /// <returns></returns>
@@ -183,6 +192,11 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         public static string ProxyAddress()
         {
             return Config.GetValueForSection(PlaywrightSECTION, "ProxyAddress");
+        }
+
+        internal static bool CapturePagesourceOnFail()
+        {
+            return Config.GetValueForSection(PlaywrightSECTION, "SavePagesourceOnFail").Equals("Yes", StringComparison.CurrentCultureIgnoreCase);
         }
     }
 }

@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionPrefix>9.0.0</VersionPrefix>
+    <VersionSuffix>alpha.1</VersionSuffix>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <PackageId>OpenMAQS.Maqs.Gherkin</PackageId>
+    <Product>OpenMAQS.Maqs.Gherkin</Product>
+    <AssemblyName>OpenMAQS.Maqs.Gherkin</AssemblyName>
+    <RootNamespace>OpenMAQS.Maqs.Gherkin</RootNamespace>
+    <ApplicationIcon>MAQS.ico</ApplicationIcon>
+	<Title>Gherkin Module</Title>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>OpenMAQS</Authors>
+    <Company>OpenMAQS</Company>
+    <Description>Gherkin extension for Open MAQS' modular automation quick start</Description>
+    <Copyright>Copyright © OpenMAQS $([System.DateTime]::Now.Year)</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>MAQS.png</PackageIcon>
+	<PackageIconUrl>https://raw.githubusercontent.com/OpenMAQS/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/OpenMAQS/openmaqs-dotnet</PackageProjectUrl>
+    <PackageTags>test selenium appium automation NUnit MSTest TestFramework Gherkin</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RepositoryUrl>https://github.com/OpenMAQS/openmaqs-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>
+      Release Notes can be found at https://github.com/OpenMAQS/openmaqs-dotnet/releases
+    </PackageReleaseNotes>
+    <DebugSymbols>true</DebugSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <SonarQubeTestProject>false</SonarQubeTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Appium.WebDriver" version="8.0.1" />
+    <PackageReference Include="Dapper" version="2.1.66" />
+    <PackageReference Include="Gherkin" version="36.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="NUnit" version="3.14.0" />
+    <PackageReference Include="Reqnroll" version="3.2.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.10" />
+    <PackageReference Include="System.Reflection.Emit" version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.Lightweight" version="4.7.0" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" version="4.6.3" />
+    <PackageReference Include="System.ValueTuple" version="4.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\MAQS.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseCompositeTest\BaseCompositeTest.csproj" />
+  </ItemGroup>
+</Project>

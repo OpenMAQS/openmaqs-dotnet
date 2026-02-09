@@ -96,7 +96,7 @@ namespace UtilitiesUnitTesting
 
             if (results.Length > 0)
             {
-                Assert.Fail("{0}{1}", results.ToString(), Environment.NewLine);
+                Assert.Fail($"{results.ToString()}{Environment.NewLine}");
             }
         }
 
@@ -128,7 +128,7 @@ namespace UtilitiesUnitTesting
 
             if (results.Length > 0)
             {
-                Assert.Fail("{0}{1}", results.ToString(), Environment.NewLine);
+                Assert.Fail($"{results.ToString()}{Environment.NewLine}");
             }
         }
 

@@ -69,24 +69,24 @@ namespace PlaywrightTests
         /// Make sure error correct error is thrown if we use a bad command timeout
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void ConfigBadCommandTimeout()
         {
             Config.AddTestSettingValue("CommandTimeout", "BAD", ConfigSection.PlaywrightMaqs);
-            var commandTimeout = PlaywrightConfig.CommandTimeout();
-            Assert.Fail($"CommandTimeout returned type: {commandTimeout}");
+            var commandTimeout = Assert.Throws<ArgumentException>(() => PlaywrightConfig.CommandTimeout());
+            //Assert.Fail($"CommandTimeout returned type: {commandTimeout}");
         }
 
         /// <summary>
         /// Make sure error correct error is thrown if we use a bad browser name
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void ConfigBadBrowserName()
         {
             Config.AddTestSettingValue("Browser", "IE", ConfigSection.PlaywrightMaqs);
-            var type = PlaywrightConfig.BrowserType();
-            Assert.Fail($"IE returned type: {type}");
+            var type = Assert.Throws<ArgumentException>(() => PlaywrightConfig.BrowserType());
+            //Assert.Fail($"IE returned type: {type}");
         }
 
         /// <summary>

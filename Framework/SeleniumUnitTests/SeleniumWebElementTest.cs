@@ -204,14 +204,14 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitForAbsentElementFail()
         {
             this.WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             this.WebDriver.Wait().ForPageLoad();
             this.WebDriver.SetWaitDriver(new WebDriverWait(new SystemClock(), this.WebDriver, TimeSpan.FromMilliseconds(100), TimeSpan.FromMilliseconds(10)));
             IWebElement element = this.WebDriver.Wait().ForVisibleElement(BodyCssSelector);
-            element.Wait().ForAbsentElement(HomeButtonCssSelector);
+            Assert.Throws<TimeoutException>( () => element.Wait().ForAbsentElement(HomeButtonCssSelector));
         }
 
         /// <summary>
@@ -311,12 +311,12 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException), "An attribute check that should have failed to find the given string within an elements attribute passed.")]
+        //[MyExpectedException(typeof(NotFoundException))] //An attribute check that should have failed to find the given string within an elements attribute passed.
         public void WaitForAttributeContainsDontFind()
         {
             this.WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             IWebElement element = this.WebDriver.Wait().ForVisibleElement(BodyCssSelector);
-            element.Wait().ForAttributeTextContains(FoodTable, "Flower Table", "Summary");
+            Assert.Throws<NotFoundException>(() => element.Wait().ForAttributeTextContains(FoodTable, "Flower Table", "Summary"));
         }
 
         /// <summary>
@@ -324,12 +324,12 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException), "An attribute check that should have failed to find the given string equal to an elements attribute passed.")]
+        //[MyExpectedException(typeof(NotFoundException))] // An attribute check that should have failed to find the given string equal to an elements attribute passed.
         public void WaitForAttributeEqualsDontFind()
         {
             this.WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             IWebElement element = this.WebDriver.Wait().ForVisibleElement(BodyCssSelector);
-            element.Wait().ForAttributeTextEquals(FoodTable, "Flower Table", "Summary");
+            Assert.Throws<NotFoundException>(() => element.Wait().ForAttributeTextEquals(FoodTable, "Flower Table", "Summary"));
         }
 
         /// <summary>

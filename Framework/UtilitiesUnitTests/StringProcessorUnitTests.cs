@@ -141,21 +141,19 @@ namespace UtilitiesUnitTesting
         /// Tests that extract size throws the correct error 
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void ExtractSizeFromStringBadFormatNoX()
         {
-            StringProcessor.ExtractSizeFromString("BAD", out _, out _);
-            Assert.Fail("Bad format should throw error");
+            Assert.Throws<ArgumentException>(() => StringProcessor.ExtractSizeFromString("BAD", out _, out _));
         }
         /// <summary>
         /// Tests that extract size throws the correct error 
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(InvalidCastException))]
+        //[MyExpectedException(typeof(InvalidCastException))]
         public void ExtractSizeFromStringBadFormatNotInt()
         {
-            StringProcessor.ExtractSizeFromString("1XBAD", out _, out _);
-            Assert.Fail("Bad format should throw error");
+            Assert.Throws<InvalidCastException>(() => StringProcessor.ExtractSizeFromString("1XBAD", out _, out _));
         }
     }
 }

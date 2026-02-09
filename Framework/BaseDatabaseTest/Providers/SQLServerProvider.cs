@@ -5,7 +5,8 @@
 // <summary>SQLServerProvider class</summary>
 //--------------------------------------------------
 
-using System.Data.SqlClient;
+
+using Microsoft.Data.SqlClient;
 
 namespace OpenMAQS.Maqs.BaseDatabaseTest.Providers
 {

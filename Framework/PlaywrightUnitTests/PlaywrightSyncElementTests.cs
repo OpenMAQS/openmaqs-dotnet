@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System;
 
 namespace PlaywrightTests
 {
@@ -33,6 +34,7 @@ namespace PlaywrightTests
             var pageModel = new PageModel(this.TestObject);
             pageModel.OpenPage();
             Models.TryAdd(this.TestObject, pageModel);
+
         }
 
         /// <summary>

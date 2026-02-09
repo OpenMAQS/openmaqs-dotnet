@@ -87,7 +87,30 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         /// <returns>The text in the textbox</returns>
         public static string GetElementAttribute(this IWebElement element, string attribute = "value")
         {
-            return element.GetAttribute(attribute);
+            return element.GetDomAttribute(attribute);
+        }
+
+        /// <summary>
+        /// Get the value of a specific property for an element
+        /// </summary>
+        /// <param name="searchContext">Web driver or element</param>
+        /// <param name="by">By selector for the element</param>
+        /// <param name="property">The property to get the value for</param>
+        /// <returns>The text in the textbox</returns>
+        public static string GetElementProperty(this ISearchContext searchContext, By by, string property = "value")
+        {
+            return GetElementProperty(searchContext.Wait().ForVisibleElement(by), property);
+        }
+
+        /// <summary>
+        /// Get the value of a specific attribute for an element
+        /// </summary>
+        /// <param name="element">Web element</param>
+        /// <param name="attribute">The attribute to get the value for</param>
+        /// <returns>The text in the textbox</returns>
+        public static string GetElementProperty(this IWebElement element, string property = "value")
+        {
+            return element.GetDomProperty(property);
         }
 
         /// <summary>

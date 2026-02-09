@@ -171,13 +171,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitForAbsentElementFail()
         {
             WebDriver.Navigate().GoToUrl(TestSiteUrl);
             WebDriver.Wait().ForPageLoad();
             WebDriver.SetWaitDriver(new WebDriverWait(new SystemClock(), WebDriver, TimeSpan.FromMilliseconds(100), TimeSpan.FromMilliseconds(10)));
-            WebDriver.Wait().ForAbsentElement(HomeButtonCssSelector);
+            Assert.Throws<TimeoutException>(() => WebDriver.Wait().ForAbsentElement(HomeButtonCssSelector));
         }
 
         /// <summary>
@@ -426,13 +426,14 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException))]
+        //[MyExpectedException(typeof(NotFoundException))]
         public void ElemListThrowException()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
-            IWebElement element = WebDriver.Find().Element(NotInPage);
 
-            Assert.Fail($"Test should have thrown an unfound error, but found element {element} instead");
+            Assert.Throws<NotFoundException>(() => WebDriver.Find().Elements(NotInPage));
+
+            //Assert.Fail($"Test should have thrown an unfound error, but found element {element} instead");
         }
 
         /// <summary>
@@ -494,13 +495,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException))]
+        //[MyExpectedException(typeof(NotFoundException))]
         public void FindElementsNotFoundThrowException()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             WebDriver.Wait().ForPageLoad();
             WebDriver.SetWaitDriver(new WebDriverWait(new SystemClock(), WebDriver, TimeSpan.FromMilliseconds(100), TimeSpan.FromMilliseconds(10)));
-            WebDriver.Find().Elements(NotInPage);
+            Assert.Throws<NotFoundException>(() => WebDriver.Find().Elements(NotInPage));
         }
 
         /// <summary>
@@ -604,12 +605,12 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException))]
+        //[MyExpectedException(typeof(NotFoundException))]
         public void FindIndexOfElementInCollectionEmptyInputList()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             WebDriver.Wait().ForPageLoad();
-            Find.IndexOfElementWithText(new List<IWebElement>(), "#notfound", true);
+            Assert.Throws<NotFoundException>(() => Find.IndexOfElementWithText(new List<IWebElement>(), "#notfound", true));
         }
 
         /// <summary>
@@ -617,12 +618,12 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException))]
+        //[MyExpectedException(typeof(NotFoundException))]
         public void FindIndexOfElementInCollectionTextNotFoundAssertIsTrue()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             WebDriver.Wait().ForPageLoad();
-            Find.IndexOfElementWithText(WebDriver.FindElements(FlowerTable), "#notfound", true);
+            Assert.Throws<NotFoundException>(() => Find.IndexOfElementWithText(WebDriver.FindElements(FlowerTable), "#notfound", true));
         }
 
         /// <summary>
@@ -682,14 +683,14 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SeleniumSoftAssertIsTrueFalseBoolean()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             WebDriver.Wait().ForPageLoad();
             var result = SoftAssert.Assert(() => Assert.IsTrue(!WebDriver.Title.Contains("Automation"), "", "Title is incorrect"));
             Assert.IsFalse(result);
-            this.SoftAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => this.SoftAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -879,13 +880,13 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SeleniumSoftAssertExpectFail()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
             WebDriver.Wait().ForPageLoad();
             SoftAssert.Assert(() => Assert.AreEqual("Wrong Title", WebDriver.Title), "Title Test", "Title is incorrect");
-            SoftAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => SoftAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -893,11 +894,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException), "An attribute check that should have failed to find the given string within an elements attribute passed.")]
+        //[MyExpectedException(typeof(NotFoundException))] // An attribute check that should have failed to find the given string within an elements attribute passed.
         public void WaitForAttributeContainsDontFind()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
-            WebDriver.Wait().ForAttributeTextContains(FoodTable, "Flower Table", "Summary");
+            Assert.Throws<NotFoundException>(() => WebDriver.Wait().ForAttributeTextContains(FoodTable, "Flower Table", "Summary"));
         }
 
         /// <summary>
@@ -905,11 +906,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NotFoundException), "An attribute check that should have failed to find the given string equal to an elements attribute passed.")]
+        //[MyExpectedException(typeof(NotFoundException))] // An attribute check that should have failed to find the given string equal to an elements attribute passed.
         public void WaitForAttributeEqualsDontFind()
         {
             WebDriver.Navigate().GoToUrl(TestSiteAutomationUrl);
-            WebDriver.Wait().ForAttributeTextEquals(FoodTable, "Flower Table", "Summary");
+            Assert.Throws<NotFoundException>(() => WebDriver.Wait().ForAttributeTextEquals(FoodTable, "Flower Table", "Summary"));
         }
 
         /// <summary>

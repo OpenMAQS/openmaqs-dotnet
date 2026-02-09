@@ -201,10 +201,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(NotImplementedException))]
+        //[MyExpectedException(typeof(NotImplementedException))]
         public void ThrowExceptionWithoutParamTest()
         {
-            GenericWait.WaitFor(this.ThrowError);
+            Assert.Throws<NotImplementedException>(() => GenericWait.WaitFor(this.ThrowError));
         }
 
         /// <summary>
@@ -212,10 +212,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void ThrowTimeoutExceptionWithoutParamTest()
         {
-            GenericWait.WaitFor(this.IsParamTest);
+            Assert.Throws<TimeoutException>(() => GenericWait.WaitFor(this.IsParamTest));
         }
 
         /// <summary>
@@ -223,10 +223,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(SystemException))]
+        //[MyExpectedException(typeof(SystemException))]
         public void ThrowExceptionWithParamTest()
         {
-            GenericWait.WaitFor<string>(this.ThrowError, TESTSTRING);
+            Assert.Throws<SystemException>(() => GenericWait.WaitFor<string>(this.ThrowError, TESTSTRING));
         }
 
         /// <summary>
@@ -234,10 +234,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void ThrowTimeoutExceptionWithParamTest()
         {
-            GenericWait.WaitFor<object[]>(this.IsTwoParameters, (new List<object>()).ToArray());
+            Assert.Throws<TimeoutException>(() => GenericWait.WaitFor<object[]>(this.IsTwoParameters, (new List<object>()).ToArray()));
         }
 
         /// <summary>
@@ -245,10 +245,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(NotImplementedException))]
+        //[MyExpectedException(typeof(NotImplementedException))]
         public void ThrowExceptionWithoutParamWithCustomTimesTest()
         {
-            GenericWait.Wait(this.ThrowError, TESTRETRY, TESTTIMEOUT, true);
+            Assert.Throws<NotImplementedException>(() => GenericWait.Wait(this.ThrowError, TESTRETRY, TESTTIMEOUT, true));
         }
 
         /// <summary>
@@ -256,10 +256,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(SystemException))]
+        //[MyExpectedException(typeof(SystemException))]
         public void ThrowExceptionWithParamWithCustomTimesTest()
         {
-            GenericWait.Wait<string>(this.ThrowError, TESTRETRY, TESTTIMEOUT, true, "Anything");
+            Assert.Throws<SystemException>(() => GenericWait.Wait<string>(this.ThrowError, TESTRETRY, TESTTIMEOUT, true, "Anything"));
         }
 
         /// <summary>
@@ -299,10 +299,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitForFunctionWithInputExceptionThrown()
         {
-            GenericWait.Wait<bool, string>(this.ThrowError, TESTRETRY, TESTTIMEOUT, "input");
+            Assert.Throws<TimeoutException>(() => GenericWait.Wait<bool, string>(this.ThrowError, TESTRETRY, TESTTIMEOUT, "input"));
         }
 
         /// <summary>
@@ -320,10 +320,10 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitForFunctionWithoutInputExceptionThrown()
         {
-            GenericWait.Wait<bool>(this.ThrowError, TESTRETRY, TESTTIMEOUT);
+            Assert.Throws<TimeoutException>(() => GenericWait.Wait<bool>(this.ThrowError, TESTRETRY, TESTTIMEOUT));
         }
 
         /// <summary>
@@ -382,11 +382,11 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitForListOfActionsException()
         {
             DateTime dateToTest = DateTime.Now.AddSeconds(120);
-            GenericWait.WaitForAnyAction<bool>(
+            Assert.Throws<TimeoutException>(() => GenericWait.WaitForAnyAction<bool>(
                 "WaitForListOfActionsException",
                 () =>
                 {
@@ -397,7 +397,7 @@ namespace UtilitiesUnitTesting
                 {
                     Assert.IsTrue(dateToTest < DateTime.Now);
                     return true;
-                });
+                }));
         }
 
         /// <summary>
@@ -673,18 +673,19 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitUntilTimeoutThrowsTimeoutException()
         {
-            GenericWait.WaitUntilTimeout(() =>
-            {
-                Thread.Sleep(TimeSpan.FromSeconds(10));
-                return "my string";
-            },
-            TimeSpan.FromSeconds(1),
-            TimeSpan.FromSeconds(2));
+            Assert.Throws<TimeoutException>(() => 
+                GenericWait.WaitUntilTimeout(() =>
+                {
+                    Thread.Sleep(TimeSpan.FromSeconds(10));
+                    return "my string";
+                },
+                TimeSpan.FromSeconds(1),
+                TimeSpan.FromSeconds(2)));
 
-            Assert.Fail();
+            //Assert.Fail();
         }
 
         /// <summary>
@@ -710,11 +711,11 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitUntilTimeoutReturnsStringWithArgumentTimeoutException()
         {
             var str = "my string";
-            GenericWait.WaitUntilTimeout(
+            Assert.Throws<TimeoutException>(() => GenericWait.WaitUntilTimeout(
                 (a) =>
                 {
                     Thread.Sleep(TimeSpan.FromSeconds(10));
@@ -722,9 +723,9 @@ namespace UtilitiesUnitTesting
                 },
                 TimeSpan.FromSeconds(1),
                 TimeSpan.FromSeconds(2),
-                str);
+                str));
 
-            Assert.Fail("Method should have thrown an exception");
+            //Assert.Fail("Method should have thrown an exception");
         }
 
         /// <summary>
@@ -751,11 +752,11 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(Exception))]
+        //[MyExpectedException(typeof(Exception))]
         public void WaitUntilTimeoutArgumentsThrowsException()
         {
             var str = "my string";
-            GenericWait.WaitUntilTimeout(
+            Assert.Throws<Exception>(() => GenericWait.WaitUntilTimeout(
                 (a) =>
                 {
                     throw new Exception("This method didn't work");
@@ -763,9 +764,9 @@ namespace UtilitiesUnitTesting
                 TimeSpan.FromSeconds(1),
                 TimeSpan.FromSeconds(2),
                 true,
-                str);
+                str));
 
-            Assert.Fail("Method should have thrown an exception");
+            //Assert.Fail("Method should have thrown an exception");
         }
 
         /// <summary>
@@ -825,16 +826,16 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(Exception))]
+        //[MyExpectedException(typeof(Exception))]
         public void WaitUntilTimeoutReturnsThrowsException()
         {
-            GenericWait.WaitUntilTimeout(
+            Assert.Throws<Exception>(() => GenericWait.WaitUntilTimeout(
                 () => throw new Exception("This method didn't work"),
                 TimeSpan.FromSeconds(1),
                 TimeSpan.FromSeconds(2),
-                true);
+                true));
 
-            Assert.Fail("Method should throw exception, Wait should throw exception.");
+            //Assert.Fail("Method should throw exception, Wait should throw exception.");
         }
 
         /// <summary>
@@ -843,15 +844,15 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitUntilTimeoutReturnsAnyReturnThrowsException()
         {
-            GenericWait.WaitUntilTimeout<string>(
+            Assert.Throws<TimeoutException>(() => GenericWait.WaitUntilTimeout<string>(
                 () => throw new Exception("This method didn't work"),
                 TimeSpan.FromSeconds(1),
-                TimeSpan.FromSeconds(2));
+                TimeSpan.FromSeconds(2)));
 
-            Assert.Fail("Method should throw exception, Wait should throw exception.");
+            //Assert.Fail("Method should throw exception, Wait should throw exception.");
         }
 
         /// <summary>
@@ -861,17 +862,17 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(TimeoutException))]
+        //[MyExpectedException(typeof(TimeoutException))]
         public void WaitUntilTimeoutReturnsAnyReturnWithArgumentsThrowsException()
         {
             var str = "my string";
-            GenericWait.WaitUntilTimeout<string, string>(
+            Assert.Throws<TimeoutException>(() => GenericWait.WaitUntilTimeout<string, string>(
                 (a) => throw new Exception("This method didn't work"),
                 TimeSpan.FromSeconds(1),
                 TimeSpan.FromSeconds(2),
-                str);
+                str));
 
-            Assert.Fail("Method should throw exception, Wait should throw exception.");
+            //Assert.Fail("Method should throw exception, Wait should throw exception.");
         }
 
         /// <summary>

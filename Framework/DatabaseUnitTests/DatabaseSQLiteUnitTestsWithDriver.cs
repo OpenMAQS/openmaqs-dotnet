@@ -243,13 +243,13 @@ namespace DatabaseUnitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(SqliteException))]
+        //[MyExpectedException(typeof(SqliteException))]
         public void CustomQueryException()
         {
-            this.DatabaseDriver.Query<Orders>((dbConnection) =>
+            Assert.Throws<SqliteException>(() => this.DatabaseDriver.Query<Orders>((dbConnection) =>
             {
                 return dbConnection.Query<Orders>("SELECT * FROM unknowntable");
-            });
+            }));
         }
 
         /// <summary>

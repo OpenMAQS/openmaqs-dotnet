@@ -20,8 +20,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
+//using WebDriverManager;
+//using WebDriverManager.DriverConfigs.Impl;
 
 namespace OpenMAQS.Maqs.BaseSeleniumTest
 {
@@ -210,7 +210,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         {
             return CreateDriver(() =>
             {
-                LazyInitializer.EnsureInitialized(ref ChromeDriverPath, () => new DriverManager().SetUpDriver(new ChromeConfig(), SeleniumConfig.GetChromeVersion()));
+                //LazyInitializer.EnsureInitialized(ref ChromeDriverPath, () => new DriverManager().SetUpDriver(new ChromeConfig(), SeleniumConfig.GetChromeVersion()));
 
                 var driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), chromeOptions, commandTimeout);
                 SetBrowserSize(driver, size);
@@ -228,7 +228,7 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         {
             return CreateDriver(() =>
             {
-                LazyInitializer.EnsureInitialized(ref ChromeDriverPath, () => new DriverManager().SetUpDriver(new ChromeConfig(), SeleniumConfig.GetChromeVersion()));
+                //LazyInitializer.EnsureInitialized(ref ChromeDriverPath, () => new DriverManager().SetUpDriver(new ChromeConfig(), SeleniumConfig.GetChromeVersion()));
 
                 return new ChromeDriver(ChromeDriverService.CreateDefaultService(), headlessChromeOptions, commandTimeout);
             }, SeleniumConfig.GetRetryRefused());
@@ -245,12 +245,12 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         {
             return CreateDriver(() =>
             {
-                LazyInitializer.EnsureInitialized(ref FirefoxDriverPath, () => new DriverManager().SetUpDriver(new FirefoxConfig(), SeleniumConfig.GetFirefoxVersion()));
+                //LazyInitializer.EnsureInitialized(ref FirefoxDriverPath, () => new DriverManager().SetUpDriver(new FirefoxConfig(), SeleniumConfig.GetFirefoxVersion()));
 
                 // Add support for encoding 437 that was removed in .net core
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-                var driver = new FirefoxDriver(Path.GetDirectoryName(FirefoxDriverPath), firefoxOptions, commandTimeout);
+                var driver = new FirefoxDriver(FirefoxDriverService.CreateDefaultService(), firefoxOptions, commandTimeout);
                 SetBrowserSize(driver, size);
 
                 return driver;
@@ -268,9 +268,9 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         {
             return CreateDriver(() =>
             {
-                LazyInitializer.EnsureInitialized(ref EdgeDriverPath, () => new DriverManager().SetUpDriver(new EdgeConfig(), SeleniumConfig.GetEdgeVersion()));
+                //LazyInitializer.EnsureInitialized(ref EdgeDriverPath, () => new DriverManager().SetUpDriver(new EdgeConfig(), SeleniumConfig.GetEdgeVersion()));
 
-                var driver = new EdgeDriver(Path.GetDirectoryName(EdgeDriverPath), edgeOptions, commandTimeout);
+                var driver = new EdgeDriver(EdgeDriverService.CreateDefaultService(), edgeOptions, commandTimeout);
                 SetBrowserSize(driver, size);
                 return driver;
             }, SeleniumConfig.GetRetryRefused());
@@ -287,9 +287,9 @@ namespace OpenMAQS.Maqs.BaseSeleniumTest
         {
             return CreateDriver(() =>
             {
-                LazyInitializer.EnsureInitialized(ref IEDriverPath, () => new DriverManager().SetUpDriver(new InternetExplorerConfig(), SeleniumConfig.GetIEVersion()));
+                //LazyInitializer.EnsureInitialized(ref IEDriverPath, () => new DriverManager().SetUpDriver(new InternetExplorerConfig(), SeleniumConfig.GetIEVersion()));
 
-                var driver = new InternetExplorerDriver(Path.GetDirectoryName(IEDriverPath), internetExplorerOptions, commandTimeout);
+                var driver = new InternetExplorerDriver(InternetExplorerDriverService.CreateDefaultService(), internetExplorerOptions, commandTimeout);
                 SetBrowserSize(driver, size);
 
                 return driver;

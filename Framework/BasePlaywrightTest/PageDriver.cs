@@ -429,7 +429,7 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         }
 
         /// <summary>
-        /// Dispose of the database connection
+        /// Dispose of the PageDriver 
         /// </summary>
         public void Dispose()
         {
@@ -438,7 +438,7 @@ namespace OpenMAQS.Maqs.BasePlaywrightTest
         }
 
         /// <summary>
-        /// Dispose of the database connection
+        /// Dispose of the PageDriver
         /// </summary>
         /// <param name="disposing">Is the object being disposed</param>
         protected virtual void Dispose(bool disposing)

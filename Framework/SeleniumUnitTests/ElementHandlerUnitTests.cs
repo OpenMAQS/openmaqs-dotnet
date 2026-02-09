@@ -119,7 +119,7 @@ namespace SeleniumUnitTests
             string expectedValue = "Tester";
             NavigateToUrl();
             WebDriver.SetTextBox(firstNameTextBox, expectedValue);
-            string actualValue = WebDriver.GetElementAttribute(firstNameTextBox);
+            string actualValue = WebDriver.GetElementProperty(firstNameTextBox);
             VerifyText(actualValue, expectedValue);
         }
 
@@ -134,7 +134,7 @@ namespace SeleniumUnitTests
             NavigateToUrl();
             LazyElement lazy = new LazyElement(this.TestObject, firstNameTextBox);
             lazy.SetTextBox(expectedValue);
-            string actualValue = WebDriver.GetElementAttribute(firstNameTextBox);
+            string actualValue = WebDriver.GetElementProperty(firstNameTextBox);
             VerifyText(actualValue, expectedValue);
         }
 
@@ -143,11 +143,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void SetTextBoxThrowException()
         {
             NavigateToUrl();
-            WebDriver.SetTextBox(firstNameTextBox, string.Empty);
+            Assert.Throws<ArgumentException>(() => WebDriver.SetTextBox(firstNameTextBox, string.Empty));
         }
 
         /// <summary>
@@ -423,11 +423,11 @@ namespace SeleniumUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Selenium)]
-        [ExpectedException(typeof(NoSuchElementException), "A JavaScript click that should have failed inappropriately passed.")]
+        //[MyExpectedException(typeof(NoSuchElementException))] //  A JavaScript click that should have failed inappropriately passed.
         public void ClickElementByJavascriptFromHoverDropdownNotFound()
         {
             NavigateToUrl();
-            WebDriver.ClickElementByJavaScript(By.CssSelector(".NotPresent"));
+            Assert.Throws<NoSuchElementException>(() => WebDriver.ClickElementByJavaScript(By.CssSelector(".NotPresent")));
         }
 
         /// <summary>
@@ -439,7 +439,7 @@ namespace SeleniumUnitTests
         {
             NavigateToUrl();
             WebDriver.SlowType(firstNameTextBox, "Test input slowtype");
-            Assert.AreEqual("Test input slowtype", WebDriver.Wait().ForClickableElement(firstNameTextBox).GetAttribute("value"));
+            Assert.AreEqual("Test input slowtype", WebDriver.Wait().ForClickableElement(firstNameTextBox).GetDomProperty("value"));
         }
 
         /// <summary>
@@ -470,7 +470,7 @@ namespace SeleniumUnitTests
         {
             string checkLogged = "THISSHOULDBELOGGED";
             NavigateToUrl();
-            Assert.ThrowsException<ArgumentNullException>(() => this.WebDriver.SendSecretKeys(firstNameTextBox, null, this.Log));
+            Assert.ThrowsExactly<ArgumentNullException>(() => this.WebDriver.SendSecretKeys(firstNameTextBox, null, this.Log));
             this.Log.LogMessage(checkLogged);
 
             IFileLogger logger = (IFileLogger)TestObject.Log;

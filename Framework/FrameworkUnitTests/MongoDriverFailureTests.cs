@@ -25,30 +25,30 @@ namespace FrameworkUnitTests
         /// Test driver call fails correctly
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void ListAllCollectionItemsFailure()
         {
-            this.MongoDBDriver.ListAllCollectionItems();
+            Assert.Throws<TimeoutException>(() => this.MongoDBDriver.ListAllCollectionItems());
         }
 
         /// <summary>
         /// Test driver call fails correctly
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void IsCollectionEmptyFailure()
         {
-            this.MongoDBDriver.IsCollectionEmpty();
+            Assert.Throws<TimeoutException>(() => this.MongoDBDriver.IsCollectionEmpty());
         }
 
         /// <summary>
         /// Test driver call fails correctly
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(TimeoutException))]
+        //[ExpectedException(typeof(TimeoutException))]
         public void CountAllItemsInCollectionFailure()
         {
-            this.MongoDBDriver.CountAllItemsInCollection();
+            Assert.Throws<TimeoutException>(() => this.MongoDBDriver.CountAllItemsInCollection());
         }
 
 
