@@ -608,7 +608,7 @@ jobs:
   publish:
     name: Publish NuGet - v${{ needs.getVersion.outputs.buildNumber }}
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&  github.event_name != 'schedule'
-    needs: [getVersion, createNugetPacakges, sonar]
+    needs: [getVersion, createNugetPacakges]
     runs-on: windows-2022
     environment: nuget
     steps:
