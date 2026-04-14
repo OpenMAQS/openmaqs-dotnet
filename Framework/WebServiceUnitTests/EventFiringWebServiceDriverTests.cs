@@ -69,10 +69,10 @@ namespace WebServiceTesterUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.WebService)]
-        [ExpectedException(typeof(ArgumentNullException))]
+        //[ExpectedException(typeof(ArgumentNullException))]
         public void SendWithResponseThrowException()
         {
-            SendWithResponse(null, null);
+            Assert.Throws<ArgumentNullException>(() => SendWithResponse(null, null));
         }
 
         /// <summary>
@@ -80,10 +80,10 @@ namespace WebServiceTesterUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.WebService)]
-        [ExpectedException(typeof(ArgumentNullException))]
+        //[ExpectedException(typeof(ArgumentNullException))]
         public void SendWithResponseAndReturnCodeThrowException()
         {
-            SendWithResponse(null, null, HttpStatusCode.OK);
+            Assert.Throws<ArgumentNullException>(() => SendWithResponse(null, null, HttpStatusCode.OK));
         }
 
         /// <summary>

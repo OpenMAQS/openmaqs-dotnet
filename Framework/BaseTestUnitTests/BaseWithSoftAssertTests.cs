@@ -14,6 +14,7 @@ using System.IO;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 using NUnitAssert = NUnit.Framework.Assert;
 using TestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
+using System;
 
 namespace BaseTestUnitTests
 {
@@ -110,11 +111,11 @@ namespace BaseTestUnitTests
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
         [SoftAssertExpectedAsserts("one")]
-        [ExpectedException(typeof(System.AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void AttributeExpectedSingleMismatch()
         {
             this.SoftAssert.Assert(() => { }, "two", "AssertionMethod");
-            this.SoftAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => this.SoftAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -136,12 +137,12 @@ namespace BaseTestUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(System.AggregateException))]
+        //[MyExpectedException(typeof(System.AggregateException))]
         public void InLineExpectedSingleMismatch()
         {
             this.SoftAssert.AddExpectedAsserts("two");
             this.SoftAssert.Assert(() => { }, "one", "AssertionMethod");
-            this.SoftAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => this.SoftAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>

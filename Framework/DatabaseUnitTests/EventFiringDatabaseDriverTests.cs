@@ -10,12 +10,13 @@ using OpenMAQS.Maqs.Utilities.Helper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DatabaseUnitTests
 {
     using global::DatabaseUnitTests.Models;
+    using Microsoft.Data.SqlClient;
     using System.Linq;
 
     /// <summary>
@@ -61,10 +62,10 @@ namespace DatabaseUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Database)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        //[MyExpectedException(typeof(InvalidOperationException))]
         public void ExecuteThrowException()
         {
-            this.Execute(null);
+            Assert.Throws<InvalidOperationException>(() => this.Execute(null));
         }
 
         /// <summary>
@@ -121,10 +122,10 @@ namespace DatabaseUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Database)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        //[MyExpectedException(typeof(InvalidOperationException))]
         public void QueryListThrowException()
         {
-            this.Query(null);
+            Assert.Throws<InvalidOperationException>(() => this.Query(null));
         }
 
         /// <summary>
@@ -181,10 +182,10 @@ namespace DatabaseUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Database)]
-        [ExpectedException(typeof(InvalidOperationException))]
+        //[MyExpectedException(typeof(InvalidOperationException))]
         public void QueryThrowException()
         {
-            this.Query<string>((string)null);
+            Assert.Throws<InvalidOperationException>(() => this.Query<string>((string)null));
         }
 
         /// <summary>
@@ -213,10 +214,10 @@ namespace DatabaseUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Database)]
-        [ExpectedException(typeof(SqlException))]
+        //[MyExpectedException(typeof(SqliteException))]
         public void InsertThrowException()
         {
-            this.Insert<string>(null);
+            Assert.Throws<SqlException>(() => this.Insert<string>(null));
         }
 
         /// <summary>
@@ -245,10 +246,10 @@ namespace DatabaseUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Database)]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void DeleteThrowException()
         {
-            this.Delete<string>(null);
+            Assert.Throws<ArgumentException>(() => this.Delete<string>(null));
         }
 
         /// <summary>
@@ -277,10 +278,10 @@ namespace DatabaseUnitTests
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Database)]
-        [ExpectedException(typeof(ArgumentException))]
+        //[MyExpectedException(typeof(ArgumentException))]
         public void UpdateThrowException()
         {
-            this.Update<string>(null);
+            Assert.Throws<ArgumentException>(() => this.Update<string>(null));
         }
 
         /// <summary>

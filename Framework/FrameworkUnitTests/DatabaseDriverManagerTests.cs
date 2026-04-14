@@ -26,22 +26,22 @@ namespace FrameworkUnitTests
         /// Make sure we get the proper factory failure
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        //[ExpectedException(typeof(InvalidOperationException))]
         public void OracleFailure()
         {
-            this.TestObject.OverrideDatabaseDriver(ConnectionFactory.GetOpenConnection("Oracle", string.Empty));
-            Assert.Fail("Get open connection should have thrown exception.");
+            Assert.Throws<InvalidOperationException>(() => this.TestObject.OverrideDatabaseDriver(ConnectionFactory.GetOpenConnection("Oracle", string.Empty)));
+            //Assert.Fail("Get open connection should have thrown exception.");
         }
 
         /// <summary>
         /// Make sure we get the proper factory failure
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        //[ExpectedException(typeof(ArgumentException))]
         public void InvalidTypeFailure()
         {
-            this.TestObject.OverrideDatabaseDriver(ConnectionFactory.GetOpenConnection("InvalidType", string.Empty));
-            Assert.Fail("Get open connection should have thrown exception.");
+            Assert.Throws<ArgumentException>(() => this.TestObject.OverrideDatabaseDriver(ConnectionFactory.GetOpenConnection("InvalidType", string.Empty)));
+            //Assert.Fail("Get open connection should have thrown exception.");
         }
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace FrameworkUnitTests
         /// Make sure we get the proper factory failure
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        //[ExpectedException(typeof(ArgumentException))]
         public void OverideFactoryFailure()
         {
-            this.TestObject.OverrideDatabaseDriver(ConnectionFactory.GetOpenConnection(string.Empty, string.Empty));
-            Assert.Fail("Get open connection should have thrown exception.");
+            Assert.Throws<ArgumentException>(() => this.TestObject.OverrideDatabaseDriver(ConnectionFactory.GetOpenConnection(string.Empty, string.Empty)));
+            //Assert.Fail("Get open connection should have thrown exception.");
         }
 
         /// <summary>

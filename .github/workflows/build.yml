@@ -84,7 +84,8 @@ jobs:
               $version = $info.name[0].ToString().Trim("v")
             }
 
-            Write-Host "::set-output name=BUILD_NUMBER::$($version)"
+            # Write-Host "::set-output name=BUILD_NUMBER::$($version)"
+            Add-Content -Path $env:GITHUB_OUTPUT "BUILD_NUMBER=$($version)"
 
   test-untils:
     name: Utils
@@ -122,10 +123,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
-            8.x.x
+            8.0.x
       - name: Configure Windows for automation
         uses: ./.github/actions/setup-winapp
       - name: Install Appium
@@ -208,13 +209,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
-            8.x.x
+            8.0.x
       - name: Start test service
         run: Start-Process -FilePath "dotnet" -ArgumentList "run --project Docker/MAQSService/MainTestService/MainTestService.csproj"
         shell: pwsh
+      - name: Wait for webservice to come online
+        run: sleep 30s
+        shell: bash
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
@@ -231,7 +235,7 @@ jobs:
   test-playwright:
     name: Playwright
     needs: waitOld
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET Core
@@ -302,7 +306,7 @@ jobs:
       - name: Build the docker-compose stack
         run: docker compose -f Docker/MAQSSQLServer/docker-compose.yml -p openmaqs_maqs-dotnet up -d
       - name: Wait for DB to come online
-        run: sleep 10s
+        run: sleep 30s
         shell: bash
       - id: builder
         uses: ./.github/workflows/buildtest-action
@@ -386,8 +390,8 @@ jobs:
             artifactTests/framework/**/*.xml
             artifactTests/framework/testResults/
 
-  test-specflow:
-    name: SpecFlow
+  test-gherkin:
+    name: Gherkin
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
@@ -402,15 +406,15 @@ jobs:
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/SpecFlowExtensionUnitTests/SpecFlowExtensionUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/specflow/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/specflow/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
+          bt-param: 'Framework/GherkinExtensionUnitTests/GherkinExtensionUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/gherkin/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/gherkin/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
       - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
-          name: specflowResults
+          name: gherkinResults
           path: |
-            artifactTests/specflow/**/*.xml
-            artifactTests/specflow/testResults/
+            artifactTests/gherkin/**/*.xml
+            artifactTests/gherkin/testResults/
 
   test-composite:
     name: Composite
@@ -442,8 +446,8 @@ jobs:
             artifactTests/composite/**/*.xml
             artifactTests/composite/testResults/
 
-  test-specflownunit:
-    name: SpecFlow NUnit
+  test-gherkinnunit:
+    name: Gherkin NUnit
     needs: waitOld
     runs-on: ubuntu-latest
     steps:
@@ -458,15 +462,15 @@ jobs:
       - id: builder
         uses: ./.github/workflows/buildtest-action
         with:
-          bt-param: 'Framework/SpecFlowExtensionNUnitTests/SpecFlowExtensionNUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/specflownunit/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/specflownunit/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
+          bt-param: 'Framework/GherkinExtensionNUnitTests/GherkinExtensionNUnitTests.csproj --settings Framework/Parallel.RunSettings  --logger trx --results-directory "${{github.workspace}}/artifactTests/gherkinnunit/testResults/" /p:CoverletOutput="${{github.workspace}}/artifactTests/gherkinnunit/" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
       - uses: actions/upload-artifact@v4
         if: always()
         name: "Upload test artifact"
         with:
-          name: specflownunitResults
+          name: gherkinnunitResults
           path: |
-            artifactTests/specflownunit/**/*.xml
-            artifactTests/specflownunit/testResults/
+            artifactTests/gherkinnunit/**/*.xml
+            artifactTests/gherkinnunit/testResults/
 
   test-selenpomlazy:
     name: Selenium POM and Lazy
@@ -558,7 +562,7 @@ jobs:
   sonar:
     name: Sonar
     runs-on: windows-2022
-    needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen, getVersion]
+    needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-gherkin, test-gherkinnunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen, getVersion]
     steps:
       - name: Set up JDK 17
         uses: actions/setup-java@v1
@@ -629,14 +633,14 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
+          .\.sonar\scanner\dotnet-sonarscanner  begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.token="$env:SONAR_TOKEN" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
           dotnet build Framework/Base.sln -p:Version=${{ needs.getVersion.outputs.buildNumber }}
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
 
   report:
     name: Report
     runs-on: ubuntu-latest
-    needs: [test-appium, test-selengen, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-specflow, test-specflownunit, test-composite, test-selenpomlazy, test-selenutil, getVersion]
+    needs: [test-appium, test-selengen, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-gherkin, test-gherkinnunit, test-composite, test-selenpomlazy, test-selenutil, getVersion]
     if: always()
     steps:
       - uses: actions/checkout@v4

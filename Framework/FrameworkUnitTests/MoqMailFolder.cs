@@ -77,6 +77,8 @@ namespace FrameworkUnitTests
         public System.Collections.Generic.IReadOnlySet<string> PermanentKeywords => throw new NotImplementedException();
 
         public IReadOnlySet<string> AcceptedKeywords => throw new NotImplementedException();
+
+        public bool CanOpen => throw new NotImplementedException();
 #pragma warning disable 0067
         public event EventHandler<EventArgs> Opened;
         public event EventHandler<EventArgs> Closed;

@@ -159,7 +159,7 @@ namespace MongoDBUnitTests
         [TestCategory(TestCategories.MongoDB)]
         public void TestMongoLinqQuery()
         {
-            IMongoQueryable<BsonDocument> query =
+            IQueryable<BsonDocument> query =
                 from e in this.MongoDBDriver.Collection.AsQueryable<BsonDocument>()
                 where e["lid"] == "test1"
                 select e;

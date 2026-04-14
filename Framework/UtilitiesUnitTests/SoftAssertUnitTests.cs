@@ -50,7 +50,7 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SoftAssertFailsInvalidTest()
         {
             SoftAssert softAssert = new SoftAssert(new FileLogger(LoggingConfig.GetLogDirectory(), "UnitTests.SoftAssertUnitTests.SoftAssertFailsInvalidTest"));
@@ -68,7 +68,7 @@ namespace UtilitiesUnitTesting
             "Assert  dividing by zero throws a null reference",
             "Failed to assert that we couldn't divide by zero");
 
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -89,13 +89,13 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SoftAssertFailTest()
         {
             SoftAssert softAssert = new SoftAssert(new FileLogger(LoggingConfig.GetLogDirectory(), "UnitTests.SoftAssertUnitTests.SoftAssertFailTest"));
             softAssert.Assert(() => Assert.AreEqual("Yes", "No"), "Utilities Soft Assert", "Message is not equal");
             softAssert.Assert(() => Assert.AreEqual("Yes", "NoAgain"), "Utilities Soft Assert 2");
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -158,14 +158,14 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SoftAssertIsTrueTestFailure()
         {
             SoftAssert softAssert = new SoftAssert(new FileLogger(LoggingConfig.GetLogDirectory(), "UnitTests.SoftAssertUnitTests.SoftAssertFailTest", MessageType.GENERIC, true));
             softAssert.Assert(() => Assert.IsTrue(1 == 2, "Test"));
             softAssert.Assert(() => Assert.IsTrue(1 == 2, "Test1"));
             softAssert.Assert(() => Assert.IsTrue(true, "Test2"));
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -209,13 +209,13 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void CapturesVSAssertFail()
         {
             SoftAssert softAssert = new SoftAssert(new FileLogger(LoggingConfig.GetLogDirectory(), "UnitTests.SoftAssertUnitTests.RespectVSFailsFails"));
             softAssert.Assert(() => Assert.AreEqual("a", "b"), "2");
 
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -223,13 +223,13 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void CapturesNUnitAssertFail()
         {
             SoftAssert softAssert = new SoftAssert(new FileLogger(LoggingConfig.GetLogDirectory(), "UnitTests.SoftAssertUnitTests.RespectNUnitFails"));
             softAssert.Assert(() => NUnit.Framework.Assert.AreEqual("a", "b"), "1");
 
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -253,14 +253,14 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SoftAssertManuallySetExpectedAssertsFails()
         {
             SoftAssert softAssert = new SoftAssert(
                 new FileLogger(LoggingConfig.GetLogDirectory(),
                 "UnitTests.SoftAssertManuallySetExpectedAssertsFails"));
             softAssert.AddExpectedAsserts("one");
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         /// <summary>
@@ -268,24 +268,24 @@ namespace UtilitiesUnitTesting
         /// </summary>
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SoftAssertAssertMethodWithFailureMessage()
         {
             SoftAssert softAssert = new SoftAssert(new FileLogger(LoggingConfig.GetLogDirectory(),
                 "UnitTests.SoftAssertAssertMethodWithFailureMessage"));
             softAssert.Assert(() => Assert.Fail(), "SoftAssertName", "Failure Message");
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         [TestMethod]
         [TestCategory(TestCategories.Utilities)]
-        [ExpectedException(typeof(AggregateException))]
+        //[MyExpectedException(typeof(AggregateException))]
         public void SoftAssertAssertFailsWithPassingAction()
         {
             SoftAssert softAssert = new SoftAssert(new FileLogger(LoggingConfig.GetLogDirectory(),
                "UnitTests.SoftAssertAssertFailsWithPassingAction"));
             softAssert.AssertFails(() => Assert.IsTrue(true), typeof(AggregateException), "assertName");
-            softAssert.FailTestIfAssertFailed();
+            Assert.Throws<AggregateException>(() => softAssert.FailTestIfAssertFailed());
         }
 
         [TestMethod]

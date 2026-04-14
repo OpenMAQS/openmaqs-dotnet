@@ -54,10 +54,10 @@ namespace AppiumUnitTests
         /// Verify a bad create fails in the right way
         /// </summary>
         [TestMethod]
-        [ExpectedException(typeof(WebDriverException))]
+        //[MyExpectedException(typeof(WebDriverException))]
         public void BadCreate()
         {
-            AppiumDriverFactory.CreateDriver(() => throw new AccessViolationException("Should fail"));
+            Assert.Throws<WebDriverException>(() => AppiumDriverFactory.CreateDriver(() => throw new AccessViolationException("Should fail")));
         }
 
         /// <summary>

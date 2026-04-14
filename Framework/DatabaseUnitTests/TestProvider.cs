@@ -8,7 +8,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using OpenMAQS.Maqs.BaseDatabaseTest.Providers;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace DatabaseUnitTests
 {
@@ -21,7 +21,7 @@ namespace DatabaseUnitTests
         /// Method used to setup a SQL connection client
         /// </summary>
         /// <param name="connectionString"> The connection string. </param>
-        /// <returns> The <see cref="SqlConnection"/> connection client. </returns>
+        /// <returns> The <see cref="SqliteConnection"/> connection client. </returns>
         public SqlConnection SetupDataBaseConnection(string connectionString)
         {
             SqlConnection connection = new SqlConnection
