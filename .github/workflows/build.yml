@@ -559,6 +559,84 @@ jobs:
             artifactTests/selengen/**/*.xml
             artifactTests/selengen/testResults/
 
+  sonar:
+    name: Sonar
+    runs-on: windows-2022
+    needs: [test-appium, test-winapp, test-untils, test-mongo, test-database, test-webservice, test-base, test-playwright, test-email, test-framework, test-gherkin, test-gherkinnunit, test-composite, test-selenpomlazy, test-selenutil, test-selengen, getVersion]
+    steps:
+      - name: Set up JDK 17
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - uses: actions/download-artifact@v4
+        with:
+          path: ${{ github.workspace }}/Results
+
+      - name: Update coverage mappings
+        shell: pwsh
+        run: |
+          $rootPath = "${{ github.workspace }}/Results"
+          $sourcePath = "${{ github.workspace }}"
+
+          Write-Host "Start updating relative paths"
+
+          Function Replace($path, $pattern, $replace)
+          {
+              $text = (Get-Content $path) -join "`n"
+              [System.Text.RegularExpressions.Regex]::Replace($text, $pattern, $replace) |  Out-File -encoding ASCII $path
+          }
+
+          $files = Get-ChildItem -Path $rootPath -Recurse -Include *.xml
+          foreach ($file in $files)
+          {
+              Write-Host "Updating" $file
+              Replace $file.FullName '(?<=fullPath=")(([-\w\d\s/\\:]+)(?=[\\/][Ff]ramework))' $sourcePath
+              Replace $file.FullName '(?<=fullPath="[-\w\d\s/.\\:]+)((/)(?=[-\w\d\s/.]+"))' "\"
+          }
+
+          $files = Get-ChildItem -Path $rootPath  -Recurse  -Include *.trx
+          foreach ($file in $files)
+          {
+              Write-Host "Updating" $file
+              Replace $file.FullName '(?<=codeBase=")(([-\w\d\s/\\:]+)(?=[\\/][Ff]ramework))' $sourcePath
+              Replace $file.FullName '(?<=codeBase="[-\w\d\s/.\\:]+)((/)(?=[-\w\d\s/.]+"))' "\"
+              Replace $file.FullName '(?<=storage=")(([-\w\d\s/\\:]+)(?=[\\/][Ff]ramework))' $sourcePath.ToLower()
+              Replace $file.FullName '(?<=storage="[-\w\d\s/.\\:]+)((/)(?=[-\w\d\s/.]+"))' "\"
+          }
+
+          Write-Host "Finished updating relative paths"
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v3
+        with:
+          path: ~\sonar\cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: Cache SonarCloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v3
+        with:
+          path: .\.sonar\scanner
+          key: ${{ runner.os }}-sonar-scanner
+      - name: Install SonarCloud scanner
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        shell: powershell
+        run: |
+          New-Item -Path .\.sonar\scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        shell: powershell
+        run: |
+          .\.sonar\scanner\dotnet-sonarscanner  begin /k:"OpenMAQS_openmaqs-dotnet" /o:"openmaqs" /d:sonar.token="$env:SONAR_TOKEN" /d:projectVersion="${{ needs.getVersion.outputs.buildNumber }}"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.opencover.reportsPaths=${{ github.workspace }}\Results\**\coverage*.opencover.xml  /d:sonar.cs.dotcover.reportsPaths=${{ github.workspace }}\Results\**\*.coverage
+          dotnet build Framework/Base.sln -p:Version=${{ needs.getVersion.outputs.buildNumber }}
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="$env:SONAR_TOKEN"
+
   report:
     name: Report
     runs-on: ubuntu-latest
@@ -608,7 +686,7 @@ jobs:
   publish:
     name: Publish NuGet - v${{ needs.getVersion.outputs.buildNumber }}
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&  github.event_name != 'schedule'
-    needs: [getVersion, createNugetPacakges]
+    needs: [getVersion, createNugetPacakges, sonar]
     runs-on: windows-2022
     environment: nuget
     steps:
