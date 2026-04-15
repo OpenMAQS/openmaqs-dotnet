@@ -10,5 +10,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: dotnet test ${{ inputs.bt-param }} -o "${{github.workspace}}/artifactTests/${{ inputs.artifact-name }}"
+    - run: dotnet test $env:BT_PARAM -o "${{github.workspace}}/artifactTests/$env:ARTIFACT_NAME"
+      env:
+          BT_PARAM: ${{ inputs.bt-param }}
+          ARTIFACT_NAME: ${{ inputs.artifact-name}}
       shell: pwsh

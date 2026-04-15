@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GherkinExtension\GherkinExtension.csproj" />
+    <ProjectReference Include="..\BaseGherkinExtension\BaseGherkinExtension.csproj" />
   </ItemGroup>
 
   <ItemGroup>
