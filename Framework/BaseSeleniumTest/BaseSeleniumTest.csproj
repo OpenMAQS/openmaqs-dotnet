@@ -49,7 +49,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Deque.AxeCore.Commons" Version="4.9.1" />
+		<PackageReference Include="Deque.AxeCore.Commons" Version="4.10.1" />
 		<PackageReference Include="Deque.AxeCore.Selenium" Version="4.9.1" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
 			<PrivateAssets>all</PrivateAssets>
