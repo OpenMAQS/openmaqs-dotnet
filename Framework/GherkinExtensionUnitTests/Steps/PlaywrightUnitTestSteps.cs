@@ -10,7 +10,7 @@ using NUnit.Framework;
 using System;
 using Reqnroll;
 
-namespace SpecFlowExtensionNUnitTests.Steps
+namespace ReqnrollExtensionNUnitTests.Steps
 {
     /// <summary>
     /// BasePlaywright unit test steps

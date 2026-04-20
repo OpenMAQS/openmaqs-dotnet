@@ -52,7 +52,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasePlaywrightTest", "BaseP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaywrightUnitTests", "PlaywrightUnitTests\PlaywrightUnitTests.csproj", "{BF775D51-3CB4-498B-9D57-0579DC34EAAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GherkinExtension", "GherkinExtension\GherkinExtension.csproj", "{766EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseGherkinExtension", "BaseGherkinExtension\BaseGherkinExtension.csproj", "{566EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GherkinExtensionNUnitTests", "GherkinExtensionNUnitTests\GherkinExtensionNUnitTests.csproj", "{E745DAF7-4099-0F23-0D63-9620DB303ACE}"
 EndProject
@@ -138,10 +138,10 @@ Global
 		{BF775D51-3CB4-498B-9D57-0579DC34EAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF775D51-3CB4-498B-9D57-0579DC34EAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF775D51-3CB4-498B-9D57-0579DC34EAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{766EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{766EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{766EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{766EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566EDDB3-6BB3-AD74-92FC-23AA8EEDF0F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E745DAF7-4099-0F23-0D63-9620DB303ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E745DAF7-4099-0F23-0D63-9620DB303ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E745DAF7-4099-0F23-0D63-9620DB303ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU

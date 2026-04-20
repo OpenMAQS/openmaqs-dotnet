@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Support.Events;
 using Reqnroll;
 
-namespace SpecFlowExtUnitTests.Steps
+namespace ReqnrollExtUnitTests.Steps
 {
     /// <summary>
     /// BaseSelenium unit test steps
