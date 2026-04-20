@@ -65,7 +65,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BaseTest\BaseTest.csproj" />
     <ProjectReference Include="..\BaseCompositeTest\BaseCompositeTest.csproj" />
   </ItemGroup>
 </Project>
