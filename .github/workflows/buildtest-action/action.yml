@@ -10,11 +10,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: |
-        # Handle params first
-        $bt = "${{ inputs.bt-param }}"
-        $name = "${{ inputs.artifact-name }}"
-        $outPath = "${{ github.workspace }}/artifactTests/$name"
-        
-        dotnet test $bt -o $outPath
+    - run: dotnet test ${{ inputs.bt-param }} -o "${{github.workspace}}/artifactTests/${{ inputs.artifact-name }}"
       shell: pwsh
