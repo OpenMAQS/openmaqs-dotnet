@@ -12,7 +12,7 @@
     <AssemblyName>OpenMAQS.Maqs.Gherkin</AssemblyName>
     <RootNamespace>OpenMAQS.Maqs.Gherkin</RootNamespace>
     <ApplicationIcon>MAQS.ico</ApplicationIcon>
-	<Title>Gherkin Module</Title>
+    <Title>Gherkin Module</Title>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>OpenMAQS</Authors>
@@ -21,7 +21,7 @@
     <Copyright>Copyright © OpenMAQS $([System.DateTime]::Now.Year)</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>MAQS.png</PackageIcon>
-	<PackageIconUrl>https://raw.githubusercontent.com/OpenMAQS/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/OpenMAQS/maqs-dotnet/main/Framework/MAQS.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/OpenMAQS/openmaqs-dotnet</PackageProjectUrl>
     <PackageTags>test selenium appium automation NUnit MSTest TestFramework Gherkin</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -65,6 +65,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BaseTest\BaseTest.csproj" />
     <ProjectReference Include="..\BaseCompositeTest\BaseCompositeTest.csproj" />
   </ItemGroup>
 </Project>

@@ -35,7 +35,7 @@ namespace OpenMAQS.Maqs.Gherkin
         public abstract O TestObject { get; }
 
         /// <summary>
-        /// Gets or sets the SpecFlow Scenario Context.
+        /// Gets or sets the Reqnroll Scenario Context.
         /// </summary>
         public ScenarioContext LocalScenarioContext { get; set; }
 

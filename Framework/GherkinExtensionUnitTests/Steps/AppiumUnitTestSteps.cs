@@ -10,7 +10,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Reqnroll;
 
 [assembly: DoNotParallelize]
-namespace SpecFlowExtUnitTests.Steps
+
+namespace ReqnrollExtUnitTests.Steps
 {
     /// <summary>
     /// BaseAppium unit test steps

@@ -9,7 +9,7 @@ using OpenMAQS.Maqs.Gherkin.TestSteps;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Reqnroll;
 
-namespace SpecFlowExtUnitTests.Steps
+namespace ReqnrollExtUnitTests.Steps
 {
     /// <summary>
     /// BaseDatabase unit test steps

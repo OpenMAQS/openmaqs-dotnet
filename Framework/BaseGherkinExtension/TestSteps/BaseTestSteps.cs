@@ -2,13 +2,14 @@
 // <copyright file="BaseTestSteps.cs" company="OpenMAQS">
 //  Copyright 2023 OpenMAQS, All rights Reserved
 // </copyright>
-// <summary>Base teststeps code for general SpecFlow tests</summary>
+// <summary>Base teststeps code for general Reqnroll tests</summary>
 //--------------------------------------------------
 using OpenMAQS.Maqs.BaseTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Reqnroll;
 using MaqsBase = OpenMAQS.Maqs.BaseTest.BaseTest;
+
 
 namespace OpenMAQS.Maqs.Gherkin.TestSteps
 {
