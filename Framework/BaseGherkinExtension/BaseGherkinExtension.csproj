@@ -52,7 +52,7 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="NUnit" version="3.14.0" />
-    <PackageReference Include="Reqnroll" version="3.2.0" />
+    <PackageReference Include="Reqnroll" version="3.3.4" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.10" />
     <PackageReference Include="System.Reflection.Emit" version="4.7.0" />
     <PackageReference Include="System.Reflection.Emit.Lightweight" version="4.7.0" />
